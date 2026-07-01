@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8" />
+    <script src="js/auth-config.js"></script>
+    <script src="js/auth-guard.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPESIFIKASI TUGAS UNIT · PEKA JKA IPGKPP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&family=Quicksand:wght@300;400;600;700&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --purple: #3a0ca3;
+            --purple-dark: #2d0880;
+            --purple-light: #7209b7;
+            --white: #ffffff;
+            --off-white: #f8f8f8;
+            --light-gray: #f0f0f0;
+            --mid-gray: #e0e0e0;
+            --text-dark: #111111;
+            --text-mid: #444444;
+            --text-light: #777777;
+            --accent-blue: #2d2ca9;
+            --soft-bg: #fafafe;
+            --border-light: #eaeaf0;
+        }
+
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* =====================
+           NAVBAR (sama seperti template)
+        ===================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 var(--mid-gray);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--mid-gray);
+        }
+
+        .nav-logo-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--purple);
+            line-height: 1.1;
+        }
+
+        .nav-logo-sub {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-light);
+            display: block;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--purple);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 380px;
+            height: 100%;
+            background: var(--purple);
+            z-index: 1001;
+            padding: 50px 40px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .sidebar.active {
+            right: 0;
+        }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .sidebar-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0;
+        }
+
+        .sidebar-close {
+            background: none;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .sidebar-nav li {
+            border: none;
+        }
+
+        .sidebar-nav a,
+        .sidebar-nav summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 14px;
+            border-radius: 10px;
+            transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .sidebar-nav summary a.sidebar-summary-link {
+            flex: 1;
+            min-width: 0;
+            color: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sidebar-nav summary a {
+            flex: 1;
+            min-width: 0;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .sidebar-nav a:hover,
+        .sidebar-nav summary:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateX(2px);
+            opacity: 1;
+        }
+
+        .sidebar-nav summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .sidebar-nav a .arrow,
+        .sidebar-nav summary .arrow {
+            font-size: 18px;
+            opacity: 0.45;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-nav details[open] > summary {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .sidebar-nav details[open] > summary .arrow {
+            transform: rotate(90deg);
+        }
+
+        .sidebar-subnav {
+            list-style: none;
+            padding: 6px 0 4px 14px;
+            margin-left: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border-left: 1px solid rgba(255,255,255,0.16);
+        }
+
+        .sidebar-subnav li {
+            border: none;
+        }
+
+        .sidebar-subnav a {
+            font-size: 14px;
+            padding: 6px 0;
+            color: rgba(255, 255, 255, 0.84);
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .sidebar-subnav a:hover {
+            opacity: 1;
+            color: white;
+            background: transparent;
+            transform: none;
+        }
+
+        /* =====================
+           PAGE CONTENT – professional layout
+        ===================== */
+        .page-content {
+            padding: 130px 80px 60px;
+            max-width: 1440px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-size: clamp(36px, 5vw, 56px);
+            font-weight: 700;
+            color: var(--text-dark);
+            letter-spacing: -0.02em;
+            margin-bottom: 8px;
+        }
+
+        .page-subtitle {
+            font-size: 18px;
+            color: var(--text-mid);
+            font-weight: 400;
+            border-left: 4px solid var(--purple);
+            padding-left: 20px;
+            margin-bottom: 48px;
+        }
+
+        /* spek card grid */
+        .spek-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+        }
+
+        .spek-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 32px 40px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+            border: 1px solid var(--border-light);
+            transition: box-shadow 0.2s;
+        }
+
+        .spek-card:hover {
+            box-shadow: 0 16px 48px rgba(58, 12, 163, 0.06);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card-avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 16px;
+            object-fit: cover;
+            object-position: center 30%;
+            border: 2px solid var(--mid-gray);
+            background: var(--light-gray);
+            display: block;
+            flex-shrink: 0;
+        }
+
+        .card-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .card-role {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--purple);
+            background: rgba(58, 12, 163, 0.06);
+            padding: 4px 14px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
+        .card-body {
+            margin-top: 6px;
+        }
+
+        .card-body ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .card-body li {
+            padding-left: 28px;
+            position: relative;
+            font-size: 15px;
+            color: var(--text-mid);
+            line-height: 1.6;
+        }
+
+        .card-body li::before {
+            content: "▹";
+            position: absolute;
+            left: 4px;
+            color: var(--purple);
+            font-weight: 700;
+        }
+
+        .card-body li strong {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .divider-light {
+            height: 2px;
+            background: var(--border-light);
+            margin: 10px 0 20px 0;
+            width: 60px;
+        }
+
+        .badge-unit {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--purple-dark);
+            background: var(--soft-bg);
+            padding: 4px 18px;
+            border-radius: 40px;
+            border: 1px solid var(--border-light);
+            letter-spacing: 0.02em;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 16px 24px;
+            }
+            .page-content {
+                padding: 100px 24px 40px;
+            }
+            .spek-card {
+                padding: 24px 20px;
+            }
+            .card-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .card-avatar {
+                width: 140px;
+                height: 140px;
+            }
+            .page-subtitle {
+                font-size: 16px;
+                padding-left: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card-title {
+                font-size: 19px;
+            }
+            .card-body li {
+                font-size: 14px;
+            }
+            .page-title {
+                font-size: 30px;
+            }
+        }
+
+        /* footer (sama seperti index) */
+        footer {
+            width: 100%;
+            background: var(--text-dark);
+        }
+
+        .footer-container {
+            width: min(1400px, calc(100% - 120px));
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            padding: 60px 0;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-brand-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-brand-sub {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-tagline {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.35);
+            font-style: italic;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col ul a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            background: var(--text-dark);
+            border-top: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .footer-bottom-inner {
+            width: min(1400px, calc(100% - 120px));
+            margin: 0 auto;
+            padding: 20px 0;
+            font-size: 12px;
+            color: rgba(255, 255, 255, .3);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 0;
+            }
+            .footer-container {
+                width: calc(100% - 48px);
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            .footer-bottom-inner {
+                width: calc(100% - 48px);
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- OVERLAY + SIDEBAR (sama seperti template) -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <p class="sidebar-title">Navigasi</p>
+            <button class="sidebar-close" onclick="toggleMenu()">✕</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Utama</a></li>
+            <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
+            <li>
+                <details>
+                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle e-Portfolio submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Jabatan Kecemerlangan Akademik</a></li>
+                        <li><a href="#">Bahasa</a></li>
+                        <li><a href="#">Ilmu Pendidikan</a></li>
+                        <li><a href="#">Sains Sosial</a></li>
+                        <li><a href="#">Matematik</a></li>
+                        <li><a href="#">Teknologi Pendidikan</a></li>
+                        <li><a href="#">JAPIM</a></li>
+                        <li><a href="#">Sains</a></li>
+                        <li><a href="#">Pengajian Melayu</a></li>
+                        <li><a href="#">Kokurikulum</a></li>
+                        <li><a href="#">JPPI</a></li>
+                        <li><a href="#">HEP</a></li>
+                        <li><a href="#">UPP</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#pengurusan-akademik" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pengurusan Akademik submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Jadual Waktu Induk</a></li>
+                        <li><a href="#">Maklumat Kursus</a></li>
+                        <li><a href="#">Headcount</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#program-pengajian-akademik" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Program Pengajian Akademik submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Kalendar Akademik</a></li>
+                        <li><a href="#">Agihan Kursus</a></li>
+                        <li><a href="#">Struktur Kursus Akademik</a></li>
+                        <li><a href="#">Buku Panduan</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#perkembangan-profesionalisme" class="sidebar-summary-link">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Perkembangan Profesionalisme submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Pentaksiran Berterusan</a></li>
+                        <li><a href="#">KPPB</a></li>
+                        <li><a href="#">PBD</a></li>
+                        <li><a href="#">TS25</a></li>
+                        <li><a href="#">KBAT</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#penambahbaikan-berterusan" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Panduan Asas: Pensyarah Baharu</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#pembelajaran-digital" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pembelajaran Digital submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Objek Pembelajaran Digital</a></li>
+                        <li><a href="#">Delima</a></li>
+                        <li><a href="#">Rubrik OPD</a></li>
+                        <li><a href="#">Aksesibiliti OPD</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#info-pensyarah" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Info Pensyarah submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Modul</a></li>
+                        <li><a href="#">Buku Panduan</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a href="#">Log Masuk JKA</a></li>
+            <li><a href="#">Hubungi</a></li>
+        </ul>
+    </div>
+
+    <!-- NAVBAR (sama seperti template) -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="PEKA JKA IPGM KPP_files/unnamed.png" alt="Logo" class="nav-logo-img" />
+            <span class="nav-logo-text">
+                PEKA JKA IPGMKPP
+                <span class="nav-logo-sub">Institut Pendidikan Guru Kampus Pulau Pinang</span>
+            </span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <!-- ============================================================
+         PAGE CONTENT – SPESIFIKASI TUGAS UNIT (professional)
+         ============================================================ -->
+    <main class="page-content">
+        <h1 class="page-title">Spesifikasi Tugas Unit</h1>
+        <div class="page-subtitle">
+            Jabatan Kecemerlangan Akademik Institut Pendidikan Guru Malaysia Kampus Pulau Pinang
+        </div>
+
+        <!-- grid of cards – setiap unit -->
+        <div class="spek-grid">
+
+            <!-- KETUA JABATAN -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed.jpg" alt="Ketua Jabatan" />
+                    <div>
+                        <div class="card-title">Encik Naziruddin bin Mashood</div>
+                        <span class="card-role">Ketua Jabatan</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">JKA</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, prosedur ISO 21001:2018 EOMS dan MQA.</li>
+                        <li><strong>Memantau &amp; menyelia</strong> semua aktiviti unit di JKA.</li>
+                        <li><strong>Memantau</strong> pengurusan proses reka bentuk dan penyampaian kurikulum.</li>
+                        <li><strong>Memantau</strong> pengurusan sistem pembelajaran digital.</li>
+                        <li><strong>Memantau</strong> penyediaan dan pelaksanaan Jadual Waktu.</li>
+                        <li><strong>Memantau</strong> perancangan PdP dan kerja kursus serta keselarasannya dengan Maklumat Kursus (MK).</li>
+                        <li><strong>Memantau</strong> pelaksanaan pentaksiran mengikut keperluan IPGM dan IPGK.</li>
+                        <li><strong>Memantau</strong> tindakan terhadap hasil refleksi praktikum pelajar serta praktikum bertema.</li>
+                        <li><strong>Memantau</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
+                        <li><strong>Memastikan</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi program / kursus.</li>
+                        <li><strong>Memantau &amp; menyelia</strong> kemajuan prestasi pelajar.</li>
+                        <li><strong>Memantau</strong> pelaksanaan semua kursus dalam semua program.</li>
+                        <li><strong>Memantau</strong> penyampaian taklimat program pengajian akademik kepada pelajar baharu.</li>
+                        <li><strong>Memantau</strong> penyebaran pindaan/penambahbaikan struktur program terkini.</li>
+                        <li><strong>Memastikan</strong> penyebaran maklumat terkini tentang perkembangan program pengajian akademik.</li>
+                        <li><strong>Memantau</strong> semua aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme.</li>
+                        <li><strong>Memantau</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
+                        <li><strong>Memantau</strong> pelaksanaan program peningkatan kompetensi pensyarah.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- TIMBALAN KETUA / KETUA UNIT PENGURUSAN AKADEMIK -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(1).jpg" alt="Timbalan Ketua" />
+                    <div>
+                        <div class="card-title">Dr. Tan Lay Koon</div>
+                        <span class="card-role">Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">UPA</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, ISO 21001:2018 EOMS dan MQA.</li>
+                        <li><strong>Memastikan</strong> semua aktiviti unit berjalan lancar.</li>
+                        <li><strong>Memastikan</strong> pengurusan proses reka bentuk dan penyampaian kurikulum dilaksanakan mengikut prosedur.</li>
+                        <li><strong>Memastikan</strong> penyediaan dan pelaksanaan Jadual Waktu berjalan lancar.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KETUA UNIT PENGAJIAN AKADEMIK -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(2).jpg" alt="Ketua Unit Pengajian Akademik" />
+                    <div>
+                        <div class="card-title">Dr. Suah See Ling</div>
+                        <span class="card-role">Ketua Unit Pengajian Akademik</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">UPA</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Memastikan</strong> penawaran semua kursus dan maklumat pentaksiran dalam semua program.</li>
+                        <li><strong>Memastikan</strong> taklimat program pengajian akademik diberi kepada pelajar baharu.</li>
+                        <li><strong>Memastikan</strong> penyebaran pindaan/penambahbaikan struktur program terkini kepada Ketua Jabatan/Unit.</li>
+                        <li><strong>Memastikan</strong> pengurusan pemilihan elektif teras dan elektif terbuka.</li>
+                        <li><strong>Membentangkan</strong> senarai kursus, tenaga pengajar serta maklumat pentaksiran dalam mesyuarat Pengurusan Tertinggi IPG.</li>
+                        <li><strong>Memastikan</strong> maklumat Program Pengajian Akademik terkini dimuatnaik ke laman web institut.</li>
+                        <li><strong>Memastikan</strong> penyebaran maklumat tentang perkembangan kurikulum terkini.</li>
+                        <li><strong>Memastikan</strong> pelaksanaan jadual waktu interaksi kuliah bagi program KDC.</li>
+                        <li><strong>Menyelaras</strong> tugas semua Penyelaras Program yang ditawarkan di Institut.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KETUA UNIT PEMBELAJARAN DIGITAL -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(3).jpg" alt="Ketua Unit Pembelajaran Digital" />
+                    <div>
+                        <div class="card-title">Dr. Kamalambal Durairaj</div>
+                        <span class="card-role">Ketua Unit Pembelajaran Digital</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">UPD</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Menyelaras</strong> perancangan, pelaksanaan, dan penilaian keberkesanan pembelajaran digital di IPGK, termasuk garis panduan, penggunaan DELIMa, dan sesi taklimat dengan OPD.</li>
+                        <li><strong>Menyelaras &amp; memantau</strong> pelaksanaan pembelajaran digital di jabatan melalui semakan laporan dan pemantauan berkala.</li>
+                        <li><strong>Menganalisis</strong> data penggunaan platform digital bagi mengenal pasti keperluan penambahbaikan serta menyediakan laporan keberkesanan.</li>
+                        <li><strong>Mengurus</strong> fungsi pentadbiran jabatan sebagai Setiausaha (minit mesyuarat, surat menyurat, dokumentasi, rekod rasmi).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KETUA UNIT PENAMBAHBAIKAN BERTERUSAN AKADEMIK -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(4).jpg" alt="Ketua Unit Penambahbaikan Berterusan" />
+                    <div>
+                        <div class="card-title">Dr. Soudamini a/p Narayanan Nair</div>
+                        <span class="card-role">Ketua Unit Penambahbaikan Berterusan Akademik</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">UPBA</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Memantau</strong> penyelarasan perancangan semester PdP dan kerja kursus bagi setiap kursus.</li>
+                        <li><strong>Memantau</strong> pelaksanaan pentaksiran yang sistematik, profesional, sah dan boleh dipercayai.</li>
+                        <li><strong>Memastikan</strong> pengurusan laporan pelaksanaan Praktikum untuk penambahbaikan berterusan.</li>
+                        <li><strong>Mengurus</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
+                        <li><strong>Mengurus &amp; menyelia</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi kursus/program.</li>
+                        <li><strong>Mengurus &amp; menyelia</strong> kemajuan prestasi pelajar dan cadangan tindakan penambahbaikan.</li>
+                        <li><strong>Memastikan</strong> perancangan dan pelaksanaan peningkatan literasi data dalam program latihan guru.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- KETUA UNIT PERKEMBANGAN PROFESIONALISME AKADEMIK -->
+            <div class="spek-card">
+                <div class="card-header">
+                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(5).jpg" alt="Ketua Unit Perkembangan Profesionalisme" />
+                    <div>
+                        <div class="card-title">Pn. Wan Nor Asmah Binti Arshad</div>
+                        <span class="card-role">Ketua Unit Perkembangan Profesionalisme Akademik</span>
+                    </div>
+                    <span class="badge-unit" style="margin-left:auto;">UPPA</span>
+                </div>
+                <div class="divider-light"></div>
+                <div class="card-body">
+                    <ul>
+                        <li><strong>Membuat penyelaras</strong> bersama ULDP/Jabatan akademik perancangan tahunan berfokus peningkatan profesionalisme berdasarkan analisis IPPK, CDl dan CCQI.</li>
+                        <li><strong>Merancang</strong> aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme akademik pensyarah dan pelajar.</li>
+                        <li><strong>Merancang</strong> aktiviti akademik yang menyokong pengembangan profesionalisme (PLC, KPPB, TS25, PBD, PAK-21, dsb.).</li>
+                        <li><strong>Memperkukuh</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
+                        <li><strong>Mengemas kini</strong> dokumentasi aktiviti unit dari semasa ke semasa.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div><!-- end spek-grid -->
+
+        <div style="margin-top: 48px; font-size: 14px; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 24px; text-align: center;">
+            <span>Kemaskini Jun 2026</span>
+        </div>
+    </main>
+
+    <!-- FOOTER (sama seperti index) -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-brand-name">PEKA JKA IPGMKPP</span>
+                <span class="footer-brand-sub">Portal Pengurusan Kurikulum Akademik — Jabatan Kecemerlangan Akademik, Institut Pendidikan Guru Kampus Pulau Pinang.</span>
+                <span class="footer-tagline">"Peneraju Kecemerlangan Pendidikan Guru Bertaraf Dunia"</span>
+            </div>
+            <div class="footer-col">
+                <h4>Pautan Utama</h4>
+                <ul>
+                    <li><a href="index.html">Utama</a></li>
+                    <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
+                    <li><a href="e-portfolio.html">e-Portfolio</a></li>
+                    <li><a href="#">Pengurusan Akademik</a></li>
+                    <li><a href="#">Program Pengajian</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Lain-lain</h4>
+                <ul>
+                    <li><a href="#">Pembelajaran Digital</a></li>
+                    <li><a href="#">Info Pensyarah</a></li>
+                    <li><a href="#">Log Masuk JKA</a></li>
+                    <li><a href="#">Hubungi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>© 2026 Jabatan Kecemerlangan Akademik, IPGKPP.</span>
+                <span>Institut Pendidikan Guru Malaysia</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>

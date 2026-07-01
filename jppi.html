@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <script src="js/auth-config.js"></script>
+    <script src="js/auth-guard.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR PAGE TITLE - PEKA JKA IPGKPP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --purple: #3a0ca3;
+            --purple-dark: #2d0880;
+            --purple-light: #7209b7;
+            --white: #ffffff;
+            --off-white: #f8f8f8;
+            --light-gray: #f0f0f0;
+            --mid-gray: #e0e0e0;
+            --text-dark: #111111;
+            --text-mid: #444444;
+            --text-light: #777777;
+        }
+
+        body {
+            font-family: 'Instrument Sans', sans-serif;
+            color: var(--text-dark);
+            background: var(--white);
+            overflow-x: hidden;
+        }
+
+        /* =====================
+           NAVBAR
+        ===================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 60px;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 0 var(--mid-gray);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .nav-logo-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--mid-gray);
+        }
+
+        .nav-logo-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--purple);
+            line-height: 1.1;
+        }
+
+        .nav-logo-sub {
+            font-size: 11px;
+            font-weight: 400;
+            color: var(--text-light);
+            display: block;
+        }
+
+        .hamburger {
+            background: none;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding: 5px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background: var(--purple);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* Sidebar styles (simplified for template) */
+        .overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 380px;
+            height: 100%;
+            background: var(--purple);
+            z-index: 1001;
+            padding: 50px 40px;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            overflow-y: auto;
+        }
+
+        .sidebar.active { right: 0; }
+
+        .sidebar-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .sidebar-title {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.5);
+            margin: 0;
+        }
+
+        .sidebar-close {
+            background: none;
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sidebar-nav {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .sidebar-nav li {
+            border: none;
+        }
+
+        .sidebar-nav a,
+        .sidebar-nav summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 14px;
+            border-radius: 10px;
+            transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+            cursor: pointer;
+        }
+
+        .sidebar-nav summary a.sidebar-summary-link {
+            flex: 1;
+            min-width: 0;
+            color: inherit;
+            text-decoration: none;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .sidebar-nav summary a {
+            flex: 1;
+            min-width: 0;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .sidebar-nav a:hover,
+        .sidebar-nav summary:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateX(2px);
+            opacity: 1;
+        }
+
+        .sidebar-nav summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .sidebar-nav a .arrow,
+        .sidebar-nav summary .arrow {
+            font-size: 18px;
+            opacity: 0.45;
+            transition: transform 0.2s ease;
+        }
+
+        .sidebar-nav details[open] > summary {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .sidebar-nav details[open] > summary .arrow {
+            transform: rotate(90deg);
+        }
+
+        .sidebar-subnav {
+            list-style: none;
+            padding: 6px 0 4px 14px;
+            margin-left: 6px;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border-left: 1px solid rgba(255,255,255,0.16);
+        }
+
+        .sidebar-subnav li {
+            border: none;
+        }
+
+        .sidebar-subnav a {
+            font-size: 14px;
+            padding: 6px 0;
+            color: rgba(255,255,255,0.84);
+            border-radius: 0;
+            background: transparent;
+        }
+
+        .sidebar-subnav a:hover {
+            opacity: 1;
+            color: white;
+            background: transparent;
+            transform: none;
+        }
+
+        /* Page content area */
+        .page-content {
+            padding: 120px 80px;
+            min-height: 100vh;
+        }
+
+        .page-title {
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background: var(--text-dark);
+        }
+
+        .footer-container {
+            width: min(1400px, calc(100% - 120px));
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 60px;
+            padding: 60px 0;
+            align-items: start;
+        }
+
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-brand-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-brand-sub {
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+            line-height: 1.8;
+            max-width: 300px;
+        }
+
+        .footer-tagline {
+            font-size: 12px;
+            color: rgba(255,255,255,0.35);
+            font-style: italic;
+        }
+
+        .footer-col h4 {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-col ul a {
+            text-decoration: none;
+            color: rgba(255,255,255,0.65);
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            background: var(--text-dark);
+            border-top: 1px solid rgba(255,255,255,.08);
+        }
+
+        .footer-bottom-inner {
+            width: min(1400px, calc(100% - 120px));
+            margin: 0 auto;
+            padding: 20px 0;
+            font-size: 12px;
+            color: rgba(255,255,255,.3);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .navbar { padding: 16px 24px; }
+            .page-content { padding: 60px 24px; }
+            footer { padding: 0; }
+            .footer-container { width: calc(100% - 48px); grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
+            .footer-bottom-inner { width: calc(100% - 48px); flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <p class="sidebar-title">Navigasi</p>
+            <button class="sidebar-close" onclick="toggleMenu()">✕</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="index.html">Utama</a></li>
+            <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
+            <li>
+                <details>
+                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle e-Portfolio submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Jabatan Kecemerlangan Akademik</a></li>
+                        <li><a href="#">Bahasa</a></li>
+                        <li><a href="#">Ilmu Pendidikan</a></li>
+                        <li><a href="#">Sains Sosial</a></li>
+                        <li><a href="#">Matematik</a></li>
+                        <li><a href="#">Teknologi Pendidikan</a></li>
+                        <li><a href="#">JAPIM</a></li>
+                        <li><a href="#">Sains</a></li>
+                        <li><a href="#">Pengajian Melayu</a></li>
+                        <li><a href="#">Kokurikulum</a></li>
+                        <li><a href="#">JPPI</a></li>
+                        <li><a href="#">HEP</a></li>
+                        <li><a href="#">UPP</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#pengurusan-akademik" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pengurusan Akademik submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Jadual Waktu Induk</a></li>
+                        <li><a href="#">Maklumat Kursus</a></li>
+                        <li><a href="#">Headcount</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#program-pengajian-akademik" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Program Pengajian Akademik submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Kalendar Akademik</a></li>
+                        <li><a href="#">Agihan Kursus</a></li>
+                        <li><a href="#">Struktur Kursus Akademik</a></li>
+                        <li><a href="#">Buku Panduan</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#perkembangan-profesionalisme" class="sidebar-summary-link">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Perkembangan Profesionalisme submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Pentaksiran Berterusan</a></li>
+                        <li><a href="#">KPPB</a></li>
+                        <li><a href="#">PBD</a></li>
+                        <li><a href="#">TS25</a></li>
+                        <li><a href="#">KBAT</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#penambahbaikan-berterusan" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Panduan Asas: Pensyarah Baharu</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#pembelajaran-digital" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pembelajaran Digital submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Objek Pembelajaran Digital</a></li>
+                        <li><a href="#">Delima</a></li>
+                        <li><a href="#">Rubrik OPD</a></li>
+                        <li><a href="#">Aksesibiliti OPD</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="#info-pensyarah" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Info Pensyarah submenu">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="#">Modul</a></li>
+                        <li><a href="#">Buku Panduan</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li><a href="#">Log Masuk JKA</a></li>
+            <li><a href="#">Hubungi</a></li>
+        </ul>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="PEKA JKA IPGM KPP_files/unnamed.png" alt="Logo" class="nav-logo-img"/>
+            <span class="nav-logo-text">
+                PEKA JKA IPGMKPP
+                <span class="nav-logo-sub">Institut Pendidikan Guru Kampus Pulau Pinang</span>
+            </span>
+        </a>
+        <button class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+<!-- ==========================================
+     PAGE CONTENT - JPPI
+     ========================================== -->
+<main class="page-content">
+    <!-- Page Header -->
+    <div style="text-align: center; margin-bottom: 48px;">
+        <h1 class="page-title" style="font-size: clamp(36px, 5vw, 64px);">JPPI</h1>
+        <p style="font-size: 18px; color: var(--text-mid);">Jabatan Perancangan, Penyelidikan dan Inovasi</p>
+        <div style="width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;"></div>
+    </div>
+
+    <!-- SENARAI PENSYARAH -->
+    <div style="max-width: 900px; margin: 0 auto 50px;">
+        <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
+            <a href="https://drive.google.com/drive/folders/1oEeAT7S4QgHGN2nLYA_W52FLhQfohCOZ?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">HAFIAH BINTI ISMAIL</a>
+            
+            <a href="https://drive.google.com/drive/folders/1iZFcl8wFmcvWO1JCDlbRFWLMGRl2mBx4?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MOHD HAZLIE BIN MUHAMAD</a>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">SAMRI BIN CHONGO</div>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">SYAMALA NAIR GOPAL</div>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">KALAIVANI A/P SHANMUGAM</div>
+        </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="width: 100%; height: 2px; background: var(--light-gray); margin: 40px 0; border-radius: 2px;"></div>
+
+    <!-- SENARAI PENSYARAH (ARKIB) -->
+    <div style="max-width: 900px; margin: 0 auto;">
+        <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH (ARKIB)</h2>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
+            <a href="https://drive.google.com/drive/folders/1Go9eIVvGAF0DbAxQSwbIuRMzoiWBSzfc?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">MARDHIYAH MOHD SAFWAN</a>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light);">SANKAR ARIKRISHNAN</div>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light);">FAIRUZ</div>
+            
+            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light);">ANEESHA</div>
+        </div>
+    </div>
+
+    <!-- Footer note -->
+    <div style="margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;">
+        dalam proses pembinaan ....
+    </div>
+</main>
+
+<!-- Additional Styles -->
+<style>
+    @media (max-width: 768px) {
+        .page-content > div {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-brand-name">PEKA JKA IPGMKPP</span>
+                <span class="footer-brand-sub">Portal Pengurusan Kurikulum Akademik — Jabatan Kecemerlangan Akademik, Institut Pendidikan Guru Kampus Pulau Pinang.</span>
+                <span class="footer-tagline">"Peneraju Kecemerlangan Pendidikan Guru Bertaraf Dunia"</span>
+            </div>
+            <div class="footer-col">
+                <h4>Pautan Utama</h4>
+                <ul>
+                    <li><a href="index.html">Utama</a></li>
+                    <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
+                    <li><a href="e-portfolio.html">e-Portfolio</a></li>
+                    <li><a href="#">Pengurusan Akademik</a></li>
+                    <li><a href="#">Program Pengajian</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Lain-lain</h4>
+                <ul>
+                    <li><a href="#">Pembelajaran Digital</a></li>
+                    <li><a href="#">Info Pensyarah</a></li>
+                    <li><a href="#">Log Masuk JKA</a></li>
+                    <li><a href="#">Hubungi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-inner">
+                <span>© 2026 Jabatan Kecemerlangan Akademik, IPGKPP.</span>
+                <span>Institut Pendidikan Guru Malaysia</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sidebar toggle
+        function toggleMenu() {
+            document.getElementById('sidebar').classList.toggle('active');
+            document.getElementById('overlay').classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
