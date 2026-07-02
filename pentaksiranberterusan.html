@@ -5,7 +5,7 @@
     <script src="js/auth-config.js"></script>
     <script src="js/auth-guard.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR PAGE TITLE - PEKA JKA IPGKPP</title>
+    <title>Pentaksiran Berterusan — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -35,9 +35,6 @@
             overflow-x: hidden;
         }
 
-        /* =====================
-           NAVBAR
-        ===================== */
         .navbar {
             position: fixed;
             top: 0;
@@ -101,7 +98,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Sidebar styles (simplified for template) */
         .overlay {
             position: fixed;
             inset: 0;
@@ -111,7 +107,6 @@
             pointer-events: none;
             transition: opacity 0.4s;
         }
-
         .overlay.active {
             opacity: 1;
             pointer-events: all;
@@ -129,7 +124,6 @@
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow-y: auto;
         }
-
         .sidebar.active { right: 0; }
 
         .sidebar-header {
@@ -170,10 +164,7 @@
             flex-direction: column;
             gap: 4px;
         }
-
-        .sidebar-nav li {
-            border: none;
-        }
+        .sidebar-nav li { border: none; }
 
         .sidebar-nav a,
         .sidebar-nav summary {
@@ -186,7 +177,7 @@
             font-weight: 500;
             padding: 12px 14px;
             border-radius: 10px;
-            transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+            transition: background 0.2s ease, transform 0.2s ease;
             cursor: pointer;
         }
 
@@ -200,23 +191,13 @@
             text-overflow: ellipsis;
         }
 
-        .sidebar-nav summary a {
-            flex: 1;
-            min-width: 0;
-            color: inherit;
-            text-decoration: none;
-        }
-
         .sidebar-nav a:hover,
         .sidebar-nav summary:hover {
             background: rgba(255,255,255,0.12);
             transform: translateX(2px);
-            opacity: 1;
         }
 
-        .sidebar-nav summary::-webkit-details-marker {
-            display: none;
-        }
+        .sidebar-nav summary::-webkit-details-marker { display: none; }
 
         .sidebar-nav a .arrow,
         .sidebar-nav summary .arrow {
@@ -228,9 +209,13 @@
         .sidebar-nav details[open] > summary {
             background: rgba(255,255,255,0.08);
         }
-
         .sidebar-nav details[open] > summary .arrow {
             transform: rotate(90deg);
+        }
+
+        .sidebar-nav a.active {
+            font-weight: 700;
+            background: rgba(255,255,255,0.16);
         }
 
         .sidebar-subnav {
@@ -242,11 +227,7 @@
             gap: 4px;
             border-left: 1px solid rgba(255,255,255,0.16);
         }
-
-        .sidebar-subnav li {
-            border: none;
-        }
-
+        .sidebar-subnav li { border: none; }
         .sidebar-subnav a {
             font-size: 14px;
             padding: 6px 0;
@@ -254,7 +235,6 @@
             border-radius: 0;
             background: transparent;
         }
-
         .sidebar-subnav a:hover {
             opacity: 1;
             color: white;
@@ -262,10 +242,115 @@
             transform: none;
         }
 
-        /* Page content area */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 80px;
+            overflow: hidden;
+            background: var(--purple-dark);
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(to bottom, rgba(30,5,90,0.3) 0%, rgba(30,5,90,0.7) 50%, rgba(20,3,70,0.95) 100%),
+                url('PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed.jpg') center/cover no-repeat;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 60px;
+            max-width: 900px;
+            animation: heroReveal 1s ease both;
+        }
+
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: rgba(255,255,255,0.4);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 76px);
+            font-weight: 700;
+            line-height: 1.05;
+            color: white;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 em {
+            font-style: normal;
+            color: rgba(255,255,255,0.55);
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+            max-width: 560px;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 10px 22px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: rgba(255,255,255,0.4);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-scroll::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+        }
+
+        @keyframes heroReveal {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .page-content {
-            padding: 120px 80px;
-            min-height: 100vh;
+            padding: 80px 80px;
         }
 
         .page-title {
@@ -275,7 +360,265 @@
             margin-bottom: 24px;
         }
 
-        /* Footer */
+        .back-btn-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 30px;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--purple);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .back-btn:hover {
+            background: var(--purple-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(58,12,163,0.25);
+        }
+
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: var(--light-gray);
+            margin: 50px 0;
+            border-radius: 2px;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+        }
+
+        .content-section h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--purple);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--purple);
+            padding-left: 16px;
+        }
+
+        .content-section .desc-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-mid);
+            text-align: justify;
+            max-width: 900px;
+            margin: 0 auto 30px;
+        }
+
+        .content-section .desc-text strong {
+            color: var(--purple);
+        }
+
+        .doc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .doc-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px 24px;
+            border: 1px solid var(--mid-gray);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .doc-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(58,12,163,0.08);
+            border-color: var(--purple);
+        }
+
+        .doc-card .doc-title {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.4;
+            margin-bottom: 6px;
+        }
+
+        .doc-card .doc-badge {
+            background: var(--light-gray);
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-mid);
+            display: inline-block;
+            align-self: flex-start;
+            margin-bottom: 10px;
+            transition: background 0.2s;
+        }
+
+        .doc-card:hover .doc-badge {
+            background: var(--purple);
+            color: white;
+        }
+
+        .doc-card .doc-footer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--light-gray);
+            min-height: 40px;
+        }
+
+        .doc-card .doc-footer .doc-link {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--purple);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .doc-card .doc-footer .doc-link .arrow-icon {
+            transition: transform 0.2s;
+        }
+
+        .doc-card:hover .doc-footer .doc-link .arrow-icon {
+            transform: translateX(4px);
+        }
+
+        .pdf-embed-wrapper {
+            position: relative;
+            width: 100%;
+            padding-top: 75%;
+            margin-bottom: 12px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--light-gray);
+            background: var(--off-white);
+        }
+
+        .pdf-embed-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .image-card {
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--mid-gray);
+            transition: all 0.3s ease;
+            background: var(--white);
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .image-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(58,12,163,0.08);
+            border-color: var(--purple);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: var(--light-gray);
+        }
+
+        .image-card .image-body {
+            padding: 16px 20px 20px;
+        }
+
+        .image-card .image-body .img-label {
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .image-card .image-body .img-badge {
+            background: var(--light-gray);
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--text-mid);
+            display: inline-block;
+            margin-top: 6px;
+        }
+
+        .image-card:hover .image-body .img-badge {
+            background: var(--purple);
+            color: white;
+        }
+
+        .btn-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white);
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 1px solid var(--mid-gray);
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+        }
+
+        .btn-card:hover {
+            border-color: var(--purple);
+            box-shadow: 0 4px 16px rgba(58,12,163,0.08);
+            transform: translateX(4px);
+        }
+
+        .btn-card .btn-label {
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .btn-card .btn-arrow {
+            color: var(--purple);
+            font-weight: 600;
+            font-size: 14px;
+            opacity: 0.5;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        .btn-card:hover .btn-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        .btn-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
         footer {
             width: 100%;
             background: var(--text-dark);
@@ -296,20 +639,17 @@
             flex-direction: column;
             gap: 16px;
         }
-
         .footer-brand-name {
             font-size: 18px;
             font-weight: 700;
             color: white;
         }
-
         .footer-brand-sub {
             font-size: 13px;
             color: rgba(255,255,255,0.5);
             line-height: 1.8;
             max-width: 300px;
         }
-
         .footer-tagline {
             font-size: 12px;
             color: rgba(255,255,255,0.35);
@@ -324,31 +664,25 @@
             color: rgba(255,255,255,0.4);
             margin-bottom: 20px;
         }
-
         .footer-col ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-
         .footer-col ul a {
             text-decoration: none;
             color: rgba(255,255,255,0.65);
             font-size: 14px;
             transition: color 0.2s;
         }
-
-        .footer-col ul a:hover {
-            color: white;
-        }
+        .footer-col ul a:hover { color: white; }
 
         .footer-bottom {
             width: 100%;
             background: var(--text-dark);
             border-top: 1px solid rgba(255,255,255,.08);
         }
-
         .footer-bottom-inner {
             width: min(1400px, calc(100% - 120px));
             margin: 0 auto;
@@ -359,12 +693,47 @@
             justify-content: space-between;
         }
 
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .doc-grid { grid-template-columns: repeat(2, 1fr); }
+            .image-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
         @media (max-width: 768px) {
             .navbar { padding: 16px 24px; }
-            .page-content { padding: 60px 24px; }
-            footer { padding: 0; }
-            .footer-container { width: calc(100% - 48px); grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
-            .footer-bottom-inner { width: calc(100% - 48px); flex-direction: column; gap: 8px; }
+            .page-content { padding: 40px 24px; }
+            .hero-content { padding: 0 24px; }
+            .hero { min-height: 60vh; padding-bottom: 60px; }
+            .doc-grid { grid-template-columns: 1fr; }
+            .image-grid { grid-template-columns: 1fr; }
+            .footer-container {
+                width: calc(100% - 48px);
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            .footer-bottom-inner {
+                width: calc(100% - 48px);
+                flex-direction: column;
+                gap: 8px;
+            }
+            .hero-scroll { display: none; }
+            .back-btn-wrapper { justify-content: center; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 32px; }
+            .hero-desc { font-size: 14px; }
+            .btn-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -384,7 +753,7 @@
             <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
             <li>
                 <details>
-                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle e-Portfolio submenu">→</span></summary>
+                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jka.html">Jabatan Kecemerlangan Akademik</a></li>
                         <li><a href="bahasa.html">Bahasa</a></li>
@@ -404,7 +773,7 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pengurusan Akademik submenu">→</span></summary>
+                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jadualwaktuinduk.html">Jadual Waktu Induk</a></li>
                         <li><a href="maklumatkursus.html">Maklumat Kursus</a></li>
@@ -414,38 +783,18 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Program Pengajian Akademik submenu">→</span></summary>
+                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="kalendarakademik.html">Kalendar Akademik</a></li>
                         <li><a href="agihankursus.html">Agihan Kursus</a></li>
                         <li><a href="strukturkursus.html">Struktur Kursus Akademik</a></li>
-                        <li><a href="bukupanduan.html">Buku Panduan</a></li>
+                        <li><a href="bukupanduan.html">Buku Panduan Program</a></li>
                     </ul>
                 </details>
             </li>
             <li>
                 <details>
-                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Perkembangan Profesionalisme submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="pentaksiranberterusan.html">Pentaksiran Berterusan</a></li>
-                        <li><a href="kppb.html">KPPB</a></li>
-                        <li><a href="pbd.html">PBD</a></li>
-                        <li><a href="ts25.html">TS25</a></li>
-                        <li><a href="kbat.html">KBAT</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pembelajaran Digital submenu">→</span></summary>
+                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="objek.html">Objek Pembelajaran Digital</a></li>
                         <li><a href="delima.html">Delima</a></li>
@@ -455,8 +804,28 @@
                 </details>
             </li>
             <li>
+                <details open>
+                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link active">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="pentaksiranberterusan.html" style="font-weight:600; color:white;">Pentaksiran Berterusan</a></li>
+                        <li><a href="kppb.html">KPPB</a></li>
+                        <li><a href="pbd.html">PBD</a></li>
+                        <li><a href="ts25.html">TS25</a></li>
+                        <li><a href="kbat.html">KBAT</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
                 <details>
-                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Info Pensyarah submenu">→</span></summary>
+                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="modul.html">Modul</a></li>
                         <li><a href="buku.html">Buku Panduan</a></li>
@@ -484,12 +853,297 @@
         </button>
     </nav>
 
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">UPPA · IPGKPP</p>
+            <h1>Pentaksiran<br><em>Berterusan</em></h1>
+            <p class="hero-desc">Pentaksiran berterusan dilaksanakan sepanjang perjalanan kursus pengajian bagi tujuan pengumpulan bukti berlakunya pembelajaran yang mana akan digunakan untuk tujuan penambahbaikan pembelajaran, pengubahsuaian pengajaran dan pengubahsuaian reka bentuk kurikulum.</p>
+            <span class="hero-tagline">📋 PB · 📊 Rubrik · 📑 Dokumentasi</span>
+        </div>
+        <div class="hero-scroll">Skrol ke bawah</div>
+    </section>
+
     <!-- ==========================================
-         PAGE CONTENT - EDIT THIS SECTION ONLY
+         KANDUNGAN UTAMA – PENTAKSIRAN BERTERUSAN
          ========================================== -->
     <main class="page-content">
-        <h1 class="page-title">Your Page Title Here</h1>
-        <p>Start adding your content here...</p>
+
+        <!-- Back Button -->
+        <div class="back-btn-wrapper">
+            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
+        </div>
+
+        <!-- Tajuk -->
+        <div style="text-align: center; margin-bottom: 48px;">
+            <h1 class="page-title" style="font-size: clamp(36px, 5vw, 64px);">PENTAKSIRAN BERTERUSAN</h1>
+            <p style="font-size: 18px; color: var(--text-mid);">Dokumen dan rujukan pentaksiran berterusan IPGM</p>
+            <div style="width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             DEFINISI & KERANGKA
+             ========================================== -->
+        <div class="content-section">
+            <h2>Definisi & Kerangka PB</h2>
+            <div class="desc-text">
+                <p><strong>Pentaksiran berterusan</strong> dilaksanakan sepanjang perjalanan kursus pengajian bagi tujuan pengumpulan bukti berlakunya pembelajaran yang mana akan digunakan untuk tujuan penambahbaikan pembelajaran, pengubahsuaian pengajaran dan pengubahsuaian reka bentuk kurikulum. Data atau skor yang diperolehi daripada pentaksiran berterusan boleh digunakan sebagai sebahagian daripada penilaian akhir pelajar.</p>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed(1).png" alt="Kerangka Pentaksiran Berterusan IPG" style="max-width: 100%; max-height: 500px; border-radius: 12px; border: 1px solid var(--mid-gray);">
+                <p style="font-size: 14px; color: var(--text-light); margin-top: 8px;"><strong>KERANGKA PENTAKSIRAN BERTERUSAN IPG</strong></p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             BUKU PANDUAN IPGM
+             ========================================== -->
+        <div class="content-section">
+            <h2>BUKU PANDUAN IPGM</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="pdf-embed-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1Gd9Voe_Ludp7uzZi5L-Y-JXt2Va9TdLE/preview" allowfullscreen></iframe>
+                    </div>
+                    <span class="doc-title">BUKU PANDUAN PENTAKSIRAN IPGM (KEMASKINI OGOS 2024)</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/1Gd9Voe_Ludp7uzZi5L-Y-JXt2Va9TdLE/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <a href="https://drive.google.com/file/d/1_cxUgemrHecYRg1TZMR0lYMRc3dywOK_/view?usp=sharing" target="_blank" style="display: block; margin-bottom: 10px;">
+                        <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed.jpg" alt="BUKU PANDUAN KEMAHIRAN INSANIAH" style="width: 100%; height: 140px; object-fit: cover; border-radius: 8px; border: 1px solid var(--light-gray);">
+                    </a>
+                    <span class="doc-title">BUKU PANDUAN KEMAHIRAN INSANIAH (KEMASKINI 2026)</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/1_cxUgemrHecYRg1TZMR0lYMRc3dywOK_/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <div class="pdf-embed-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1OauCga4d_VypDQAIBIufvty62Gv7YqWy/preview" allowfullscreen></iframe>
+                    </div>
+                    <span class="doc-title">BUKU KEMAHIRAN INSANIAH IPGM (JUN 2022)</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/1OauCga4d_VypDQAIBIufvty62Gv7YqWy/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <div class="pdf-embed-wrapper">
+                        <iframe src="https://drive.google.com/file/d/108KzjbTzorBODg0U0q_fe7xnfdBAT9XI/preview" allowfullscreen></iframe>
+                    </div>
+                    <span class="doc-title">GARIS PANDUAN PENCEGAHAN PLAGIARISME 2021</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/108KzjbTzorBODg0U0q_fe7xnfdBAT9XI/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             RUJUKAN PENYEDIAAN PB
+             ========================================== -->
+        <div class="content-section">
+            <h2>RUJUKAN PENYEDIAAN PB</h2>
+            <div class="doc-grid">
+                <div class="doc-card">
+                    <div class="pdf-embed-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1_H-SMUJ-8cHVSyTUh7oMW0xyJjdMQxVy/preview" allowfullscreen></iframe>
+                    </div>
+                    <span class="doc-title">Ringkasan HPP kepada Kemahiran Insaniah PPISMP &amp; PISMP</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/1_H-SMUJ-8cHVSyTUh7oMW0xyJjdMQxVy/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+                <div class="doc-card">
+                    <div class="pdf-embed-wrapper">
+                        <iframe src="https://drive.google.com/file/d/1v63x9DQElbL07a2Ndh3HrNwyD3IKAGeH/preview" allowfullscreen></iframe>
+                    </div>
+                    <span class="doc-title">Merealisasikan KPPB melalui Rubrik</span>
+                    <span class="doc-badge">PDF</span>
+                    <div class="doc-footer">
+                        <a href="https://drive.google.com/file/d/1v63x9DQElbL07a2Ndh3HrNwyD3IKAGeH/view?usp=sharing" target="_blank" class="doc-link" aria-label="Buka dokumen"><span class="arrow-icon">→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             TARIKH-TARIKH PENTING
+             ========================================== -->
+        <div class="content-section">
+            <h2>TARIKH-TARIKH PENTING</h2>
+            <div class="btn-grid">
+                <a href="https://drive.google.com/file/d/1GKoRYs02PqeSGPHkNPeGCiYT_VmCjMs8/view?usp=sharing" target="_blank" class="btn-card">
+                    <span class="btn-label">📝 Memo Edaran 25 Mei 2026</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/file/d/18xxfWabSrKOB3PmuM3pPd7MB16bsbb0E/view?usp=sharing" target="_blank" class="btn-card">
+                    <span class="btn-label">📝 Bahan Taklimat 1</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1JJxdICxx8zG0qQ2CfaZDW4rx2TsBKHEu/view?usp=sharing" target="_blank" class="btn-card">
+                    <span class="btn-label">📝 Bahan Taklimat 2</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+
+            <div style="margin-top: 30px;">
+                <div class="image-grid">
+                    <div class="image-card">
+                        <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed(2).jpg" alt="Tarikh Penting 1">
+                        <div class="image-body">
+                            <span class="img-label">Tarikh Penting PB</span>
+                            <span class="img-badge">Rujukan</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed(3).jpg" alt="Tarikh Penting 2">
+                        <div class="image-body">
+                            <span class="img-label">Tarikh Penting PB</span>
+                            <span class="img-badge">Rujukan</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed(4).jpg" alt="Tarikh Penting 3">
+                        <div class="image-body">
+                            <span class="img-label">Tarikh Penting PB</span>
+                            <span class="img-badge">Rujukan</span>
+                        </div>
+                    </div>
+                    <div class="image-card">
+                        <img src="PEKA JKA IPGM KPP - Pentaksiran Berterusan_files/unnamed(5).jpg" alt="Tarikh Penting 4">
+                        <div class="image-body">
+                            <span class="img-label">Tarikh Penting PB</span>
+                            <span class="img-badge">Rujukan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             DOKUMEN PENTAKSIRAN BERTERUSAN
+             ========================================== -->
+        <div class="content-section">
+            <h2>DOKUMEN PENTAKSIRAN BERTERUSAN</h2>
+            <div class="btn-grid">
+                <a href="https://drive.google.com/drive/folders/1jKBrOCagW_54ssFRHBWLjcteOf0Cnl1F?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📋 JADUAL SPESIFIKASI TUGASAN</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1f7jEXBIITT_TSllIg_M-vb83iUtSTcKP?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📝 SOALAN TUGASAN</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1MuMIabWIlPwP1OGUzKlD8JLLuJWCd9rl?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📄 TEMPLAT MUKA DEPAN PB</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/18UVOwJ5b3XQadmOozlyHz1f_u4NZWAWW?usp=sharing" target="_blank" class="btn-card">
+                    <span class="btn-label">📨 SURAT PERINGATAN PB</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1jaYNie7ncmMiY-56G8G8_3_taNfKVS-C?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">✅ SENARAI SEMAK SAMPEL</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1QY5P--moITrqCT605J2Cg2TKoq-pD30G?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📊 BORANG PENGESAHAN MARKAH</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1HC-RA4JLwOBxQyWFUQRdQCOPLwIDYd4O?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📋 BORANG PENYELARASAN</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1YhCqtTp8ZmK5_2HpGcSE14_wXx9jdHiN/view?usp=sharing" target="_blank" class="btn-card">
+                    <span class="btn-label">📑 PT04 - PROSEDUR TERAS PB</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1T1rRC3qIzWCr3dejT7snu5lA5EHnLVWx?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📎 LAM-PT-04-01</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1lKi6hHuyBk5o7G-S2b45UoNORn672sad?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📎 LAM-PT-04-02</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1RL_SOadZ33lS_HmQ1dSVkqUHmL6cKriq?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📎 LAM-PT-04-03</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/d/1oqDQ48AnmJMgqp215yeL7P3ODNVte4xM/edit?usp=drive_link" target="_blank" class="btn-card">
+                    <span class="btn-label">📎 LAM-PT-04-04</span>
+                    <span class="btn-arrow">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- ==========================================
+             PEMERIKSA DALAM
+             ========================================== -->
+        <div class="content-section">
+            <h2>PEMERIKSA DALAM</h2>
+            
+            <div style="margin-bottom: 24px;">
+                <h3 style="font-size: 18px; font-weight: 600; color: var(--purple-dark); margin-bottom: 12px;">PISMP</h3>
+                <div class="btn-grid">
+                    <a href="https://drive.google.com/drive/folders/1e7GQ_siRwOzjUR4GQNcNosB7vnUkM0Kp?usp=sharing" target="_blank" class="btn-card">
+                        <span class="btn-label">SEM I 2024/2025 (OGOS - DIS 2024)</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1Ki8p7WZoJNaK-c_osSk_i3DsdAvs9hW3?usp=sharing" target="_blank" class="btn-card">
+                        <span class="btn-label">SEM II 2024/2025 (JAN - MEI 2025)</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h3 style="font-size: 18px; font-weight: 600; color: var(--purple-dark); margin-bottom: 12px;">PDPP</h3>
+                <div class="btn-grid">
+                    <a href="https://drive.google.com/drive/folders/10r88sYtCw0uqgR0qnXKtP8PACq2y6e7-?usp=drive_link" target="_blank" class="btn-card">
+                        <span class="btn-label">SEM I 2024/2025 (OKT 2024 - JAN 2025)</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/166lsunQFi_ZdJok7s71E4ertRzDuate1?usp=drive_link" target="_blank" class="btn-card">
+                        <span class="btn-label">SEM II 2024/2025 (FEB - MEI 2025)</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Nota tambahan -->
+        <div style="margin-top: 40px; padding: 24px; background: var(--light-gray); border-radius: 16px; border-left: 4px solid var(--purple);">
+            <p style="font-size: 14px; color: var(--text-mid); font-weight: 500;">📌 Sila klik pada mana-mana pautan untuk melihat atau memuat turun dokumen. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.</p>
+            <p style="font-size: 13px; color: var(--text-light); margin-top: 8px;">Kemaskini terakhir: Jun 2026</p>
+        </div>
+
+        <!-- footer note -->
+        <div style="margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;">
+            dalam proses pembinaan ....
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -507,7 +1161,7 @@
                     <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
                     <li><a href="e-portfolio.html">e-Portfolio</a></li>
                     <li><a href="pengurusanakademik.html">Pengurusan Akademik</a></li>
-                    <li><a href="programpengajianakademik.html">Program Pengajian</a></li>
+                    <li><a href="programpengajianakademik.html">Program Pengajian Akademik</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -529,11 +1183,29 @@
     </footer>
 
     <script>
-        // Sidebar toggle
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
+
+        document.getElementById('backBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            if (document.referrer && document.referrer.includes(window.location.hostname)) {
+                window.history.back();
+            } else {
+                window.location.href = 'perkembangan-profesionalisme.html';
+            }
+        });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     </script>
 
 </body>
