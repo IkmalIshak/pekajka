@@ -2,6 +2,8 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8" />
+    <script src="js/auth-config.js"></script>
+    <script src="js/auth-guard.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>PBD — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -432,10 +434,10 @@
             transform: translateX(4px);
         }
 
-        /* --- BROSUR CARDS (larger, more readable) --- */
+        /* --- BROSUR CARDS with preview embed --- */
         .brosur-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: 32px;
         }
 
@@ -457,32 +459,44 @@
             border-color: var(--purple);
         }
 
-        .brosur-thumb {
+        /* preview embed */
+        .brosur-preview {
             width: 100%;
-            aspect-ratio: 16 / 9;
+            aspect-ratio: 16 / 10;
             background: var(--light-gray);
+            overflow: hidden;
+            border-bottom: 1px solid var(--mid-gray);
+            position: relative;
+        }
+        .brosur-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .brosur-preview .pdf-placeholder {
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 64px;
+            height: 100%;
+            background: var(--off-white);
             color: var(--text-light);
-            position: relative;
-            border-bottom: 1px solid var(--mid-gray);
+            font-size: 14px;
+            flex-direction: column;
+            gap: 8px;
         }
-        .brosur-thumb .pdf-icon {
-            width: 72px;
-            height: 72px;
-            object-fit: contain;
+        .brosur-preview .pdf-placeholder .icon {
+            font-size: 48px;
+            opacity: 0.4;
         }
-        .brosur-thumb .badge {
+        .brosur-preview .badge {
             position: absolute;
-            bottom: 12px;
-            right: 16px;
+            bottom: 10px;
+            right: 14px;
             background: var(--purple);
             color: white;
-            font-size: 11px;
+            font-size: 10px;
             font-weight: 600;
-            padding: 4px 14px;
+            padding: 3px 14px;
             border-radius: 30px;
             letter-spacing: 0.04em;
         }
@@ -954,7 +968,7 @@
         <div class="divider"></div>
 
         <!-- ============================================================
-        BROSUR PELAKSANAAN PBD — redesigned for readability
+        BROSUR PELAKSANAAN PBD — with live PDF preview
         ============================================================ -->
         <div class="section-block">
             <h2>BROSUR PELAKSANAAN PBD</h2>
@@ -962,8 +976,8 @@
 
                 <!-- Brosur 1 -->
                 <a href="https://drive.google.com/file/d/1m1MgFOUg7hX0NkVO7FmXM-DO26r4Iq77/view?usp=drive_link" target="_blank" class="brosur-card">
-                    <div class="brosur-thumb">
-                        <img src="PEKA JKA IPGM KPP - PBD_files/drive-32.png" alt="PDF" class="pdf-icon" />
+                    <div class="brosur-preview">
+                        <iframe src="https://drive.google.com/file/d/1m1MgFOUg7hX0NkVO7FmXM-DO26r4Iq77/preview" allowfullscreen></iframe>
                         <span class="badge">PDF</span>
                     </div>
                     <div class="brosur-body">
@@ -979,8 +993,8 @@
 
                 <!-- Brosur 2 -->
                 <a href="https://drive.google.com/file/d/12Qdma7dOrI3ptZLjBuDbOuHHBCzpb-LY/view?usp=drive_link" target="_blank" class="brosur-card">
-                    <div class="brosur-thumb">
-                        <img src="PEKA JKA IPGM KPP - PBD_files/drive-32.png" alt="PDF" class="pdf-icon" />
+                    <div class="brosur-preview">
+                        <iframe src="https://drive.google.com/file/d/12Qdma7dOrI3ptZLjBuDbOuHHBCzpb-LY/preview" allowfullscreen></iframe>
                         <span class="badge">PDF</span>
                     </div>
                     <div class="brosur-body">
@@ -1012,8 +1026,6 @@
         </div>
 
         <div class="divider"></div>
-
-
 
         <!-- FOOTER NOTE -->
         <div style="margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;">

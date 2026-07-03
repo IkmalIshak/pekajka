@@ -5,7 +5,7 @@
     <script src="js/auth-config.js"></script>
     <script src="js/auth-guard.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR PAGE TITLE - PEKA JKA IPGKPP</title>
+    <title>TS25 — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -35,9 +35,7 @@
             overflow-x: hidden;
         }
 
-        /* =====================
-           NAVBAR
-        ===================== */
+        /* navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -48,18 +46,16 @@
             align-items: center;
             justify-content: space-between;
             padding: 20px 60px;
-            background: rgba(255,255,255,0.97);
+            background: rgba(255, 255, 255, 0.97);
             backdrop-filter: blur(10px);
             box-shadow: 0 1px 0 var(--mid-gray);
         }
-
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
-
         .nav-logo-img {
             width: 44px;
             height: 44px;
@@ -67,21 +63,18 @@
             object-fit: cover;
             border: 2px solid var(--mid-gray);
         }
-
         .nav-logo-text {
             font-size: 17px;
             font-weight: 700;
             color: var(--purple);
             line-height: 1.1;
         }
-
         .nav-logo-sub {
             font-size: 11px;
             font-weight: 400;
             color: var(--text-light);
             display: block;
         }
-
         .hamburger {
             background: none;
             border: none;
@@ -91,7 +84,6 @@
             gap: 5px;
             padding: 5px;
         }
-
         .hamburger span {
             display: block;
             width: 26px;
@@ -101,17 +93,16 @@
             transition: all 0.3s ease;
         }
 
-        /* Sidebar styles (simplified for template) */
+        /* overlay & sidebar */
         .overlay {
             position: fixed;
             inset: 0;
-            background: rgba(0,0,0,0.6);
+            background: rgba(0, 0, 0, 0.6);
             z-index: 1000;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.4s;
         }
-
         .overlay.active {
             opacity: 1;
             pointer-events: all;
@@ -129,8 +120,9 @@
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow-y: auto;
         }
-
-        .sidebar.active { right: 0; }
+        .sidebar.active {
+            right: 0;
+        }
 
         .sidebar-header {
             display: flex;
@@ -139,19 +131,17 @@
             gap: 12px;
             margin-bottom: 24px;
         }
-
         .sidebar-title {
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             margin: 0;
         }
-
         .sidebar-close {
             background: none;
-            border: 1px solid rgba(255,255,255,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
             color: white;
             width: 36px;
             height: 36px;
@@ -170,11 +160,9 @@
             flex-direction: column;
             gap: 4px;
         }
-
         .sidebar-nav li {
             border: none;
         }
-
         .sidebar-nav a,
         .sidebar-nav summary {
             display: flex;
@@ -186,10 +174,9 @@
             font-weight: 500;
             padding: 12px 14px;
             border-radius: 10px;
-            transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+            transition: background 0.2s ease, transform 0.2s ease;
             cursor: pointer;
         }
-
         .sidebar-nav summary a.sidebar-summary-link {
             flex: 1;
             min-width: 0;
@@ -199,40 +186,30 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        .sidebar-nav summary a {
-            flex: 1;
-            min-width: 0;
-            color: inherit;
-            text-decoration: none;
-        }
-
         .sidebar-nav a:hover,
         .sidebar-nav summary:hover {
-            background: rgba(255,255,255,0.12);
+            background: rgba(255, 255, 255, 0.12);
             transform: translateX(2px);
-            opacity: 1;
         }
-
         .sidebar-nav summary::-webkit-details-marker {
             display: none;
         }
-
         .sidebar-nav a .arrow,
         .sidebar-nav summary .arrow {
             font-size: 18px;
             opacity: 0.45;
             transition: transform 0.2s ease;
         }
-
-        .sidebar-nav details[open] > summary {
-            background: rgba(255,255,255,0.08);
+        .sidebar-nav details[open]>summary {
+            background: rgba(255, 255, 255, 0.08);
         }
-
-        .sidebar-nav details[open] > summary .arrow {
+        .sidebar-nav details[open]>summary .arrow {
             transform: rotate(90deg);
         }
-
+        .sidebar-nav a.active {
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.16);
+        }
         .sidebar-subnav {
             list-style: none;
             padding: 6px 0 4px 14px;
@@ -240,21 +217,18 @@
             display: flex;
             flex-direction: column;
             gap: 4px;
-            border-left: 1px solid rgba(255,255,255,0.16);
+            border-left: 1px solid rgba(255, 255, 255, 0.16);
         }
-
         .sidebar-subnav li {
             border: none;
         }
-
         .sidebar-subnav a {
             font-size: 14px;
             padding: 6px 0;
-            color: rgba(255,255,255,0.84);
+            color: rgba(255, 255, 255, 0.84);
             border-radius: 0;
             background: transparent;
         }
-
         .sidebar-subnav a:hover {
             opacity: 1;
             color: white;
@@ -262,25 +236,202 @@
             transform: none;
         }
 
-        /* Page content area */
-        .page-content {
-            padding: 120px 80px;
-            min-height: 100vh;
+        /* hero */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 80px;
+            overflow: hidden;
+            background: var(--purple-dark);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(to bottom, rgba(30, 5, 90, 0.3) 0%, rgba(30, 5, 90, 0.7) 50%, rgba(20, 3, 70, 0.95) 100%),
+                url('PEKA JKA IPGM KPP - TS25_files/unnamed(1).png') center/cover no-repeat;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 60px;
+            max-width: 900px;
+            animation: heroReveal 1s ease both;
+        }
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 76px);
+            font-weight: 700;
+            line-height: 1.05;
+            color: white;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: rgba(255, 255, 255, 0.55);
+        }
+        .hero-desc {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.8;
+            max-width: 560px;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            padding: 10px 22px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-scroll::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        @keyframes heroReveal {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
+        /* content */
+        .page-content {
+            padding: 80px 80px;
+        }
         .page-title {
             font-size: clamp(32px, 4vw, 52px);
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 24px;
         }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: var(--light-gray);
+            margin: 50px 0;
+            border-radius: 2px;
+        }
 
-        /* Footer */
+        /* section block */
+        .section-block {
+            margin-bottom: 50px;
+        }
+        .section-block h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--purple);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--purple);
+            padding-left: 16px;
+        }
+
+        /* compact module grid - small buttons */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+
+        .module-btn {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px;
+            background: var(--white);
+            border: 1px solid var(--mid-gray);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+            transition: all 0.25s ease;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .module-btn:hover {
+            border-color: var(--purple);
+            background: var(--off-white);
+            transform: translateX(4px);
+            box-shadow: 0 2px 12px rgba(58, 12, 163, 0.06);
+        }
+        .module-btn .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 32px;
+            height: 32px;
+            background: var(--purple);
+            color: white;
+            border-radius: 50%;
+            font-size: 12px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .module-btn .label {
+            flex: 1;
+            line-height: 1.3;
+        }
+        .module-btn .arrow {
+            color: var(--purple);
+            font-size: 18px;
+            opacity: 0.4;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+        .module-btn:hover .arrow {
+            opacity: 1;
+            transform: translateX(2px);
+        }
+
+        /* footer */
         footer {
             width: 100%;
             background: var(--text-dark);
         }
-
         .footer-container {
             width: min(1400px, calc(100% - 120px));
             margin: 0 auto;
@@ -290,90 +441,129 @@
             padding: 60px 0;
             align-items: start;
         }
-
         .footer-brand {
             display: flex;
             flex-direction: column;
             gap: 16px;
         }
-
         .footer-brand-name {
             font-size: 18px;
             font-weight: 700;
             color: white;
         }
-
         .footer-brand-sub {
             font-size: 13px;
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
             line-height: 1.8;
             max-width: 300px;
         }
-
         .footer-tagline {
             font-size: 12px;
-            color: rgba(255,255,255,0.35);
+            color: rgba(255, 255, 255, 0.35);
             font-style: italic;
         }
-
         .footer-col h4 {
             font-size: 11px;
             font-weight: 600;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
+            color: rgba(255, 255, 255, 0.4);
             margin-bottom: 20px;
         }
-
         .footer-col ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-
         .footer-col ul a {
             text-decoration: none;
-            color: rgba(255,255,255,0.65);
+            color: rgba(255, 255, 255, 0.65);
             font-size: 14px;
             transition: color 0.2s;
         }
-
         .footer-col ul a:hover {
             color: white;
         }
-
         .footer-bottom {
             width: 100%;
             background: var(--text-dark);
-            border-top: 1px solid rgba(255,255,255,.08);
+            border-top: 1px solid rgba(255, 255, 255, .08);
         }
-
         .footer-bottom-inner {
             width: min(1400px, calc(100% - 120px));
             margin: 0 auto;
             padding: 20px 0;
             font-size: 12px;
-            color: rgba(255,255,255,.3);
+            color: rgba(255, 255, 255, .3);
             display: flex;
             justify-content: space-between;
         }
 
+        /* responsive */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .module-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 768px) {
-            .navbar { padding: 16px 24px; }
-            .page-content { padding: 60px 24px; }
-            footer { padding: 0; }
-            .footer-container { width: calc(100% - 48px); grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
-            .footer-bottom-inner { width: calc(100% - 48px); flex-direction: column; gap: 8px; }
+            .navbar {
+                padding: 16px 24px;
+            }
+            .page-content {
+                padding: 40px 24px;
+            }
+            .hero-content {
+                padding: 0 24px;
+            }
+            .hero {
+                min-height: 60vh;
+                padding-bottom: 60px;
+            }
+            .module-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-container {
+                width: calc(100% - 48px);
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            .footer-bottom-inner {
+                width: calc(100% - 48px);
+                flex-direction: column;
+                gap: 8px;
+            }
+            .hero-scroll {
+                display: none;
+            }
+        }
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            .hero-desc {
+                font-size: 14px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- OVERLAY -->
+    <!-- overlay -->
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
-    <!-- SIDEBAR -->
+    <!-- sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <p class="sidebar-title">Navigasi</p>
@@ -384,7 +574,7 @@
             <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
             <li>
                 <details>
-                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle e-Portfolio submenu">→</span></summary>
+                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jka.html">Jabatan Kecemerlangan Akademik</a></li>
                         <li><a href="bahasa.html">Bahasa</a></li>
@@ -404,7 +594,7 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pengurusan Akademik submenu">→</span></summary>
+                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jadualwaktuinduk.html">Jadual Waktu Induk</a></li>
                         <li><a href="maklumatkursus.html">Maklumat Kursus</a></li>
@@ -414,38 +604,18 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Program Pengajian Akademik submenu">→</span></summary>
+                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="kalendarakademik.html">Kalendar Akademik</a></li>
                         <li><a href="agihankursus.html">Agihan Kursus</a></li>
                         <li><a href="strukturkursus.html">Struktur Kursus Akademik</a></li>
-                        <li><a href="bukupanduan.html">Buku Panduan</a></li>
+                        <li><a href="bukupanduan.html">Buku Panduan Program</a></li>
                     </ul>
                 </details>
             </li>
             <li>
                 <details>
-                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Perkembangan Profesionalisme submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="pentaksiranberterusan.html">Pentaksiran Berterusan</a></li>
-                        <li><a href="kppb.html">KPPB</a></li>
-                        <li><a href="pbd.html">PBD</a></li>
-                        <li><a href="ts25.html">TS25</a></li>
-                        <li><a href="kbat.html">KBAT</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pembelajaran Digital submenu">→</span></summary>
+                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="objek.html">Objek Pembelajaran Digital</a></li>
                         <li><a href="delima.html">Delima</a></li>
@@ -455,8 +625,28 @@
                 </details>
             </li>
             <li>
+                <details open>
+                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link active">Perkembangan Profesionalisme Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="pentaksiranberterusan.html">Pentaksiran Berterusan</a></li>
+                        <li><a href="kppb.html">KPPB</a></li>
+                        <li><a href="pbd.html">PBD</a></li>
+                        <li><a href="ts25.html" class="active">TS25</a></li>
+                        <li><a href="kbat.html">KBAT</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
                 <details>
-                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Info Pensyarah submenu">→</span></summary>
+                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="modul.html">Modul</a></li>
                         <li><a href="buku.html">Buku Panduan</a></li>
@@ -468,10 +658,10 @@
         </ul>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- navbar -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <img src="PEKA JKA IPGM KPP_files/unnamed.png" alt="Logo" class="nav-logo-img"/>
+            <img src="PEKA JKA IPGM KPP - TS25_files/unnamed.png" alt="Logo" class="nav-logo-img" />
             <span class="nav-logo-text">
                 PEKA JKA IPGMKPP
                 <span class="nav-logo-sub">Institut Pendidikan Guru Kampus Pulau Pinang</span>
@@ -484,15 +674,140 @@
         </button>
     </nav>
 
-    <!-- ==========================================
-         PAGE CONTENT - EDIT THIS SECTION ONLY
-         ========================================== -->
+    <!-- hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">UPPA · IPGKPP</p>
+            <h1>Program Transformasi<br><em>Sekolah 2025</em></h1>
+            <p class="hero-desc">TS25 merupakan sebahagian daripada usaha Kementerian Pendidikan Malaysia ke arah meningkatkan kemenjadian murid dan sekolah berkualiti melalui pengurusan dan kepimpinan serta pedagogi dalam pembelajaran dan pengajaran (PdP).</p>
+            <span class="hero-tagline">🏫 TS25 · 📘 Modul · 📄 Arkib</span>
+        </div>
+    </section>
+
+    <!-- main content -->
     <main class="page-content">
-        <h1 class="page-title">Your Page Title Here</h1>
-        <p>Start adding your content here...</p>
+
+        <!-- header -->
+        <div style="text-align: center; margin-bottom: 48px;">
+            <h1 class="page-title" style="font-size: clamp(36px, 5vw, 64px);">PROGRAM TRANSFORMASI SEKOLAH (TS25)</h1>
+            <p style="font-size: 18px; color: var(--text-mid);">Konsep, modul dan arkib program TS25</p>
+            <div style="width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Konsep TS25 with Terma Rujukan link under image -->
+        <div class="section-block">
+            <h2>KONSEP TS25</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start; background: var(--off-white); border-radius: 20px; padding: 40px;">
+                <div style="flex: 1; min-width: 250px; text-align: center;">
+                    <img src="PEKA JKA IPGM KPP - TS25_files/unnamed(2).png" alt="TS25 Concept" style="max-width: 100%; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                    <!-- Terma Rujukan link directly under the image -->
+                    <div style="margin-top: 16px;">
+                        <a href="https://drive.google.com/file/d/1o8AAqPABtaJoBsqM9ofnkxXmdeywUdbo/view?usp=drive_link" target="_blank" style="display: inline-block; padding: 10px 24px; background: var(--purple); color: white; border-radius: 40px; text-decoration: none; font-weight: 600; font-size: 14px; transition: background 0.2s;">
+                            📄 TERMA RUJUKAN &amp; PENGURUSAN PELAKSANAAN TS25
+                        </a>
+                    </div>
+                </div>
+                <div style="flex: 2; min-width: 280px;">
+                    <p style="font-size: 16px; line-height: 1.8; color: var(--text-mid); margin-bottom: 16px;">
+                        <strong style="color: var(--purple);">Program Transformasi Sekolah 2025 (TS25)</strong> merupakan sebahagian daripada usaha Kementerian Pendidikan Malaysia ke arah meningkatkan kemenjadian murid dan sekolah berkualiti.
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8; color: var(--text-mid); margin-bottom: 16px;">
+                        Melalui TS25, diharapkan sekolah yang terlibat berupaya mengaplikasikan amalan terbaik dalam pelaksanaan pengurusan dan kepimpinan serta pedagogi dalam <strong style="color: var(--purple);">pembelajaran dan pengajaran (PdP)</strong> selari dengan hasrat yang terkandung dalam Pelan Pembangunan Pendidikan Malaysia (PPPM) 2013 – 2025.
+                    </p>
+                    <p style="font-size: 16px; line-height: 1.8; color: var(--text-mid);">
+                        TS25 adalah satu usaha ke arah <strong style="color: var(--purple);">melahirkan modal insan unggul</strong> melalui:
+                    </p>
+                    <ul style="margin-top: 12px; padding-left: 24px; color: var(--text-mid); font-size: 15px; line-height: 2;">
+                        <li>Persekitaran pembelajaran yang menyeronokkan</li>
+                        <li>Disokong kepimpinan yang berkualiti / berwawasan</li>
+                        <li>Guru yang kompeten dan beraspirasi tinggi</li>
+                        <li>Komitmen komuniti yang padu</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Modul TS25 - compact button grid -->
+        <div class="section-block">
+            <h2>MODUL PROGRAM TRANSFORMASI SEKOLAH 2025 (TS25)</h2>
+            <div class="module-grid">
+
+                <a href="https://drive.google.com/file/d/1Ex3CzHve_U8cgdZjs5w3E1-57SihGJwi/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">1</span>
+                    <span class="label">Bimbingan dan Pementoran</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1i97EqogyupgPR7qx_r_OocAZhtXHW8lc/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">2</span>
+                    <span class="label">Menerajui Kepimpinan</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1ArBw3gu77X89jJcEUKw14AUvp3tMSuUL/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">3</span>
+                    <span class="label">Menerajui Pembelajaran</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1zufUbFoDiTkXzgT1BrMhQU_ZjtgORh4O/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">4</span>
+                    <span class="label">Persekitaran Pembelajaran Profesional</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1G3vmfzFofOaSitxbIP--muFza9IBpTJT/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">5</span>
+                    <span class="label">Penilaian dan Refleksi</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1mzC8hXv_-dVKlCvEukoWqPRl-_7D9Mh2/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">6</span>
+                    <span class="label">Kefahaman Melalui Reka Bentuk</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1nWAOFbanxLq-O01zMPtCMi_NkZOf68W0/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">7</span>
+                    <span class="label">Digital Tools and Resources</span>
+                    <span class="arrow">→</span>
+                </a>
+
+                <a href="https://drive.google.com/file/d/1vmRWJSd7OLcJ8s8vdg7LpnbebCvjg8vV/view?usp=drive_link" target="_blank" class="module-btn">
+                    <span class="num">8</span>
+                    <span class="label">Redesign Students Learning Experiences</span>
+                    <span class="arrow">→</span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Arkib Program TS25 -->
+        <div class="section-block">
+            <h2>ARKIB PROGRAM TS25</h2>
+            <div style="padding: 30px; background: var(--off-white); border-radius: 16px; text-align: center; color: var(--text-mid);">
+                <p style="font-size: 16px;">📂 Arkib program TS25 akan dipaparkan di sini.</p>
+                <p style="font-size: 14px; margin-top: 8px;">Sila semak semula untuk kemas kini terkini.</p>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- footer note -->
+        <div style="margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;">
+            dalam proses pembinaan ....
+        </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
@@ -529,11 +844,20 @@
     </footer>
 
     <script>
-        // Sidebar toggle
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
+
+        // fade-up
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     </script>
 
 </body>
