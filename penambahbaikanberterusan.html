@@ -2,18 +2,12 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8">
-    <script src="js/auth-config.js"></script>
-    <script src="js/auth-guard.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUR PAGE TITLE - PEKA JKA IPGKPP</title>
+    <title>Penambahbaikan Berterusan Akademik — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         :root {
             --purple: #3a0ca3;
@@ -35,9 +29,7 @@
             overflow-x: hidden;
         }
 
-        /* =====================
-           NAVBAR
-        ===================== */
+        /* navbar */
         .navbar {
             position: fixed;
             top: 0;
@@ -52,14 +44,12 @@
             backdrop-filter: blur(10px);
             box-shadow: 0 1px 0 var(--mid-gray);
         }
-
         .nav-brand {
             display: flex;
             align-items: center;
             gap: 12px;
             text-decoration: none;
         }
-
         .nav-logo-img {
             width: 44px;
             height: 44px;
@@ -67,21 +57,18 @@
             object-fit: cover;
             border: 2px solid var(--mid-gray);
         }
-
         .nav-logo-text {
             font-size: 17px;
             font-weight: 700;
             color: var(--purple);
             line-height: 1.1;
         }
-
         .nav-logo-sub {
             font-size: 11px;
             font-weight: 400;
             color: var(--text-light);
             display: block;
         }
-
         .hamburger {
             background: none;
             border: none;
@@ -91,7 +78,6 @@
             gap: 5px;
             padding: 5px;
         }
-
         .hamburger span {
             display: block;
             width: 26px;
@@ -101,7 +87,7 @@
             transition: all 0.3s ease;
         }
 
-        /* Sidebar styles (simplified for template) */
+        /* overlay & sidebar */
         .overlay {
             position: fixed;
             inset: 0;
@@ -111,11 +97,7 @@
             pointer-events: none;
             transition: opacity 0.4s;
         }
-
-        .overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
+        .overlay.active { opacity: 1; pointer-events: all; }
 
         .sidebar {
             position: fixed;
@@ -129,7 +111,6 @@
             transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             overflow-y: auto;
         }
-
         .sidebar.active { right: 0; }
 
         .sidebar-header {
@@ -139,7 +120,6 @@
             gap: 12px;
             margin-bottom: 24px;
         }
-
         .sidebar-title {
             font-size: 11px;
             font-weight: 600;
@@ -148,7 +128,6 @@
             color: rgba(255,255,255,0.5);
             margin: 0;
         }
-
         .sidebar-close {
             background: none;
             border: 1px solid rgba(255,255,255,0.3);
@@ -170,11 +149,7 @@
             flex-direction: column;
             gap: 4px;
         }
-
-        .sidebar-nav li {
-            border: none;
-        }
-
+        .sidebar-nav li { border: none; }
         .sidebar-nav a,
         .sidebar-nav summary {
             display: flex;
@@ -186,10 +161,9 @@
             font-weight: 500;
             padding: 12px 14px;
             border-radius: 10px;
-            transition: background 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+            transition: background 0.2s ease, transform 0.2s ease;
             cursor: pointer;
         }
-
         .sidebar-nav summary a.sidebar-summary-link {
             flex: 1;
             min-width: 0;
@@ -199,40 +173,28 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
-
-        .sidebar-nav summary a {
-            flex: 1;
-            min-width: 0;
-            color: inherit;
-            text-decoration: none;
-        }
-
         .sidebar-nav a:hover,
         .sidebar-nav summary:hover {
             background: rgba(255,255,255,0.12);
             transform: translateX(2px);
-            opacity: 1;
         }
-
-        .sidebar-nav summary::-webkit-details-marker {
-            display: none;
-        }
-
+        .sidebar-nav summary::-webkit-details-marker { display: none; }
         .sidebar-nav a .arrow,
         .sidebar-nav summary .arrow {
             font-size: 18px;
             opacity: 0.45;
             transition: transform 0.2s ease;
         }
-
         .sidebar-nav details[open] > summary {
             background: rgba(255,255,255,0.08);
         }
-
         .sidebar-nav details[open] > summary .arrow {
             transform: rotate(90deg);
         }
-
+        .sidebar-nav a.active {
+            font-weight: 700;
+            background: rgba(255,255,255,0.16);
+        }
         .sidebar-subnav {
             list-style: none;
             padding: 6px 0 4px 14px;
@@ -242,11 +204,7 @@
             gap: 4px;
             border-left: 1px solid rgba(255,255,255,0.16);
         }
-
-        .sidebar-subnav li {
-            border: none;
-        }
-
+        .sidebar-subnav li { border: none; }
         .sidebar-subnav a {
             font-size: 14px;
             padding: 6px 0;
@@ -254,7 +212,6 @@
             border-radius: 0;
             background: transparent;
         }
-
         .sidebar-subnav a:hover {
             opacity: 1;
             color: white;
@@ -262,25 +219,239 @@
             transform: none;
         }
 
-        /* Page content area */
-        .page-content {
-            padding: 120px 80px;
-            min-height: 100vh;
+        /* hero */
+        .hero {
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            padding-bottom: 80px;
+            overflow: hidden;
+            background: var(--purple-dark);
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: 
+                linear-gradient(to bottom, rgba(30,5,90,0.3) 0%, rgba(30,5,90,0.7) 50%, rgba(20,3,70,0.95) 100%),
+                url('PEKA\ JKA\ IPGM\ KPP\ -\ Penambahbaikan\ Berterusan\ Akademik_files/unnamed.jpg') center/cover no-repeat;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 0 60px;
+            max-width: 900px;
+            animation: heroReveal 1s ease both;
+        }
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: rgba(255,255,255,0.4);
+        }
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 76px);
+            font-weight: 700;
+            line-height: 1.05;
+            color: white;
+            letter-spacing: -0.02em;
+            margin-bottom: 24px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: rgba(255,255,255,0.55);
+        }
+        .hero-desc {
+            font-size: 18px;
+            font-weight: 400;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+            max-width: 560px;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .hero-tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 50px;
+            padding: 10px 22px;
+            font-size: 14px;
+            color: rgba(255,255,255,0.85);
+            font-weight: 500;
+        }
+        .hero-scroll {
+            position: absolute;
+            bottom: 40px;
+            right: 60px;
+            color: rgba(255,255,255,0.4);
+            font-size: 12px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            writing-mode: vertical-rl;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .hero-scroll::after {
+            content: '';
+            display: block;
+            width: 1px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+        }
+        @keyframes heroReveal {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
+        /* content */
+        .page-content {
+            padding: 80px 80px;
+        }
         .page-title {
             font-size: clamp(32px, 4vw, 52px);
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 24px;
         }
+        .divider {
+            width: 100%;
+            height: 2px;
+            background: var(--light-gray);
+            margin: 50px 0;
+            border-radius: 2px;
+        }
 
-        /* Footer */
+        /* section block */
+        .section-block {
+            margin-bottom: 50px;
+        }
+        .section-block h2 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--purple);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--purple);
+            padding-left: 16px;
+        }
+
+        /* cards grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+        .card-item {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px 20px 20px;
+            border: 1px solid var(--mid-gray);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: var(--text-dark);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .card-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(58,12,163,0.08);
+            border-color: var(--purple);
+        }
+        .card-item .card-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            object-fit: cover;
+            margin-bottom: 12px;
+            border: 2px solid var(--light-gray);
+            background: var(--off-white);
+        }
+        .card-item .card-title {
+            font-weight: 700;
+            font-size: 16px;
+            color: var(--purple);
+            margin-bottom: 4px;
+        }
+        .card-item .card-desc {
+            font-size: 13px;
+            color: var(--text-mid);
+            line-height: 1.5;
+        }
+        .card-item .card-arrow {
+            margin-top: 12px;
+            color: var(--purple);
+            font-weight: 600;
+            font-size: 13px;
+            opacity: 0.5;
+            transition: opacity 0.2s, transform 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .card-item:hover .card-arrow {
+            opacity: 1;
+            transform: translateX(4px);
+        }
+
+        /* link list */
+        .link-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 8px;
+        }
+        .link-list a {
+            color: var(--purple);
+            font-weight: 600;
+            text-decoration: underline;
+            font-size: 15px;
+            transition: color 0.2s;
+            padding: 6px 0;
+        }
+        .link-list a:hover {
+            color: var(--purple-dark);
+        }
+
+        /* back button */
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: var(--purple);
+            color: white;
+            border-radius: 60px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: background 0.2s;
+        }
+        .back-btn:hover {
+            background: var(--purple-dark);
+        }
+
+        /* footer */
         footer {
             width: 100%;
             background: var(--text-dark);
         }
-
         .footer-container {
             width: min(1400px, calc(100% - 120px));
             margin: 0 auto;
@@ -290,32 +461,27 @@
             padding: 60px 0;
             align-items: start;
         }
-
         .footer-brand {
             display: flex;
             flex-direction: column;
             gap: 16px;
         }
-
         .footer-brand-name {
             font-size: 18px;
             font-weight: 700;
             color: white;
         }
-
         .footer-brand-sub {
             font-size: 13px;
             color: rgba(255,255,255,0.5);
             line-height: 1.8;
             max-width: 300px;
         }
-
         .footer-tagline {
             font-size: 12px;
             color: rgba(255,255,255,0.35);
             font-style: italic;
         }
-
         .footer-col h4 {
             font-size: 11px;
             font-weight: 600;
@@ -324,31 +490,24 @@
             color: rgba(255,255,255,0.4);
             margin-bottom: 20px;
         }
-
         .footer-col ul {
             list-style: none;
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-
         .footer-col ul a {
             text-decoration: none;
             color: rgba(255,255,255,0.65);
             font-size: 14px;
             transition: color 0.2s;
         }
-
-        .footer-col ul a:hover {
-            color: white;
-        }
-
+        .footer-col ul a:hover { color: white; }
         .footer-bottom {
             width: 100%;
             background: var(--text-dark);
             border-top: 1px solid rgba(255,255,255,.08);
         }
-
         .footer-bottom-inner {
             width: min(1400px, calc(100% - 120px));
             margin: 0 auto;
@@ -359,21 +518,51 @@
             justify-content: space-between;
         }
 
+        /* responsive */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 1024px) {
+            .card-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 768px) {
             .navbar { padding: 16px 24px; }
-            .page-content { padding: 60px 24px; }
-            footer { padding: 0; }
-            .footer-container { width: calc(100% - 48px); grid-template-columns: 1fr; gap: 40px; padding: 40px 0; }
-            .footer-bottom-inner { width: calc(100% - 48px); flex-direction: column; gap: 8px; }
+            .page-content { padding: 40px 24px; }
+            .hero-content { padding: 0 24px; }
+            .hero { min-height: 60vh; padding-bottom: 60px; }
+            .card-grid { grid-template-columns: 1fr; }
+            .footer-container {
+                width: calc(100% - 48px);
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 40px 0;
+            }
+            .footer-bottom-inner {
+                width: calc(100% - 48px);
+                flex-direction: column;
+                gap: 8px;
+            }
+            .hero-scroll { display: none; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 32px; }
+            .hero-desc { font-size: 14px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- OVERLAY -->
+    <!-- overlay -->
     <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
 
-    <!-- SIDEBAR -->
+    <!-- sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <p class="sidebar-title">Navigasi</p>
@@ -384,7 +573,7 @@
             <li><a href="spesifikasitugas.html">Spesifikasi Tugas Unit</a></li>
             <li>
                 <details>
-                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle e-Portfolio submenu">→</span></summary>
+                    <summary><a href="e-portfolio.html" class="sidebar-summary-link">e-Portfolio</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jka.html">Jabatan Kecemerlangan Akademik</a></li>
                         <li><a href="bahasa.html">Bahasa</a></li>
@@ -404,7 +593,7 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pengurusan Akademik submenu">→</span></summary>
+                    <summary><a href="pengurusanakademik.html" class="sidebar-summary-link">Pengurusan Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="jadualwaktuinduk.html">Jadual Waktu Induk</a></li>
                         <li><a href="maklumatkursus.html">Maklumat Kursus</a></li>
@@ -414,38 +603,18 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Program Pengajian Akademik submenu">→</span></summary>
+                    <summary><a href="programpengajianakademik.html" class="sidebar-summary-link">Program Pengajian Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="kalendarakademik.html">Kalendar Akademik</a></li>
                         <li><a href="agihankursus.html">Agihan Kursus</a></li>
                         <li><a href="strukturkursus.html">Struktur Kursus Akademik</a></li>
-                        <li><a href="bukupanduan.html">Buku Panduan</a></li>
+                        <li><a href="bukupanduan.html">Buku Panduan Program</a></li>
                     </ul>
                 </details>
             </li>
             <li>
                 <details>
-                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link">Perkembangan Profesionalisme</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Perkembangan Profesionalisme submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="pentaksiranberterusan.html">Pentaksiran Berterusan</a></li>
-                        <li><a href="kppb.html">KPPB</a></li>
-                        <li><a href="pbd.html">PBD</a></li>
-                        <li><a href="ts25.html">TS25</a></li>
-                        <li><a href="kbat.html">KBAT</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
-                    <ul class="sidebar-subnav">
-                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
-                    </ul>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Pembelajaran Digital submenu">→</span></summary>
+                    <summary><a href="pembelajarandigital.html" class="sidebar-summary-link">Pembelajaran Digital</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="objek.html">Objek Pembelajaran Digital</a></li>
                         <li><a href="delima.html">Delima</a></li>
@@ -456,7 +625,27 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Info Pensyarah submenu">→</span></summary>
+                    <summary><a href="perkembanganprofessionalisme.html" class="sidebar-summary-link">Perkembangan Profesionalisme Akademik</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="pentaksiranberterusan.html">Pentaksiran Berterusan</a></li>
+                        <li><a href="kppb.html">KPPB</a></li>
+                        <li><a href="pbd.html">PBD</a></li>
+                        <li><a href="ts25.html">TS25</a></li>
+                        <li><a href="kbat.html">KBAT</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details open>
+                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link active">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
+                    <ul class="sidebar-subnav">
+                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
+                    </ul>
+                </details>
+            </li>
+            <li>
+                <details>
+                    <summary><a href="infopensyarah.html" class="sidebar-summary-link">Info Pensyarah</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;">→</span></summary>
                     <ul class="sidebar-subnav">
                         <li><a href="modul.html">Modul</a></li>
                         <li><a href="buku.html">Buku Panduan</a></li>
@@ -468,10 +657,10 @@
         </ul>
     </div>
 
-    <!-- NAVBAR -->
+    <!-- navbar -->
     <nav class="navbar">
         <a href="index.html" class="nav-brand">
-            <img src="PEKA JKA IPGM KPP_files/unnamed.png" alt="Logo" class="nav-logo-img"/>
+            <img src="PEKA JKA IPGM KPP - Penambahbaikan Berterusan Akademik_files/unnamed.png" alt="Logo" class="nav-logo-img"/>
             <span class="nav-logo-text">
                 PEKA JKA IPGMKPP
                 <span class="nav-logo-sub">Institut Pendidikan Guru Kampus Pulau Pinang</span>
@@ -484,15 +673,153 @@
         </button>
     </nav>
 
-    <!-- ==========================================
-         PAGE CONTENT - EDIT THIS SECTION ONLY
-         ========================================== -->
+    <!-- hero -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">JKA · IPGKPP</p>
+            <h1>Penambahbaikan<br><em>Berterusan Akademik</em></h1>
+            <p class="hero-desc">Unit Penambahbaikan Berterusan Akademik bertanggungjawab memastikan kualiti akademik diperkukuh melalui pemantauan, penilaian dan pelaporan yang sistematik.</p>
+            <span class="hero-tagline">📊 Laporan CDL/CCQI · 📋 Laporan IPPK · 📝 ATP</span>
+        </div>
+    </section>
+
+    <!-- main content -->
     <main class="page-content">
-        <h1 class="page-title">Your Page Title Here</h1>
-        <p>Start adding your content here...</p>
+
+        <!-- header -->
+        <div style="text-align: center; margin-bottom: 48px;">
+            <h1 class="page-title" style="font-size: clamp(36px, 5vw, 64px);">UNIT PENAMBAHBAIKAN BERTERUSAN AKADEMIK</h1>
+            <p style="font-size: 18px; color: var(--text-mid);">Laporan dan dokumen penambahbaikan berterusan akademik</p>
+            <div style="width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Laporan CDL/CCQI -->
+        <div class="section-block">
+            <h2>📊 Laporan CDL/CCQI</h2>
+            <div class="card-grid">
+                <a href="https://drive.google.com/drive/folders/1mJl42dyLkr7BZy4OsvVtWkSJPGmHo-Nq?usp=drive_link" target="_blank" class="card-item">
+                    <div class="card-title">PPISMP</div>
+                    <div class="card-desc">Laporan CDL/CCQI program PPISMP</div>
+                    <div class="card-arrow">Lihat →</div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1u-RtjKu2_kVBLvYXBn99I-hzZbnVwfOr?usp=drive_link" target="_blank" class="card-item">
+                    <div class="card-title">PISMP</div>
+                    <div class="card-desc">Laporan CDL/CCQI program PISMP</div>
+                    <div class="card-arrow">Lihat →</div>
+                </a>
+                <a href="https://drive.google.com/drive/folders/18nQuxQhbn48RL5LeHC1C1gOI8vp7s9pr?usp=sharing" target="_blank" class="card-item">
+                    <div class="card-title">PDPP</div>
+                    <div class="card-desc">Laporan CDL/CCQI program PDPP</div>
+                    <div class="card-arrow">Lihat →</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Laporan IPPK -->
+        <div class="section-block">
+            <h2>📋 Laporan IPPK</h2>
+            <div class="link-list">
+                <a href="https://drive.google.com/file/d/1hiHm0Bq8FCeKnL5iEMDj8CaMT9YpXy78/view?usp=drive_link" target="_blank">Semester Januari-Mei 2023</a>
+                <a href="https://drive.google.com/drive/folders/1kOMnWb31ELKwsmHbm8W-VHWXWKJwW23z?usp=drive_link" target="_blank">Semester Jun-Julai 2023</a>
+                <a href="https://drive.google.com/drive/folders/1VYm4GxE2RbNhgV6lr-Yc0H7DObG3Ze6s?usp=sharing" target="_blank">Semester Ogos-Disember 2023</a>
+                <a href="https://drive.google.com/drive/folders/1BnAD7-6O0u99Yd4-HdZcWtru5FX5Bx94?usp=drive_link" target="_blank">Semester Januari-Mei 2024</a>
+                <a href="https://drive.google.com/drive/folders/18XGq59QGbpmsPLwWsw4JJ0tXgTep01LW?usp=sharing" target="_blank">Semester Jun-Julai 2024</a>
+                <span style="color: var(--text-light); padding: 6px 0; font-weight: 500;">Semester Ogos-Disember 2024</span>
+                <a href="https://drive.google.com/drive/folders/1JTqc7dUGQle_MbucgIYTlAkN6mnvzfJB?usp=sharing" target="_blank">Semester Januari-Mei 2025</a>
+                <a href="https://drive.google.com/drive/folders/1nx4CP0ThW_rWEniGzLx--xbeRgOY0iMS?usp=sharing" target="_blank">Semester Jun-Julai 2025</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Surat Lantikan Mengajar & ATP -->
+        <div class="section-block">
+            <h2>📝 Dokumen Akademik</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 24px;">
+                <a href="https://drive.google.com/drive/folders/1xs8itR59oJEmReeckI3ycDf3UiyvsrmF?usp=drive_link" target="_blank" style="flex: 1; min-width: 250px; display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--white); border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.3s ease;">
+                    <div style="font-size: 36px;">📩</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--purple); font-size: 17px;">Surat Lantikan Mengajar</div>
+                        <div style="font-size: 14px; color: var(--text-mid);">Dokumen lantikan mengajar pensyarah</div>
+                    </div>
+                    <span style="margin-left: auto; color: var(--purple); font-weight: 600;">→</span>
+                </a>
+                <a href="https://drive.google.com/drive/folders/1fr96sfmZGZK9xY8lDV-ReW9V0qTbuN6q?usp=drive_link" target="_blank" style="flex: 1; min-width: 250px; display: flex; align-items: center; gap: 16px; padding: 20px 24px; background: var(--white); border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.3s ease;">
+                    <div style="font-size: 36px;">📋</div>
+                    <div>
+                        <div style="font-weight: 700; color: var(--purple); font-size: 17px;">ATP</div>
+                        <div style="font-size: 14px; color: var(--text-mid);">Analisis Tugasan Pembelajaran</div>
+                    </div>
+                    <span style="margin-left: auto; color: var(--purple); font-weight: 600;">→</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Laporan CDL CCQI untuk MKSP -->
+        <div class="section-block">
+            <h2>📄 Laporan CDL CCQI untuk MKSP</h2>
+            <div class="link-list">
+                <a href="https://drive.google.com/file/d/16q5yXr9a1CriigiRX6u1KmlpSw5EsKHG/view?usp=sharing" target="_blank">Laporan KJ JKA 5.3.1 CDL CCQI 2023</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Laporan CDL CCQI untuk IPGM -->
+        <div class="section-block">
+            <h2>📄 Laporan CDL CCQI untuk IPGM</h2>
+            <div class="link-list">
+                <a href="https://drive.google.com/file/d/1OvrXLKSVZG1RGQeGvosE8Rw_MCILM6ab/view?usp=drive_link" target="_blank">LAPORAN LENGKAP IPGK TIER 1 BIDANG MATEMATIK SEMESTER OGOS-DISEMBER 2023</a>
+                <a href="https://drive.google.com/file/d/16IVhhSas4G4TftR_J3vcXnE-_4icyu_S/view?usp=drive_link" target="_blank">LAPORAN LENGKAP IPGK TIER 1 BIDANG SAINS SEMESTER OGOS-DISEMBER 2023</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Laporan CDL CCQI IPGMKPP -->
+        <div class="section-block">
+            <h2>📄 Laporan CDL CCQI IPGMKPP</h2>
+            <div class="link-list">
+                <a href="https://drive.google.com/file/d/1hLpFz-axgXSP2a25HBQn71FMcpVkFkXT/view?usp=drive_link" target="_blank">LAPORAN LENGKAP CDL CCQI IPGMKPP SEMESTER JANUARI-MEI 2024</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Pengurusan Risiko JKA -->
+        <div class="section-block">
+            <h2>⚠️ Pengurusan Risiko JKA</h2>
+            <div class="link-list">
+                <a href="https://docs.google.com/spreadsheets/d/1B8904NWwGQeu1v1UCM2lPkb8ETwMiTh2/edit?usp=drive_link&ouid=103898500181281694954&rtpof=true&sd=true" target="_blank">JKA 240131 Daftar Risiko IPGM 2024</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Rekod Pemantauan KJ -->
+        <div class="section-block">
+            <h2>📋 Rekod Pemantauan Ketua Jabatan Terhadap Pensyarah</h2>
+            <div class="link-list">
+                <a href="https://docs.google.com/spreadsheets/d/10yNohxhItAhjX2tjs50lYTDJh0Blt9dY/edit?usp=drive_link&ouid=101617717143713065344&rtpof=true&sd=true" target="_blank">REKOD PEMANTAUAN KJ TERHADAP PENSYARAH SEM JANUARI-MEI 2025</a>
+                <a href="https://docs.google.com/spreadsheets/d/1AbMPlQocDQ1B_s90gtT0miAcvu4wILCN/edit?usp=drive_link&ouid=101617717143713065344&rtpof=true&sd=true" target="_blank">REKOD PEMANTAUAN KJ TERHADAP PENSYARAH SEM OGOS-DIS 2025</a>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+        <!-- footer note -->
+        <div style="margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;">
+            dalam proses pembinaan ....
+        </div>
     </main>
 
-    <!-- FOOTER -->
+    <!-- footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-brand">
@@ -529,11 +856,20 @@
     </footer>
 
     <script>
-        // Sidebar toggle
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
+
+        // fade-up
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
     </script>
 
 </body>
