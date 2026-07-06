@@ -6,6 +6,8 @@
     <title>MAKLUMAT KURSUS — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="js/auth-config.js"></script>
+    <script src="js/auth-guard.js"></script>
     <style>
         * {
             margin: 0;
@@ -301,7 +303,7 @@
         }
 
         .hero-eyebrow::before {
-            content: '';
+            content: '
             display: block;
             width: 32px;
             height: 1px;
@@ -359,7 +361,7 @@
         }
 
         .hero-scroll::after {
-            content: '';
+            content: '
             display: block;
             width: 1px;
             height: 60px;
@@ -507,7 +509,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper { justify-content: center; }
         }
 
         @media (max-width: 480px) {
@@ -646,10 +647,6 @@
          PAGE CONTENT - MAKLUMAT KURSUS
          ========================================== -->
     <main class="page-content">
-        <!-- Back Button - Right Aligned -->
-        <div style="display: flex; justify-content: flex-end; margin-bottom: 30px;">
-            <a href="#" class="back-btn" id="backBtn" style="display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: white; padding: 12px 24px; border-radius: 50px; text-decoration: none; font-size: 14px; font-weight: 600; transition: all 0.3s ease; border: none; cursor: pointer;" onmouseover="this.style.background='var(--purple-dark)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--purple)'; this.style.transform='translateY(0)';">← Kembali ke Halaman Sebelumnya</a>
-        </div>
 
         <!-- PAUTAN MENGAKSES MK (MyPDPP) -->
         <div style="margin-bottom: 50px;">
@@ -670,7 +667,7 @@
                         <div style="background: var(--off-white); padding: 14px 18px; border-radius: 10px; border: 1px solid var(--mid-gray); margin-bottom: 20px; font-size: 13px; color: var(--text-mid); word-break: break-all; font-family: monospace;">
                             https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=BMMB1094
                         </div>
-                        <a href="https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: white; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--purple-dark)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='var(--purple)'; this.style.transform='translateY(0)';">🔗 Pautan akses e-MK</a>
+                        <a href="https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: white; padding: 14px 28px; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.3s ease;" onmouseover="this.style.background='var(--purple-dark) this.style.transform='translateY(-2px)" onmouseout="this.style.background='var(--purple) this.style.transform='translateY(0)">🔗 Pautan akses e-MK</a>
                     </div>
                 </div>
             </div>
@@ -685,7 +682,7 @@
             
             <!-- Memo List -->
             <div style="max-width: 900px; margin: 0 auto;">
-                <a href="https://drive.google.com/drive/folders/1RwOwUda8vP3bIzFrbHhB6WgK_9BE-95u?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/1RwOwUda8vP3bIzFrbHhB6WgK_9BE-95u?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PPISMP - 29 MEI 2026</span>
@@ -693,7 +690,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/1r4l92Aw86x_7lDdq9d1xAq2Dm6HFfwWz?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/1r4l92Aw86x_7lDdq9d1xAq2Dm6HFfwWz?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PPISMP - 05 JANUARI 2026 (KEMASKINI 23 JAN 2026)</span>
@@ -701,7 +698,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/1jVobGublejLN4jTrsgE3xVMZq7Ed_6bC?usp=sharing" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/1jVobGublejLN4jTrsgE3xVMZq7Ed_6bC?usp=sharing" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PPISMP/PISMP JULAI 2025 - 30 JULAI 2025</span>
@@ -709,7 +706,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/17ChMcK35AqKbKcTzgFTnxgfF-_DW5_4L?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/17ChMcK35AqKbKcTzgFTnxgfF-_DW5_4L?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PPISMP SAINS &amp; MUZIK - 08 MEI 2025</span>
@@ -717,7 +714,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/1AY6ZcqhwJA-Zx0tq3x2MzEVeGYw8aPTI?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/1AY6ZcqhwJA-Zx0tq3x2MzEVeGYw8aPTI?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI AGIHAN KURSUS ELEKTIF TERAS TESL - 14 JANUARI 2025</span>
@@ -725,7 +722,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/16bv1oN6Fp_i4Mq5fjpa8UrfclPPr71sH?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/16bv1oN6Fp_i4Mq5fjpa8UrfclPPr71sH?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMAS KINI MK PPISMP / PISMP - 6 JANUARI 2025</span>
@@ -733,7 +730,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/1NFoqFmNeUWkrV_seIxbWbMxFxSjz2MTh?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/1NFoqFmNeUWkrV_seIxbWbMxFxSjz2MTh?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PPISMP / PISMP - 11 DISEMBER 2024</span>
@@ -741,7 +738,7 @@
                     <div style="color: var(--purple); font-weight: 600; font-size: 13px;">Buka →</div>
                 </a>
                 
-                <a href="https://drive.google.com/drive/folders/16bv1oN6Fp_i4Mq5fjpa8UrfclPPr71sH?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple)'; this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08)'; this.style.transform='translateX(4px)';" onmouseout="this.style.borderColor='var(--mid-gray)'; this.style.boxShadow='none'; this.style.transform='translateX(0)';">
+                <a href="https://drive.google.com/drive/folders/16bv1oN6Fp_i4Mq5fjpa8UrfclPPr71sH?usp=drive_link" target="_blank" style="display: flex; align-items: center; justify-content: space-between; background: var(--white); padding: 16px 24px; border-radius: 12px; border: 1px solid var(--mid-gray); text-decoration: none; color: var(--text-dark); transition: all 0.25s ease; margin-bottom: 10px;" onmouseover="this.style.borderColor='var(--purple) this.style.boxShadow='0 4px 16px rgba(58,12,163,0.08) this.style.transform='translateX(4px)" onmouseout="this.style.borderColor='var(--mid-gray) this.style.boxShadow='none this.style.transform='translateX(0)">
                     <div style="display: flex; align-items: center; gap: 14px;">
                         <span style="font-size: 20px;">📄</span>
                         <span style="font-weight: 500; font-size: 14px;">MEMO - KEMASKINI MK PDPP - 11 DISEMBER 2024</span>
@@ -773,7 +770,7 @@
                 <div style="font-size: 13px; color: var(--text-mid);">
                     <strong style="color: var(--text-dark);">Kemas kini MK</strong> — Google Sheets
                 </div>
-                <a href="https://drive.google.com/open?authuser=0&id=1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE" target="_blank" style="color: var(--purple); text-decoration: none; font-size: 13px; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7';" onmouseout="this.style.opacity='1';">
+                <a href="https://drive.google.com/open?authuser=0&id=1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE" target="_blank" style="color: var(--purple); text-decoration: none; font-size: 13px; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7" onmouseout="this.style.opacity='1">
                     📊 Buka di Google Sheets →
                 </a>
             </div>
@@ -800,7 +797,7 @@
                 <div style="font-size: 13px; color: var(--text-mid);">
                     <strong style="color: var(--text-dark);">PEMETAAN DOMAIN-KLUSTER-HP-KI.pdf</strong> — Google Drive
                 </div>
-                <a href="https://drive.google.com/file/d/1bj2_Za34kvOEKqBm4eKSGvhvAMKAqCj-/view?authuser=0&usp=sharing" target="_blank" style="color: var(--purple); text-decoration: none; font-size: 13px; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7';" onmouseout="this.style.opacity='1';">
+                <a href="https://drive.google.com/file/d/1bj2_Za34kvOEKqBm4eKSGvhvAMKAqCj-/view?authuser=0&usp=sharing" target="_blank" style="color: var(--purple); text-decoration: none; font-size: 13px; font-weight: 500; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.7" onmouseout="this.style.opacity='1">
                     📄 Buka di Drive →
                 </a>
             </div>
@@ -854,20 +851,6 @@
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
-
-        // Back button - dynamic return to previous page
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Check if there's a referrer (previous page)
-            if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                // If the referrer is from your site, go back
-                window.history.back();
-            } else {
-                // Fallback: go to Pengurusan Akademik page
-                window.location.href = 'pengurusanakademik.html';
-            }
-        });
     </script>
 
 </body>

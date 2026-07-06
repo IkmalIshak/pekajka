@@ -303,7 +303,7 @@
         }
 
         .hero-eyebrow::before {
-            content: '';
+            content: '
             display: block;
             width: 32px;
             height: 1px;
@@ -361,7 +361,7 @@
         }
 
         .hero-scroll::after {
-            content: '';
+            content: '
             display: block;
             width: 1px;
             height: 60px;
@@ -390,11 +390,6 @@
         /* =====================
            BACK BUTTON - RIGHT ALIGNED
         ===================== */
-        .back-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
-        }
 
         .back-btn {
             display: inline-flex;
@@ -700,7 +695,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper { justify-content: center; }
             .program-card .card-img { height: 160px; }
         }
 
@@ -843,10 +837,6 @@
          PAGE CONTENT - PROGRAM PENGAJIAN AKADEMIK
          ========================================== -->
     <main class="page-content">
-        <!-- Back Button - Right Aligned -->
-        <div class="back-btn-wrapper">
-            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
-        </div>
 
         <!-- Page Header -->
         <div style="text-align: center; margin-bottom: 48px;">
@@ -1007,17 +997,6 @@
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
-
-        // Back button - dynamic return to previous page
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                window.history.back();
-            } else {
-                window.location.href = 'pengurusanakademik.html';
-            }
-        });
 
         // Scroll animations
         const observer = new IntersectionObserver((entries) => {

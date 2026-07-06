@@ -365,11 +365,6 @@
         }
 
         /* ── back button ── */
-        .back-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
-        }
 
         .back-btn {
             display: inline-flex;
@@ -615,7 +610,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper { justify-content: center; }
             .buku-card .pdf-preview { height: 160px; }
         }
 
@@ -746,23 +740,17 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <p class="hero-eyebrow">Info Pensyarah · IPGKPP</p>
+            <p class="hero-eyebrow">PPA · IPGKPP</p>
             <h1>Buku Panduan<br><em>IPGM</em></h1>
             <p class="hero-desc">Koleksi buku panduan dan dokumen rasmi IPGM untuk rujukan pensyarah dan staf akademik.</p>
             <span class="hero-tagline">📘 Dasar · 📙 Panduan · 📗 Prosedur</span>
         </div>
-        <div class="hero-scroll">Skrol ke bawah</div>
     </section>
 
     <!-- ==========================================
          KANDUNGAN UTAMA – BUKU PANDUAN
          ========================================== -->
     <main class="page-content">
-
-        <!-- Back Button -->
-        <div class="back-btn-wrapper">
-            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
-        </div>
 
         <!-- Tajuk -->
         <div style="text-align: center; margin-bottom: 48px;">
@@ -931,16 +919,6 @@
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
-
-        // Back button – kembali ke halaman sebelumnya (atau info-pensyarah.html)
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                window.history.back();
-            } else {
-                window.location.href = 'info-pensyarah.html';
-            }
-        });
 
         // Scroll animations (fade-up)
         const observer = new IntersectionObserver((entries) => {

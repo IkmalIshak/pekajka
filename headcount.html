@@ -328,7 +328,7 @@
         }
 
         .hero-eyebrow::before {
-            content: '';
+            content: '
             display: block;
             width: 32px;
             height: 1px;
@@ -386,7 +386,7 @@
         }
 
         .hero-scroll::after {
-            content: '';
+            content: '
             display: block;
             width: 1px;
             height: 60px;
@@ -435,11 +435,6 @@
         /* =====================
            BACK BUTTON - RIGHT ALIGNED
         ===================== */
-        .back-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
-        }
 
         .back-btn {
             display: inline-flex;
@@ -651,9 +646,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper {
-                justify-content: center;
-            }
         }
 
         @media (max-width: 480px) {
@@ -792,10 +784,6 @@
 
     <!-- MAIN CONTENT -->
     <section class="section section-gray">
-        <!-- Back Button - Right Aligned -->
-        <div class="back-btn-wrapper fade-up">
-            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
-        </div>
 
         <!-- Embed Container -->
         <div class="embed-container fade-up">
@@ -890,20 +878,6 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-        // Back button - dynamic return to previous page
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Check if there's a referrer (previous page)
-            if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                // If the referrer is from your site, go back
-                window.history.back();
-            } else {
-                // Fallback: go to Pengurusan Akademik page
-                window.location.href = 'pengurusanakademik.html';
-            }
-        });
     </script>
 
 </body>

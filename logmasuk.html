@@ -227,6 +227,12 @@
             }
         }
 
+        if (isAuthenticatedUser()) {
+            const redirectTo = sessionStorage.getItem('redirect_after_login') || 'index.html';
+            sessionStorage.removeItem('redirect_after_login');
+            window.location.href = redirectTo;
+        }
+
         window.onload = function () {
             google.accounts.id.initialize({
                 client_id: GOOGLE_CLIENT_ID,

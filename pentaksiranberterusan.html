@@ -280,7 +280,7 @@
             gap: 12px;
         }
         .hero-eyebrow::before {
-            content: '';
+            content: '
             display: block;
             width: 32px;
             height: 1px;
@@ -337,7 +337,7 @@
             gap: 12px;
         }
         .hero-scroll::after {
-            content: '';
+            content: '
             display: block;
             width: 1px;
             height: 60px;
@@ -358,12 +358,6 @@
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 24px;
-        }
-
-        .back-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
         }
 
         .back-btn {
@@ -727,7 +721,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper { justify-content: center; }
         }
 
         @media (max-width: 480px) {
@@ -869,11 +862,6 @@
          KANDUNGAN UTAMA – PENTAKSIRAN BERTERUSAN
          ========================================== -->
     <main class="page-content">
-
-        <!-- Back Button -->
-        <div class="back-btn-wrapper">
-            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
-        </div>
 
         <!-- Tajuk -->
         <div style="text-align: center; margin-bottom: 48px;">
@@ -1188,12 +1176,12 @@
             document.getElementById('overlay').classList.toggle('active');
         }
 
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
+        
+            
             if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                window.history.back();
+                
             } else {
-                window.location.href = 'perkembangan-profesionalisme.html';
+                perkembanganprofessionalisme.html
             }
         });
 

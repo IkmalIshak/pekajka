@@ -283,7 +283,7 @@
             gap: 12px;
         }
         .hero-eyebrow::before {
-            content: '';
+            content: '
             display: block;
             width: 32px;
             height: 1px;
@@ -340,7 +340,7 @@
             gap: 12px;
         }
         .hero-scroll::after {
-            content: '';
+            content: '
             display: block;
             width: 1px;
             height: 60px;
@@ -365,11 +365,6 @@
         }
 
         /* ── back button ── */
-        .back-btn-wrapper {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 30px;
-        }
 
         .back-btn {
             display: inline-flex;
@@ -582,7 +577,6 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
-            .back-btn-wrapper { justify-content: center; }
         }
 
         @media (max-width: 480px) {
@@ -724,11 +718,6 @@
          ========================================== -->
     <main class="page-content">
 
-        <!-- Back Button -->
-        <div class="back-btn-wrapper">
-            <a href="#" class="back-btn" id="backBtn">← Kembali ke Halaman Sebelumnya</a>
-        </div>
-
         <!-- Tajuk -->
         <div style="text-align: center; margin-bottom: 48px;">
             <h1 class="page-title" style="font-size: clamp(36px, 5vw, 64px);">STRUKTUR KURSUS</h1>
@@ -851,16 +840,6 @@
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
-
-        // Back button – kembali ke halaman sebelumnya (atau programpengajian.html)
-        document.getElementById('backBtn').addEventListener('click', function(e) {
-            e.preventDefault();
-            if (document.referrer && document.referrer.includes(window.location.hostname)) {
-                window.history.back();
-            } else {
-                window.location.href = 'programpengajian.html';
-            }
-        });
 
         // Scroll animations (fade-up)
         const observer = new IntersectionObserver((entries) => {
