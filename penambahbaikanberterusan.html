@@ -6,8 +6,7 @@
     <title>Penambahbaikan Berterusan Akademik — PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="js/auth-config.js"></script>
-    <script src="js/auth-guard.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -236,7 +235,7 @@
             inset: 0;
             background: 
                 linear-gradient(to bottom, rgba(30,5,90,0.3) 0%, rgba(30,5,90,0.7) 50%, rgba(20,3,70,0.95) 100%),
-                url('PEKA\ JKA\ IPGM\ KPP\ -\ Penambahbaikan\ Berterusan\ Akademik_files/unnamed.jpg') center/cover no-repeat;
+                url('PEKA JKA IPGM KPP - Penambahbaikan Berterusan Akademik_files/unnamed.jpg') center/cover no-repeat;
         }
         .hero-content {
             position: relative;
@@ -412,7 +411,135 @@
             transform: translateX(4px);
         }
 
-        /* link list */
+        /* ---------------------------------------- */
+        /* ✨ BUTTON STYLE UNTUK LAPORAN IPPK        */
+        /* ---------------------------------------- */
+        .ippk-button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .ippk-year-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.5rem 0.75rem;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            padding: 0.6rem 1.2rem 0.6rem 1.4rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255,255,255,0.7);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+            transition: background 0.2s;
+        }
+
+        .ippk-year-row:hover {
+            background: rgba(255,255,255,0.85);
+        }
+
+        .ippk-year-label {
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.02em;
+            min-width: 3.6rem;
+            color: #1a2b4a;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .ippk-year-label i {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* butang semester — gaya moden */
+        .ippk-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            background: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1f3a5f;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0, 20, 40, 0.04), 0 0 0 1px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            white-space: nowrap;
+            flex: 0 1 auto;
+        }
+
+        .ippk-btn i {
+            font-size: 0.75rem;
+            opacity: 0.6;
+            transition: transform 0.2s;
+        }
+
+        .ippk-btn:hover {
+            background: #ffffff;
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 24px -10px rgba(20, 50, 100, 0.18), 0 0 0 1px rgba(70, 110, 180, 0.15);
+            border-color: rgba(70, 110, 180, 0.2);
+            color: #0b2647;
+        }
+
+        .ippk-btn:hover i {
+            transform: translateX(3px);
+            opacity: 1;
+        }
+
+        .ippk-btn:active {
+            transform: scale(0.96);
+        }
+
+        /* tahun semasa 2026 — sentuhan istimewa */
+        .ippk-year-row:last-child .ippk-year-label {
+            color: var(--purple);
+        }
+
+        .ippk-year-row:last-child .ippk-btn {
+            background: rgba(58, 12, 163, 0.06);
+            border-color: rgba(58, 12, 163, 0.15);
+            color: var(--purple-dark);
+        }
+
+        .ippk-year-row:last-child .ippk-btn:hover {
+            background: var(--purple);
+            color: white;
+            border-color: var(--purple);
+            box-shadow: 0 12px 28px -8px rgba(58, 12, 163, 0.25);
+        }
+
+        .ippk-year-row:last-child .ippk-btn:hover i {
+            color: white;
+        }
+
+        /* jika tiada pautan (placeholder) */
+        .ippk-placeholder {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            background: rgba(200,200,200,0.2);
+            border: 1px dashed rgba(150,150,150,0.3);
+            cursor: default;
+            white-space: nowrap;
+        }
+
+        /* link list lain (kekal) */
         .link-list {
             display: flex;
             flex-direction: column;
@@ -552,6 +679,19 @@
                 gap: 8px;
             }
             .hero-scroll { display: none; }
+            .ippk-year-row {
+                padding: 0.6rem 1rem;
+                border-radius: 40px;
+                gap: 0.4rem;
+            }
+            .ippk-year-label {
+                min-width: 2.8rem;
+                font-size: 0.95rem;
+            }
+            .ippk-btn {
+                font-size: 0.75rem;
+                padding: 0.4rem 0.9rem;
+            }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 32px; }
@@ -722,20 +862,48 @@
 
         <div class="divider"></div>
 
-        <!-- Laporan IPPK -->
+        <!-- ============================================ -->
+        <!-- Laporan IPPK — BUTTON STYLE ✨               -->
+        <!-- ============================================ -->
         <div class="section-block">
             <h2>📋 Laporan IPPK</h2>
-            <div class="link-list">
-                <a href="https://drive.google.com/file/d/1hiHm0Bq8FCeKnL5iEMDj8CaMT9YpXy78/view?usp=drive_link" target="_blank">Semester Januari-Mei 2023</a>
-                <a href="https://drive.google.com/drive/folders/1kOMnWb31ELKwsmHbm8W-VHWXWKJwW23z?usp=drive_link" target="_blank">Semester Jun-Julai 2023</a>
-                <a href="https://drive.google.com/drive/folders/1VYm4GxE2RbNhgV6lr-Yc0H7DObG3Ze6s?usp=sharing" target="_blank">Semester Ogos-Disember 2023</a>
-                <a href="https://drive.google.com/drive/folders/1BnAD7-6O0u99Yd4-HdZcWtru5FX5Bx94?usp=drive_link" target="_blank">Semester Januari-Mei 2024</a>
-                <a href="https://drive.google.com/drive/folders/18XGq59QGbpmsPLwWsw4JJ0tXgTep01LW?usp=sharing" target="_blank">Semester Jun-Julai 2024</a>
-                <span style="color: var(--text-light); padding: 6px 0; font-weight: 500;">Semester Ogos-Disember 2024</span>
-                <a href="https://drive.google.com/drive/folders/1JTqc7dUGQle_MbucgIYTlAkN6mnvzfJB?usp=sharing" target="_blank">Semester Januari-Mei 2025</a>
-                <a href="https://drive.google.com/drive/folders/1nx4CP0ThW_rWEniGzLx--xbeRgOY0iMS?usp=sharing" target="_blank">Semester Jun-Julai 2025</a>
+            <div class="ippk-button-group">
+
+                <!-- 2024 -->
+                <div class="ippk-year-row">
+                    <span class="ippk-year-label"><i class="fas fa-calendar-alt"></i> 2024</span>
+                    <a href="https://drive.google.com/drive/folders/1BnAD7-6O0u99Yd4-HdZcWtru5FX5Bx94?usp=drive_link" target="_blank" class="ippk-btn">
+                        <i class="fas fa-folder-open"></i> Jan–Mei 2024
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/18XGq59QGbpmsPLwWsw4JJ0tXgTep01LW?usp=sharing" target="_blank" class="ippk-btn">
+                        <i class="fas fa-folder-open"></i> Jun–Jul 2024
+                    </a>
+                    <span class="ippk-placeholder"><i class="fas fa-clock"></i> Ogos–Dis 2024</span>
+                </div>
+
+                <!-- 2025 -->
+                <div class="ippk-year-row">
+                    <span class="ippk-year-label"><i class="fas fa-calendar-alt"></i> 2025</span>
+                    <a href="https://drive.google.com/drive/folders/1JTqc7dUGQle_MbucgIYTlAkN6mnvzfJB?usp=sharing" target="_blank" class="ippk-btn">
+                        <i class="fas fa-folder-open"></i> Jan–Mei 2025
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1nx4CP0ThW_rWEniGzLx--xbeRgOY0iMS?usp=sharing" target="_blank" class="ippk-btn">
+                        <i class="fas fa-folder-open"></i> Jun–Jul 2025
+                    </a>
+                    <span class="ippk-placeholder"><i class="fas fa-clock"></i> Ogos–Dis 2025</span>
+                </div>
+
+                <!-- 2026-->
+                <div class="ippk-year-row">
+                    <span class="ippk-year-label"><i class="fas fa-calendar-alt" style="color: var(--purple);"></i> 2026</span>
+                    <span class="ippk-placeholder" style="background: rgba(58,12,163,0.04); border-color: rgba(58,12,163,0.15); color: var(--purple-dark);">
+                        <i class="fas fa-hourglass-half"></i> Akan datang
+                    </span>
+                </div>
+
             </div>
         </div>
+        <!-- ============================================ -->
 
         <div class="divider"></div>
 
@@ -805,14 +973,37 @@
 
         <div class="divider"></div>
 
-        <!-- Rekod Pemantauan KJ -->
-        <div class="section-block">
-            <h2>📋 Rekod Pemantauan Ketua Jabatan Terhadap Pensyarah</h2>
-            <div class="link-list">
-                <a href="https://docs.google.com/spreadsheets/d/10yNohxhItAhjX2tjs50lYTDJh0Blt9dY/edit?usp=drive_link&ouid=101617717143713065344&rtpof=true&sd=true" target="_blank">REKOD PEMANTAUAN KJ TERHADAP PENSYARAH SEM JANUARI-MEI 2025</a>
-                <a href="https://docs.google.com/spreadsheets/d/1AbMPlQocDQ1B_s90gtT0miAcvu4wILCN/edit?usp=drive_link&ouid=101617717143713065344&rtpof=true&sd=true" target="_blank">REKOD PEMANTAUAN KJ TERHADAP PENSYARAH SEM OGOS-DIS 2025</a>
+       <!-- ============================================ -->
+        <!-- Pemantauan Kokurikulum dengan QR CODE ✨     -->
+         <!-- ============================================ -->
+          <div class="section-block">
+            <h2>📱 Pemantauan Perlaksanaan Kokurikulum (KJ/KU-LAM/PT/03/04)</h2>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 30px; background: var(--off-white); padding: 24px 28px; border-radius: 20px; border: 1px solid var(--mid-gray);">
+                        <!-- QR Code Image -->
+                         <div style="flex: 0 0 auto;">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://tinyurl.com/ippklampt0304" 
+                            alt="QR Code untuk Pemantauan Kokurikulum" 
+                            style="width: 130px; height: 130px; border-radius: 16px; border: 2px solid var(--purple); padding: 6px; background: white; box-shadow: 0 4px 12px rgba(0,0,0,0.06); transition: transform 0.3s ease;" 
+                            onmouseover="this.style.transform='scale(1.05)'" 
+                            onmouseout="this.style.transform='scale(1)'">
+                        </div>
+                        <!-- Link & description -->
+                         <div style="flex: 1; min-width: 200px;">
+            <div style="font-weight: 700; font-size: 18px; color: var(--purple-dark); margin-bottom: 6px;">
+                <i class="fas fa-link" style="margin-right: 10px;"></i>Pautan Pemantauan
             </div>
+            <div style="font-size: 14px; color: var(--text-mid); margin-bottom: 12px;">
+                Imbas QR atau klik pautan di bawah untuk ke borang pemantauan perlaksanaan kokurikulum.
+            </div>
+            <a href="https://tinyurl.com/ippklampt0304" target="_blank" 
+               style="display: inline-flex; align-items: center; gap: 10px; background: var(--purple); color: white; padding: 10px 24px; border-radius: 60px; text-decoration: none; font-weight: 600; font-size: 15px; transition: background 0.2s, transform 0.2s;"
+               onmouseover="this.style.background='#2d0880'; this.style.transform='translateY(-2px)'" 
+               onmouseout="this.style.background='#3a0ca3'; this.style.transform='translateY(0)'">
+                <i class="fas fa-external-link-alt"></i> Buka Borang
+            </a>
         </div>
+    </div>
+</div>
 
         <div class="divider"></div>
         <!-- footer note -->
