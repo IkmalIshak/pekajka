@@ -4,7 +4,8 @@ const GOOGLE_CLIENT_ID = "99876814836-i4hm08pabd27o54spfm1mnk5bpulsk56.apps.goog
 const ALLOWED_EMAILS = [
     "ikmalishak0803@gmail.com",
     "isnamaku@gmail.com",
-    "naziruddin@ipgm.edu.my"
+    "naziruddin@ipgm.edu.my",
+    "jka.ipgkpp@ipgm.edu.my"
 ];
 
 const AUTH_STORAGE_KEY = "site_auth_user";

@@ -2,8 +2,6 @@
 <html lang="ms">
 <head>
     <meta charset="UTF-8" />
-    <script src="js/auth-config.js"></script>
-    <script src="js/auth-guard.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPESIFIKASI TUGAS UNIT · PEKA JKA IPGKPP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -295,23 +293,138 @@
         }
 
         /* spek card grid */
+        .page-section {
+            margin-bottom: 40px;
+        }
+
+        .section-heading {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .section-intro {
+            font-size: 15px;
+            color: var(--text-mid);
+            margin-bottom: 20px;
+        }
+
+        /* ---- Carta Organisasi: professional frame ---- */
+        .org-chart-card {
+            background: linear-gradient(180deg, var(--soft-bg) 0%, var(--white) 100%);
+            border: 1px solid var(--border-light);
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(58, 12, 163, 0.06);
+            overflow: hidden;
+        }
+
+        .org-chart-toolbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 18px 26px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .org-chart-toolbar-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--purple-dark);
+        }
+
+        .org-chart-toolbar-label .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--purple);
+            display: inline-block;
+        }
+
+        .org-chart-hint {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: var(--text-light);
+            background: var(--soft-bg);
+            border: 1px solid var(--border-light);
+            padding: 6px 14px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: background 0.2s ease, color 0.2s ease;
+        }
+
+        .org-chart-hint:hover {
+            background: rgba(58, 12, 163, 0.06);
+            color: var(--purple-dark);
+        }
+
+        .org-chart-frame {
+            padding: 32px 40px 40px;
+            display: flex;
+            justify-content: center;
+            cursor: zoom-in;
+        }
+
+        .org-chart-frame img {
+            width: 100%;
+            max-width: 980px;
+            display: block;
+            border-radius: 12px;
+            object-fit: contain;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .org-chart-frame:hover img {
+            transform: scale(1.01);
+            box-shadow: 0 10px 28px rgba(58, 12, 163, 0.12);
+        }
+
+        .section-divider {
+            height: 1px;
+            background: var(--border-light);
+            margin: 24px 0 32px;
+        }
+
         .spek-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 32px;
         }
 
+        /* card is now a clickable button, not a link */
         .spek-card {
+            width: 100%;
+            text-align: left;
+            font-family: inherit;
             background: var(--white);
             border-radius: 24px;
             padding: 32px 40px;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
             border: 1px solid var(--border-light);
-            transition: box-shadow 0.2s;
+            cursor: pointer;
+            transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
         }
 
-        .spek-card:hover {
-            box-shadow: 0 16px 48px rgba(58, 12, 163, 0.06);
+        .spek-card:hover,
+        .spek-card:focus-visible {
+            box-shadow: 0 16px 48px rgba(58, 12, 163, 0.08);
+            transform: translateY(-2px);
+            border-color: rgba(58, 12, 163, 0.18);
+        }
+
+        .spek-card:focus-visible {
+            outline: 2px solid var(--purple);
+            outline-offset: 3px;
         }
 
         .card-header {
@@ -320,6 +433,11 @@
             gap: 16px;
             margin-bottom: 20px;
             flex-wrap: wrap;
+        }
+
+        .card-avatar-wrap {
+            position: relative;
+            flex-shrink: 0;
         }
 
         .card-avatar {
@@ -331,7 +449,22 @@
             border: 2px solid var(--mid-gray);
             background: var(--light-gray);
             display: block;
-            flex-shrink: 0;
+        }
+
+        .card-avatar-zoom {
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: rgba(58, 12, 163, 0.88);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            pointer-events: none;
         }
 
         .card-title {
@@ -401,6 +534,108 @@
             letter-spacing: 0.02em;
         }
 
+        /* =====================
+           PHOTO PREVIEW LIGHTBOX
+        ===================== */
+        .preview-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 17, 17, 0.82);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .preview-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .preview-box {
+            background: var(--white);
+            border-radius: 20px;
+            max-width: 560px;
+            width: 100%;
+            max-height: 88vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transform: scale(0.96);
+            transition: transform 0.25s ease;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+        }
+
+        .preview-overlay.active .preview-box {
+            transform: scale(1);
+        }
+
+        .preview-box-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 14px 14px 0;
+        }
+
+        .preview-close {
+            background: var(--light-gray);
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            font-size: 16px;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .preview-close:hover {
+            background: var(--mid-gray);
+        }
+
+        .preview-img-wrap {
+            padding: 8px 28px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .preview-img-wrap img {
+            width: 100%;
+            max-height: 56vh;
+            object-fit: contain;
+            border-radius: 12px;
+            background: var(--off-white);
+        }
+
+        .preview-caption {
+            padding: 0 28px 28px;
+            text-align: center;
+        }
+
+        .preview-caption .preview-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .preview-caption .preview-role {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--purple);
+            background: rgba(58, 12, 163, 0.06);
+            padding: 4px 14px;
+            border-radius: 40px;
+            display: inline-block;
+        }
+
         /* responsive */
         @media (max-width: 768px) {
             .navbar {
@@ -423,6 +658,12 @@
             .page-subtitle {
                 font-size: 16px;
                 padding-left: 14px;
+            }
+            .org-chart-toolbar {
+                padding: 14px 18px;
+            }
+            .org-chart-frame {
+                padding: 22px 18px 28px;
             }
         }
 
@@ -664,159 +905,228 @@
             Jabatan Kecemerlangan Akademik Institut Pendidikan Guru Malaysia Kampus Pulau Pinang
         </div>
 
-        <!-- grid of cards – setiap unit -->
-        <div class="spek-grid">
-
-            <!-- KETUA JABATAN -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed.jpg" alt="Ketua Jabatan" />
-                    <div>
-                        <div class="card-title">Encik Naziruddin bin Mashood</div>
-                        <span class="card-role">Ketua Jabatan</span>
-                    </div>
-                    <span class="badge-unit" style="margin-left:auto;">JKA</span>
+        <section class="page-section">
+            <h2 class="section-heading">Carta Organisasi</h2>
+            <p class="section-intro">Struktur organisasi Jabatan Kecemerlangan Akademik IPGKPP.</p>
+            <div class="org-chart-card">
+                <div class="org-chart-toolbar">
+                    <span class="org-chart-toolbar-label"><span class="dot"></span>Carta Organisasi Rasmi</span>
+                    <span class="org-chart-hint" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png', 'Carta Organisasi', 'Jabatan Kecemerlangan Akademik')">🔍 Lihat penuh</span>
                 </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, prosedur ISO 21001:2018 EOMS dan MQA.</li>
-                        <li><strong>Memantau &amp; menyelia</strong> semua aktiviti unit di JKA.</li>
-                        <li><strong>Memantau</strong> pengurusan proses reka bentuk dan penyampaian kurikulum.</li>
-                        <li><strong>Memantau</strong> pengurusan sistem pembelajaran digital.</li>
-                        <li><strong>Memantau</strong> penyediaan dan pelaksanaan Jadual Waktu.</li>
-                        <li><strong>Memantau</strong> perancangan PdP dan kerja kursus serta keselarasannya dengan Maklumat Kursus (MK).</li>
-                        <li><strong>Memantau</strong> pelaksanaan pentaksiran mengikut keperluan IPGM dan IPGK.</li>
-                        <li><strong>Memantau</strong> tindakan terhadap hasil refleksi praktikum pelajar serta praktikum bertema.</li>
-                        <li><strong>Memantau</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
-                        <li><strong>Memastikan</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi program / kursus.</li>
-                        <li><strong>Memantau &amp; menyelia</strong> kemajuan prestasi pelajar.</li>
-                        <li><strong>Memantau</strong> pelaksanaan semua kursus dalam semua program.</li>
-                        <li><strong>Memantau</strong> penyampaian taklimat program pengajian akademik kepada pelajar baharu.</li>
-                        <li><strong>Memantau</strong> penyebaran pindaan/penambahbaikan struktur program terkini.</li>
-                        <li><strong>Memastikan</strong> penyebaran maklumat terkini tentang perkembangan program pengajian akademik.</li>
-                        <li><strong>Memantau</strong> semua aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme.</li>
-                        <li><strong>Memantau</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
-                        <li><strong>Memantau</strong> pelaksanaan program peningkatan kompetensi pensyarah.</li>
-                    </ul>
+                <div class="org-chart-frame" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png', 'Carta Organisasi', 'Jabatan Kecemerlangan Akademik')">
+                    <img src="SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png" alt="Carta Organisasi Jabatan Kecemerlangan Akademik" />
                 </div>
             </div>
+        </section>
 
-            <!-- TIMBALAN KETUA / KETUA UNIT PENGURUSAN AKADEMIK -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(1).jpg" alt="Timbalan Ketua" />
-                    <div>
-                        <div class="card-title">Dr. Tan Lay Koon</div>
-                        <span class="card-role">Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik</span>
+        <div class="section-divider"></div>
+
+        <section class="page-section">
+            <h2 class="section-heading">Pensyarah</h2>
+            <p class="section-intro">Senarai pegawai dan pensyarah yang terlibat dalam pelaksanaan fungsi unit. Klik kad untuk lihat gambar penuh.</p>
+
+            <div class="spek-grid">
+
+                <!-- KETUA JABATAN -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/naziruddin.png', 'Encik Naziruddin bin Mashood', 'Ketua Jabatan')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed.jpg" alt="Ketua Jabatan" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Encik Naziruddin bin Mashood</div>
+                            <span class="card-role">Ketua Jabatan</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">JKA</span>
                     </div>
-                    <span class="badge-unit" style="margin-left:auto;">UPA</span>
-                </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, ISO 21001:2018 EOMS dan MQA.</li>
-                        <li><strong>Memastikan</strong> semua aktiviti unit berjalan lancar.</li>
-                        <li><strong>Memastikan</strong> pengurusan proses reka bentuk dan penyampaian kurikulum dilaksanakan mengikut prosedur.</li>
-                        <li><strong>Memastikan</strong> penyediaan dan pelaksanaan Jadual Waktu berjalan lancar.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- KETUA UNIT PENGAJIAN AKADEMIK -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(2).jpg" alt="Ketua Unit Pengajian Akademik" />
-                    <div>
-                        <div class="card-title">Dr. Suah See Ling</div>
-                        <span class="card-role">Ketua Unit Pengajian Akademik</span>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, prosedur ISO 21001:2018 EOMS dan MQA.</li>
+                            <li><strong>Memantau &amp; menyelia</strong> semua aktiviti unit di JKA.</li>
+                            <li><strong>Memantau</strong> pengurusan proses reka bentuk dan penyampaian kurikulum.</li>
+                            <li><strong>Memantau</strong> pengurusan sistem pembelajaran digital.</li>
+                            <li><strong>Memantau</strong> penyediaan dan pelaksanaan Jadual Waktu.</li>
+                            <li><strong>Memantau</strong> perancangan PdP dan kerja kursus serta keselarasannya dengan Maklumat Kursus (MK).</li>
+                            <li><strong>Memantau</strong> pelaksanaan pentaksiran mengikut keperluan IPGM dan IPGK.</li>
+                            <li><strong>Memantau</strong> tindakan terhadap hasil refleksi praktikum pelajar serta praktikum bertema.</li>
+                            <li><strong>Memantau</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
+                            <li><strong>Memastikan</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi program / kursus.</li>
+                            <li><strong>Memantau &amp; menyelia</strong> kemajuan prestasi pelajar.</li>
+                            <li><strong>Memantau</strong> pelaksanaan semua kursus dalam semua program.</li>
+                            <li><strong>Memantau</strong> penyampaian taklimat program pengajian akademik kepada pelajar baharu.</li>
+                            <li><strong>Memantau</strong> penyebaran pindaan/penambahbaikan struktur program terkini.</li>
+                            <li><strong>Memastikan</strong> penyebaran maklumat terkini tentang perkembangan program pengajian akademik.</li>
+                            <li><strong>Memantau</strong> semua aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme.</li>
+                            <li><strong>Memantau</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
+                            <li><strong>Memantau</strong> pelaksanaan program peningkatan kompetensi pensyarah.</li>
+                        </ul>
                     </div>
-                    <span class="badge-unit" style="margin-left:auto;">UPA</span>
-                </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Memastikan</strong> penawaran semua kursus dan maklumat pentaksiran dalam semua program.</li>
-                        <li><strong>Memastikan</strong> taklimat program pengajian akademik diberi kepada pelajar baharu.</li>
-                        <li><strong>Memastikan</strong> penyebaran pindaan/penambahbaikan struktur program terkini kepada Ketua Jabatan/Unit.</li>
-                        <li><strong>Memastikan</strong> pengurusan pemilihan elektif teras dan elektif terbuka.</li>
-                        <li><strong>Membentangkan</strong> senarai kursus, tenaga pengajar serta maklumat pentaksiran dalam mesyuarat Pengurusan Tertinggi IPG.</li>
-                        <li><strong>Memastikan</strong> maklumat Program Pengajian Akademik terkini dimuatnaik ke laman web institut.</li>
-                        <li><strong>Memastikan</strong> penyebaran maklumat tentang perkembangan kurikulum terkini.</li>
-                        <li><strong>Memastikan</strong> pelaksanaan jadual waktu interaksi kuliah bagi program KDC.</li>
-                        <li><strong>Menyelaras</strong> tugas semua Penyelaras Program yang ditawarkan di Institut.</li>
-                    </ul>
-                </div>
-            </div>
+                </button>
 
-            <!-- KETUA UNIT PEMBELAJARAN DIGITAL -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(3).jpg" alt="Ketua Unit Pembelajaran Digital" />
-                    <div>
-                        <div class="card-title">Dr. Kamalambal Durairaj</div>
-                        <span class="card-role">Ketua Unit Pembelajaran Digital</span>
+                <!-- TIMBALAN KETUA / KETUA UNIT PENGURUSAN AKADEMIK -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/drtan.png', 'Dr. Tan Lay Koon', 'Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(1).jpg" alt="Timbalan Ketua" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Dr. Tan Lay Koon</div>
+                            <span class="card-role">Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">UPA</span>
                     </div>
-                    <span class="badge-unit" style="margin-left:auto;">UPD</span>
-                </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Menyelaras</strong> perancangan, pelaksanaan, dan penilaian keberkesanan pembelajaran digital di IPGK, termasuk garis panduan, penggunaan DELIMa, dan sesi taklimat dengan OPD.</li>
-                        <li><strong>Menyelaras &amp; memantau</strong> pelaksanaan pembelajaran digital di jabatan melalui semakan laporan dan pemantauan berkala.</li>
-                        <li><strong>Menganalisis</strong> data penggunaan platform digital bagi mengenal pasti keperluan penambahbaikan serta menyediakan laporan keberkesanan.</li>
-                        <li><strong>Mengurus</strong> fungsi pentadbiran jabatan sebagai Setiausaha (minit mesyuarat, surat menyurat, dokumentasi, rekod rasmi).</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- KETUA UNIT PENAMBAHBAIKAN BERTERUSAN AKADEMIK -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(4).jpg" alt="Ketua Unit Penambahbaikan Berterusan" />
-                    <div>
-                        <div class="card-title">Dr. Soudamini a/p Narayanan Nair</div>
-                        <span class="card-role">Ketua Unit Penambahbaikan Berterusan Akademik</span>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Memantau</strong> semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, ISO 21001:2018 EOMS dan MQA.</li>
+                            <li><strong>Memastikan</strong> semua aktiviti unit berjalan lancar.</li>
+                            <li><strong>Memastikan</strong> pengurusan proses reka bentuk dan penyampaian kurikulum dilaksanakan mengikut prosedur.</li>
+                            <li><strong>Memastikan</strong> penyediaan dan pelaksanaan Jadual Waktu berjalan lancar.</li>
+                        </ul>
                     </div>
-                    <span class="badge-unit" style="margin-left:auto;">UPBA</span>
-                </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Memantau</strong> penyelarasan perancangan semester PdP dan kerja kursus bagi setiap kursus.</li>
-                        <li><strong>Memantau</strong> pelaksanaan pentaksiran yang sistematik, profesional, sah dan boleh dipercayai.</li>
-                        <li><strong>Memastikan</strong> pengurusan laporan pelaksanaan Praktikum untuk penambahbaikan berterusan.</li>
-                        <li><strong>Mengurus</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
-                        <li><strong>Mengurus &amp; menyelia</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi kursus/program.</li>
-                        <li><strong>Mengurus &amp; menyelia</strong> kemajuan prestasi pelajar dan cadangan tindakan penambahbaikan.</li>
-                        <li><strong>Memastikan</strong> perancangan dan pelaksanaan peningkatan literasi data dalam program latihan guru.</li>
-                    </ul>
-                </div>
-            </div>
+                </button>
 
-            <!-- KETUA UNIT PERKEMBANGAN PROFESIONALISME AKADEMIK -->
-            <div class="spek-card">
-                <div class="card-header">
-                    <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(5).jpg" alt="Ketua Unit Perkembangan Profesionalisme" />
-                    <div>
-                        <div class="card-title">Pn. Wan Nor Asmah Binti Arshad</div>
-                        <span class="card-role">Ketua Unit Perkembangan Profesionalisme Akademik</span>
+                <!-- KETUA UNIT PENGAJIAN AKADEMIK -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/drsuah.png', 'Dr. Suah See Ling', 'Ketua Unit Pengajian Akademik')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(2).jpg" alt="Ketua Unit Pengajian Akademik" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Dr. Suah See Ling</div>
+                            <span class="card-role">Ketua Unit Pengajian Akademik</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">UPA</span>
                     </div>
-                    <span class="badge-unit" style="margin-left:auto;">UPPA</span>
-                </div>
-                <div class="divider-light"></div>
-                <div class="card-body">
-                    <ul>
-                        <li><strong>Membuat penyelaras</strong> bersama ULDP/Jabatan akademik perancangan tahunan berfokus peningkatan profesionalisme berdasarkan analisis IPPK, CDl dan CCQI.</li>
-                        <li><strong>Merancang</strong> aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme akademik pensyarah dan pelajar.</li>
-                        <li><strong>Merancang</strong> aktiviti akademik yang menyokong pengembangan profesionalisme (PLC, KPPB, TS25, PBD, PAK-21, dsb.).</li>
-                        <li><strong>Memperkukuh</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
-                        <li><strong>Mengemas kini</strong> dokumentasi aktiviti unit dari semasa ke semasa.</li>
-                    </ul>
-                </div>
-            </div>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Memastikan</strong> penawaran semua kursus dan maklumat pentaksiran dalam semua program.</li>
+                            <li><strong>Memastikan</strong> taklimat program pengajian akademik diberi kepada pelajar baharu.</li>
+                            <li><strong>Memastikan</strong> penyebaran pindaan/penambahbaikan struktur program terkini kepada Ketua Jabatan/Unit.</li>
+                            <li><strong>Memastikan</strong> pengurusan pemilihan elektif teras dan elektif terbuka.</li>
+                            <li><strong>Membentangkan</strong> senarai kursus, tenaga pengajar serta maklumat pentaksiran dalam mesyuarat Pengurusan Tertinggi IPG.</li>
+                            <li><strong>Memastikan</strong> maklumat Program Pengajian Akademik terkini dimuatnaik ke laman web institut.</li>
+                            <li><strong>Memastikan</strong> penyebaran maklumat tentang perkembangan kurikulum terkini.</li>
+                            <li><strong>Memastikan</strong> pelaksanaan jadual waktu interaksi kuliah bagi program KDC.</li>
+                            <li><strong>Menyelaras</strong> tugas semua Penyelaras Program yang ditawarkan di Institut.</li>
+                        </ul>
+                    </div>
+                </button>
 
-        </div><!-- end spek-grid -->
+                <!-- KETUA UNIT PEMBELAJARAN DIGITAL -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/drkamala.png', 'Dr. Kamalambal Durairaj', 'Ketua Unit Pembelajaran Digital')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(3).jpg" alt="Ketua Unit Pembelajaran Digital" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Dr. Kamalambal Durairaj</div>
+                            <span class="card-role">Ketua Unit Pembelajaran Digital</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">UPD</span>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Menyelaras</strong> perancangan, pelaksanaan, dan penilaian keberkesanan pembelajaran digital di IPGK, termasuk garis panduan, penggunaan DELIMa, dan sesi taklimat dengan OPD.</li>
+                            <li><strong>Menyelaras &amp; memantau</strong> pelaksanaan pembelajaran digital di jabatan melalui semakan laporan dan pemantauan berkala.</li>
+                            <li><strong>Menganalisis</strong> data penggunaan platform digital bagi mengenal pasti keperluan penambahbaikan serta menyediakan laporan keberkesanan.</li>
+                            <li><strong>Mengurus</strong> fungsi pentadbiran jabatan sebagai Setiausaha (minit mesyuarat, surat menyurat, dokumentasi, rekod rasmi).</li>
+                        </ul>
+                    </div>
+                </button>
+
+                <!-- KETUA UNIT PENAMBAHBAIKAN BERTERUSAN AKADEMIK -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/drsoudamini.png', 'Dr. Soudamini a/p Narayanan Nair', 'Ketua Unit Penambahbaikan Berterusan Akademik')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(4).jpg" alt="Ketua Unit Penambahbaikan Berterusan" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Dr. Soudamini a/p Narayanan Nair</div>
+                            <span class="card-role">Ketua Unit Penambahbaikan Berterusan Akademik</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">UPBA</span>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Memantau</strong> penyelarasan perancangan semester PdP dan kerja kursus bagi setiap kursus.</li>
+                            <li><strong>Memantau</strong> pelaksanaan pentaksiran yang sistematik, profesional, sah dan boleh dipercayai.</li>
+                            <li><strong>Memastikan</strong> pengurusan laporan pelaksanaan Praktikum untuk penambahbaikan berterusan.</li>
+                            <li><strong>Mengurus</strong> pelaksanaan pemantauan penyampaian kurikulum.</li>
+                            <li><strong>Mengurus &amp; menyelia</strong> pelaksanaan dan pelaporan <em>Closing the Loop</em> bagi kursus/program.</li>
+                            <li><strong>Mengurus &amp; menyelia</strong> kemajuan prestasi pelajar dan cadangan tindakan penambahbaikan.</li>
+                            <li><strong>Memastikan</strong> perancangan dan pelaksanaan peningkatan literasi data dalam program latihan guru.</li>
+                        </ul>
+                    </div>
+                </button>
+
+                <!-- KETUA UNIT PERKEMBANGAN PROFESIONALISME AKADEMIK -->
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/wannorasmah.png', 'Pn. Wan Nor Asmah Binti Arshad', 'Ketua Unit Perkembangan Profesionalisme Akademik')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed(5).jpg" alt="Ketua Unit Perkembangan Profesionalisme" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Pn. Wan Nor Asmah Binti Arshad</div>
+                            <span class="card-role">Ketua Unit Perkembangan Profesionalisme Akademik</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">UPPA</span>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Membuat penyelaras</strong> bersama ULDP/Jabatan akademik perancangan tahunan berfokus peningkatan profesionalisme berdasarkan analisis IPPK, CDl dan CCQI.</li>
+                            <li><strong>Merancang</strong> aktiviti unit secara bersepadu untuk meningkatkan kualiti &amp; profesionalisme akademik pensyarah dan pelajar.</li>
+                            <li><strong>Merancang</strong> aktiviti akademik yang menyokong pengembangan profesionalisme (PLC, KPPB, TS25, PBD, PAK-21, dsb.).</li>
+                            <li><strong>Memperkukuh</strong> pembudayaan amalan pedagogi masa kini di institut.</li>
+                            <li><strong>Mengemas kini</strong> dokumentasi aktiviti unit dari semasa ke semasa.</li>
+                        </ul>
+                    </div>
+                </button>
+
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section class="page-section">
+            <h2 class="section-heading">Pembantu Tadbir</h2>
+            <p class="section-intro">Sokongan jabatan pentadbiran.</p>
+
+            <div class="spek-grid">
+                <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/unnamed.png', 'Pn. Norhayati binti Ishak', 'Pembantu Tadbir (P/O)')">
+                    <div class="card-header">
+                        <div class="card-avatar-wrap">
+                            <img class="card-avatar" src="SPESIFIKASI TUGAS UNIT_files/unnamed.png" alt="Pembantu Tadbir" />
+                            <span class="card-avatar-zoom">🔍</span>
+                        </div>
+                        <div>
+                            <div class="card-title">Pn. Norhayati binti Ishak</div>
+                            <span class="card-role">Pembantu Tadbir (P/O)</span>
+                        </div>
+                        <span class="badge-unit" style="margin-left:auto;">Pentadbiran</span>
+                    </div>
+                    <div class="divider-light"></div>
+                    <div class="card-body">
+                        <ul>
+                            <li><strong>Menyokong</strong> pentadbiran jabatan, pengurusan dokumen dan urusan rasmi.</li>
+                            <li><strong>Membantu</strong> penyediaan minit mesyuarat, surat menyurat dan rekod unit.</li>
+                            <li><strong>Menyelaras</strong> urusan harian serta dokumen berkaitan pentadbiran jabatan.</li>
+                        </ul>
+                    </div>
+                </button>
+            </div>
+        </section>
 
         <div style="margin-top: 48px; font-size: 14px; color: var(--text-light); border-top: 1px solid var(--border-light); padding-top: 24px; text-align: center;">
             <span>Kemaskini Jun 2026</span>
@@ -859,11 +1169,45 @@
         </div>
     </footer>
 
+    <!-- PHOTO PREVIEW LIGHTBOX -->
+    <div class="preview-overlay" id="previewOverlay" onclick="if(event.target===this) closePreview()">
+        <div class="preview-box">
+            <div class="preview-box-header">
+                <button class="preview-close" onclick="closePreview()" aria-label="Tutup">✕</button>
+            </div>
+            <div class="preview-img-wrap">
+                <img id="previewImg" src="" alt="" />
+            </div>
+            <div class="preview-caption">
+                <div class="preview-name" id="previewName"></div>
+                <span class="preview-role" id="previewRole"></span>
+            </div>
+        </div>
+    </div>
+
     <script>
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
+
+        function openPreview(src, name, role) {
+            document.getElementById('previewImg').src = src;
+            document.getElementById('previewImg').alt = name;
+            document.getElementById('previewName').textContent = name;
+            document.getElementById('previewRole').textContent = role;
+            document.getElementById('previewOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            document.getElementById('previewOverlay').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closePreview();
+        });
     </script>
 
 </body>
