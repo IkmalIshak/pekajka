@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /Users/ikmal/Downloads/pekajka && python3 - <<'PY'\nfrom pathlib import Path\nroot = Path\\('\\.'\\)\nfor path in root\\.glob\\('\\*\\.html'\\):\n    text = path\\.read_text\\(encoding='utf-8'\\)\n    new = text\\.replace\\('href=\"penambahbaikanberterusan\\.html\"', 'href=\"panduanasas\\.html\"'\\)\n    if new != text:\n        path\\.write_text\\(new, encoding='utf-8'\\)\n        print\\(path\\.name\\)\nPY$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
