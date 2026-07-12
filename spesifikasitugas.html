@@ -545,7 +545,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 32px;
+            padding: 16px;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.25s ease;
@@ -559,9 +559,9 @@
         .preview-box {
             background: var(--white);
             border-radius: 20px;
-            max-width: 560px;
-            width: 100%;
-            max-height: 88vh;
+            max-width: 96vw;
+            width: auto;
+            max-height: 94vh;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -578,7 +578,7 @@
             display: flex;
             align-items: center;
             justify-content: flex-end;
-            padding: 14px 14px 0;
+            padding: 10px 10px 0;
         }
 
         .preview-close {
@@ -594,6 +594,8 @@
             align-items: center;
             justify-content: center;
             transition: background 0.2s ease;
+            flex-shrink: 0;
+            z-index: 1;
         }
 
         .preview-close:hover {
@@ -601,22 +603,29 @@
         }
 
         .preview-img-wrap {
-            padding: 8px 28px 20px;
+            padding: 4px 16px;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex: 1;
+            min-height: 0;
         }
 
         .preview-img-wrap img {
-            width: 100%;
-            max-height: 56vh;
+            max-width: 90vw;
+            max-height: 78vh;
+            width: auto;
+            height: auto;
             object-fit: contain;
             border-radius: 12px;
             background: var(--off-white);
+            display: block;
         }
 
         .preview-caption {
-            padding: 0 28px 28px;
+            padding: 4px 28px 24px;
             text-align: center;
+            flex-shrink: 0;
         }
 
         .preview-caption .preview-name {
@@ -849,9 +858,9 @@
             </li>
             <li>
                 <details>
-                    <summary><a href="panduanasas.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
+                    <summary><a href="penambahbaikanberterusan.html" class="sidebar-summary-link">Penambahbaikan Berterusan</a> <span class="arrow" onclick="event.stopPropagation(); event.preventDefault(); this.closest('details').open = !this.closest('details').open;" aria-label="Toggle Penambahbaikan Berterusan submenu">→</span></summary>
                     <ul class="sidebar-subnav">
-                        <li><a href="panduanasas.html">Panduan Asas: Pensyarah Baharu</a></li>
+                        <li><a href="penambahbaikanberterusan.html">Panduan Asas: Pensyarah Baharu</a></li>
                     </ul>
                 </details>
             </li>
@@ -1100,8 +1109,8 @@
         <div class="section-divider"></div>
 
         <section class="page-section">
-            <h2 class="section-heading">Pembantu Tadbir</h2>
-            <p class="section-intro">Sokongan jabatan pentadbiran.</p>
+            <h2 class="section-heading">Bukan Pensyarah</h2>
+            <p class="section-intro">Sokongan pentadbiran jabatan.</p>
 
             <div class="spek-grid">
                 <button class="spek-card" type="button" onclick="openPreview('SPESIFIKASI TUGAS UNIT_files/unnamed.png', 'Pn. Norhayati binti Ishak', 'Pembantu Tadbir (P/O)')">
