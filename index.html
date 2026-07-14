@@ -302,24 +302,115 @@
         }
 
         /* =====================
-           HERO
+           HERO / SLIDER
         ===================== */
         .hero {
             position: relative;
             min-height: 100vh;
+            overflow: hidden;
+            background: var(--purple-dark);
+        }
+
+        .hero-slide-track {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .hero-slide {
+            position: absolute;
+            inset: 0;
             display: flex;
             align-items: flex-end;
             padding-bottom: 100px;
-            overflow: hidden;
-            background: var(--purple-dark);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.9s ease, visibility 0.9s ease;
+            text-decoration: none;
+        }
+
+        .hero-slide.active {
+            opacity: 1;
+            visibility: visible;
         }
 
         .hero-bg {
             position: absolute;
             inset: 0;
-            background: 
+            background:
                 linear-gradient(to bottom, rgba(30,5,90,0.3) 0%, rgba(30,5,90,0.75) 60%, rgba(20,3,70,0.95) 100%),
                 url('PEKA JKA IPGM KPP_files/unnamed.jpg') center/cover no-repeat;
+        }
+
+        .hero-bg-calendar {
+            background:
+                radial-gradient(circle at 18% 25%, rgba(255,255,255,0.07) 0%, transparent 40%),
+                radial-gradient(circle at 82% 78%, rgba(114,9,183,0.35) 0%, transparent 45%),
+                linear-gradient(135deg, #2d0880 0%, #3a0ca3 55%, #22065f 100%);
+        }
+
+        .hero-bg-calendar::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1.5px);
+            background-size: 26px 26px;
+            pointer-events: none;
+        }
+
+        .hero-calendar-card {
+            position: absolute;
+            right: 7%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 380px;
+            max-width: 40vw;
+            border-radius: 20px;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 24px 70px rgba(10,2,40,0.4), 0 0 0 1px rgba(255,255,255,0.08);
+            cursor: default;
+            pointer-events: auto;
+        }
+
+        .hero-calendar-card::before {
+            content: '';
+            display: block;
+            height: 4px;
+            background: linear-gradient(90deg, var(--purple-light), var(--purple));
+        }
+
+        .hero-calendar-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 18px;
+            background: var(--off-white);
+            border-bottom: 1px solid var(--mid-gray);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-mid);
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+            box-shadow: 0 0 0 rgba(46,204,113,0.5);
+            animation: livePulse 2s infinite;
+        }
+
+        @keyframes livePulse {
+            0% { box-shadow: 0 0 0 0 rgba(46,204,113,0.5); }
+            70% { box-shadow: 0 0 0 8px rgba(46,204,113,0); }
+            100% { box-shadow: 0 0 0 0 rgba(46,204,113,0); }
+        }
+
+        .hero-calendar-card iframe {
+            display: block;
         }
 
         .hero-content {
@@ -384,29 +475,70 @@
             font-size: 14px;
             color: rgba(255,255,255,0.85);
             font-weight: 500;
+            transition: background 0.25s ease, border-color 0.25s ease;
         }
 
-        .hero-scroll {
+        .hero-slide-calendar {
+            cursor: pointer;
+        }
+
+        .hero-slide-calendar:hover .hero-tagline {
+            background: rgba(255,255,255,0.14);
+            border-color: rgba(255,255,255,0.55);
+        }
+
+        .hero-dots {
             position: absolute;
             bottom: 40px;
-            right: 60px;
-            color: rgba(255,255,255,0.4);
-            font-size: 12px;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            writing-mode: vertical-rl;
+            left: 60px;
+            z-index: 3;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
         }
 
-        .hero-scroll::after {
-            content: '';
-            display: block;
-            width: 1px;
-            height: 60px;
-            background: rgba(255,255,255,0.2);
+        .hero-dot {
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.35);
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
+
+        .hero-dot.active {
+            width: 30px;
+            border-radius: 6px;
+            background: white;
+        }
+
+        .hero-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 3;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s ease;
+        }
+
+        .hero-arrow:hover {
+            background: rgba(255,255,255,0.22);
+        }
+
+        .hero-arrow-prev { left: 24px; }
+        .hero-arrow-next { right: 24px; }
 
         /* =====================
            SECTIONS
@@ -792,6 +924,12 @@
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .hero-calendar-card {
+                width: 300px;
+                max-width: 50vw;
+                right: 4%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -806,7 +944,11 @@
             .section-header { flex-direction: column; align-items: flex-start; }
             footer { grid-template-columns: 1fr; gap: 40px; padding: 40px 24px; }
             .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 8px; }
-            .hero-scroll { display: none; }
+            .hero-dots { left: 24px; }
+            .hero-arrow { width: 40px; height: 40px; font-size: 18px; }
+            .hero-arrow-prev { left: 12px; }
+            .hero-arrow-next { right: 12px; }
+            .hero-calendar-card { display: none; }
         }
     </style>
 </head>
@@ -926,13 +1068,54 @@
         </button>
     </nav>
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow">Jabatan Kecemerlangan Akademik · IPGKPP</p>
-            <h1>Pengurusan<br>Kurikulum<br><em>Akademik</em></h1>
-            <p class="hero-desc">Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.</p>
+    <!-- HERO SLIDER -->
+    <section class="hero" id="heroSlider">
+        <div class="hero-slide-track" id="heroTrack">
+
+            <!-- SLIDE 1: Intro -->
+            <div class="hero-slide active" data-index="0">
+                <div class="hero-bg"></div>
+                <div class="hero-content">
+                    <p class="hero-eyebrow">Jabatan Kecemerlangan Akademik · IPGKPP</p>
+                    <h1>Pengurusan<br>Kurikulum<br><em>Akademik</em></h1>
+                    <p class="hero-desc">Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.</p>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: Kalendar Akademik -->
+            <a class="hero-slide hero-slide-calendar"
+               data-index="1"
+               href="https://calendar.google.com/calendar/embed?src=2554962d7e7924234be43f2bc12f869c87d733228cb8a61f887dd39607720ca7%40group.calendar.google.com"
+               target="_blank"
+               rel="noopener">
+                <div class="hero-bg hero-bg-calendar"></div>
+                <div class="hero-calendar-card" onclick="event.stopPropagation();">
+                    <div class="hero-calendar-badge"><span class="live-dot"></span> Kalendar Langsung</div>
+                    <iframe
+                        src="https://calendar.google.com/calendar/embed?height=380&wkst=2&ctz=Asia%2FKuala_Lumpur&bgcolor=%23ffffff&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&mode=AGENDA&color=%233a0ca3&src=2554962d7e7924234be43f2bc12f869c87d733228cb8a61f887dd39607720ca7%40group.calendar.google.com"
+                        style="border:0" width="100%" height="380" frameborder="0" scrolling="no"
+                        loading="lazy" title="Pratonton Kalendar JKA">
+                    </iframe>
+                </div>
+                <div class="hero-content">
+                    <p class="hero-eyebrow">Kalendar JKA · IPGKPP</p>
+                    <h1>Lihat<br>Kalendar<br><em>JKA</em></h1>
+                    <p class="hero-desc">Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.</p>
+                    <span class="hero-tagline">📅 Buka Kalendar Penuh →</span>
+                </div>
+            </a>
+
+        </div>
+
+        <!-- Dots -->
+        <div class="hero-dots">
+            <button class="hero-dot active" onclick="goToSlide(0)" aria-label="Slaid 1: Utama"></button>
+            <button class="hero-dot" onclick="goToSlide(1)" aria-label="Slaid 2: Kalendar Akademik"></button>
+        </div>
+
+        <!-- Arrows -->
+        <button class="hero-arrow hero-arrow-prev" onclick="prevSlide()" aria-label="Slaid sebelumnya">‹</button>
+        <button class="hero-arrow hero-arrow-next" onclick="nextSlide()" aria-label="Slaid seterusnya">›</button>
     </section>
 
     <!-- SHORTCUTS -->
@@ -1104,6 +1287,42 @@
         }, { threshold: 0.1 });
 
         document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+        // ===== HERO SLIDER =====
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroDots = document.querySelectorAll('.hero-dot');
+        let currentHeroSlide = 0;
+        let heroAutoplay;
+
+        function goToSlide(index) {
+            heroSlides[currentHeroSlide].classList.remove('active');
+            heroDots[currentHeroSlide].classList.remove('active');
+            currentHeroSlide = index;
+            heroSlides[currentHeroSlide].classList.add('active');
+            heroDots[currentHeroSlide].classList.add('active');
+        }
+
+        function nextSlide() {
+            goToSlide((currentHeroSlide + 1) % heroSlides.length);
+        }
+
+        function prevSlide() {
+            goToSlide((currentHeroSlide - 1 + heroSlides.length) % heroSlides.length);
+        }
+
+        function startHeroAutoplay() {
+            heroAutoplay = setInterval(nextSlide, 7000);
+        }
+
+        function stopHeroAutoplay() {
+            clearInterval(heroAutoplay);
+        }
+
+        startHeroAutoplay();
+
+        const heroSection = document.getElementById('heroSlider');
+        heroSection.addEventListener('mouseenter', stopHeroAutoplay);
+        heroSection.addEventListener('mouseleave', startHeroAutoplay);
     </script>
 
 </body>
