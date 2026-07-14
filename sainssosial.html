@@ -275,6 +275,93 @@
             margin-bottom: 24px;
         }
 
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 40px 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .staff-card {
+            text-align: center;
+        }
+
+        .staff-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+            border: 4px solid var(--purple);
+            box-shadow: 0 8px 24px rgba(58,12,163,0.12);
+            background: var(--light-gray);
+        }
+
+        .staff-photo.archive {
+            border-color: var(--text-light);
+        }
+
+        .staff-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .staff-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .staff-name a {
+            color: var(--purple);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .staff-name a:hover {
+            color: var(--purple-dark);
+        }
+
+        .staff-name.archive-name,
+        .staff-name.archive-name a {
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .staff-name.archive-name a:hover {
+            color: var(--text-dark);
+        }
+
+        .staff-name span {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px !important;
+            color: var(--text-light) !important;
+            font-weight: 400;
+        }
+
+        .staff-role {
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .portfolio-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 18px 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
         /* Footer */
         footer {
             width: 100%;
@@ -499,27 +586,97 @@
     <div style="max-width: 900px; margin: 0 auto 50px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/1MwA44sYSt5BSbOuC26NTWibAeXCVUIri?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ABDUL JALEEL B ABDUL HAKEEM</a>
-            
-            <a href="https://drive.google.com/drive/folders/1V39KazJND75QRRElL14QTwjnCmhsw0Xt?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">TAN YAN SANG</a>
-            
-            <a href="https://drive.google.com/drive/folders/1THEZXf-Vm5bL2WBAzLkuxwwcKCYjGbpX?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MOHD FAUZI B MD REJAB</a>
-            
-            <a href="https://drive.google.com/drive/folders/1KuXBXgavw91osW3ykq8lM2L308KF5hG0?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SANKAR A/L ARIKRISHNAN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1N-62PVoW4vk-y36vT2HPD53pweGdf_eA?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORIZA BINTI MOHD YASIN@HASHIM</a>
-            
-            <a href="https://drive.google.com/drive/folders/1j9YgxLak4ZmuF1h4O5Pn_-L00EA-hD1v?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">TENGKU NURLIDA BINTI TENGKU ZAINUL ABIDIN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1Bq3jovr2nJy_cG9A8cj__vLy04aI7lb5?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">LIM WU MIN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1HGkmUFg7mxYx3eeiFxo3qdLOVFGRWDBk?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">AZNEE NAZEERAH BT MOHD ZAIN</a>
-            
-            <a href="https://drive.google.com/drive/folders/15nXZ3AxO9pUYeqBWViQHqW_I7hkUrmgM?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MARIAYEE A/P PERUMAL</a>
-            
-            <a href="https://drive.google.com/drive/folders/1-gm6AW7Aak91zDGCcjNWPjOTlZfySeP-?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MOHAMMED SIRAAJ B SAIDUMASUDU</a>
-        </div>
+        <div class="staff-grid">
+                <!-- ABDUL JALEEL B ABDUL HAKEEM -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="ABDUL JALEEL B ABDUL HAKEEM">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1MwA44sYSt5BSbOuC26NTWibAeXCVUIri?usp=drive_link" target="_blank" rel="noopener">ABDUL JALEEL B ABDUL HAKEEM</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- TAN YAN SANG -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="TAN YAN SANG">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1V39KazJND75QRRElL14QTwjnCmhsw0Xt?usp=drive_link" target="_blank" rel="noopener">TAN YAN SANG</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MOHD FAUZI B MD REJAB -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="MOHD FAUZI B MD REJAB">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1THEZXf-Vm5bL2WBAzLkuxwwcKCYjGbpX?usp=drive_link" target="_blank" rel="noopener">MOHD FAUZI B MD REJAB</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- SANKAR A/L ARIKRISHNAN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="SANKAR A/L ARIKRISHNAN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1KuXBXgavw91osW3ykq8lM2L308KF5hG0?usp=drive_link" target="_blank" rel="noopener">SANKAR A/L ARIKRISHNAN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORIZA BINTI MOHD YASIN@HASHIM -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="NORIZA BINTI MOHD YASIN@HASHIM">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1N-62PVoW4vk-y36vT2HPD53pweGdf_eA?usp=drive_link" target="_blank" rel="noopener">NORIZA BINTI MOHD YASIN@HASHIM</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- TENGKU NURLIDA BINTI TENGKU ZAINUL ABIDIN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="TENGKU NURLIDA BINTI TENGKU ZAINUL ABIDIN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1j9YgxLak4ZmuF1h4O5Pn_-L00EA-hD1v?usp=drive_link" target="_blank" rel="noopener">TENGKU NURLIDA BINTI TENGKU ZAINUL ABIDIN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- LIM WU MIN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="LIM WU MIN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1Bq3jovr2nJy_cG9A8cj__vLy04aI7lb5?usp=drive_link" target="_blank" rel="noopener">LIM WU MIN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- AZNEE NAZEERAH BT MOHD ZAIN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="AZNEE NAZEERAH BT MOHD ZAIN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1HGkmUFg7mxYx3eeiFxo3qdLOVFGRWDBk?usp=drive_link" target="_blank" rel="noopener">AZNEE NAZEERAH BT MOHD ZAIN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MARIAYEE A/P PERUMAL -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="MARIAYEE A/P PERUMAL">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/15nXZ3AxO9pUYeqBWViQHqW_I7hkUrmgM?usp=drive_link" target="_blank" rel="noopener">MARIAYEE A/P PERUMAL</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MOHAMMED SIRAAJ B SAIDUMASUDU -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="MOHAMMED SIRAAJ B SAIDUMASUDU">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1-gm6AW7Aak91zDGCcjNWPjOTlZfySeP-?usp=drive_link" target="_blank" rel="noopener">MOHAMMED SIRAAJ B SAIDUMASUDU</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+            </div>
     </div>
 
     <!-- Divider -->
@@ -529,11 +686,25 @@
     <div style="max-width: 900px; margin: 0 auto 50px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH BANTUAN</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/10tX1qI5iQBSexLpgTC5bHqYYGZ3d4Ae1?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SOUDAMINI A/P NARAYANAN NAIR</a>
-            
-            <a href="https://drive.google.com/drive/folders/1zypFpu7d0MTyi8pZnw6g3OOHuJMYR22g?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SYAMALA NAIR A/P G GOPAL</a>
-        </div>
+        <div class="staff-grid">
+                <!-- SOUDAMINI A/P NARAYANAN NAIR -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="SOUDAMINI A/P NARAYANAN NAIR">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/10tX1qI5iQBSexLpgTC5bHqYYGZ3d4Ae1?usp=drive_link" target="_blank" rel="noopener">SOUDAMINI A/P NARAYANAN NAIR</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- SYAMALA NAIR A/P G GOPAL -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="SYAMALA NAIR A/P G GOPAL">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1zypFpu7d0MTyi8pZnw6g3OOHuJMYR22g?usp=drive_link" target="_blank" rel="noopener">SYAMALA NAIR A/P G GOPAL</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+            </div>
     </div>
 
     <!-- Divider -->
@@ -543,11 +714,25 @@
     <div style="max-width: 900px; margin: 0 auto;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH (ARKIB)</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light);">SOUDAMINI A/P NARAYANAN NAIR <span style="font-size: 12px; color: var(--text-light);">(sebelum 2026)</span></div>
-            
-            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light);">SYAMALA NAIR A/P G GOPAL <span style="font-size: 12px; color: var(--text-light);">(sebelum 2026)</span></div>
-        </div>
+        <div class="staff-grid">
+                <!-- SOUDAMINI A/P NARAYANAN NAIR (SEBELUM 2026) -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="SOUDAMINI A/P NARAYANAN NAIR (sebelum 2026)">
+                    </div>
+                    <h3 class="staff-name archive-name">SOUDAMINI A/P NARAYANAN NAIR <span style="font-size: 12px; color: var(--text-light);">(sebelum 2026)</span></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+
+                <!-- SYAMALA NAIR A/P G GOPAL (SEBELUM 2026) -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - SAINS SOSIAL_files/placeholder-avatar.svg" alt="SYAMALA NAIR A/P G GOPAL (sebelum 2026)">
+                    </div>
+                    <h3 class="staff-name archive-name">SYAMALA NAIR A/P G GOPAL <span style="font-size: 12px; color: var(--text-light);">(sebelum 2026)</span></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+            </div>
     </div>
 
     <!-- Footer note -->

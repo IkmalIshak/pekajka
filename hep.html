@@ -275,6 +275,93 @@
             margin-bottom: 24px;
         }
 
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 40px 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .staff-card {
+            text-align: center;
+        }
+
+        .staff-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+            border: 4px solid var(--purple);
+            box-shadow: 0 8px 24px rgba(58,12,163,0.12);
+            background: var(--light-gray);
+        }
+
+        .staff-photo.archive {
+            border-color: var(--text-light);
+        }
+
+        .staff-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .staff-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .staff-name a {
+            color: var(--purple);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .staff-name a:hover {
+            color: var(--purple-dark);
+        }
+
+        .staff-name.archive-name,
+        .staff-name.archive-name a {
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .staff-name.archive-name a:hover {
+            color: var(--text-dark);
+        }
+
+        .staff-name span {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px !important;
+            color: var(--text-light) !important;
+            font-weight: 400;
+        }
+
+        .staff-role {
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .portfolio-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 18px 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
         /* Footer */
         footer {
             width: 100%;
@@ -499,21 +586,70 @@
     <div style="max-width: 900px; margin: 0 auto;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/1uuR2FpOGVFAivyyljfQGvZ2kcWGw58Px?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">KAMIL NASURUDDIN BIN DARUS</a>
-            
-            <a href="https://drive.google.com/drive/folders/1hxTVY4L2z0Avr6wYKKaq2Y_x6MTShPyS?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MOHD SAIFUL RIZAL B OTHMAN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1nDN60sl-rU4UERmnXqHMaj9z7xVgwxPh?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ZAILI BIN IDRIS</a>
-            
-            <a href="https://drive.google.com/drive/folders/1YUYtUS85RS_yY4R5dD8R-3ow2o0z4ts5?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NOOR EFFENDI BIN ISMAIL</a>
-            
-            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">AZILINA BINTI MOHAMED BOR</div>
-            
-            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">MOHD. RASUL BIN ALI</div>
-            
-            <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-dark); font-weight: 500; border-left: 4px solid var(--purple);">MASYITHOH BINTI MD ZUBER</div>
-        </div>
+        <div class="staff-grid">
+                <!-- KAMIL NASURUDDIN BIN DARUS -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="KAMIL NASURUDDIN BIN DARUS">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1uuR2FpOGVFAivyyljfQGvZ2kcWGw58Px?usp=drive_link" target="_blank" rel="noopener">KAMIL NASURUDDIN BIN DARUS</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MOHD SAIFUL RIZAL B OTHMAN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="MOHD SAIFUL RIZAL B OTHMAN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1hxTVY4L2z0Avr6wYKKaq2Y_x6MTShPyS?usp=drive_link" target="_blank" rel="noopener">MOHD SAIFUL RIZAL B OTHMAN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ZAILI BIN IDRIS -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="ZAILI BIN IDRIS">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1nDN60sl-rU4UERmnXqHMaj9z7xVgwxPh?usp=drive_link" target="_blank" rel="noopener">ZAILI BIN IDRIS</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NOOR EFFENDI BIN ISMAIL -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="NOOR EFFENDI BIN ISMAIL">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1YUYtUS85RS_yY4R5dD8R-3ow2o0z4ts5?usp=sharing" target="_blank" rel="noopener">NOOR EFFENDI BIN ISMAIL</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- AZILINA BINTI MOHAMED BOR -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="AZILINA BINTI MOHAMED BOR">
+                    </div>
+                    <h3 class="staff-name">AZILINA BINTI MOHAMED BOR</h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MOHD. RASUL BIN ALI -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="MOHD. RASUL BIN ALI">
+                    </div>
+                    <h3 class="staff-name">MOHD. RASUL BIN ALI</h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MASYITHOH BINTI MD ZUBER -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - HEP_files/placeholder-avatar.svg" alt="MASYITHOH BINTI MD ZUBER">
+                    </div>
+                    <h3 class="staff-name">MASYITHOH BINTI MD ZUBER</h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+            </div>
     </div>
 
     <!-- Footer note -->

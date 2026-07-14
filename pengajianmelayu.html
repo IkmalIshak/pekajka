@@ -275,6 +275,93 @@
             margin-bottom: 24px;
         }
 
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 40px 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .staff-card {
+            text-align: center;
+        }
+
+        .staff-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+            border: 4px solid var(--purple);
+            box-shadow: 0 8px 24px rgba(58,12,163,0.12);
+            background: var(--light-gray);
+        }
+
+        .staff-photo.archive {
+            border-color: var(--text-light);
+        }
+
+        .staff-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .staff-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .staff-name a {
+            color: var(--purple);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .staff-name a:hover {
+            color: var(--purple-dark);
+        }
+
+        .staff-name.archive-name,
+        .staff-name.archive-name a {
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .staff-name.archive-name a:hover {
+            color: var(--text-dark);
+        }
+
+        .staff-name span {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px !important;
+            color: var(--text-light) !important;
+            font-weight: 400;
+        }
+
+        .staff-role {
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .portfolio-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 18px 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
         /* Footer */
         footer {
             width: 100%;
@@ -499,18 +586,60 @@
         <div style="max-width: 900px; margin: 0 auto 50px;">
             <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-                <a href="https://drive.google.com/drive/folders/1oVCBdNnyO5EuTwO7xG7R9p8M26ty_9jP?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MAT SALLEH B MOHAMAD ZAIN</a>
-                
-                <a href="https://drive.google.com/drive/folders/18ZSpI-X5T2iZQuGjYj91_TrwPH_dcuIB?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ARFAH BINTI AHAMAD</a>
-                
-                <a href="https://drive.google.com/drive/folders/1vZKRpw0_xeYEOYcBs6Z3NKo_WGjxqGXq?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ROZEEROZANNA BT ROSLI</a>
-                
-                <a href="https://drive.google.com/drive/folders/12MYNw_5lwdSZALH6r2WYcRhA-v2ygUa_?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">WAHIDAH BINTI MUHAMAD</a>
-                
-                <a href="https://drive.google.com/drive/folders/1AktIip3yupYG-YIdrJMWia8cmw2okoln?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MASHITOH BT PAKIR MOHAMED</a>
-                
-                <a href="https://drive.google.com/drive/folders/1sDnFZrDvbKL98C4lfMMGyiCRvlLKlOlz?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORHAYATI BINTI AYIT</a>
+            <div class="staff-grid">
+                <!-- MAT SALLEH B MOHAMAD ZAIN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="MAT SALLEH B MOHAMAD ZAIN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1oVCBdNnyO5EuTwO7xG7R9p8M26ty_9jP?usp=drive_link" target="_blank" rel="noopener">MAT SALLEH B MOHAMAD ZAIN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ARFAH BINTI AHAMAD -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="ARFAH BINTI AHAMAD">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/18ZSpI-X5T2iZQuGjYj91_TrwPH_dcuIB?usp=drive_link" target="_blank" rel="noopener">ARFAH BINTI AHAMAD</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ROZEEROZANNA BT ROSLI -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="ROZEEROZANNA BT ROSLI">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1vZKRpw0_xeYEOYcBs6Z3NKo_WGjxqGXq?usp=drive_link" target="_blank" rel="noopener">ROZEEROZANNA BT ROSLI</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- WAHIDAH BINTI MUHAMAD -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="WAHIDAH BINTI MUHAMAD">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/12MYNw_5lwdSZALH6r2WYcRhA-v2ygUa_?usp=drive_link" target="_blank" rel="noopener">WAHIDAH BINTI MUHAMAD</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MASHITOH BT PAKIR MOHAMED -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="MASHITOH BT PAKIR MOHAMED">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1AktIip3yupYG-YIdrJMWia8cmw2okoln?usp=drive_link" target="_blank" rel="noopener">MASHITOH BT PAKIR MOHAMED</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORHAYATI BINTI AYIT -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="NORHAYATI BINTI AYIT">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1sDnFZrDvbKL98C4lfMMGyiCRvlLKlOlz?usp=drive_link" target="_blank" rel="noopener">NORHAYATI BINTI AYIT</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
             </div>
         </div>
 
@@ -521,8 +650,15 @@
         <div style="max-width: 900px; margin: 0 auto 50px;">
             <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH BANTUAN</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-                <a href="https://drive.google.com/drive/folders/1qJoBzwELU2iyfjXRieZALMDBazRaaT2I?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NAZIRUDDIN BIN MASHOOD</a>
+            <div class="staff-grid">
+                <!-- NAZIRUDDIN BIN MASHOOD -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg" alt="NAZIRUDDIN BIN MASHOOD">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1qJoBzwELU2iyfjXRieZALMDBazRaaT2I?usp=drive_link" target="_blank" rel="noopener">NAZIRUDDIN BIN MASHOOD</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
             </div>
         </div>
 
@@ -533,9 +669,8 @@
         <div style="max-width: 900px; margin: 0 auto;">
             <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH (ARKIB)</h2>
             
-            <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-                <!-- No archived lecturers listed in the original Pengajian Melayu page -->
-                <div style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; color: var(--text-mid); font-weight: 400; border-left: 4px solid var(--text-light); font-style: italic;">Tiada data arkib</div>
+            <div class="staff-grid">
+                <div class="portfolio-empty">Tiada data arkib</div>
             </div>
         </div>
 

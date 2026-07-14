@@ -275,6 +275,93 @@
             margin-bottom: 24px;
         }
 
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 40px 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .staff-card {
+            text-align: center;
+        }
+
+        .staff-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 16px;
+            border: 4px solid var(--purple);
+            box-shadow: 0 8px 24px rgba(58,12,163,0.12);
+            background: var(--light-gray);
+        }
+
+        .staff-photo.archive {
+            border-color: var(--text-light);
+        }
+
+        .staff-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .staff-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+            line-height: 1.35;
+        }
+
+        .staff-name a {
+            color: var(--purple);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .staff-name a:hover {
+            color: var(--purple-dark);
+        }
+
+        .staff-name.archive-name,
+        .staff-name.archive-name a {
+            color: var(--text-mid);
+            font-weight: 500;
+        }
+
+        .staff-name.archive-name a:hover {
+            color: var(--text-dark);
+        }
+
+        .staff-name span {
+            display: block;
+            margin-top: 4px;
+            font-size: 12px !important;
+            color: var(--text-light) !important;
+            font-weight: 400;
+        }
+
+        .staff-role {
+            font-size: 13px;
+            color: var(--text-light);
+            margin: 0;
+        }
+
+        .portfolio-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 18px 20px;
+            background: var(--light-gray);
+            border-radius: 10px;
+            color: var(--text-mid);
+            font-style: italic;
+        }
+
         /* Footer */
         footer {
             width: 100%;
@@ -499,41 +586,160 @@
     <div style="max-width: 900px; margin: 0 auto 50px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/1Jfm717md7xEIh9jRI0bVr-s2d_nUpvOp?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORAZIAH BT AHMAD SHATAR</a>
-            
-            <a href="https://drive.google.com/drive/folders/1HhL6hcK_uDhOxuEB0knfKMLaYszj85Uu?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">LINA LEE GAY WAH</a>
-            
-            <a href="https://drive.google.com/drive/folders/12kMPdh95l0xD7m9YevTaeZ_V8G2J5Ztl?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">RATANAMLA A/P KALIMUTHU</a>
-            
-            <a href="https://drive.google.com/drive/folders/1DFvGwUrwWJ2eAD18M6TT32dg-nVQxbYJ?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">KAM LAY KHUAN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1ukwYYamFKw1rdPkq3rK4R_WYhSOJKJWp?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SHUHAILAH BT MAT SAID</a>
-            
-            <a href="https://drive.google.com/drive/folders/1kE7pp5HWB0XH6cHfqi6dBOy9GAGUcnG4?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ANPALAKAN A/L VADIAPPAN</a>
-            
-            <a href="https://drive.google.com/drive/folders/1D5o5KqvjfULqTaEJTHaukYkeYuK7WdVQ?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">JUNAIDAH BINTI ABDUL SHUKUR</a>
-            
-            <a href="https://drive.google.com/drive/folders/1ctn9m-zqKCNBDkk9DIPUcmk0PAv0Pe2m?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORZABIDI BIN ABU BAKAR</a>
-            
-            <a href="https://drive.google.com/drive/folders/1_cwPMoCwO1oWvhCiCU0oOkgW-DX5AKuk?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">MARDHIYAH BINTI MOHD SAFWAN</a>
-            
-            <a href="https://drive.google.com/drive/folders/11ZzHFWbTVvPsmq8_2cqQgjCtm04TEQvH?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ZAINAB BINTI ISMAIL</a>
-            
-            <a href="https://drive.google.com/drive/folders/1qX-3K4n1uiZDK3vElfgqb-oBwVvrfhgj?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">AMY LOH LIEW YI</a>
-            
-            <a href="https://drive.google.com/drive/folders/1wJOk_QiurBqUp4HsvcVpcnQgpML7BK4d?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">WAN MOHD AZIHAN WAN ALI</a>
-            
-            <a href="https://drive.google.com/drive/folders/1xrQ60xHl8ESF38vPQUwq_Jk1IJLWqW15?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORHAFILAH BT ABDULLAH</a>
-            
-            <a href="https://drive.google.com/drive/folders/1LPT53Haz3hsOu9TdUHYDxikwjN2dbyIg?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ZULFA BT SALEH</a>
-            
-            <a href="https://drive.google.com/drive/folders/1F4hhwJ7ZG68c_oRAnETL2mPuXV44kUR7?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">JAYARAJALECHMEE A/P KRISNASAMY <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a>
-            
-            <a href="https://drive.google.com/drive/folders/1PtK5JP-u5Y6-nB2oE7DulyOdz6ApEMmk?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORAZILAH BT ISMAIL <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a>
-            
-            <a href="https://drive.google.com/drive/folders/12RuDaC69pF39c9Atcmsz9d7aVR-FR-ar?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple);" onmouseover="this.style.background='var(--purple)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">NORIDAWATI BT MD NOR <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a>
-        </div>
+        <div class="staff-grid">
+                <!-- NORAZIAH BT AHMAD SHATAR -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NORAZIAH BT AHMAD SHATAR">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1Jfm717md7xEIh9jRI0bVr-s2d_nUpvOp?usp=drive_link" target="_blank" rel="noopener">NORAZIAH BT AHMAD SHATAR</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- LINA LEE GAY WAH -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="LINA LEE GAY WAH">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1HhL6hcK_uDhOxuEB0knfKMLaYszj85Uu?usp=drive_link" target="_blank" rel="noopener">LINA LEE GAY WAH</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- RATANAMLA A/P KALIMUTHU -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="RATANAMLA A/P KALIMUTHU">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/12kMPdh95l0xD7m9YevTaeZ_V8G2J5Ztl?usp=drive_link" target="_blank" rel="noopener">RATANAMLA A/P KALIMUTHU</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- KAM LAY KHUAN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="KAM LAY KHUAN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1DFvGwUrwWJ2eAD18M6TT32dg-nVQxbYJ?usp=sharing" target="_blank" rel="noopener">KAM LAY KHUAN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- SHUHAILAH BT MAT SAID -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="SHUHAILAH BT MAT SAID">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1ukwYYamFKw1rdPkq3rK4R_WYhSOJKJWp?usp=drive_link" target="_blank" rel="noopener">SHUHAILAH BT MAT SAID</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ANPALAKAN A/L VADIAPPAN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="ANPALAKAN A/L VADIAPPAN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1kE7pp5HWB0XH6cHfqi6dBOy9GAGUcnG4?usp=drive_link" target="_blank" rel="noopener">ANPALAKAN A/L VADIAPPAN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- JUNAIDAH BINTI ABDUL SHUKUR -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="JUNAIDAH BINTI ABDUL SHUKUR">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1D5o5KqvjfULqTaEJTHaukYkeYuK7WdVQ?usp=drive_link" target="_blank" rel="noopener">JUNAIDAH BINTI ABDUL SHUKUR</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORZABIDI BIN ABU BAKAR -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NORZABIDI BIN ABU BAKAR">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1ctn9m-zqKCNBDkk9DIPUcmk0PAv0Pe2m?usp=sharing" target="_blank" rel="noopener">NORZABIDI BIN ABU BAKAR</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- MARDHIYAH BINTI MOHD SAFWAN -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="MARDHIYAH BINTI MOHD SAFWAN">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1_cwPMoCwO1oWvhCiCU0oOkgW-DX5AKuk?usp=sharing" target="_blank" rel="noopener">MARDHIYAH BINTI MOHD SAFWAN</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ZAINAB BINTI ISMAIL -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="ZAINAB BINTI ISMAIL">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/11ZzHFWbTVvPsmq8_2cqQgjCtm04TEQvH?usp=drive_link" target="_blank" rel="noopener">ZAINAB BINTI ISMAIL</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- AMY LOH LIEW YI -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="AMY LOH LIEW YI">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1qX-3K4n1uiZDK3vElfgqb-oBwVvrfhgj?usp=drive_link" target="_blank" rel="noopener">AMY LOH LIEW YI</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- WAN MOHD AZIHAN WAN ALI -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="WAN MOHD AZIHAN WAN ALI">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1wJOk_QiurBqUp4HsvcVpcnQgpML7BK4d?usp=drive_link" target="_blank" rel="noopener">WAN MOHD AZIHAN WAN ALI</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORHAFILAH BT ABDULLAH -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NORHAFILAH BT ABDULLAH">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1xrQ60xHl8ESF38vPQUwq_Jk1IJLWqW15?usp=drive_link" target="_blank" rel="noopener">NORHAFILAH BT ABDULLAH</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- ZULFA BT SALEH -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="ZULFA BT SALEH">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1LPT53Haz3hsOu9TdUHYDxikwjN2dbyIg?usp=drive_link" target="_blank" rel="noopener">ZULFA BT SALEH</a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- JAYARAJALECHMEE A/P KRISNASAMY (MULAI JUN 2026) -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="JAYARAJALECHMEE A/P KRISNASAMY (MULAI JUN 2026)">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1F4hhwJ7ZG68c_oRAnETL2mPuXV44kUR7?usp=drive_link" target="_blank" rel="noopener">JAYARAJALECHMEE A/P KRISNASAMY <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORAZILAH BT ISMAIL (MULAI JUN 2026) -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NORAZILAH BT ISMAIL (MULAI JUN 2026)">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1PtK5JP-u5Y6-nB2oE7DulyOdz6ApEMmk?usp=drive_link" target="_blank" rel="noopener">NORAZILAH BT ISMAIL <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+
+                <!-- NORIDAWATI BT MD NOR (MULAI JUN 2026) -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NORIDAWATI BT MD NOR (MULAI JUN 2026)">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/12RuDaC69pF39c9Atcmsz9d7aVR-FR-ar?usp=drive_link" target="_blank" rel="noopener">NORIDAWATI BT MD NOR <span style="font-size: 12px; color: var(--text-light);">(MULAI JUN 2026)</span></a></h3>
+                    <p class="staff-role">Pensyarah</p>
+                </div>
+            </div>
     </div>
 
     <!-- Divider -->
@@ -543,23 +749,79 @@
     <div style="max-width: 900px; margin: 0 auto 50px;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH BANTUAN (SEMESTER JAN-MEI 2026)</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/1Xy91fEEza7JYhApHP0zXdpaUDwO441Z7?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SUAH SEE LING</a>
-            
-            <a href="https://drive.google.com/drive/folders/16Go1DKsVfFkwOFO-4aZdZTQA2shCaIu_?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">HAFIAH BINTI ISMAIL</a>
-            
-            <a href="https://drive.google.com/drive/folders/1lrCmvnkYTldZqKph3lyldjfEiwaJRVt2?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">KAMIL NASURUDDIN BIN DARUS</a>
-            
-            <a href="https://drive.google.com/drive/folders/18KYsssXHIZzvpfUodGZ2QTVzJWoNsvVX?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">ZAILI BIN IDRIS</a>
-            
-            <a href="https://drive.google.com/drive/folders/1l0J1oXU7mNMSkyOs6mPYa0hPJY942ykT?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">KAMALAMBAL A/P DURAIRAJ</a>
-            
-            <a href="https://drive.google.com/drive/folders/1Y9V6lJPF65w9I6mBzIbROdhFoVO6t44i?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">SANURA</a>
-            
-            <a href="https://drive.google.com/drive/folders/1yl7prtYa5utLkIUrVFPwvpeTGwbBSYmn?usp=sharing" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">RUZAINA</a>
-            
-            <a href="https://drive.google.com/drive/folders/1X8EOi4eeEKgXEuzIPOg5fbr6GanpGd7q?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-dark); font-weight: 500; transition: all 0.2s ease; border-left: 4px solid var(--purple-light);" onmouseover="this.style.background='var(--purple-light)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-dark)';">Ts. MOHD HAZLIE BIN MUHAMAD</a>
-        </div>
+        <div class="staff-grid">
+                <!-- SUAH SEE LING -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="SUAH SEE LING">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1Xy91fEEza7JYhApHP0zXdpaUDwO441Z7?usp=drive_link" target="_blank" rel="noopener">SUAH SEE LING</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- HAFIAH BINTI ISMAIL -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="HAFIAH BINTI ISMAIL">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/16Go1DKsVfFkwOFO-4aZdZTQA2shCaIu_?usp=drive_link" target="_blank" rel="noopener">HAFIAH BINTI ISMAIL</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- KAMIL NASURUDDIN BIN DARUS -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="KAMIL NASURUDDIN BIN DARUS">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1lrCmvnkYTldZqKph3lyldjfEiwaJRVt2?usp=drive_link" target="_blank" rel="noopener">KAMIL NASURUDDIN BIN DARUS</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- ZAILI BIN IDRIS -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="ZAILI BIN IDRIS">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/18KYsssXHIZzvpfUodGZ2QTVzJWoNsvVX?usp=drive_link" target="_blank" rel="noopener">ZAILI BIN IDRIS</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- KAMALAMBAL A/P DURAIRAJ -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="KAMALAMBAL A/P DURAIRAJ">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1l0J1oXU7mNMSkyOs6mPYa0hPJY942ykT?usp=drive_link" target="_blank" rel="noopener">KAMALAMBAL A/P DURAIRAJ</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- SANURA -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="SANURA">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1Y9V6lJPF65w9I6mBzIbROdhFoVO6t44i?usp=sharing" target="_blank" rel="noopener">SANURA</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- RUZAINA -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="RUZAINA">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1yl7prtYa5utLkIUrVFPwvpeTGwbBSYmn?usp=sharing" target="_blank" rel="noopener">RUZAINA</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+
+                <!-- TS. MOHD HAZLIE BIN MUHAMAD -->
+                <div class="staff-card">
+                    <div class="staff-photo">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="Ts. MOHD HAZLIE BIN MUHAMAD">
+                    </div>
+                    <h3 class="staff-name"><a href="https://drive.google.com/drive/folders/1X8EOi4eeEKgXEuzIPOg5fbr6GanpGd7q?usp=drive_link" target="_blank" rel="noopener">Ts. MOHD HAZLIE BIN MUHAMAD</a></h3>
+                    <p class="staff-role">Pensyarah Bantuan</p>
+                </div>
+            </div>
     </div>
 
     <!-- Divider -->
@@ -569,17 +831,52 @@
     <div style="max-width: 900px; margin: 0 auto;">
         <h2 style="font-size: 20px; font-weight: 700; color: var(--purple); margin-bottom: 24px; border-left: 5px solid var(--purple); padding-left: 16px;">SENARAI PENSYARAH BANTUAN (ARKIB)</h2>
         
-        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px;">
-            <a href="https://drive.google.com/drive/folders/10ASNukqLH_qKQe-PxNX0AF0zcFDSyLC1?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">NG KOK HOU</a>
-            
-            <a href="https://drive.google.com/drive/folders/176EiEgmc7KZtjnb9FmlYs0wlVyUBIYYT?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">TAN LEAN HUA</a>
-            
-            <a href="https://drive.google.com/drive/folders/19zMCZhNfxl9xppnkufwP8wAF6_qf5NqA?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">AHMAD ZOHRI BIN ISYAK</a>
-            
-            <a href="https://drive.google.com/drive/folders/14Oh6_YxS5-QKmi7KdiA68pA4aPD_cO9F?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">NG WENG TUTT</a>
-            
-            <a href="https://drive.google.com/drive/folders/1mzxW7RpXDRy3tpU6wjvjd7n9A2PSCm8J?usp=drive_link" target="_blank" style="display: block; padding: 14px 20px; background: var(--light-gray); border-radius: 10px; text-decoration: none; color: var(--text-mid); font-weight: 400; transition: all 0.2s ease; border-left: 4px solid var(--text-light);" onmouseover="this.style.background='var(--text-dark)'; this.style.color='white';" onmouseout="this.style.background='var(--light-gray)'; this.style.color='var(--text-mid)';">KHOO BEE LEE</a>
-        </div>
+        <div class="staff-grid">
+                <!-- NG KOK HOU -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NG KOK HOU">
+                    </div>
+                    <h3 class="staff-name archive-name"><a href="https://drive.google.com/drive/folders/10ASNukqLH_qKQe-PxNX0AF0zcFDSyLC1?usp=drive_link" target="_blank" rel="noopener">NG KOK HOU</a></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+
+                <!-- TAN LEAN HUA -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="TAN LEAN HUA">
+                    </div>
+                    <h3 class="staff-name archive-name"><a href="https://drive.google.com/drive/folders/176EiEgmc7KZtjnb9FmlYs0wlVyUBIYYT?usp=drive_link" target="_blank" rel="noopener">TAN LEAN HUA</a></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+
+                <!-- AHMAD ZOHRI BIN ISYAK -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="AHMAD ZOHRI BIN ISYAK">
+                    </div>
+                    <h3 class="staff-name archive-name"><a href="https://drive.google.com/drive/folders/19zMCZhNfxl9xppnkufwP8wAF6_qf5NqA?usp=drive_link" target="_blank" rel="noopener">AHMAD ZOHRI BIN ISYAK</a></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+
+                <!-- NG WENG TUTT -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="NG WENG TUTT">
+                    </div>
+                    <h3 class="staff-name archive-name"><a href="https://drive.google.com/drive/folders/14Oh6_YxS5-QKmi7KdiA68pA4aPD_cO9F?usp=drive_link" target="_blank" rel="noopener">NG WENG TUTT</a></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+
+                <!-- KHOO BEE LEE -->
+                <div class="staff-card">
+                    <div class="staff-photo archive">
+                        <img src="PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg" alt="KHOO BEE LEE">
+                    </div>
+                    <h3 class="staff-name archive-name"><a href="https://drive.google.com/drive/folders/1mzxW7RpXDRy3tpU6wjvjd7n9A2PSCm8J?usp=drive_link" target="_blank" rel="noopener">KHOO BEE LEE</a></h3>
+                    <p class="staff-role">Arkib</p>
+                </div>
+            </div>
     </div>
 
     <!-- Footer note -->
