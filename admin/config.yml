@@ -266,6 +266,7 @@ collections:
                 summary: "{{fields.text}}"
                 fields:
                   - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Picture or Icon", name: "image", widget: "image", required: false }
                   - { label: "Link", name: "link", widget: "string" }
                   - { label: "Description", name: "description", widget: "text", required: false }
                   - { label: "Button Text", name: "button_text", widget: "string", required: false, default: "Buka →" }
