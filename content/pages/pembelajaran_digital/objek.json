@@ -1,0 +1,112 @@
+{
+  "page": "Objek Pembelajaran Digital",
+  "browser_title": "Objekt Pembelajaran Digital — PEKA JKA IPGKPP",
+  "hero_eyebrow": "JKA · IPGKPP",
+  "hero_title_html": "Objek Pembelajaran<br><em>Digital</em>",
+  "hero_description": "Objek Pembelajaran Digital (OPD) merupakan bahan pengajaran digital yang terancang, interaktif, dan boleh digunakan semula untuk menyokong pembelajaran kendiri pelajar serta pengajaran pensyarah.",
+  "hero_tagline": "📘 Konsep · 🧩 Komponen · 📎 Templat & Rubrik",
+  "page_title": "OBJEK PEMBELAJARAN DIGITAL",
+  "page_subtitle": "Bahan pengajaran digital yang interaktif, terancang dan boleh digunakan semula",
+  "professional_sections": [
+    {
+      "type": "cards",
+      "heading": "JABATAN MATEMATIK",
+      "description": "Objek Pembelajaran Digital — Matematik",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "OPD Matematik 1",
+          "description": "",
+          "image": "PEKA JKA IPGM KPP - Objek Pembelajaran Digital_files/unnamed(1).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/moe-dl.edu.my/mtes1142-2024/home",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "OPD Matematik 2",
+          "description": "",
+          "image": "PEKA JKA IPGM KPP - Objek Pembelajaran Digital_files/unnamed(2).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/moe-dl.edu.my/mtes3103-2024/home",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "OPD Matematik 3",
+          "description": "",
+          "image": "PEKA JKA IPGM KPP - Objek Pembelajaran Digital_files/unnamed(3).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/moe-dl.edu.my/mtes3103-2024/home",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "OPD Matematik 4",
+          "description": "",
+          "image": "PEKA JKA IPGM KPP - Objek Pembelajaran Digital_files/unnamed(4).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/moe-dl.edu.my/mtes3143-mohdshafianshafiee/home",
+          "button_text": "MULA SEKARANG"
+        }
+      ],
+      "images": []
+    },
+    {
+      "type": "cards",
+      "heading": "JABATAN SAINS",
+      "description": "Objek Pembelajaran Digital — Sains",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "OPD Sains 1",
+          "description": "",
+          "image": "PEKA JKA IPGM KPP - Objek Pembelajaran Digital_files/unnamed(5).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/moe-dl.edu.my/opdpals1012",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "JABATAN SAINS 2",
+          "description": "",
+          "image": "",
+          "preview_url": "",
+          "url": "#",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "JABATAN SAINS 3",
+          "description": "",
+          "image": "",
+          "preview_url": "",
+          "url": "#",
+          "button_text": "MULA SEKARANG"
+        },
+        {
+          "title": "JABATAN SAINS 4",
+          "description": "",
+          "image": "",
+          "preview_url": "",
+          "url": "#",
+          "button_text": "MULA SEKARANG"
+        }
+      ],
+      "images": []
+    },
+    {
+      "type": "cards",
+      "heading": "RUBRIK OPD",
+      "description": "Rubrik penilaian Objek Pembelajaran Digital — KPPB",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "RUBRIK OPD",
+          "description": "",
+          "image": "",
+          "preview_url": "",
+          "url": "https://drive.google.com/file/d/1dBsOBBQZH19GqO5aMcNEhBZ75XqP-DYg/view?usp=sharing",
+          "button_text": "Buka →"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

@@ -1,0 +1,86 @@
+{
+  "department": "Unit Kokurikulum",
+  "staff": [
+    {
+      "name": "HAIZUL AZZUAN B NORDIN",
+      "role": "Ketua Unit",
+      "section": "pensyarah",
+      "featured": true,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/HAIZUL(KOKO) (3).png",
+      "link": "https://drive.google.com/drive/folders/1l_rqLcPKA02lKHWvZWJLyNBZrYNlQq6X?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "PUSPAGARAN A/L MANIAM",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/PUSPAGARAN.png",
+      "link": "https://drive.google.com/drive/folders/1Bl1qG5og-dB7nds00wozUUfPzTWBtpWw?usp=drive_link",
+      "image_position": "left"
+    },
+    {
+      "name": "SARAWATY BT MOHAMAD RAMLY",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/SARAWATY.png",
+      "link": "https://drive.google.com/drive/folders/1OvIxU61ZuGnERm4oS1089qoSgedLD6Vw?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KHOR AIK KEONG",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/KHOR AIK KEONG(JKOKO) (12).png",
+      "link": "https://drive.google.com/drive/folders/1ByarjcR8n4IJZE89oIAzQreUY7JKQ25y?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NORAMIRA BT AGUST",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/NOR AMIRA(KOKO) (7).png",
+      "link": "https://drive.google.com/drive/folders/15c14w1ofkjSNp_oX9gxggmSbpAGBOo05?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. ABDUL RAHMAN BIN MOIDU",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/ABD (6).png",
+      "link": "https://drive.google.com/drive/folders/12DNZXQAKcaC_kXoX-i-9Iu_g9Ugj_8Fi?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "NOORARTIKA BINTI ROSLAN WHIMS",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/ATIQAH7.png",
+      "link": "https://drive.google.com/drive/folders/1zA0VFM7BbG6PF4TYfxAQf__0NNldlqP-?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "AMY LOH LIEW YI",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/AMY LOH.png",
+      "link": "https://drive.google.com/drive/folders/1qX-3K4n1uiZDK3vElfgqb-oBwVvrfhgj?usp=sharing",
+      "image_position": "left"
+    },
+    {
+      "name": "NAZRI B BEDIN",
+      "role": "Pensyarah",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - KOKURIKULUM_files/NAZRI.png",
+      "link": "https://drive.google.com/drive/folders/1MByMa-TacrjoUNnZgn4ZX3lGLj6NGto9?usp=drive_link",
+      "image_position": "right"
+    }
+  ]
+}

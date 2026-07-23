@@ -1,0 +1,43 @@
+{
+  "page": "DELIMa",
+  "browser_title": "DELIMA — PEKA JKA IPGKPP",
+  "hero_eyebrow": "JKA · IPGKPP",
+  "hero_title_html": "DELIMA<br><em>Digital Educational Learning Interactive Management Application</em>",
+  "hero_description": "DELIMA merupakan platform pembelajaran digital yang menyokong pelaksanaan pengajaran dan pembelajaran (PdP) secara interaktif dan berkesan.",
+  "hero_tagline": "📚 DELIMA · 💻 Pembelajaran Digital · 🎓 IPGKPP",
+  "page_title": "DELIMA",
+  "page_subtitle": "Digital Educational Learning Interactive Management Application",
+  "professional_sections": [
+    {
+      "type": "cards",
+      "heading": "🌐 PORTAL DELIMA",
+      "description": "DELIMA (Digital Educational Learning Interactive Management Application) adalah platform pembelajaran digital yang dibangunkan untuk menyokong proses pengajaran dan pembelajaran (PdP) di Institut Pendidikan Guru.",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "🚀 Lawati Portal DELIMA →",
+          "description": "",
+          "image": "",
+          "preview_url": "",
+          "url": "https://d2.delima.edu.my/teacher",
+          "button_text": "Buka →"
+        }
+      ],
+      "images": [
+        {
+          "image": "PEKA JKA IPGM KPP - DELIMA_files/unnamed(1).png",
+          "alt": "DELIMA Logo"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "📋 MAKLUMAT DELIMA",
+      "description": "Platform pembelajaran digital yang interaktif dan menarik untuk pelajar guru.\nMenguruskan kursus, bahan pengajaran dan penilaian secara digital.\nMenyokong kolaborasi antara pensyarah dan pelajar guru secara dalam talian.",
+      "embed_url": "",
+      "items": [],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

@@ -1,0 +1,86 @@
+{
+  "department": "Jabatan Teknologi Pendidikan",
+  "staff": [
+    {
+      "name": "JULIANA BINTI SAARANI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/JULIANA.png",
+      "link": "https://drive.google.com/drive/folders/12Cal6aOlPTNtg4L_1NzNgB-P7R8naj6J?usp=drive_link",
+      "image_position": "left"
+    },
+    {
+      "name": "VIMALA A/P MUNIANDY",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/VIMALA(JTP) (5).png",
+      "link": "https://drive.google.com/drive/folders/1SZVMbY6KcGLWmO-V2Cr6QJFzG1qIAqFv?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "RUZAINA BINTI ABDUL JABBAR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/RUZAINA.png",
+      "link": "https://drive.google.com/drive/folders/13D-FHNzh-VLEqOB5WgK9MNY2janOZBMm?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "PRABU A/L BALACHANDRAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/PRABU.png",
+      "link": "https://drive.google.com/drive/folders/1rkJTg5p2OkdQUgMdINA5j6OhGCCZcP5P",
+      "image_position": "center"
+    },
+    {
+      "name": "TS MOHD HAZLIE BIN MUHAMAD",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/ts.png",
+      "link": "https://drive.google.com/drive/folders/1iZFcl8wFmcvWO1JCDlbRFWLMGRl2mBx4?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KAMALAMBAL A/P DURAIRAJ",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/kamala.png",
+      "link": "https://drive.google.com/drive/folders/1l0J1oXU7mNMSkyOs6mPYa0hPJY942ykT?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "SANURA BINTI JAYA",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/SANURA (JTP) (6).png",
+      "link": "https://drive.google.com/drive/folders/1578wWtXtsdIlpY9atnJ388HGjFbZTJkg?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ANUAR BIN YUNUS (sebelum 2026)",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "",
+      "image_position": "center"
+    },
+    {
+      "name": "ABDUL JASHEER JAWASEELAN BIN ABDULLAH (sebelum 2026)",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "",
+      "image_position": "center"
+    }
+  ]
+}

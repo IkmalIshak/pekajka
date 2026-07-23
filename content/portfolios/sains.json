@@ -1,0 +1,131 @@
+{
+  "department": "Jabatan Sains",
+  "staff": [
+    {
+      "name": "AZLINA BT AMIR HAMZAH",
+      "role": "Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/PUAN AZLINA (4).png",
+      "link": "https://drive.google.com/drive/folders/1U1_XG02p7V2gzrQbuNZV28ojqEZ7eL3i?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ASNIDA BT ISMAIL",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/ASNIDA(JSN) (5).png",
+      "link": "https://drive.google.com/drive/folders/1bB3A1A6LD0fM-4MytH4VvelKNhY0u-sd?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "NOORHALIZAH BT ABDUL RAHMAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/NORHALIZAH(JSN) (4).png",
+      "link": "https://drive.google.com/drive/folders/1nRLJk-Md1oLPH3QGQ1eFbnyOPIkySVGR?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. RAHIMAWATI BT ABDUL RAHIM",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/RAHIMAWATI(JSN) (6).png",
+      "link": "https://drive.google.com/drive/folders/1gTJMfWTLajIPoVQFBEC-fSHGWKI1CMh9?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "AIDA RAHAYU BT SHARIFUDDIN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/AIDA RAHAYU.png",
+      "link": "https://drive.google.com/drive/folders/1hBjlhf6NI_ukaaZbuI3fhaY7k6fQbM6U?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "GUNASUNDARY A/P SINNASAMY",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/GUNASUNDARI(JAB SAINS) (6).png",
+      "link": "https://drive.google.com/drive/folders/1CnIdhAc44hvCedbol0AFMDsjQSnPkvEB",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. HJH SUMAIYAH BINTI ABD RAHMAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/Sumaiyah.png",
+      "link": "https://drive.google.com/drive/folders/1shgq4s9ycIKOEm-ip65CP4tg9jB_8PO5",
+      "image_position": "center"
+    },
+    {
+      "name": "DEVA NANTHINI A/P SINNIAH",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/15tjGUoH91JaDxFFicF175ikXfGfvIxiI?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "SAMRI B CHONGO",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/SAMRI.png",
+      "link": "https://drive.google.com/drive/folders/1g50EjeJu2sTxfu6Vpt1fbAp9h7z_8R6P?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MUHD RASUL B ALI",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/RASUL.png",
+      "link": "https://drive.google.com/drive/folders/1v1nB1YUdXxQVf9NCXnM4xpzR-Emfl1M3?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KHAW MEI LIN",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/KHAW (1).png",
+      "link": "https://drive.google.com/drive/folders/1ehhtVusXsnh5WdeEaRA19Ugmcf-nUFNy?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "AZILINA BINTI MOHAMED NOR",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/AZILINA(JSN) (4).png",
+      "link": "https://drive.google.com/drive/folders/13zOuuO6Sl9mdy8WzRNQ6SSsLdQCR-j-J?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "YEOH POH CHOO",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/1eYS3sezW3TcxZ8NGMXMCNhFA48WjFoKL?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ROHANA BINTI MAHADZIR",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/1yAwVFbDlP7Ytqb97IOCjSC8tNRMGVVSb?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

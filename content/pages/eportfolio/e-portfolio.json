@@ -1,0 +1,44 @@
+{
+  "page": "e-Portfolio",
+  "browser_title": "e-Portfolio | PEKA JKA IPGMKPP",
+  "page_title": "e-Portfolio",
+  "subtitle": "FOLIO PENSYARAH DAN FOLIO KURSUS",
+  "department_heading": "Jabatan",
+  "departments": [
+    { "name": "Jabatan Kecemerlangan Akademik", "link": "jka.html" },
+    { "name": "JPPI", "link": "jppi.html" },
+    { "name": "Jabatan Hal Ehwal Pelajar", "link": "hep.html" },
+    { "name": "Jabatan Teknologi Pendidikan", "link": "teknologipendidikan.html" },
+    { "name": "Jabatan Sains", "link": "sains.html" },
+    { "name": "Jabatan Matematik", "link": "matematik.html" },
+    { "name": "Jabatan Bahasa", "link": "bahasa.html" },
+    { "name": "Jabatan Ilmu Pendidikan", "link": "ilmupendidikan.html" },
+    { "name": "Jabatan Pengajian Melayu", "link": "pengajianmelayu.html" },
+    { "name": "Jabatan Sains Sosial", "link": "sainssosial.html" },
+    { "name": "Jabatan Pendidikan Islam & Moral", "link": "japim.html" }
+  ],
+  "unit_heading": "Unit",
+  "units": [
+    { "name": "UPP", "link": "upp.html" },
+    { "name": "Unit Kokurikulum", "link": "kokurikulum.html" }
+  ],
+  "resources": [
+    {
+      "title": "Manual Mencipta Tanda Tangan Digital",
+      "embed_url": "https://drive.google.com/file/d/1iKk6KV_Uz9mAOUN42rMXCsmTKUfsMiGl/preview",
+      "file_name": "Digital SignatureV1.pdf",
+      "source_name": "Google Drive",
+      "link": "https://drive.google.com/uc?id=1iKk6KV_Uz9mAOUN42rMXCsmTKUfsMiGl&export=download",
+      "button_text": "Download"
+    },
+    {
+      "title": "Video Mencipta Tanda Tangan Digital",
+      "embed_url": "https://www.youtube.com/embed/jk7fq0PxmLM",
+      "file_name": "Digital Signature Tutorial",
+      "source_name": "YouTube",
+      "link": "https://www.youtube.com/watch?v=jk7fq0PxmLM",
+      "button_text": "Watch"
+    }
+  ],
+  "footer_note": "Halaman e-Portfolio sedang dikemas kini untuk pengalaman pengguna yang lebih baik."
+}

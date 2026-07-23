@@ -1,0 +1,62 @@
+{
+  "page": "Perkembangan Profesionalisme",
+  "browser_title": "Perkembangan Profesionalisme Akademik — PEKA JKA IPGKPP",
+  "hero_eyebrow": "UPPA · IPGKPP",
+  "hero_title_html": "Perkembangan<br><em>Profesionalisme Akademik</em>",
+  "hero_description": "Unit Perkembangan Profesionalisme Akademik (UPPA) memacu kecemerlangan guru melalui program pembangunan profesional yang berterusan.",
+  "hero_tagline": "📘 KPPB · 📝 PBD · 🧠 KBAT",
+  "page_title": "UNIT PERKEMBANGAN PROFESIONALISME AKADEMIK",
+  "page_subtitle": "Sub-unit di bawah Jabatan Kecemerlangan Akademik (JKA)",
+  "professional_sections": [
+    {
+      "type": "cards",
+      "heading": "SUB-UNIT UPPA",
+      "description": "",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "KPPB",
+          "description": "Kursus Pengajian Profesionalisme Berterusan",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(1).png",
+          "preview_url": "",
+          "url": "kppb.html",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "PENTAKSIRAN BILIK DARJAH (PBD)",
+          "description": "Pentaksiran berterusan dalam bilik darjah",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(2).png",
+          "preview_url": "",
+          "url": "pbd.html",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "KBAT",
+          "description": "Kemahiran Berfikir Aras Tinggi",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(3).png",
+          "preview_url": "",
+          "url": "kbat.html",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "PENTAKSIRAN BERTERUSAN",
+          "description": "Pentaksiran formatif dan sumatif",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(4).png",
+          "preview_url": "",
+          "url": "pentaksiranberterusan.html",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "PROGRAM TRANSFORMASI SEKOLAH (TS25)",
+          "description": "Transformasi sekolah ke arah kecemerlangan",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(5).png",
+          "preview_url": "",
+          "url": "ts25.html",
+          "button_text": "Lihat →"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

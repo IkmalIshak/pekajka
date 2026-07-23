@@ -1,0 +1,109 @@
+{
+  "page": "Agihan Kursus",
+  "browser_title": "Agihan Kursus PISMP/PPISMP — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Program Pengajian · IPGKPP",
+  "hero_title_html": "Agihan Kursus<br><em>PISMP / PPISMP / PDPP</em>",
+  "hero_description": "Senarai kursus mengikut program pengajian. Klik pada mana-mana pautan untuk melihat maklumat lengkap agihan kursus.",
+  "hero_tagline": "PPISMP · PISMP · PDPP",
+  "page_title": "AGIHAN KURSUS",
+  "page_subtitle": "Kursus mengikut program dan bidang pengajian",
+  "content_type": "grouped_links",
+  "card_class": "course-card",
+  "section_class": "course-section",
+  "groups": [
+    {
+      "name": "PPISMP",
+      "items": [
+        {
+          "title": "MATEMATIK",
+          "url": "https://drive.google.com/file/d/1sdRmOdmaQc4tI2mZU_uZffmZYGtr9fOR/view?usp=sharing"
+        },
+        {
+          "title": "MUZIK",
+          "url": "https://drive.google.com/file/d/1w_mMm-KI8eA-rhP1drnBN4kiv7AyCoSL/view?usp=sharing"
+        },
+        {
+          "title": "PENGAJIAN ISLAM",
+          "url": "https://drive.google.com/file/d/1iIZa_bMRr2gKJwr6HL-5euW-mZ39Kd9-/view?usp=sharing"
+        },
+        {
+          "title": "PENGAJIAN MELAYU",
+          "url": "https://drive.google.com/file/d/1XxKLb7AKUrwE-pqhg4UU2YWDAkwLrwAf/view?usp=sharing"
+        },
+        {
+          "title": "SAINS",
+          "url": "https://drive.google.com/file/d/1ElLsBrx-IRJvDcYmsoK9gzUgYOle66Cf/view?usp=sharing"
+        },
+        {
+          "title": "TESL",
+          "url": "https://drive.google.com/file/d/1Q1Ph6by4UXyMX8wzt-Bon4ADXdWxBgyZ/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "name": "PISMP",
+      "items": [
+        {
+          "title": "MATEMATIK",
+          "url": "https://drive.google.com/drive/folders/1Y20UuHxIC0d0oF7pgEN7XrDvwSrUBCER?usp=sharing"
+        },
+        {
+          "title": "PENGAJIAN ISLAM",
+          "url": "https://drive.google.com/drive/folders/1qVH2kFDcqa6anya-4gGgVfc3eCKQHYYq?usp=sharing"
+        },
+        {
+          "title": "PENGAJIAN MELAYU",
+          "url": "https://drive.google.com/drive/folders/112nYrsmlBP1MjkZAKLZfbc-l8h-AP2t8?usp=sharing"
+        },
+        {
+          "title": "TESL",
+          "url": "https://drive.google.com/drive/folders/1eECHFrnQaFkadGX38aJsHUZ06dGStaKO?usp=sharing"
+        },
+        {
+          "title": "SAINS",
+          "url": "https://drive.google.com/drive/folders/13WDNoDETriQQU3hfZCZQe4TIJRzRET4j?usp=sharing"
+        },
+        {
+          "title": "MUZIK",
+          "url": "https://drive.google.com/drive/folders/1ShoSjYbmXYo-Z98SC_1tPqruw9BmOztW?usp=drive_link"
+        }
+      ]
+    },
+    {
+      "name": "PDPP",
+      "items": [
+        {
+          "title": "SAINS (MENENGAH)",
+          "url": "https://drive.google.com/file/d/1WN_gA9_cBC-LXFtfE4t01nJuokMjBHr7/view?usp=sharing"
+        },
+        {
+          "title": "SAINS (RENDAH)",
+          "url": "https://drive.google.com/file/d/1-ARZcbEPvVpdn3AsULeT7MrGjGZ4Mwuh/view?usp=sharing"
+        },
+        {
+          "title": "MATEMATIK (MENENGAH)",
+          "url": "https://drive.google.com/file/d/1Cv91-wGpuAG43CutF4DG0OgOgiluJXUm/view?usp=sharing"
+        },
+        {
+          "title": "MATEMATIK (RENDAH)",
+          "url": "https://drive.google.com/file/d/1ZQWi5fniXVaJL_jveInLyYq2hwnJc4PT/view?usp=sharing"
+        },
+        {
+          "title": "PENDIDIKAN ISLAM (RENDAH)",
+          "url": "https://drive.google.com/file/d/1vPavUF7hkt7fsmUGapXGpft1eGJ9IW19/view?usp=sharing"
+        },
+        {
+          "title": "PENGAJIAN MELAYU (MENENGAH)",
+          "url": "https://drive.google.com/file/d/1CCT1df0NZEsUYSFZK5jReQLctwZdkqz1/view?usp=sharing"
+        },
+        {
+          "title": "PENDIDIKAN JASMANI (RENDAH)",
+          "url": "https://drive.google.com/file/d/19XInaIFX6tD2RCvbH9UOJ0xcr50Q6WBP/view?usp=sharing"
+        }
+      ]
+    }
+  ],
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
+  "updated_text": "Kemaskini terakhir: Jun 2026",
+  "footer_note": "dalam proses pembinaan ...."
+}

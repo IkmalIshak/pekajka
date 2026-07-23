@@ -1,0 +1,136 @@
+{
+  "page": "Program Pengajian Akademik",
+  "browser_title": "Program Pengajian Akademik — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Program Pengajian · IPGKPP",
+  "hero_title_html": "Program Pengajian<br>Akademik",
+  "hero_description": "Maklumat lengkap program pengajian yang ditawarkan di IPGKPP termasuk PPISMP, PISMP dan PDPP.",
+  "hero_tagline": "🎓 PPISMP · 📚 PISMP · 📖 PDPP",
+  "page_title": "PROGRAM PENGAJIAN AKADEMIK",
+  "page_subtitle": "Profil program dan pautan maklumat kursus",
+  "profile_heading": "PROFIL PROGRAM",
+  "profiles": [
+    {
+      "name": "PPISMP",
+      "image": "PEKA JKA IPGM KPP - Program Pengajian Akademik_files/unnamed.jpg",
+      "cohorts": [
+        {
+          "label": "SELEPAS AMB JUN 2023/2028",
+          "links": [
+            {
+              "title": "BAHASA MELAYU",
+              "url": "https://docs.google.com/spreadsheets/d/14DkcDb9mhdDrT6NYmxzWxEkfcWBmDmF2/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "MATEMATIK",
+              "url": "https://docs.google.com/spreadsheets/d/1DJ_tJ0XYQFcFv9cIWxwwyTrZA_WL_zoT/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "PENDIDIKAN ISLAM",
+              "url": "https://docs.google.com/spreadsheets/d/1EwtYpTYxVw1XqPVkA2tvxstD8CcmuxAC/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "PENDIDIKAN MUZIK",
+              "url": "https://docs.google.com/spreadsheets/d/1RTchMXr9KWiKEX0b0sIjO6nK8vtHiNtD/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "SAINS",
+              "url": "https://docs.google.com/spreadsheets/d/1CqyWPRwTiZZYrrxIb8dfWCJkMqRi_tAt/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "TESL",
+              "url": "https://docs.google.com/spreadsheets/d/1D01jNK-g0Ro9-YSOonf4ZZqhi-SFyK55/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PISMP",
+      "image": "PEKA JKA IPGM KPP - Program Pengajian Akademik_files/unnamed(1).jpg",
+      "cohorts": [
+        {
+          "label": "AMB JUN 2021/2026",
+          "links": [
+            {
+              "title": "MATEMATIK",
+              "url": "https://drive.google.com/drive/folders/1i1lTPiggWvnDxeuZRQ1amzcmZ54Coudw?usp=sharing"
+            },
+            {
+              "title": "SAINS",
+              "url": "https://drive.google.com/drive/folders/1tNXfndnIHzRksA51rmiXEeh72oacK9Xx?usp=sharing"
+            }
+          ]
+        },
+        {
+          "label": "SELEPAS AMB JUN 2022/2027",
+          "links": [
+            {
+              "title": "BAHASA MELAYU",
+              "url": "https://drive.google.com/drive/folders/1IXQvDzFfYJ9SZ5iE40tsH4lcTtFAMoLk?usp=sharing"
+            },
+            {
+              "title": "MATEMATIK",
+              "url": "https://drive.google.com/drive/folders/14NQlc6KP5Tg8zfSMLIsufuya1c8DXcLE?usp=sharing"
+            },
+            {
+              "title": "PENDIDIKAN MUZIK",
+              "url": "https://drive.google.com/drive/folders/1C3IjgCR0euFL0Znh5xxx6BbPAGhXwFdq?usp=sharing"
+            },
+            {
+              "title": "SAINS",
+              "url": "https://drive.google.com/drive/folders/1CDELFFLHhGH6DfyFLSN1DHxPueoA6MtD?usp=sharing"
+            },
+            {
+              "title": "TESL",
+              "url": "https://docs.google.com/spreadsheets/d/1KjKqXAUWwNY4I-3xsNayUEmpmLW2WuU3/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            },
+            {
+              "title": "PENDIDIKAN ISLAM",
+              "url": "https://docs.google.com/spreadsheets/d/1eM7v7zV0lYd6FiFnvyD4tYGcCOVcHM7j/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PDPP",
+      "image": "PEKA JKA IPGM KPP - Program Pengajian Akademik_files/unnamed(2).jpg",
+      "cohorts": [
+        {
+          "label": "AMB OKTOBER 2024",
+          "links": [
+            {
+              "title": "PDPP",
+              "url": "https://docs.google.com/spreadsheets/d/1O8j0Av58VZQxxpbgJE03aYKIYG4DVc5m/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "elective_sections": [
+    {
+      "heading": "ELEKTIF TERAS",
+      "links": [
+        {
+          "title": "AMB JUN 2021/2026",
+          "url": "https://drive.google.com/drive/folders/1pSXuBKZp_ePrjFt2YFAWSPHw7pOpW1Sa?usp=drive_link"
+        },
+        {
+          "title": "AMB JUN 2022/2027",
+          "url": "https://drive.google.com/drive/folders/1EKQDl-rd2M1B2Fm_ZlPfudD13xCBfX5W?usp=sharing"
+        }
+      ]
+    },
+    {
+      "heading": "ELEKTIF TERBUKA",
+      "links": [
+        {
+          "title": "MULAI AMB JUN 2021/2026",
+          "url": "https://drive.google.com/drive/folders/1xpjwnRzUfkG1wqSPDhGuCOI_79zB7aV2?usp=sharing"
+        }
+      ]
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

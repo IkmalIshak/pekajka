@@ -1,0 +1,131 @@
+{
+  "department": "Jabatan Sains Sosial",
+  "staff": [
+    {
+      "name": "ABDUL JALEEL B ABDUL HAKEEM",
+      "role": "Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/jaleel.png",
+      "link": "https://drive.google.com/drive/folders/1MwA44sYSt5BSbOuC26NTWibAeXCVUIri?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "TAN YAN SANG",
+      "role": "Ketua Unit",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/tan.png",
+      "link": "https://drive.google.com/drive/folders/1V39KazJND75QRRElL14QTwjnCmhsw0Xt?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MOHD FAUZI B MD REJAB",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/fauzi.png",
+      "link": "https://drive.google.com/drive/folders/1THEZXf-Vm5bL2WBAzLkuxwwcKCYjGbpX?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. SANKAR A/L ARIKRISHNAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/sankar.png",
+      "link": "https://drive.google.com/drive/folders/1KuXBXgavw91osW3ykq8lM2L308KF5hG0?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NORIZA BINTI MOHD YASIN@HASHIM",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/noriza.png",
+      "link": "https://drive.google.com/drive/folders/1N-62PVoW4vk-y36vT2HPD53pweGdf_eA?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. TENGKU NURLIDA BINTI TENGKU ZAINUL ABIDIN",
+      "role": "Penolong Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/tengku.png",
+      "link": "https://drive.google.com/drive/folders/1j9YgxLak4ZmuF1h4O5Pn_-L00EA-hD1v?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "LIM WU MIN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/LIM WU MIN (JSS) (5).png",
+      "link": "https://drive.google.com/drive/folders/1Bq3jovr2nJy_cG9A8cj__vLy04aI7lb5?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "AZNEE NAZEERAH BT MOHD ZAIN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/aznee.png",
+      "link": "https://drive.google.com/drive/folders/1HGkmUFg7mxYx3eeiFxo3qdLOVFGRWDBk?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. MARIAYEE A/P PERUMAL",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/maria.png",
+      "link": "https://drive.google.com/drive/folders/15nXZ3AxO9pUYeqBWViQHqW_I7hkUrmgM?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. MOHAMMED SIRAAJ B SAIDUMASUDU",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS SOSIAL_files/siraj.png",
+      "link": "https://drive.google.com/drive/folders/1-gm6AW7Aak91zDGCcjNWPjOTlZfySeP-?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. SOUDAMINI A/P NARAYANAN NAIR",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/souda.png",
+      "link": "https://drive.google.com/drive/folders/10tX1qI5iQBSexLpgTC5bHqYYGZ3d4Ae1?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. SYAMALA NAIR A/P G GOPAL",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/syamala.png",
+      "link": "https://drive.google.com/drive/folders/1zypFpu7d0MTyi8pZnw6g3OOHuJMYR22g?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. SOUDAMINI A/P NARAYANAN NAIR (sebelum 2026)",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/souda.png",
+      "link": "",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. SYAMALA NAIR A/P G GOPAL (sebelum 2026)",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/syamala.png",
+      "link": "",
+      "image_position": "center"
+    }
+  ]
+}
