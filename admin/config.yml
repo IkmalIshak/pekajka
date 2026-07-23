@@ -540,7 +540,9 @@ collections:
                 name: "type"
                 widget: "select"
                 options:
-                  - { label: "Cards / Links", value: "cards" }
+                  - { label: "Cards", value: "cards" }
+                  - { label: "Simple Text Links", value: "links" }
+                  - { label: "Buttons", value: "buttons" }
                   - { label: "Documents with Previews", value: "documents" }
                   - { label: "Video / Embed", value: "video" }
                   - { label: "Pictures", value: "images" }

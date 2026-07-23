@@ -999,12 +999,57 @@
             }
             if (Array.isArray(section.items) && section.items.length) {
                 const grid = element('div', 'cms-professional-grid');
-                grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;';
+                if (section.type === 'buttons') {
+                    grid.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;';
+                } else if (section.type === 'links') {
+                    grid.style.cssText = 'display:grid;gap:10px;';
+                } else {
+                    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;';
+                }
                 section.items.forEach((item) => {
                     const card = element('a', 'cms-professional-card');
                     card.href = item.url || '#';
-                    card.target = '_blank';
-                    card.rel = 'noopener';
+                    if (/^https?:\/\//i.test(item.url || '')) {
+                        card.target = '_blank';
+                        card.rel = 'noopener';
+                    }
+
+                    if (section.type === 'buttons') {
+                        card.style.cssText = 'display:inline-flex;align-items:center;padding:12px 20px;background:var(--purple);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;';
+                        if (item.image) {
+                            const image = element('img');
+                            image.src = item.image;
+                            image.alt = '';
+                            image.style.cssText = 'width:28px;height:28px;object-fit:contain;background:#fff;border-radius:6px;margin-right:10px;';
+                            card.appendChild(image);
+                        }
+                        card.appendChild(document.createTextNode(item.title || item.button_text || 'Buka'));
+                        grid.appendChild(card);
+                        return;
+                    }
+
+                    if (section.type === 'links') {
+                        card.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;background:var(--white);border:1px solid var(--mid-gray);border-radius:10px;text-decoration:none;color:var(--text-dark);';
+                        const label = element('span');
+                        if (item.image) {
+                            label.style.cssText = 'display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;';
+                            const image = element('img');
+                            image.src = item.image;
+                            image.alt = '';
+                            image.style.cssText = 'width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;grid-row:1 / span 2;';
+                            label.appendChild(image);
+                        }
+                        label.appendChild(element('strong', '', item.title || 'Pautan'));
+                        if (item.description) {
+                            const description = element('small', '', item.description);
+                            description.style.cssText = `display:block;margin-top:4px;color:var(--text-light);${item.image ? 'grid-column:2;' : ''}`;
+                            label.appendChild(description);
+                        }
+                        card.append(label, element('span', '', item.button_text || 'Buka →'));
+                        grid.appendChild(card);
+                        return;
+                    }
+
                     card.style.cssText = 'display:flex;flex-direction:column;background:var(--white);border:1px solid var(--mid-gray);border-radius:16px;padding:20px;text-decoration:none;color:var(--text-dark);box-shadow:0 4px 16px rgba(58,12,163,.06);';
                     if (item.preview_url) {
                         const preview = element('iframe');
