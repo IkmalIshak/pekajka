@@ -1,0 +1,68 @@
+{
+  "department": "Jabatan Hal Ehwal Pelajar",
+  "staff": [
+    {
+      "name": "KAMIL NASURUDDIN BIN DARUS",
+      "role": "Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/kamil3.png",
+      "link": "https://drive.google.com/drive/folders/1uuR2FpOGVFAivyyljfQGvZ2kcWGw58Px?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MOHD SAIFUL RIZAL B OTHMAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/saiful.png",
+      "link": "https://drive.google.com/drive/folders/1hxTVY4L2z0Avr6wYKKaq2Y_x6MTShPyS?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ZAILI BIN IDRIS",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/zaili.png",
+      "link": "https://drive.google.com/drive/folders/1nDN60sl-rU4UERmnXqHMaj9z7xVgwxPh?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NOOR EFFENDI BIN ISMAIL",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/effendi (2).png",
+      "link": "https://drive.google.com/drive/folders/1YUYtUS85RS_yY4R5dD8R-3ow2o0z4ts5?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "AZILINA BINTI MOHAMED BOR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/AZILINA(JSN) (4).png",
+      "link": "https://drive.google.com/drive/folders/13zOuuO6Sl9mdy8WzRNQ6SSsLdQCR-j-J?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MOHD. RASUL BIN ALI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/RASUL.png",
+      "link": "https://drive.google.com/drive/folders/1v1nB1YUdXxQVf9NCXnM4xpzR-Emfl1M3?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MASYITHOH BINTI MD ZUBER",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/masyitoh.png",
+      "link": "https://drive.google.com/drive/folders/1r6PWGJ5GQfzrddYwnpvCXG6QW5MV7wyn?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

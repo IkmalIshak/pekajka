@@ -1,0 +1,46 @@
+{
+  "page": "Pembelajaran Digital",
+  "browser_title": "Pembelajaran Digital — PEKA JKA IPGKPP",
+  "hero_eyebrow": "JKA · IPGKPP",
+  "hero_title_html": "Unit Pembelajaran<br><em>Digital</em>",
+  "hero_description": "Unit Pembelajaran Digital bertanggungjawab menyokong visi IPGKPP dalam melahirkan guru profesional yang mahir mengintegrasikan teknologi digital dalam proses pengajaran dan pembelajaran (PdP).",
+  "hero_tagline": "💻 Objektif · ⚙️ Fungsi · 📚 Manual & Panduan",
+  "page_title": "UNIT PEMBELAJARAN DIGITAL",
+  "page_subtitle": "Menyokong pengintegrasian teknologi digital dalam PdP",
+  "professional_sections": [
+    {
+      "type": "text",
+      "heading": "OBJEKTIF & FUNGSI",
+      "description": "Menyokong visi IPGKPP dalam melahirkan guru profesional yang mahir mengintegrasikan teknologi digital dalam proses pengajaran dan pembelajaran (PdP).\nMeningkatkan kompetensi digital pensyarah, staf, dan pelajar guru agar selaras dengan keperluan pendidikan abad ke-21.\nMengintegrasikan teknologi digital secara efektif dalam kurikulum latihan perguruan.\nMemupuk budaya inovasi dan pembelajaran sepanjang hayat melalui penggunaan teknologi pendidikan.\nMenyediakan ekosistem pembelajaran digital yang mesra pengguna, inklusif, dan mudah diakses.\nMerancang, membangunkan, dan mengurus platform pembelajaran digital, termasuk DELIMa dan Google Workspace for Education, bagi menyokong pelaksanaan PdP yang berkesan.\nMenyediakan latihan dan bimbingan kepada pensyarah serta pelajar guru berkaitan penggunaan teknologi pembelajaran.\nMenyediakan sokongan teknikal dan sumber digital untuk keperluan pengajaran, pembelajaran, dan pentaksiran.\nMenghasilkan dan mengurus bahan pengajaran digital termasuk pengurusan hak cipta, penyimpanan, dan perkongsian sumber.\nMenjalin kolaborasi dengan pihak dalaman dan luaran bagi memperkukuh amalan PdP digital di IPGKPP.",
+      "embed_url": "",
+      "items": [],
+      "images": []
+    },
+    {
+      "type": "cards",
+      "heading": "MANUAL & PANDUAN OPD",
+      "description": "",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "TEMPLAT MERUNGKAI-MERANGKAI (KMR)",
+          "description": "Templat untuk merungkai dan merangkai kurikulum",
+          "image": "PEKA JKA IPGM KPP - Pembelajaran Digital_files/docs_32dp.png",
+          "preview_url": "",
+          "url": "https://drive.google.com/open?authuser=0&id=1asynTbXDSnF1PDifcn1oWRCkFwwsJ-dB9_KtgKgRXn4",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "RUBRIK OPD-KPPB",
+          "description": "Rubrik penilaian Objek Pembelajaran Digital",
+          "image": "PEKA JKA IPGM KPP - Pembelajaran Digital_files/drive-32.png",
+          "preview_url": "",
+          "url": "https://drive.google.com/file/d/1dQtfFHQpeokkkgoEc9lq1HpuO_AeOKb_/view?usp=drive_link",
+          "button_text": "Lihat →"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

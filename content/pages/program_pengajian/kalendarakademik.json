@@ -1,0 +1,80 @@
+{
+  "page": "Kalendar Akademik",
+  "browser_title": "Kalendar Akademik — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Program Pengajian · IPGKPP",
+  "hero_title_html": "Kalendar<br>Akademik",
+  "hero_description": "Semakan tarikh penting bagi setiap semester mengikut program pengajian. Pautan ke kalendar rasmi PPISMP, PISMP dan PDPP.",
+  "hero_tagline": "PPISMP · PISMP · PDPP",
+  "page_title": "KALENDER AKADEMIK",
+  "page_subtitle": "Tarikh penting sesi akademik mengikut semester dan program",
+  "content_type": "grouped_links",
+  "card_class": "calendar-card",
+  "section_class": "calendar-section",
+  "groups": [
+    {
+      "name": "PPISMP / PISMP",
+      "items": [
+        {
+          "title": "OGOS – DISEMBER 2023",
+          "url": "https://drive.google.com/file/d/1GqY3wki5qFPp8Jfzwe6tr-Gfj2funBst/view?usp=sharing"
+        },
+        {
+          "title": "JAN – MEI 2024",
+          "url": "https://drive.google.com/file/d/1K5MNFEGPBnRw3TBWdpHTxm-zd7ul0Nv7/view?usp=sharing"
+        },
+        {
+          "title": "JUN – JULAI 2024",
+          "url": "https://drive.google.com/file/d/1oN9_cwQkyNJU26tssxZaZ7ck29BbOG4L/view?usp=sharing"
+        },
+        {
+          "title": "OGOS – DISEMBER 2024",
+          "url": "https://drive.google.com/file/d/1IFzXFYyGieUBCwUvMiMHEPnz_Ez2-LMy/view?usp=sharing"
+        },
+        {
+          "title": "JAN – MEI 2025",
+          "url": "https://drive.google.com/file/d/1Rhls9FAENUaxuk-F7ohcuQKzWfHX61o7/view?usp=sharing"
+        },
+        {
+          "title": "JUN – JULAI 2025",
+          "url": "https://drive.google.com/file/d/1WSNJTn9OWVSPSbKy1TvgCXrzG77cLKJb/view?usp=sharing"
+        },
+        {
+          "title": "OGOS – DISEMBER 2025",
+          "url": "https://drive.google.com/file/d/1K49yXe-cTp1Pi4jd62XNjxHVrfPnBIb3/view?usp=sharing"
+        },
+        {
+          "title": "JAN – MEI 2026",
+          "url": "https://drive.google.com/file/d/1QfifheF_Ikjh6FO5R8AexaLTnKwAG-un/view?usp=sharing"
+        },
+        {
+          "title": "JUN – JULAI 2026",
+          "url": "https://drive.google.com/file/d/1GdrOLYK80jZD7GoLNGbzQfLybi4zYo0X/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "name": "PDPP",
+      "items": [
+        {
+          "title": "OKTOBER 2024 – JANUARI 2025",
+          "url": "https://drive.google.com/file/d/1442f9GgX-qAvL_cl5lKGY_uVd3kgD6WF/view?usp=drive_link"
+        },
+        {
+          "title": "FEBRUARI – MEI 2024",
+          "url": "https://drive.google.com/file/d/12HCgxbVjk1RZqo19_PDuITbQeSDgmWp5/view?usp=drive_link"
+        },
+        {
+          "title": "JUN – SEPTEMBER 2024",
+          "url": "https://drive.google.com/file/d/1YsgYiqAzh4ZI1JTH6ZNEmOQqmQqT0KI7/view?usp=sharing"
+        },
+        {
+          "title": "OKTOBER 2024 – SEPTEMBER 2025 (3 SEMESTER)",
+          "url": "https://drive.google.com/file/d/1qQ_jvOIHRy2cfljyMHSt7evzlqO_xedo/view?usp=sharing"
+        }
+      ]
+    }
+  ],
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
+  "updated_text": "Kemaskini terakhir: Jun 2026",
+  "footer_note": "dalam proses pembinaan ...."
+}

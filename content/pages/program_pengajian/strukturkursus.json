@@ -1,0 +1,65 @@
+{
+  "page": "Struktur Kursus Akademik",
+  "browser_title": "Struktur Kursus Akademik — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Program Pengajian · IPGKPP",
+  "hero_title_html": "Struktur Kursus<br><em>Akademik</em>",
+  "hero_description": "Maklumat struktur kursus mengikut semester bagi program PISMP, PPISMP dan PDPP.",
+  "hero_tagline": "📚 PISMP · PPISMP · PDPP",
+  "page_title": "STRUKTUR KURSUS",
+  "page_subtitle": "Struktur kursus mengikut program dan semester",
+  "content_type": "grouped_links",
+  "card_class": "structure-card",
+  "section_class": "structure-section",
+  "groups": [
+    {
+      "name": "PISMP",
+      "items": [
+        {
+          "title": "SEMESTER JANUARI – MEI 2024",
+          "url": "https://drive.google.com/file/d/1g9GfoG5AmNKg7asHQbVgs8dnkC4tbi0Z/view?usp=drive_link"
+        },
+        {
+          "title": "SEMESTER JUN – JULAI 2024",
+          "url": "https://drive.google.com/file/d/1DFotrZKKDzi0Xe7iYMaWXw9wlrOensAa/view?usp=drive_link"
+        },
+        {
+          "title": "SEMESTER OGOS – DISEMBER 2025",
+          "url": "https://drive.google.com/file/d/1MubPWjDqiH7YekuDxRS7AWdrfBOES9yk/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "name": "PPISMP",
+      "items": [
+        {
+          "title": "SEMESTER JANUARI – MEI 2024",
+          "url": "https://drive.google.com/file/d/1X4bndkhZu2yRqmrCoEeN7RoaDPMyFAVv/view?usp=drive_link"
+        },
+        {
+          "title": "SEMESTER JUN – JULAI 2024",
+          "url": "https://drive.google.com/file/d/1JAZQRFs59ACZgTGZpgv4CXr4pU83R4qt/view?usp=drive_link"
+        },
+        {
+          "title": "SEMESTER JANUARI – MEI 2025",
+          "url": "https://drive.google.com/file/d/1RqbqqAuanXw5SwTXV1kqaucXzPQLq8dY/view?usp=sharing"
+        },
+        {
+          "title": "SEMESTER OGOS – DISEMBER 2025",
+          "url": "https://drive.google.com/file/d/1KKqfYue19NFgFAkNuMJ4Y4Hch2csr6xq/view?usp=sharing"
+        }
+      ]
+    },
+    {
+      "name": "PDPP",
+      "items": [
+        {
+          "title": "SEMESTER FEBRUARI – MEI 2024",
+          "url": "https://drive.google.com/file/d/1GEOKK4wJ4x9NyChXMaL4UjQiuVMGR4gJ/view?usp=drive_link"
+        }
+      ]
+    }
+  ],
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
+  "updated_text": "Kemaskini terakhir: Jun 2026",
+  "footer_note": "dalam proses pembinaan ...."
+}

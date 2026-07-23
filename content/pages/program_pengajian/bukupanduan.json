@@ -1,0 +1,73 @@
+{
+  "page": "Buku Panduan",
+  "browser_title": "Buku Panduan — PEKA JKA IPGKPP",
+  "hero_eyebrow": "PPA · IPGKPP",
+  "hero_title_html": "Buku Panduan<br><em>IPGM</em>",
+  "hero_description": "Koleksi buku panduan dan dokumen rasmi IPGM untuk rujukan pensyarah dan staf akademik.",
+  "hero_tagline": "📘 Dasar · 📙 Panduan · 📗 Prosedur",
+  "page_title": "BUKU PANDUAN IPGM",
+  "page_subtitle": "Dokumen rujukan utama untuk urusan akademik dan profesionalisme",
+  "content_type": "books",
+  "groups": [
+    {
+      "name": "Dasar & Garis Panduan",
+      "documents": [
+        {
+          "title": "GARIS PANDUAN PROFESIONALISME PDPP",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/11y9VuhKCXBmt2Ncw5d5jUVrOAMgowSXJ/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/11y9VuhKCXBmt2Ncw5d5jUVrOAMgowSXJ/preview"
+        },
+        {
+          "title": "GARIS PANDUAN PROFESIONALISME PDP",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1UEnqaPC8CoWO871I_Jr80F-BcTe_nfH4/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1UEnqaPC8CoWO871I_Jr80F-BcTe_nfH4/preview"
+        },
+        {
+          "title": "Dasar Akademik IPGM 2023",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1Iwz441G3oofnugxXna8TXdhYuPJ9t8Bq/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1Iwz441G3oofnugxXna8TXdhYuPJ9t8Bq/preview"
+        }
+      ]
+    },
+    {
+      "name": "Panduan Program & Pentaksiran",
+      "documents": [
+        {
+          "title": "Buku Panduan PDPP V3",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1BLs8TVE2eGOJA8919_rnl80AKxE2ZKn9/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1BLs8TVE2eGOJA8919_rnl80AKxE2ZKn9/preview"
+        },
+        {
+          "title": "Buku Panduan Pentaksiran IPG",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1Y0NNPWwsNGQp-I60pSmhtUQnD8V_BrkK/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1Y0NNPWwsNGQp-I60pSmhtUQnD8V_BrkK/preview"
+        },
+        {
+          "title": "Buku Panduan & Syarat Penganugerahan 2024",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1kN5tHmsNAzP-qEw_0jwFtS7Ih9BIRKuS/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1kN5tHmsNAzP-qEw_0jwFtS7Ih9BIRKuS/preview"
+        }
+      ]
+    },
+    {
+      "name": "Modul & Bahan Rujukan",
+      "documents": [
+        {
+          "title": "Modul GenMADANI (V9)",
+          "badge": "PDF",
+          "url": "https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/view?usp=sharing",
+          "preview_url": "https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/preview"
+        }
+      ]
+    }
+  ],
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
+  "updated_text": "Kemaskini terakhir: Jun 2026",
+  "footer_note": "dalam proses pembinaan ...."
+}

@@ -1,0 +1,634 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: test
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "portfolios"
+    label: "Lecturer Portfolios"
+    label_singular: "Department Portfolio"
+    folder: "content/portfolios"
+    create: false
+    extension: "json"
+    format: "json"
+    identifier_field: "department"
+    summary: "{{department}}"
+    fields:
+      - { label: "Department", name: "department", widget: "string" }
+      - label: "Staff"
+        name: "staff"
+        widget: "list"
+        summary: "{{fields.name}} — {{fields.section}}"
+        fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Role", name: "role", widget: "string" }
+          - label: "Section"
+            name: "section"
+            widget: "select"
+            options:
+              - { label: "Pensyarah", value: "pensyarah" }
+              - { label: "Pensyarah Bantuan", value: "bantuan" }
+              - { label: "Arkib", value: "arkib" }
+          - { label: "Featured / Head", name: "featured", widget: "boolean", default: false }
+          - { label: "Photo", name: "image", widget: "image" }
+          - { label: "E-Portfolio Link", name: "link", widget: "string", required: false }
+          - label: "Photo Position"
+            name: "image_position"
+            widget: "select"
+            default: "center"
+            options:
+              - { label: "Center", value: "center" }
+              - { label: "Move Left", value: "left" }
+              - { label: "Move Right", value: "right" }
+
+  - name: "utama"
+    label: "Utama"
+    files:
+      - name: "index"
+        label: "Utama"
+        file: "content/pages/utama/index.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Utama" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - label: "Hero Slides"
+            name: "home_slides"
+            widget: "list"
+            label_singular: "Slide"
+            summary: "{{fields.eyebrow}}"
+            fields:
+              - label: "Slide Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Introduction", value: "intro" }
+                  - { label: "Calendar", value: "calendar" }
+              - { label: "Small Heading", name: "eyebrow", widget: "string", required: false }
+              - { label: "Large Title", name: "title_html", widget: "code", default_language: "html", output_code_only: true }
+              - { label: "Description", name: "description_html", widget: "text", required: false }
+              - { label: "Tagline", name: "tagline", widget: "string", required: false }
+              - { label: "Slide Link", name: "link", widget: "string", required: false }
+              - { label: "Calendar Embed URL", name: "calendar_embed_url", widget: "string", required: false }
+              - { label: "Calendar Badge", name: "calendar_badge", widget: "string", required: false }
+          - { label: "Shortcut Section Eyebrow", name: "shortcuts_eyebrow", widget: "string" }
+          - { label: "Shortcut Section Title", name: "shortcuts_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - label: "Shortcut Cards"
+            name: "shortcuts"
+            widget: "list"
+            label_singular: "Shortcut"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Picture", name: "image", widget: "image" }
+              - { label: "Page or Website Link", name: "link", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Picture", name: "image", widget: "image" }
+              - { label: "Button Text", name: "button_text", widget: "string", required: false }
+              - { label: "Button Link", name: "button_link", widget: "string", required: false }
+          - label: "Location Section"
+            name: "location"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - label: "Contact Details"
+                name: "details"
+                widget: "list"
+                label_singular: "Contact Detail"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Icon or Emoji", name: "icon", widget: "string", required: false }
+                  - { label: "Text", name: "text", widget: "string" }
+              - { label: "Google Maps Embed URL", name: "map_embed_url", widget: "string", required: false }
+
+  - name: "spesifikasi_tugas"
+    label: "Spesifikasi Tugas Unit"
+    files:
+      - name: "spesifikasitugas"
+        label: "Spesifikasi Tugas Unit"
+        file: "content/pages/spesifikasi/spesifikasitugas.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Spesifikasi Tugas Unit" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+          - { label: "Organisation Chart Heading", name: "organisation_heading", widget: "string" }
+          - { label: "Organisation Chart Introduction", name: "organisation_intro", widget: "text", required: false }
+          - { label: "Organisation Chart Picture", name: "organisation_image", widget: "image" }
+          - { label: "Lecturer Section Heading", name: "lecturer_heading", widget: "string" }
+          - { label: "Lecturer Section Introduction", name: "lecturer_intro", widget: "text", required: false }
+          - { label: "Administration Section Heading", name: "administration_heading", widget: "string" }
+          - { label: "Administration Section Introduction", name: "administration_intro", widget: "text", required: false }
+          - label: "People"
+            name: "staff"
+            widget: "list"
+            label_singular: "Person"
+            summary: "{{fields.name}} — {{fields.role}}"
+            fields:
+              - label: "Section"
+                name: "group"
+                widget: "select"
+                options:
+                  - { label: "Pensyarah", value: "lecturers" }
+                  - { label: "Pembantu Tadbir", value: "administration" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Unit Badge", name: "badge", widget: "string", required: false }
+              - { label: "Card Picture", name: "image", widget: "image" }
+              - { label: "Full Preview Picture", name: "preview_image", widget: "image", required: false }
+              - label: "Tasks"
+                name: "tasks"
+                widget: "list"
+                label_singular: "Task"
+                field: { label: "Task Description", name: "task", widget: "text" }
+          - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
+
+  - name: "eportfolio_pages"
+    label: "e-Portfolio Pages"
+    files:
+      - name: "eportfolio"
+        label: "e-Portfolio"
+        file: "content/pages/eportfolio/e-portfolio.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "e-Portfolio" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "Department Section Name", name: "department_heading", widget: "string", default: "Jabatan" }
+          - label: "Departments"
+            name: "departments"
+            widget: "list"
+            label_singular: "Department"
+            summary: "{{fields.name}}"
+            fields: &portfolio_link_fields
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Page or Website Link", name: "link", widget: "string" }
+              - { label: "Picture or Logo", name: "image", widget: "image", required: false }
+          - { label: "Unit Section Name", name: "unit_heading", widget: "string", default: "Unit" }
+          - label: "Units"
+            name: "units"
+            widget: "list"
+            label_singular: "Unit"
+            summary: "{{fields.name}}"
+            fields: *portfolio_link_fields
+          - label: "Guides and Resources"
+            name: "resources"
+            widget: "list"
+            label_singular: "Resource"
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Embed URL", name: "embed_url", widget: "string", required: false, hint: "Google Drive preview or YouTube embed URL" }
+              - { label: "File or Video Name", name: "file_name", widget: "string", required: false }
+              - { label: "Source", name: "source_name", widget: "string", required: false }
+              - { label: "Button Link", name: "link", widget: "string", required: false }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "Buka", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+      - name: "upp"
+        label: "UPP"
+        file: "content/pages/eportfolio/upp.json"
+        format: "json"
+        fields: &page_fields
+          - { label: "Page Name", name: "page", widget: "string" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string", required: false }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true, required: false }
+          - { label: "Hero Description", name: "hero_description_html", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - label: "Existing Page Layout — Advanced"
+            name: "content_html"
+            widget: "code"
+            default_language: "html"
+            output_code_only: true
+            required: false
+  - name: "pengurusan_akademik"
+    label: "Pengurusan Akademik"
+    files:
+      - name: "pengurusanakademik"
+        label: "Pengurusan Akademik"
+        file: "content/pages/pengurusan_akademik/pengurusanakademik.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Pengurusan Akademik" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Section Eyebrow", name: "section_eyebrow", widget: "string", required: false }
+          - { label: "Section Title", name: "section_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - label: "Navigation Cards"
+            name: "cards"
+            widget: "list"
+            label_singular: "Card"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Picture", name: "image", widget: "image" }
+              - { label: "Page or Website Link", name: "link", widget: "string" }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "Teroka →" }
+
+      - name: "jadualwaktuinduk"
+        label: "Jadual Waktu Induk"
+        file: "content/pages/pengurusan_akademik/jadualwaktuinduk.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Jadual Waktu Induk" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - label: "Programs"
+            name: "programs"
+            widget: "list"
+            label_singular: "Program"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Program Name", name: "name", widget: "string" }
+              - label: "Semesters"
+                name: "semesters"
+                widget: "list"
+                label_singular: "Semester"
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: "Semester Name", name: "name", widget: "string" }
+                  - { label: "Open by Default", name: "open", widget: "boolean", default: true }
+                  - label: "Documents"
+                    name: "documents"
+                    widget: "list"
+                    label_singular: "Document"
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: "Document Title", name: "title", widget: "string" }
+                      - { label: "Document Link", name: "url", widget: "string" }
+          - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
+          - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "maklumatkursus"
+        label: "Maklumat Kursus"
+        file: "content/pages/pengurusan_akademik/maklumatkursus.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Maklumat Kursus" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Access Section Heading", name: "access_heading", widget: "string" }
+          - { label: "Access Picture", name: "access_image", widget: "image", required: false }
+          - { label: "Access Instructions", name: "access_instruction", widget: "text", required: false }
+          - { label: "Example URL", name: "access_example", widget: "string", required: false }
+          - { label: "Access Button Text", name: "access_button_text", widget: "string" }
+          - { label: "Access Button Link", name: "access_url", widget: "string" }
+          - { label: "Memo Section Heading", name: "memo_heading", widget: "string" }
+          - label: "Memos"
+            name: "memos"
+            widget: "list"
+            label_singular: "Memo"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Memo Title", name: "title", widget: "string" }
+              - { label: "Memo Link", name: "url", widget: "string" }
+          - label: "Embedded Resources"
+            name: "resources"
+            widget: "list"
+            label_singular: "Resource"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Embed URL", name: "embed_url", widget: "string", required: false }
+              - { label: "File Name", name: "file_name", widget: "string", required: false }
+              - { label: "Source", name: "source", widget: "string", required: false }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "Buka" }
+              - { label: "Button Link", name: "link", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "headcount"
+        label: "Headcount"
+        file: "content/pages/headcount/headcount.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Headcount" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title", widget: "string" }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - label: "Headcount Sections"
+            name: "headcount_sections"
+            widget: "list"
+            label_singular: "Headcount Section"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Dashboard / Embed URL", name: "embed_url", widget: "string", required: false }
+              - { label: "Embed Height", name: "embed_height", widget: "number", value_type: "int", default: 700, min: 200 }
+              - { label: "Last Updated", name: "last_updated", widget: "string", required: false }
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                label_singular: "Link"
+                required: false
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Link Text", name: "label", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+              - { label: "Section Note", name: "note", widget: "text", required: false }
+  - name: "program_pengajian"
+    label: "Program Pengajian Akademik"
+    files:
+      - name: "programpengajianakademik"
+        label: "Program Pengajian Akademik"
+        file: "content/pages/program_pengajian/programpengajianakademik.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Program Pengajian Akademik" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Profile Section Heading", name: "profile_heading", widget: "string" }
+          - label: "Program Profiles"
+            name: "profiles"
+            widget: "list"
+            label_singular: "Program Profile"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Program Name", name: "name", widget: "string" }
+              - { label: "Picture", name: "image", widget: "image", required: false }
+              - label: "Cohorts / Intakes"
+                name: "cohorts"
+                widget: "list"
+                label_singular: "Cohort"
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: "Cohort Label", name: "label", widget: "string" }
+                  - label: "Fields and Links"
+                    name: "links"
+                    widget: "list"
+                    label_singular: "Field Link"
+                    summary: "{{fields.title}}"
+                    fields: &simple_link_fields
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Link", name: "url", widget: "string" }
+          - label: "Elective Sections"
+            name: "elective_sections"
+            widget: "list"
+            label_singular: "Elective Section"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Links", name: "links", widget: "list", label_singular: "Link", summary: "{{fields.title}}", fields: *simple_link_fields }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "kalendarakademik"
+        label: "Kalendar Akademik"
+        file: "content/pages/program_pengajian/kalendarakademik.json"
+        format: "json"
+        fields: &grouped_links_page_fields
+          - { label: "Page Name", name: "page", widget: "string" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Content Type", name: "content_type", widget: "hidden", default: "grouped_links" }
+          - { label: "Card CSS Class", name: "card_class", widget: "hidden" }
+          - { label: "Section CSS Class", name: "section_class", widget: "hidden" }
+          - label: "Groups"
+            name: "groups"
+            widget: "list"
+            label_singular: "Group"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Group Name", name: "name", widget: "string" }
+              - { label: "Items", name: "items", widget: "list", label_singular: "Item", summary: "{{fields.title}}", fields: *simple_link_fields }
+          - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
+          - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "agihankursus"
+        label: "Agihan Kursus"
+        file: "content/pages/program_pengajian/agihankursus.json"
+        format: "json"
+        fields: *grouped_links_page_fields
+
+      - name: "strukturkursus"
+        label: "Struktur Kursus Akademik"
+        file: "content/pages/program_pengajian/strukturkursus.json"
+        format: "json"
+        fields: *grouped_links_page_fields
+
+      - name: "bukupanduan"
+        label: "Buku Panduan"
+        file: "content/pages/program_pengajian/bukupanduan.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Buku Panduan" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Content Type", name: "content_type", widget: "hidden", default: "books" }
+          - label: "Book Sections"
+            name: "groups"
+            widget: "list"
+            label_singular: "Book Section"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Section Name", name: "name", widget: "string" }
+              - label: "Books and Documents"
+                name: "documents"
+                widget: "list"
+                label_singular: "Book"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Badge", name: "badge", widget: "string", default: "PDF" }
+                  - { label: "Document Link", name: "url", widget: "string" }
+                  - { label: "Preview / Embed URL", name: "preview_url", widget: "string", required: false }
+          - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
+          - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+  - name: "perkembangan_profesionalisme"
+    label: "Perkembangan Profesionalisme"
+    files:
+      - name: "perkembanganprofessionalisme"
+        label: "Perkembangan Profesionalisme"
+        file: "content/pages/perkembangan_profesionalisme/perkembanganprofessionalisme.json"
+        format: "json"
+        fields: &professional_page_fields
+          - { label: "Page Name", name: "page", widget: "string" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - label: "Page Sections"
+            name: "professional_sections"
+            widget: "list"
+            label_singular: "Section"
+            summary: "{{fields.heading}}"
+            fields:
+              - label: "Section Layout"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Cards / Links", value: "cards" }
+                  - { label: "Documents with Previews", value: "documents" }
+                  - { label: "Video / Embed", value: "video" }
+                  - { label: "Pictures", value: "images" }
+                  - { label: "Text", value: "text" }
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - { label: "Section Description", name: "description", widget: "text", required: false }
+              - { label: "Video / Embed URL", name: "embed_url", widget: "string", required: false }
+              - label: "Cards, Documents or Links"
+                name: "items"
+                widget: "list"
+                label_singular: "Resource"
+                required: false
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text", required: false }
+                  - { label: "Picture", name: "image", widget: "image", required: false }
+                  - { label: "Document Preview URL", name: "preview_url", widget: "string", required: false }
+                  - { label: "Page or Document Link", name: "url", widget: "string" }
+                  - { label: "Button Text", name: "button_text", widget: "string", default: "Buka →" }
+              - label: "Pictures"
+                name: "images"
+                widget: "list"
+                label_singular: "Picture"
+                required: false
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Picture", name: "image", widget: "image" }
+                  - { label: "Alternative Text", name: "alt", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - { name: "pentaksiranberterusan", label: "Pentaksiran Berterusan", file: "content/pages/perkembangan_profesionalisme/pentaksiranberterusan.json", format: "json", fields: *professional_page_fields }
+      - { name: "kppb", label: "KPPB", file: "content/pages/perkembangan_profesionalisme/kppb.json", format: "json", fields: *professional_page_fields }
+      - { name: "pbd", label: "PBD", file: "content/pages/perkembangan_profesionalisme/pbd.json", format: "json", fields: *professional_page_fields }
+      - { name: "ts25", label: "TS25", file: "content/pages/perkembangan_profesionalisme/ts25.json", format: "json", fields: *professional_page_fields }
+      - { name: "kbat", label: "KBAT", file: "content/pages/perkembangan_profesionalisme/kbat.json", format: "json", fields: *professional_page_fields }
+  - name: "penambahbaikan_berterusan"
+    label: "Penambahbaikan Berterusan"
+    files:
+      - name: "penambahbaikanberterusan"
+        label: "Penambahbaikan Berterusan"
+        file: "content/pages/penambahbaikan_berterusan/penambahbaikanberterusan.json"
+        format: "json"
+        fields: *professional_page_fields
+      - name: "panduanasas"
+        label: "Panduan Asas: Pensyarah Baharu"
+        file: "content/pages/penambahbaikan_berterusan/panduanasas.json"
+        format: "json"
+        fields: *professional_page_fields
+  - name: "pembelajaran_digital"
+    label: "Pembelajaran Digital"
+    files:
+      - name: "pembelajarandigital"
+        label: "Pembelajaran Digital"
+        file: "content/pages/pembelajaran_digital/pembelajarandigital.json"
+        format: "json"
+        fields: *professional_page_fields
+      - name: "objek"
+        label: "Objek Pembelajaran Digital"
+        file: "content/pages/pembelajaran_digital/objek.json"
+        format: "json"
+        fields: *professional_page_fields
+      - name: "delima"
+        label: "DELIMa"
+        file: "content/pages/pembelajaran_digital/delima.json"
+        format: "json"
+        fields: *professional_page_fields
+      - name: "rubrik"
+        label: "Rubrik OPD"
+        file: "content/pages/pembelajaran_digital/rubrik.json"
+        format: "json"
+        fields: *professional_page_fields
+      - name: "akses"
+        label: "Aksesibiliti OPD"
+        file: "content/pages/pembelajaran_digital/akses.json"
+        format: "json"
+        fields: *professional_page_fields
+  - { name: "info_pensyarah", label: "Info Pensyarah", folder: "content/pages/info_pensyarah", create: false, extension: "json", format: "json", identifier_field: "page", summary: "{{page}}", fields: *page_fields }
+  - name: "lain_lain"
+    label: "Lain-lain"
+    files:
+      - name: "logmasuk"
+        label: "Log Masuk JKA"
+        file: "content/pages/lain_lain/logmasuk.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Log Masuk JKA" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - label: "Login Page Text"
+            name: "login_content"
+            widget: "object"
+            fields:
+              - { label: "Badge / Emoji", name: "badge", widget: "string", required: false }
+              - { label: "Small Heading", name: "eyebrow", widget: "string", required: false }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Loading Message", name: "loading_message", widget: "string" }
+              - { label: "Access Denied Message", name: "error_message", widget: "text" }
+              - { label: "Bottom Hint", name: "hint", widget: "text", required: false }
+
+      - name: "hubungi"
+        label: "Hubungi"
+        file: "content/pages/lain_lain/hubungi.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Hubungi" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Department Name", name: "department_name", widget: "string" }
+          - { label: "Department Subtitle", name: "department_subtitle", widget: "string", required: false }
+          - label: "Contacts"
+            name: "contacts"
+            widget: "list"
+            label_singular: "Contact"
+            summary: "{{fields.name}} — {{fields.position}}"
+            fields:
+              - { label: "Position", name: "position", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Phone Number", name: "phone", widget: "string", required: false }
+              - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }

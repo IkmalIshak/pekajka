@@ -1,0 +1,28 @@
+{
+  "page": "Headcount",
+  "browser_title": "STATISTIK PENSYARAH DAN PELAJAR — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Pengurusan Akademik · IPGKPP",
+  "hero_title": "STATISTIK PENSYARAH DAN PELAJAR",
+  "hero_description": "Data bilangan pensyarah dan pelajar mengikut bidang dan unit bagi tujuan perancangan akademik dan pentadbiran.",
+  "hero_tagline": "Data Terkini",
+  "headcount_sections": [
+    {
+      "title": "",
+      "description": "",
+      "embed_url": "https://lookerstudio.google.com/embed/reporting/d23f2711-066f-4c0f-aa12-5c0c0f61bdcd/page/qg3SF",
+      "embed_height": 700,
+      "last_updated": "22/1/2026",
+      "links": [
+        {
+          "label": "📊 Buka di Google Sheets → ( Bilangan pensyarah dan pelajar)",
+          "url": "https://docs.google.com/spreadsheets/d/18YrpaEx3KEb7c9V37VJJqRIoWhF-H2gqnlXV2orDyGE/edit?gid=0#gid=0"
+        },
+        {
+          "label": "📊 Buka di Google Sheets → ( Bilangan bilik kuliah dan kursus yang ditawarkan)",
+          "url": "https://docs.google.com/spreadsheets/d/1ejY0sfga6AMgf7mPCHzS9aZGxlkx_vN48LgTwOggRIo/edit?usp=sharing"
+        }
+      ],
+      "note": "dalam proses pembinaan ...."
+    }
+  ]
+}

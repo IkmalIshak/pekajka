@@ -1,0 +1,21 @@
+{
+  "page": "Hubungi",
+  "browser_title": "Hubungi Kami | PEKA JKA IPGMKPP",
+  "hero_eyebrow": "JKA · IPGKPP",
+  "hero_title_html": "Hubungi<br><em>Kami</em>",
+  "hero_description": "Hubungi Jabatan Kecemerlangan Akademik (JKA) IPGM Kampus Pulau Pinang untuk sebarang pertanyaan, maklumat, atau perkongsian berkaitan pengurusan akademik.",
+  "hero_tagline": "📞 Telefon · 📧 Emel · 📍 Alamat",
+  "page_title": "HUBUNGI KAMI",
+  "page_subtitle": "Jabatan Kecemerlangan Akademik, IPGM Kampus Pulau Pinang",
+  "department_name": "JABATAN KECEMERLANGAN AKADEMIK",
+  "department_subtitle": "IPGM Kampus Pulau Pinang",
+  "contacts": [
+    { "position": "Ketua Jabatan JKA", "name": "En Naziruddin bin Mashood", "phone": "012-472 6202", "email": "" },
+    { "position": "Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik", "name": "Dr Tan Lay Koon", "phone": "019-473 2828", "email": "" },
+    { "position": "Ketua Unit Pengajian Akademik", "name": "Dr Suah See Ling", "phone": "016-486 4133", "email": "" },
+    { "position": "Ketua Unit Pembelajaran Digital", "name": "Dr Kamalambal Durairaj", "phone": "019-410 5477", "email": "" },
+    { "position": "Ketua Unit Perkembangan Profesionalisme Akademik", "name": "Puan Wan Nor Asmah Binti Arshad", "phone": "013-418 9262", "email": "" },
+    { "position": "Ketua Unit Penambahbaikan Berterusan", "name": "Dr Soudamini a/p Narayanan Nair", "phone": "012-441 4570", "email": "" }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

@@ -1,0 +1,68 @@
+{
+  "department": "Jabatan Pengajian Melayu",
+  "staff": [
+    {
+      "name": "DR. MAT SALLEH B MOHAMAD ZAIN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/mat.png",
+      "link": "https://drive.google.com/drive/folders/1oVCBdNnyO5EuTwO7xG7R9p8M26ty_9jP?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. ARFAH BINTI AHAMAD",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/ARFAH.png",
+      "link": "https://drive.google.com/drive/folders/18ZSpI-X5T2iZQuGjYj91_TrwPH_dcuIB?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ROZEEROZANNA BT ROSLI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/rozee.png",
+      "link": "https://drive.google.com/drive/folders/1vZKRpw0_xeYEOYcBs6Z3NKo_WGjxqGXq?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "WAHIDAH BINTI MUHAMAD",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/wahidah.png",
+      "link": "https://drive.google.com/drive/folders/12MYNw_5lwdSZALH6r2WYcRhA-v2ygUa_?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MASHITOH BT PAKIR MOHAMED",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/mashitoh.png",
+      "link": "https://drive.google.com/drive/folders/1AktIip3yupYG-YIdrJMWia8cmw2okoln?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NAZIRUDDIN BIN MASHOOD",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/nash.png",
+      "link": "https://drive.google.com/drive/folders/1qJoBzwELU2iyfjXRieZALMDBazRaaT2I?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NORHAYATI BINTI AYIT",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - PENGAJIAN MELAYU_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/1sDnFZrDvbKL98C4lfMMGyiCRvlLKlOlz?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

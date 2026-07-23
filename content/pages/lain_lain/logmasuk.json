@@ -1,0 +1,13 @@
+{
+  "page": "Log Masuk JKA",
+  "browser_title": "Log Masuk — JKA IPGKPP",
+  "login_content": {
+    "badge": "🔒",
+    "eyebrow": "Akses Terhad",
+    "title": "Log Masuk Diperlukan",
+    "description": "Kandungan ini hanya boleh diakses oleh ahli JKA IPGKPP yang berdaftar. Sila log masuk menggunakan akaun Google anda.",
+    "loading_message": "Mengesahkan akaun...",
+    "error_message": "Akaun Google ini tidak mempunyai akses. Sila hubungi pentadbir jika ini satu kesilapan.",
+    "hint": "Hanya akaun yang diluluskan oleh Jabatan Kecemerlangan Akademik boleh mengakses portal ini."
+  }
+}

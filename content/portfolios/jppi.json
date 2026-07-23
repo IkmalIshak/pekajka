@@ -1,0 +1,50 @@
+{
+  "department": "JPPI",
+  "staff": [
+    {
+      "name": "Dr. Hafiah binti Ismail",
+      "role": "Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/hafiah.png",
+      "link": "https://drive.google.com/drive/folders/1oEeAT7S4QgHGN2nLYA_W52FLhQfohCOZ?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Ts. Mohd Hazlie bin Muhamad",
+      "role": "Penolong Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/ts.png",
+      "link": "https://drive.google.com/drive/folders/1iZFcl8wFmcvWO1JCDlbRFWLMGRl2mBx4?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr. Samri bin Chongo",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - SAINS_files/SAMRI.png",
+      "link": "https://drive.google.com/drive/folders/1g50EjeJu2sTxfu6Vpt1fbAp9h7z_8R6P?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr. Syamala Nair Gopal",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/syamala.png",
+      "link": "https://drive.google.com/drive/folders/1zypFpu7d0MTyi8pZnw6g3OOHuJMYR22g?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr. Kalaivani a/p Shanmugam",
+      "role": "Ketua Unit",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/kalai.png",
+      "link": "https://drive.google.com/drive/folders/1i8fIXQcP6DJs1pno7L2lYYw9mAIt0tbr?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

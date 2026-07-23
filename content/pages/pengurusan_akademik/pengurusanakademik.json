@@ -1,0 +1,33 @@
+{
+  "page": "Pengurusan Akademik",
+  "browser_title": "Pengurusan Akademik — PEKA JKA IPGKPP",
+  "hero_eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
+  "hero_title_html": "Pengurusan<br>Akademik",
+  "hero_description": "Mengurus dan menyelaras pelaksanaan kurikulum akademik secara sistematik bagi memastikan kelancaran proses pengajaran dan pembelajaran di IPGKPP.",
+  "hero_tagline": "Jadual Waktu · Maklumat Kursus · Headcount",
+  "section_eyebrow": "Terokai",
+  "section_title_html": "Urusan Akademik<br>Utama",
+  "cards": [
+    {
+      "link": "jadualwaktuinduk.html",
+      "image": "PEKA JKA IPGM KPP - Pengurusan Akademik_files/unnamed(1).png",
+      "title": "Jadual Waktu Induk",
+      "description": "Semakan jadual waktu pengajaran pensyarah dan sesi pembelajaran pelajar bagi setiap program akademik.",
+      "button_text": "Teroka →"
+    },
+    {
+      "link": "maklumatkursus.html",
+      "image": "PEKA JKA IPGM KPP - Pengurusan Akademik_files/unnamed(2).png",
+      "title": "Maklumat Kursus",
+      "description": "Butiran lengkap tentang kursus yang ditawarkan, termasuk sinopsis, hasil pembelajaran, dan penilaian.",
+      "button_text": "Teroka →"
+    },
+    {
+      "link": "headcount.html",
+      "image": "PEKA JKA IPGM KPP - Pengurusan Akademik_files/unnamed(3).png",
+      "title": "Headcount",
+      "description": "Data bilangan pelajar mengikut program, tahun, dan sesi bagi tujuan perancangan akademik dan pentadbiran.",
+      "button_text": "Teroka →"
+    }
+  ]
+}

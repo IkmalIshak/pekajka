@@ -1,0 +1,59 @@
+{
+  "department": "Jabatan Kecemerlangan Akademik",
+  "staff": [
+    {
+      "name": "Encik Naziruddin b Mashood",
+      "role": "Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/nash.png",
+      "link": "https://drive.google.com/drive/folders/1qJoBzwELU2iyfjXRieZALMDBazRaaT2I?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr Tan Lay Koon",
+      "role": "Timbalan Ketua Jabatan",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/tan.png",
+      "link": "https://drive.google.com/drive/folders/1tUYdR7OfkRb6wnW66duqkftyhAmVHgPo?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr Suah See Ling",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/suah.png",
+      "link": "https://drive.google.com/drive/folders/11-NaV6LMyodc-bOK_EPDzHkIvwJUJjgm?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Pn Wan Nor Asmah Arshad",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/wan.png",
+      "link": "https://drive.google.com/drive/folders/1Su5aTYqSDetaeyxvzzca1-pEEucEZvJd?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr Kamalambal Durairaj",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/kamala.png",
+      "link": "https://drive.google.com/drive/folders/1l0J1oXU7mNMSkyOs6mPYa0hPJY942ykT?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Dr Soudamini a/p Narayanan Nair",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/souda.png",
+      "link": "https://drive.google.com/drive/folders/10tX1qI5iQBSexLpgTC5bHqYYGZ3d4Ae1?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

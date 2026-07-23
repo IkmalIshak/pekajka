@@ -1,0 +1,149 @@
+{
+  "department": "Jabatan Matematik",
+  "staff": [
+    {
+      "name": "DR. NORABIATUL ADAWIAH BT ABD WAHID",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/NORABIATUL.png",
+      "link": "https://drive.google.com/drive/folders/13DOttKtg64xSmJJzvOg4f9s0QjJaP5oZ?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "JONG CHERNG MEEI @ YONG CHERNG MEEI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/JONG CHERNG MEI(MATH) (6).png",
+      "link": "https://drive.google.com/drive/folders/157KnbiKS1xrFq2zUwpGwEGu-0ZZVi2LA?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. LAVANEESVARI A/P MANOGARAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/Dr. Lavaneesvari_.png",
+      "link": "https://drive.google.com/drive/folders/1egW2XZKtZL0oNkUO_9FyBXqAYI76nmvj?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "SELVAM MANISAKARAM",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/SELVAM.png",
+      "link": "https://drive.google.com/drive/folders/16OYLjXG_JGUHAfbjLKiwA8lflxZ8m6lS?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ONG PEI WEN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/ONG PEI WEN(MATH) (5).png",
+      "link": "https://drive.google.com/drive/folders/1owD5X2uUyFlD2c9fdWZSJahHLFMefNyJ?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. DURGA A/P GNANASAGARAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/DURGA(MATH) (5).png",
+      "link": "https://drive.google.com/drive/folders/19qBLX6bi1zp2qBUtB6x5MqYTiw1zzj8q?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MUHAMMAD SAFFUAN B JAFFAR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/Saffuan Mat.png",
+      "link": "https://drive.google.com/drive/folders/1PNPSK2tx5uriHvG8OItCG2_R6ZAHsyeb?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MOHD MURSYIDI B YAHAYA",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/MURSHIDI.png",
+      "link": "https://drive.google.com/drive/folders/1OUh1nfXo7Ku8X8b1OdYnEwcbKWuFyTtj?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "LEW YE JING",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/LEW YE JING(MATH) (3).png",
+      "link": "https://drive.google.com/drive/folders/17dzGYSNpX36j8TjRRFM-jyfopLaAMmII?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ONG LI LI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/ONG LILI(MATH) (3).png",
+      "link": "https://drive.google.com/drive/folders/1jh7L8BMKYZwDTmEKg98DyEMeWQ8cQIvl?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. NORLIZA BT MOHAMED",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/NORLIZA(MATH) (3).png",
+      "link": "https://drive.google.com/drive/folders/1JMpTKYYWXfLJ2jZ4poQxILfYsbVUxLM5?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "E YUVATHI EALOMALAI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/E.png",
+      "link": "https://drive.google.com/drive/folders/1CbDNAzaRZIPSgqFoV5FE8-XmOiZzNdPa?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NOR FAZMIRA BT MOHD RAZALI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/NOR FAZMIRA(JAB MATH) (2).png",
+      "link": "https://drive.google.com/drive/folders/1pLh4MOMD0desYXBCypPRa47tWtmMfgYx?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NG CHEE HOE",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/NG CHEE HOE (MATH) (4).png",
+      "link": "https://drive.google.com/drive/folders/1pCdF6nGV7WOOEBmYqgZmVgU9Io_Ic6bT?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KALAIVANI A/P SHANMUGAM",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/kalai.png",
+      "link": "https://drive.google.com/drive/folders/1i8fIXQcP6DJs1pno7L2lYYw9mAIt0tbr?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "MASYITHOH BT MD ZUBER",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/masyitoh.png",
+      "link": "https://drive.google.com/drive/folders/1r6PWGJ5GQfzrddYwnpvCXG6QW5MV7wyn?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}

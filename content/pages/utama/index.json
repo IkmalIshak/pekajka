@@ -1,0 +1,138 @@
+{
+  "page": "Utama",
+  "browser_title": "PEKA JKA IPGKPP",
+  "home_slides": [
+    {
+      "type": "intro",
+      "eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
+      "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
+      "description_html": "Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.",
+      "tagline": "",
+      "link": "",
+      "calendar_embed_url": "",
+      "calendar_badge": ""
+    },
+    {
+      "type": "calendar",
+      "eyebrow": "Kalendar JKA · IPGKPP",
+      "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
+      "description_html": "Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.",
+      "tagline": "📅 Buka Kalendar Penuh →",
+      "link": "https://calendar.google.com/calendar/u/0?cid=amthLmlwZ2twcEBpcGdtLmVkdS5teQ",
+      "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=jka.ipgkpp%40ipgm.edu.my&ctz=Asia%2FKuala_Lumpur",
+      "calendar_badge": "Kalendar Langsung"
+    }
+  ],
+  "shortcuts_eyebrow": "Pautan Pantas",
+  "shortcuts_title_html": "Akses Kandungan<br>Utama",
+  "shortcuts": [
+    {
+      "title": "Spesifikasi Tugas Unit",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(1).png",
+      "link": "spesifikasitugas.html"
+    },
+    {
+      "title": "Agihan Kursus PISMP/PPISMP",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(2).png",
+      "link": "agihankursus.html"
+    },
+    {
+      "title": "Kalendar Akademik",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(3).png",
+      "link": "kalendarakademik.html"
+    },
+    {
+      "title": "Jadual Waktu",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(4).png",
+      "link": "jadualwaktuinduk.html"
+    },
+    {
+      "title": "Maklumat Kursus",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(5).png",
+      "link": "maklumatkursus.html"
+    },
+    {
+      "title": "Profil Program",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(6).png",
+      "link": "programpengajianakademik.html"
+    },
+    {
+      "title": "e-Portfolio",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(7).png",
+      "link": "e-portfolio.html"
+    },
+    {
+      "title": "Headcount",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(8).png",
+      "link": "headcount.html"
+    },
+    {
+      "title": "Buku Panduan",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(9).png",
+      "link": "bukupanduan.html"
+    },
+    {
+      "title": "CDL/CCQI",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(10).png",
+      "link": "penambahbaikanberterusan.html"
+    },
+    {
+      "title": "Pentaksiran Berterusan",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(11).png",
+      "link": "pentaksiranberterusan.html"
+    },
+    {
+      "title": "Pembelajaran Digital",
+      "image": "PEKA JKA IPGM KPP_files/unnamed(12).png",
+      "link": "pembelajarandigital.html"
+    },
+    {
+      "title": "MEMO / DOKUMENTASI",
+      "image": "/assets/uploads/images.png",
+      "link": "https://docs.google.com/spreadsheets/d/172DttdC9cJFQwkBO6_n1-qWy9Mc8e9ljcBityp16akQ/edit?gid=121306024#gid=121306024"
+    },
+    {
+      "title": "KOMPAS",
+      "image": "/assets/uploads/compass.png",
+      "link": "panduanasas.html"
+    },
+    {
+      "title": "KASUMA",
+      "image": "/assets/uploads/sport.png",
+      "link": "https://drive.google.com/drive/u/0/folders/13f89s6m3l3eAqVdO1VBTgpbpAf0l8jrx"
+    },
+    {
+      "title": "GALERI",
+      "image": "/assets/uploads/gallery.png",
+      "link": "-"
+    }
+  ],
+  "about": {
+    "eyebrow": "Mengenai Kami",
+    "title": "Jabatan Kecemerlangan Akademik",
+    "description": "Jabatan Kecemerlangan Akademik (JKA) bertanggungjawab memastikan pengurusan kurikulum akademik berjalan dengan lancar dan berkualiti tinggi, selaras dengan visi IPGKPP sebagai peneraju kecemerlangan pendidikan guru bertaraf dunia.",
+    "image": "PEKA JKA IPGM KPP_files/unnamedbg.jpg",
+    "button_text": "Ketahui Lebih Lanjut →",
+    "button_link": "spesifikasitugas.html"
+  },
+  "location": {
+    "eyebrow": "Lokasi Kami",
+    "title": "Institut Pendidikan Guru Kampus Pulau Pinang",
+    "description": "Terletak di kawasan strategik di Pulau Pinang, IPGKPP mudah dikunjungi oleh semua pihak yang berkepentingan.",
+    "details": [
+      {
+        "icon": "📍",
+        "text": "Bukit Coombe, 11700 Gelugor, Pulau Pinang, Malaysia"
+      },
+      {
+        "icon": "🕐",
+        "text": "Isnin – Jumaat: 8:00 pagi – 5:00 petang"
+      },
+      {
+        "icon": "📧",
+        "text": "jka.ipgkpp@ipgm.edu.my"
+      }
+    ],
+    "map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3972.263557112976!2d100.30990607571039!3d5.376726235424888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac10a413c8b69%3A0x3e8d8f84ec956963!2sIPGM%20Kampus%20Pulau%20Pinang!5e0!3m2!1sen!2smy!4v1782722889840!5m2!1sen!2smy"
+  }
+}

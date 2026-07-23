@@ -1,0 +1,136 @@
+{
+  "page": "Spesifikasi Tugas Unit",
+  "browser_title": "SPESIFIKASI TUGAS UNIT · PEKA JKA IPGKPP",
+  "page_title": "Spesifikasi Tugas Unit",
+  "subtitle": "Jabatan Kecemerlangan Akademik Institut Pendidikan Guru Malaysia Kampus Pulau Pinang",
+  "organisation_heading": "Carta Organisasi",
+  "organisation_intro": "Struktur organisasi Jabatan Kecemerlangan Akademik IPGKPP.",
+  "organisation_image": "SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png",
+  "lecturer_heading": "Pensyarah",
+  "lecturer_intro": "Senarai pegawai dan pensyarah yang terlibat dalam pelaksanaan fungsi unit. Klik kad untuk lihat gambar penuh.",
+  "administration_heading": "Pembantu Tadbir",
+  "administration_intro": "Sokongan pentadbiran jabatan.",
+  "staff": [
+    {
+      "group": "lecturers",
+      "name": "Encik Naziruddin bin Mashood",
+      "role": "Ketua Jabatan",
+      "badge": "JKA",
+      "image": "SPESIFIKASI TUGAS UNIT_files/nash.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/naziruddin.png",
+      "tasks": [
+        "Memantau semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, prosedur ISO 21001:2018 EOMS dan MQA.",
+        "Memantau & menyelia semua aktiviti unit di JKA.",
+        "Memantau pengurusan proses reka bentuk dan penyampaian kurikulum.",
+        "Memantau pengurusan sistem pembelajaran digital.",
+        "Memantau penyediaan dan pelaksanaan Jadual Waktu.",
+        "Memantau perancangan PdP dan kerja kursus serta keselarasannya dengan Maklumat Kursus (MK).",
+        "Memantau pelaksanaan pentaksiran mengikut keperluan IPGM dan IPGK.",
+        "Memantau tindakan terhadap hasil refleksi praktikum pelajar serta praktikum bertema.",
+        "Memantau pelaksanaan pemantauan penyampaian kurikulum.",
+        "Memastikan pelaksanaan dan pelaporan Closing the Loop bagi program / kursus.",
+        "Memantau & menyelia kemajuan prestasi pelajar.",
+        "Memantau pelaksanaan semua kursus dalam semua program.",
+        "Memantau penyampaian taklimat program pengajian akademik kepada pelajar baharu.",
+        "Memantau penyebaran pindaan/penambahbaikan struktur program terkini.",
+        "Memastikan penyebaran maklumat terkini tentang perkembangan program pengajian akademik.",
+        "Memantau semua aktiviti unit secara bersepadu untuk meningkatkan kualiti & profesionalisme.",
+        "Memantau pembudayaan amalan pedagogi masa kini di institut.",
+        "Memantau pelaksanaan program peningkatan kompetensi pensyarah."
+      ]
+    },
+    {
+      "group": "lecturers",
+      "name": "Dr. Tan Lay Koon",
+      "role": "Timbalan Ketua Jabatan / Ketua Unit Pengurusan Akademik",
+      "badge": "UPA",
+      "image": "SPESIFIKASI TUGAS UNIT_files/tan.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/drtan.png",
+      "tasks": [
+        "Memantau semua aktiviti pengurusan akademik institut berdasarkan garis panduan IPGM, ISO 21001:2018 EOMS dan MQA.",
+        "Memastikan semua aktiviti unit berjalan lancar.",
+        "Memastikan pengurusan proses reka bentuk dan penyampaian kurikulum dilaksanakan mengikut prosedur.",
+        "Memastikan penyediaan dan pelaksanaan Jadual Waktu berjalan lancar."
+      ]
+    },
+    {
+      "group": "lecturers",
+      "name": "Dr. Suah See Ling",
+      "role": "Ketua Unit Pengajian Akademik",
+      "badge": "UPA",
+      "image": "SPESIFIKASI TUGAS UNIT_files/suah.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/drsuah.png",
+      "tasks": [
+        "Memastikan penawaran semua kursus dan maklumat pentaksiran dalam semua program.",
+        "Memastikan taklimat program pengajian akademik diberi kepada pelajar baharu.",
+        "Memastikan penyebaran pindaan/penambahbaikan struktur program terkini kepada Ketua Jabatan/Unit.",
+        "Memastikan pengurusan pemilihan elektif teras dan elektif terbuka.",
+        "Membentangkan senarai kursus, tenaga pengajar serta maklumat pentaksiran dalam mesyuarat Pengurusan Tertinggi IPG.",
+        "Memastikan maklumat Program Pengajian Akademik terkini dimuatnaik ke laman web institut.",
+        "Memastikan penyebaran maklumat tentang perkembangan kurikulum terkini.",
+        "Memastikan pelaksanaan jadual waktu interaksi kuliah bagi program KDC.",
+        "Menyelaras tugas semua Penyelaras Program yang ditawarkan di Institut."
+      ]
+    },
+    {
+      "group": "lecturers",
+      "name": "Dr. Kamalambal Durairaj",
+      "role": "Ketua Unit Pembelajaran Digital",
+      "badge": "UPD",
+      "image": "SPESIFIKASI TUGAS UNIT_files/kamala.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/drkamala.png",
+      "tasks": [
+        "Menyelaras perancangan, pelaksanaan, dan penilaian keberkesanan pembelajaran digital di IPGK, termasuk garis panduan, penggunaan DELIMa, dan sesi taklimat dengan OPD.",
+        "Menyelaras & memantau pelaksanaan pembelajaran digital di jabatan melalui semakan laporan dan pemantauan berkala.",
+        "Menganalisis data penggunaan platform digital bagi mengenal pasti keperluan penambahbaikan serta menyediakan laporan keberkesanan.",
+        "Mengurus fungsi pentadbiran jabatan sebagai Setiausaha (minit mesyuarat, surat menyurat, dokumentasi, rekod rasmi)."
+      ]
+    },
+    {
+      "group": "lecturers",
+      "name": "Dr. Soudamini a/p Narayanan Nair",
+      "role": "Ketua Unit Penambahbaikan Berterusan Akademik",
+      "badge": "UPBA",
+      "image": "SPESIFIKASI TUGAS UNIT_files/souda.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/drsoudamini.png",
+      "tasks": [
+        "Memantau penyelarasan perancangan semester PdP dan kerja kursus bagi setiap kursus.",
+        "Memantau pelaksanaan pentaksiran yang sistematik, profesional, sah dan boleh dipercayai.",
+        "Memastikan pengurusan laporan pelaksanaan Praktikum untuk penambahbaikan berterusan.",
+        "Mengurus pelaksanaan pemantauan penyampaian kurikulum.",
+        "Mengurus & menyelia pelaksanaan dan pelaporan Closing the Loop bagi kursus/program.",
+        "Mengurus & menyelia kemajuan prestasi pelajar dan cadangan tindakan penambahbaikan.",
+        "Memastikan perancangan dan pelaksanaan peningkatan literasi data dalam program latihan guru."
+      ]
+    },
+    {
+      "group": "lecturers",
+      "name": "Pn. Wan Nor Asmah Binti Arshad",
+      "role": "Ketua Unit Perkembangan Profesionalisme Akademik",
+      "badge": "UPPA",
+      "image": "SPESIFIKASI TUGAS UNIT_files/wan.png",
+      "preview_image": "SPESIFIKASI TUGAS UNIT_files/wannorasmah.png",
+      "tasks": [
+        "Membuat penyelaras bersama ULDP/Jabatan akademik perancangan tahunan berfokus peningkatan profesionalisme berdasarkan analisis IPPK, CDl dan CCQI.",
+        "Merancang aktiviti unit secara bersepadu untuk meningkatkan kualiti & profesionalisme akademik pensyarah dan pelajar.",
+        "Merancang aktiviti akademik yang menyokong pengembangan profesionalisme (PLC, KPPB, TS25, PBD, PAK-21, dsb.).",
+        "Memperkukuh pembudayaan amalan pedagogi masa kini di institut.",
+        "Mengemas kini dokumentasi aktiviti unit dari semasa ke semasa."
+      ]
+    },
+    {
+      "group": "administration",
+      "name": "Pn. Norhayati binti Ishak",
+      "role": "Pembantu Tadbir (P/O)",
+      "badge": "Pentadbiran",
+      "image": "PEKA JKA IPGM KPP - JABATAN KECEMERLANGAN AKADEMIK_files/NORHAYATI.ISHAK2.png",
+      "preview_image": "PEKA JKA IPGM KPP - JABATAN KECEMERLANGAN AKADEMIK_files/NORHAYATI.ISHAK2.png",
+      "tasks": [
+        "Menyokong pentadbiran jabatan, pengurusan dokumen dan urusan rasmi.",
+        "Membantu penyediaan minit mesyuarat, surat menyurat dan rekod unit.",
+        "Menyelaras urusan harian serta dokumen berkaitan pentadbiran jabatan."
+      ]
+    }
+  ],
+  "updated_text": "Kemaskini Jun 2026"
+}

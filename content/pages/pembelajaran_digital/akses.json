@@ -1,0 +1,71 @@
+{
+  "page": "Aksesibiliti OPD",
+  "browser_title": "Aksessibiliti — PEKA JKA IPGKPP",
+  "hero_eyebrow": "JKA · IPGKPP",
+  "hero_title_html": "Objek Pembelajaran<br><em>Digital</em>",
+  "hero_description": "Objek Pembelajaran Digital (OPD) merupakan bahan pengajaran digital yang terancang, interaktif, dan boleh digunakan semula untuk menyokong pembelajaran kendiri pelajar serta pengajaran pensyarah.",
+  "hero_tagline": "📘 Konsep · 🧩 Komponen · 📎 Templat & Rubrik",
+  "page_title": "OBJEK PEMBELAJARAN DIGITAL",
+  "page_subtitle": "Bahan pengajaran digital yang interaktif, terancang dan boleh digunakan semula",
+  "professional_sections": [
+    {
+      "type": "text",
+      "heading": "KONSEP & KOMPONEN OPD",
+      "description": "Objekt Pembelajaran Digital (OPD) ialah bahan pengajaran digital yang direka bentuk untuk mencapai objektif pembelajaran tertentu.\nOPD bersifat interaktif, boleh digunakan semula, dan boleh dikongsi merentasi platform pembelajaran.\nIa merangkumi pelbagai format seperti modul interaktif, video, simulasi, kuiz, dan bahan multimedia lain.\nOPD menyokong pembelajaran kendiri pelajar dan boleh diintegrasikan dalam PdP bersemuka atau secara hibrid.\nObjektif Pembelajaran: Pernyataan jelas tentang apa yang pelajar boleh capai selepas menggunakan OPD.\nKandungan Interaktif: Bahan pembelajaran yang melibatkan pelajar secara aktif (simulasi, latihan, animasi).\nPenilaian & Maklum Balas: Kuiz, ujian kendiri, dan maklum balas segera untuk mengukur kefahaman.\nNavigasi & Reka Bentuk: Susunan yang intuitif, mesra pengguna, dan boleh diakses merentasi peranti.\nMetadata & Kebolehcarian: Maklumat tentang OPD (tajuk, kata kunci, tahap kesukaran) untuk memudahkan pencarian dan perkongsian.",
+      "embed_url": "",
+      "items": [],
+      "images": []
+    },
+    {
+      "type": "images",
+      "heading": "GAMBARAN OPD",
+      "description": "Contoh antaramuka Objek Pembelajaran Digital yang dibangunkan di IPGKPP",
+      "embed_url": "",
+      "items": [],
+      "images": [
+        {
+          "image": "PEKA JKA IPGM KPP - OBJECT PEMBELAJARAN DIGITAL_files/unnamed(1).png",
+          "alt": "Contoh OPD 1"
+        },
+        {
+          "image": "PEKA JKA IPGM KPP - OBJECT PEMBELAJARAN DIGITAL_files/unnamed(2).png",
+          "alt": "Contoh OPD 2"
+        },
+        {
+          "image": "PEKA JKA IPGM KPP - OBJECT PEMBELAJARAN DIGITAL_files/unnamed(3).png",
+          "alt": "Contoh OPD 3"
+        },
+        {
+          "image": "PEKA JKA IPGM KPP - OBJECT PEMBELAJARAN DIGITAL_files/unnamed(4).png",
+          "alt": "Contoh OPD 4"
+        }
+      ]
+    },
+    {
+      "type": "cards",
+      "heading": "MANUAL & PANDUAN OPD",
+      "description": "",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "TEMPLAT MERUNGKAI-MERANGKAI (KMR)",
+          "description": "Templat untuk merungkai dan merangkai kurikulum bagi membangunkan OPD",
+          "image": "PEKA JKA IPGM KPP - Pembelajaran Digital_files/docs_32dp.png",
+          "preview_url": "",
+          "url": "https://drive.google.com/open?authuser=0&id=1asynTbXDSnF1PDifcn1oWRCkFwwsJ-dB9_KtgKgRXn4",
+          "button_text": "Lihat →"
+        },
+        {
+          "title": "RUBRIK OPD-KPPB",
+          "description": "Rubrik penilaian Objek Pembelajaran Digital untuk memastikan kualiti dan keberkesanan",
+          "image": "PEKA JKA IPGM KPP - Pembelajaran Digital_files/drive-32.png",
+          "preview_url": "",
+          "url": "https://drive.google.com/file/d/1dQtfFHQpeokkkgoEc9lq1HpuO_AeOKb_/view?usp=drive_link",
+          "button_text": "Lihat →"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

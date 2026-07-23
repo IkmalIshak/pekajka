@@ -1,0 +1,55 @@
+{
+  "page": "KPPB",
+  "browser_title": "KPPB — PEKA JKA IPGKPP",
+  "hero_eyebrow": "UPPA · IPGKPP",
+  "hero_title_html": "Kapasiti Pedagogi<br><em>Pembelajaran Bermakna</em>",
+  "hero_description": "KPPB merupakan inisiatif di bawah Unit Perkembangan Profesionalisme Akademik (UPPA) yang bertujuan memperkukuh pedagogi bermakna dalam kalangan pendidik.",
+  "hero_tagline": "📘 Portal KPPB · 📚 Rujukan · 🔗 Bahan",
+  "page_title": "KAPASITI PEDAGOGI PEMBELAJARAN BERMAKNA (KPPB)",
+  "page_subtitle": "Portal & rujukan rasmi KPPB",
+  "professional_sections": [
+    {
+      "type": "cards",
+      "heading": "PORTAL RASMI KPPB",
+      "description": "",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "PORTAL KPPB — OPD",
+          "description": "Portal rasmi KPPB IPG Kampus Pulau Pinang",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(1).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/ipgm.edu.my/portalkppbipgmkpulaupinang/utama",
+          "button_text": "Lawati →"
+        },
+        {
+          "title": "PORTAL KPPB IPGM",
+          "description": "Portal kebangsaan KPPB Institut Pendidikan Guru Malaysia",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(2).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/epembelajaran.edu.my/kppb-ipg/pengenalan",
+          "button_text": "Lawati →"
+        }
+      ],
+      "images": []
+    },
+    {
+      "type": "cards",
+      "heading": "RUJUKAN & BAHAN KPPB",
+      "description": "",
+      "embed_url": "",
+      "items": [
+        {
+          "title": "BAHAN KPPB",
+          "description": "Arkib bahan, modul dan dokumen sokongan KPPB",
+          "image": "PEKA JKA IPGM KPP - Perkembangan Profesionalisme Akademik_files/unnamed(3).png",
+          "preview_url": "",
+          "url": "https://sites.google.com/ipgm.edu.my/portalkppbipgmkpulaupinang/arkib",
+          "button_text": "Terokai →"
+        }
+      ],
+      "images": []
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
+}

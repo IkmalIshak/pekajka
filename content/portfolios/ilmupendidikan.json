@@ -1,0 +1,275 @@
+{
+  "department": "Jabatan Ilmu Pendidikan",
+  "staff": [
+    {
+      "name": "DR. NORAZIAH BT AHMAD SHATAR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/NOR AZIAH.png",
+      "link": "https://drive.google.com/drive/folders/1Jfm717md7xEIh9jRI0bVr-s2d_nUpvOp?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "LEE GAY WAH",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/LINA LEE(JIP)  (1).png",
+      "link": "https://drive.google.com/drive/folders/1HhL6hcK_uDhOxuEB0knfKMLaYszj85Uu?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "RATANAMLA A/P KALIMUTHU",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/ratna.png",
+      "link": "https://drive.google.com/drive/folders/12kMPdh95l0xD7m9YevTaeZ_V8G2J5Ztl?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KAM LAY KHUAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/KAM LAY KHUAN(JIP) (5).png",
+      "link": "https://drive.google.com/drive/folders/1DFvGwUrwWJ2eAD18M6TT32dg-nVQxbYJ?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "SHUHAILAH BT MAT SAID",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/shuhailah.png",
+      "link": "https://drive.google.com/drive/folders/1ukwYYamFKw1rdPkq3rK4R_WYhSOJKJWp?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. ANPALAKAN A/L VADIAPPAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/ANPALAKAN.png",
+      "link": "https://drive.google.com/drive/folders/1kE7pp5HWB0XH6cHfqi6dBOy9GAGUcnG4?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "JUNAIDAH BINTI ABDUL SHUKUR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/JUNAIDAH(JIP) (2).png",
+      "link": "https://drive.google.com/drive/folders/1D5o5KqvjfULqTaEJTHaukYkeYuK7WdVQ?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NORZABIDI BIN ABU BAKAR",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/Zabidi.png",
+      "link": "https://drive.google.com/drive/folders/1ctn9m-zqKCNBDkk9DIPUcmk0PAv0Pe2m?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "MARDHIYAH BINTI MOHD SAFWAN",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/MARDIYAH(JIP) (5).png",
+      "link": "https://drive.google.com/drive/folders/1_cwPMoCwO1oWvhCiCU0oOkgW-DX5AKuk?usp=sharing",
+      "image_position": "center"
+    },
+    {
+      "name": "ZAINAB BINTI ISMAIL",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/zainab.png",
+      "link": "https://drive.google.com/drive/folders/11ZzHFWbTVvPsmq8_2cqQgjCtm04TEQvH?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "AMY LOH LIEW YI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/AMY LOH.png",
+      "link": "https://drive.google.com/drive/folders/1qX-3K4n1uiZDK3vElfgqb-oBwVvrfhgj?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "WAN MOHD AZIHAN WAN ALI",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/Wan azihan.png",
+      "link": "https://drive.google.com/drive/folders/1wJOk_QiurBqUp4HsvcVpcnQgpML7BK4d?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "DR. NORHAFILAH BINTI ABDULLAH",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/Norhafilah.png",
+      "link": "https://drive.google.com/drive/folders/1xrQ60xHl8ESF38vPQUwq_Jk1IJLWqW15?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ZULFA BINTI SALEH",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/zulfa.png",
+      "link": "https://drive.google.com/drive/folders/1LPT53Haz3hsOu9TdUHYDxikwjN2dbyIg?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "JAYARAJALECHMEE A/P KRISNASAMY (MULAI JUN 2026)",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/JAYARAJALECHMEE(JIP) (2).png",
+      "link": "https://drive.google.com/drive/folders/1F4hhwJ7ZG68c_oRAnETL2mPuXV44kUR7?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NUR AZILAH BINTI ISMAIL (MULAI JUN 2026)",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/NUR AZILAH (11)(JIP).png",
+      "link": "https://drive.google.com/drive/folders/1PtK5JP-u5Y6-nB2oE7DulyOdz6ApEMmk?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NORIDAWATI BINTI MD NOR (MULAI JUN 2026)",
+      "role": "Pensyarah",
+      "section": "pensyarah",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/NORIDAWATI (10)(JIP).png",
+      "link": "https://drive.google.com/drive/folders/12RuDaC69pF39c9Atcmsz9d7aVR-FR-ar?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "SUAH SEE LING",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/suah.png",
+      "link": "https://drive.google.com/drive/folders/11-NaV6LMyodc-bOK_EPDzHkIvwJUJjgm?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "HAFIAH BINTI ISMAIL",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/hafiah.png",
+      "link": "https://drive.google.com/drive/folders/16Go1DKsVfFkwOFO-4aZdZTQA2shCaIu_?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KAMIL NASURUDDIN BIN DARUS",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/kamil3.png",
+      "link": "https://drive.google.com/drive/folders/1uuR2FpOGVFAivyyljfQGvZ2kcWGw58Px?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "ZAILI BIN IDRIS",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - HEP_files/zaili.png",
+      "link": "https://drive.google.com/drive/folders/18KYsssXHIZzvpfUodGZ2QTVzJWoNsvVX?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KAMALAMBAL A/P DURAIRAJ",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "SPESIFIKASI TUGAS UNIT_files/kamala.png",
+      "link": "https://drive.google.com/drive/folders/1l0J1oXU7mNMSkyOs6mPYa0hPJY942ykT?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "SANURA BINTI JAYA",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/SANURA (JTP) (6).png",
+      "link": "https://drive.google.com/drive/folders/1578wWtXtsdIlpY9atnJ388HGjFbZTJkg?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "RUZAINA BINTI ABDUL JABBAR",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - TEKNOLOGI PENDIDIKAN_files/RUZAINA.png",
+      "link": "https://drive.google.com/drive/folders/13D-FHNzh-VLEqOB5WgK9MNY2janOZBMm?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "Ts. MOHD HAZLIE BIN MUHAMAD",
+      "role": "Pensyarah Bantuan",
+      "section": "bantuan",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - JPPI_files/ts.png",
+      "link": "https://drive.google.com/drive/folders/1X8EOi4eeEKgXEuzIPOg5fbr6GanpGd7q?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NG KOK HOU",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - BAHASA_files/NG KOK HOU(JAB BAHASA) (5).png",
+      "link": "https://drive.google.com/drive/folders/10ASNukqLH_qKQe-PxNX0AF0zcFDSyLC1?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "TAN LEAN HUA",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/176EiEgmc7KZtjnb9FmlYs0wlVyUBIYYT?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "AHMAD ZOHRI BIN ISYAK",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/19zMCZhNfxl9xppnkufwP8wAF6_qf5NqA?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "NG WENG TUTT",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/14Oh6_YxS5-QKmi7KdiA68pA4aPD_cO9F?usp=drive_link",
+      "image_position": "center"
+    },
+    {
+      "name": "KHOO BEE LEE",
+      "role": "Pensyarah",
+      "section": "arkib",
+      "featured": false,
+      "image": "PEKA JKA IPGM KPP - ILMU PENDIDIKAN_files/placeholder-avatar.svg",
+      "link": "https://drive.google.com/drive/folders/1mzxW7RpXDRy3tpU6wjvjd7n9A2PSCm8J?usp=drive_link",
+      "image_position": "center"
+    }
+  ]
+}
