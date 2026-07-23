@@ -9,5 +9,11 @@
     "loading_message": "Mengesahkan akaun...",
     "error_message": "Akaun Google ini tidak mempunyai akses. Sila hubungi pentadbir jika ini satu kesilapan.",
     "hint": "Hanya akaun yang diluluskan oleh Jabatan Kecemerlangan Akademik boleh mengakses portal ini."
-  }
+  },
+  "allowed_emails": [
+    "ikmalishak0803@gmail.com",
+    "isnamaku@gmail.com",
+    "naziruddin@ipgm.edu.my",
+    "jka.ipgkpp@ipgm.edu.my"
+  ]
 }

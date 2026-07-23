@@ -1,12 +1,35 @@
 // ===== CONFIGURATION =====
 const GOOGLE_CLIENT_ID = "99876814836-i4hm08pabd27o54spfm1mnk5bpulsk56.apps.googleusercontent.com";
 
-const ALLOWED_EMAILS = [
+const DEFAULT_ALLOWED_EMAILS = [
     "ikmalishak0803@gmail.com",
     "isnamaku@gmail.com",
     "naziruddin@ipgm.edu.my",
     "jka.ipgkpp@ipgm.edu.my"
 ];
+
+function loadAllowedEmails() {
+    try {
+        const request = new XMLHttpRequest();
+        request.open("GET", "content/pages/lain_lain/logmasuk.json", false);
+        request.send(null);
+
+        if (!request.status || (request.status >= 200 && request.status < 300)) {
+            const settings = JSON.parse(request.responseText);
+            if (Array.isArray(settings.allowed_emails)) {
+                return settings.allowed_emails
+                    .map(email => String(email).trim().toLowerCase())
+                    .filter(Boolean);
+            }
+        }
+    } catch (error) {
+        console.warn("Could not load the CMS email allowlist; using the fallback list.", error);
+    }
+
+    return DEFAULT_ALLOWED_EMAILS;
+}
+
+const ALLOWED_EMAILS = loadAllowedEmails();
 
 const AUTH_STORAGE_KEY = "site_auth_user";
 

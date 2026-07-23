@@ -733,6 +733,18 @@ collections:
               - { label: "Loading Message", name: "loading_message", widget: "string" }
               - { label: "Access Denied Message", name: "error_message", widget: "text" }
               - { label: "Bottom Hint", name: "hint", widget: "text", required: false }
+          - label: "Allowed Emails"
+            name: "allowed_emails"
+            widget: "list"
+            label_singular: "Email"
+            summary: "{{fields.email}}"
+            field:
+              label: "Email Address"
+              name: "email"
+              widget: "string"
+              pattern:
+                - "^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$"
+                - "Enter a valid email address"
 
       - name: "hubungi"
         label: "Hubungi"
