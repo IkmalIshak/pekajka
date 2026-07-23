@@ -436,6 +436,7 @@ collections:
               - { label: "Section Heading", name: "heading", widget: "string" }
               - { label: "Links", name: "links", widget: "list", label_singular: "Link", summary: "{{fields.title}}", fields: *simple_link_fields }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+          - *academic_additional_sections
 
       - name: "kalendarakademik"
         label: "Kalendar Akademik"
@@ -464,6 +465,7 @@ collections:
           - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
           - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+          - *academic_additional_sections
 
       - name: "agihankursus"
         label: "Agihan Kursus"
@@ -511,6 +513,7 @@ collections:
           - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
           - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+          - *academic_additional_sections
   - name: "perkembangan_profesionalisme"
     label: "Perkembangan Profesionalisme"
     files:

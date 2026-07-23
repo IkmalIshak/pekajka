@@ -868,6 +868,7 @@
             main.append(section, element('div', 'divider'));
         });
         appendInformationNote(main, data);
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -902,6 +903,7 @@
             main.append(section, element('div', 'divider'));
         });
         appendInformationNote(main, data);
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -961,6 +963,7 @@
             main.appendChild(section);
             if (index < data.elective_sections.length - 1) main.appendChild(element('div', 'divider'));
         });
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
