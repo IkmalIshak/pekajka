@@ -1,13 +1,34 @@
 {
-  "page": "Program Pengajian Akademik",
   "browser_title": "Program Pengajian Akademik — PEKA JKA IPGKPP",
   "hero_eyebrow": "Program Pengajian · IPGKPP",
-  "hero_title_html": "Program Pengajian<br>Akademik",
-  "hero_description": "Maklumat lengkap program pengajian yang ditawarkan di IPGKPP termasuk PPISMP, PISMP dan PDPP.",
-  "hero_tagline": "🎓 PPISMP · 📚 PISMP · 📖 PDPP",
+  "elective_sections": [
+    {
+      "heading": "ELEKTIF TERAS",
+      "links": [
+        {
+          "title": "AMB JUN 2021/2026",
+          "url": "https://drive.google.com/drive/folders/1pSXuBKZp_ePrjFt2YFAWSPHw7pOpW1Sa?usp=drive_link"
+        },
+        {
+          "title": "AMB JUN 2022/2027",
+          "url": "https://drive.google.com/drive/folders/1EKQDl-rd2M1B2Fm_ZlPfudD13xCBfX5W?usp=sharing"
+        }
+      ]
+    },
+    {
+      "heading": "ELEKTIF TERBUKA",
+      "links": [
+        {
+          "title": "MULAI AMB JUN 2021/2026",
+          "url": "https://drive.google.com/drive/folders/1xpjwnRzUfkG1wqSPDhGuCOI_79zB7aV2?usp=sharing"
+        }
+      ]
+    }
+  ],
+  "additional_sections": [],
   "page_title": "PROGRAM PENGAJIAN AKADEMIK",
   "page_subtitle": "Profil program dan pautan maklumat kursus",
-  "profile_heading": "PROFIL PROGRAM",
+  "hero_tagline": "🎓 PPISMP · 📚 PISMP · 📖 PDPP",
   "profiles": [
     {
       "name": "PPISMP",
@@ -108,29 +129,9 @@
       ]
     }
   ],
-  "elective_sections": [
-    {
-      "heading": "ELEKTIF TERAS",
-      "links": [
-        {
-          "title": "AMB JUN 2021/2026",
-          "url": "https://drive.google.com/drive/folders/1pSXuBKZp_ePrjFt2YFAWSPHw7pOpW1Sa?usp=drive_link"
-        },
-        {
-          "title": "AMB JUN 2022/2027",
-          "url": "https://drive.google.com/drive/folders/1EKQDl-rd2M1B2Fm_ZlPfudD13xCBfX5W?usp=sharing"
-        }
-      ]
-    },
-    {
-      "heading": "ELEKTIF TERBUKA",
-      "links": [
-        {
-          "title": "MULAI AMB JUN 2021/2026",
-          "url": "https://drive.google.com/drive/folders/1xpjwnRzUfkG1wqSPDhGuCOI_79zB7aV2?usp=sharing"
-        }
-      ]
-    }
-  ],
-  "footer_note": "dalam proses pembinaan ...."
+  "profile_heading": "PROFIL PROGRAM",
+  "page": "Program Pengajian Akademik",
+  "footer_note": "Update July 2026",
+  "hero_title_html": "Program Pengajian<br>Akademik",
+  "hero_description": "Maklumat lengkap program pengajian yang ditawarkan di IPGKPP termasuk PPISMP, PISMP dan PDPP."
 }

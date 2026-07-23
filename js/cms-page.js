@@ -69,6 +69,18 @@
             renderContactPage(main, data);
             return;
         }
+        if (main && Array.isArray(data.info_sections)) {
+            renderLecturerInformation(main, data);
+            return;
+        }
+        if (main && Array.isArray(data.modules)) {
+            renderLecturerModules(main, data);
+            return;
+        }
+        if (main && Array.isArray(data.books)) {
+            renderLecturerBooks(main, data);
+            return;
+        }
         if (Array.isArray(data.cards) && data.section_title_html) {
             renderAcademicManagement(data);
             return;
@@ -496,6 +508,7 @@
             }
             content.appendChild(block);
         });
+        appendFlexibleSections(content, data.additional_sections);
     }
 
     function renderTimetable(main, data) {
@@ -545,6 +558,7 @@
             if (data.updated_text) note.appendChild(element('p', '', data.updated_text));
             main.appendChild(note);
         }
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -604,6 +618,7 @@
             main.appendChild(section);
             if (index < data.resources.length - 1) main.appendChild(cmsDivider());
         });
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -633,12 +648,171 @@
             grid.appendChild(card);
         });
         content.append(header, grid);
+
+        (data.additional_sections || []).forEach((section) => {
+            const sectionWrap = element('div', 'fade-up visible');
+            sectionWrap.style.cssText = 'margin-top:70px;';
+            sectionWrap.appendChild(cmsPageHeading(section.title));
+            if (section.description) {
+                const description = element('p', '', section.description);
+                description.style.cssText = 'max-width:760px;margin:-6px 0 24px;color:var(--text-light);line-height:1.7;';
+                sectionWrap.appendChild(description);
+            }
+
+            const items = element('div');
+            const style = section.display_style || 'links';
+            if (style === 'cards') {
+                items.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;';
+            } else if (style === 'buttons') {
+                items.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;';
+            } else {
+                items.style.cssText = 'display:grid;gap:10px;';
+            }
+
+            (section.items || []).forEach((item) => {
+                const link = element('a');
+                link.href = item.link || '#';
+                if (/^https?:\/\//i.test(item.link || '')) {
+                    link.target = '_blank';
+                    link.rel = 'noopener';
+                }
+
+                if (style === 'cards') {
+                    link.style.cssText = 'display:block;padding:24px;background:var(--white);border:1px solid var(--mid-gray);border-radius:16px;text-decoration:none;color:var(--text-dark);box-shadow:0 4px 18px rgba(0,0,0,.04);';
+                    if (item.image) {
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = item.text || '';
+                        image.style.cssText = 'display:block;width:100%;height:150px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:18px;';
+                        link.appendChild(image);
+                    }
+                    link.appendChild(element('h3', '', item.text || ''));
+                    if (item.description) {
+                        const text = element('p', '', item.description);
+                        text.style.cssText = 'margin:10px 0 18px;color:var(--text-light);line-height:1.6;';
+                        link.appendChild(text);
+                    }
+                    link.appendChild(element('strong', '', item.button_text || 'Buka →'));
+                } else if (style === 'buttons') {
+                    link.style.cssText = 'display:inline-flex;align-items:center;padding:12px 20px;background:var(--purple);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;';
+                    if (item.image) {
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = '';
+                        image.style.cssText = 'width:28px;height:28px;object-fit:contain;background:#fff;border-radius:6px;margin-right:10px;';
+                        link.appendChild(image);
+                    }
+                    link.appendChild(document.createTextNode(item.text || item.button_text || 'Buka'));
+                } else {
+                    link.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 18px;background:var(--white);border:1px solid var(--mid-gray);border-radius:10px;text-decoration:none;color:var(--text-dark);';
+                    const label = element('span');
+                    if (item.image) {
+                        label.style.cssText = 'display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;';
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = '';
+                        image.style.cssText = 'width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;grid-row:1 / span 2;';
+                        label.appendChild(image);
+                    }
+                    label.appendChild(element('strong', '', item.text || ''));
+                    if (item.description) {
+                        const text = element('small', '', item.description);
+                        text.style.cssText = `display:block;margin-top:4px;color:var(--text-light);${item.image ? 'grid-column:2;' : ''}`;
+                        label.appendChild(text);
+                    }
+                    link.append(label, element('span', '', item.button_text || 'Buka →'));
+                }
+                items.appendChild(link);
+            });
+
+            sectionWrap.appendChild(items);
+            content.appendChild(sectionWrap);
+        });
     }
 
     function cmsPageHeading(text) {
         const heading = element('h2', '', text || '');
         heading.style.cssText = 'font-size:22px;font-weight:700;color:var(--purple);margin-bottom:20px;border-left:5px solid var(--purple);padding-left:16px;';
         return heading;
+    }
+
+    function appendFlexibleSections(parent, sections) {
+        (sections || []).forEach((section) => {
+            const sectionWrap = element('section', 'fade-up visible');
+            sectionWrap.style.cssText = 'margin-top:70px;';
+            sectionWrap.appendChild(cmsPageHeading(section.title));
+            if (section.description) {
+                const description = element('p', '', section.description);
+                description.style.cssText = 'max-width:760px;margin:-6px 0 24px;color:var(--text-light);line-height:1.7;';
+                sectionWrap.appendChild(description);
+            }
+
+            const items = element('div');
+            const style = section.display_style || 'links';
+            items.style.cssText = style === 'cards'
+                ? 'display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;'
+                : style === 'buttons'
+                    ? 'display:flex;flex-wrap:wrap;gap:12px;'
+                    : 'display:grid;gap:10px;';
+
+            (section.items || []).forEach((item) => {
+                const link = element('a');
+                link.href = item.link || '#';
+                if (/^https?:\/\//i.test(item.link || '')) {
+                    link.target = '_blank';
+                    link.rel = 'noopener';
+                }
+
+                if (style === 'cards') {
+                    link.style.cssText = 'display:block;padding:24px;background:var(--white);border:1px solid var(--mid-gray);border-radius:16px;text-decoration:none;color:var(--text-dark);box-shadow:0 4px 18px rgba(0,0,0,.04);';
+                    if (item.image) {
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = item.text || '';
+                        image.style.cssText = 'display:block;width:100%;height:150px;object-fit:contain;background:#fff;border-radius:10px;margin-bottom:18px;';
+                        link.appendChild(image);
+                    }
+                    link.appendChild(element('h3', '', item.text || ''));
+                    if (item.description) {
+                        const description = element('p', '', item.description);
+                        description.style.cssText = 'margin:10px 0 18px;color:var(--text-light);line-height:1.6;';
+                        link.appendChild(description);
+                    }
+                    link.appendChild(element('strong', '', item.button_text || 'Buka →'));
+                } else if (style === 'buttons') {
+                    link.style.cssText = 'display:inline-flex;align-items:center;padding:12px 20px;background:var(--purple);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;';
+                    if (item.image) {
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = '';
+                        image.style.cssText = 'width:28px;height:28px;object-fit:contain;background:#fff;border-radius:6px;margin-right:10px;';
+                        link.appendChild(image);
+                    }
+                    link.appendChild(document.createTextNode(item.text || item.button_text || 'Buka'));
+                } else {
+                    link.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 18px;background:var(--white);border:1px solid var(--mid-gray);border-radius:10px;text-decoration:none;color:var(--text-dark);';
+                    const label = element('span');
+                    if (item.image) {
+                        label.style.cssText = 'display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;';
+                        const image = element('img');
+                        image.src = item.image;
+                        image.alt = '';
+                        image.style.cssText = 'width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;grid-row:1 / span 2;';
+                        label.appendChild(image);
+                    }
+                    label.appendChild(element('strong', '', item.text || ''));
+                    if (item.description) {
+                        const description = element('small', '', item.description);
+                        description.style.cssText = `display:block;margin-top:4px;color:var(--text-light);${item.image ? 'grid-column:2;' : ''}`;
+                        label.appendChild(description);
+                    }
+                    link.append(label, element('span', '', item.button_text || 'Buka →'));
+                }
+                items.appendChild(link);
+            });
+            sectionWrap.appendChild(items);
+            parent.appendChild(sectionWrap);
+        });
     }
 
     function cmsDivider() {
@@ -706,6 +880,7 @@
             main.append(section, element('div', 'divider'));
         });
         appendInformationNote(main, data);
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -740,6 +915,7 @@
             main.append(section, element('div', 'divider'));
         });
         appendInformationNote(main, data);
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -799,6 +975,7 @@
             main.appendChild(section);
             if (index < data.elective_sections.length - 1) main.appendChild(element('div', 'divider'));
         });
+        appendFlexibleSections(main, data.additional_sections);
         appendFooterNote(main, data.footer_note);
     }
 
@@ -834,12 +1011,57 @@
             }
             if (Array.isArray(section.items) && section.items.length) {
                 const grid = element('div', 'cms-professional-grid');
-                grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;';
+                if (section.type === 'buttons') {
+                    grid.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;';
+                } else if (section.type === 'links') {
+                    grid.style.cssText = 'display:grid;gap:10px;';
+                } else {
+                    grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;';
+                }
                 section.items.forEach((item) => {
                     const card = element('a', 'cms-professional-card');
                     card.href = item.url || '#';
-                    card.target = '_blank';
-                    card.rel = 'noopener';
+                    if (/^https?:\/\//i.test(item.url || '')) {
+                        card.target = '_blank';
+                        card.rel = 'noopener';
+                    }
+
+                    if (section.type === 'buttons') {
+                        card.style.cssText = 'display:inline-flex;align-items:center;padding:12px 20px;background:var(--purple);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;';
+                        if (item.image) {
+                            const image = element('img');
+                            image.src = item.image;
+                            image.alt = '';
+                            image.style.cssText = 'width:28px;height:28px;object-fit:contain;background:#fff;border-radius:6px;margin-right:10px;';
+                            card.appendChild(image);
+                        }
+                        card.appendChild(document.createTextNode(item.title || item.button_text || 'Buka'));
+                        grid.appendChild(card);
+                        return;
+                    }
+
+                    if (section.type === 'links') {
+                        card.style.cssText = 'display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 18px;background:var(--white);border:1px solid var(--mid-gray);border-radius:10px;text-decoration:none;color:var(--text-dark);';
+                        const label = element('span');
+                        if (item.image) {
+                            label.style.cssText = 'display:grid;grid-template-columns:42px 1fr;column-gap:12px;align-items:center;';
+                            const image = element('img');
+                            image.src = item.image;
+                            image.alt = '';
+                            image.style.cssText = 'width:42px;height:42px;object-fit:contain;background:#fff;border-radius:8px;grid-row:1 / span 2;';
+                            label.appendChild(image);
+                        }
+                        label.appendChild(element('strong', '', item.title || 'Pautan'));
+                        if (item.description) {
+                            const description = element('small', '', item.description);
+                            description.style.cssText = `display:block;margin-top:4px;color:var(--text-light);${item.image ? 'grid-column:2;' : ''}`;
+                            label.appendChild(description);
+                        }
+                        card.append(label, element('span', '', item.button_text || 'Buka →'));
+                        grid.appendChild(card);
+                        return;
+                    }
+
                     card.style.cssText = 'display:flex;flex-direction:column;background:var(--white);border:1px solid var(--mid-gray);border-radius:16px;padding:20px;text-decoration:none;color:var(--text-dark);box-shadow:0 4px 16px rgba(58,12,163,.06);';
                     if (item.preview_url) {
                         const preview = element('iframe');
@@ -881,6 +1103,105 @@
             main.appendChild(block);
             if (index < data.professional_sections.length - 1) main.appendChild(element('div', 'divider'));
         });
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerInformation(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        data.info_sections.forEach((section, index) => {
+            const block = element('div', 'section-block');
+            block.appendChild(element('h2', '', section.heading));
+            const grid = element('div', 'info-card-grid');
+            (section.items || []).forEach((item) => {
+                const card = element('a', 'info-card');
+                card.href = item.url || '#';
+                if (/^https?:\/\//i.test(item.url || '')) {
+                    card.target = '_blank';
+                    card.rel = 'noopener';
+                }
+                if (item.accent_color) card.style.borderLeft = `4px solid ${item.accent_color}`;
+                if (item.image) {
+                    const image = element('img');
+                    image.src = item.image;
+                    image.alt = item.title || '';
+                    image.style.cssText = 'display:block;width:100%;height:150px;object-fit:contain;border-radius:10px;margin-bottom:14px;background:#fff;';
+                    card.appendChild(image);
+                }
+                const title = element('div', 'card-title');
+                if (item.icon) title.appendChild(element('span', 'emoji-badge', item.icon));
+                const titleText = element('span', '', item.title || '');
+                if (item.accent_color) titleText.style.color = item.accent_color;
+                title.appendChild(titleText);
+                card.appendChild(title);
+                if (item.description) card.appendChild(element('div', 'card-desc', item.description));
+                card.appendChild(element('div', 'card-link', item.button_text || 'Buka →'));
+                grid.appendChild(card);
+            });
+            block.appendChild(grid);
+            main.appendChild(block);
+            if (index < data.info_sections.length - 1) main.appendChild(element('div', 'divider'));
+        });
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerModules(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        const block = element('div', 'section-block');
+        block.appendChild(element('h2', '', data.section_heading || 'SENARAI MODUL'));
+        const grid = element('div', 'modul-grid');
+        data.modules.forEach((item) => {
+            const card = element('a', 'modul-card');
+            card.href = item.url || '#';
+            if (/^https?:\/\//i.test(item.url || '')) {
+                card.target = '_blank';
+                card.rel = 'noopener';
+            }
+            if (item.image) {
+                const image = element('img');
+                image.src = item.image;
+                image.alt = item.title || '';
+                card.appendChild(image);
+            }
+            card.appendChild(element('div', 'modul-title', item.title || ''));
+            if (item.description) card.appendChild(element('div', 'modul-desc', item.description));
+            card.appendChild(element('div', 'modul-link', item.button_text || '📥 Muat Turun →'));
+            grid.appendChild(card);
+        });
+        block.appendChild(grid);
+        main.append(block, element('div', 'divider'));
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerBooks(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        const block = element('div', 'section-block');
+        block.appendChild(element('h2', '', data.section_heading || 'SENARAI BUKU PANDUAN'));
+        const grid = element('div', 'buku-grid');
+        data.books.forEach((item) => {
+            const card = element('a', 'buku-card');
+            card.href = item.url || '#';
+            if (/^https?:\/\//i.test(item.url || '')) {
+                card.target = '_blank';
+                card.rel = 'noopener';
+            }
+            if (item.image) {
+                const image = element('img', 'buku-thumb');
+                image.src = item.image;
+                image.alt = item.title || '';
+                card.appendChild(image);
+            } else {
+                card.appendChild(element('div', 'buku-thumb-fallback', item.badge || '📄 PDF'));
+            }
+            card.appendChild(element('div', 'buku-title', item.title || ''));
+            if (item.description) card.appendChild(element('div', 'buku-desc', item.description));
+            card.appendChild(element('div', 'buku-link', item.button_text || '📥 Lihat →'));
+            grid.appendChild(card);
+        });
+        block.appendChild(grid);
+        main.append(block, element('div', 'divider'));
         appendFooterNote(main, data.footer_note);
     }
 

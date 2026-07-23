@@ -5,5 +5,120 @@
   "hero_title_html": "Info<br><em>Pensyarah</em>",
   "hero_description_html": "Platform rujukan dan perkongsian maklumat untuk pensyarah Jabatan Kecemerlangan Akademik (JKA) IPGKPP. Akses kepada dokumen penting, borang pengesahan, bahan taklimat, dan data akademik.",
   "hero_tagline": "📋 Rujukan · 📑 Borang · 📚 Bahan",
-  "content_html": "<!-- header -->\n        <div style=\"text-align: center; margin-bottom: 48px;\">\n            <h1 class=\"page-title\" style=\"font-size: clamp(36px, 5vw, 64px);\">INFO PENSYARAH</h1>\n            <p style=\"font-size: 18px; color: var(--text-mid);\">Rujukan dan maklumat untuk pensyarah JKA</p>\n            <div style=\"width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;\"></div>\n        </div>\n\n        <!-- ========================================== -->\n        <!-- PENGESAHAN PENERIMAAN                      -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>PENGESAHAN PENERIMAAN</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://forms.gle/yvNnvN6a3wUGMRWNA\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📑</span> Pengesahan Penerimaan Maklumat Kursus &amp; Dokumen Kurikulum</div>\n                    <div class=\"card-desc\">Sahkan penerimaan maklumat kursus dan dokumen kurikulum melalui borang ini.</div>\n                    <div class=\"card-link\">📋 Buka Borang →</div>\n                </a>\n                <a href=\"https://forms.gle/upMrnwAkkcR8ErXG9\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📑</span> Pengesahan Penerimaan Jadual Waktu Induk IPGM KPP</div>\n                    <div class=\"card-desc\">Sahkan penerimaan jadual waktu induk IPGM KPP melalui borang ini.</div>\n                    <div class=\"card-link\">📋 Buka Borang →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- ========================================== -->\n        <!-- BAHAN RUJUKAN IPGM                         -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>BAHAN RUJUKAN IPGM</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/view?usp=drive_link\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📘</span> Modul Pelaksanaan Program Pembinaan Karakter Generasi Madani</div>\n                    <div class=\"card-desc\">Modul rujukan untuk program pembinaan karakter generasi madani.</div>\n                    <div class=\"card-link\">📥 Muat Turun →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- ========================================== -->\n        <!-- SURAT RUJUKAN                              -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>SURAT RUJUKAN</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://docs.google.com/spreadsheets/d/1AxaSlxq1103MVEK0XzD_Jo7eI9AFPgzYqUDVE19gWLM/edit?usp=sharing\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📋</span> Daftar Surat JKA</div>\n                    <div class=\"card-desc\">Senarai surat-menyurat Jabatan Kecemerlangan Akademik.</div>\n                    <div class=\"card-link\">📊 Buka Spreadsheet →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- ========================================== -->\n        <!-- MAKLUMAT PENSYARAH                         -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>MAKLUMAT PENSYARAH</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://docs.google.com/spreadsheets/d/1fABN0TbppbNniH0FjPDVGRxAPKBvGmNd/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">👨‍🏫</span> Maklumat Akademik Pensyarah Mengikut Jabatan</div>\n                    <div class=\"card-desc\">Data akademik pensyarah mengikut jabatan masing-masing.</div>\n                    <div class=\"card-link\">📊 Buka Spreadsheet →</div>\n                </a>\n                <a href=\"https://forms.gle/upMrnwAkkcR8ErXG9\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📑</span> Data Pensyarah</div>\n                    <div class=\"card-desc\">Borang untuk mengisi maklumat data pensyarah.</div>\n                    <div class=\"card-link\">📋 Buka Borang →</div>\n                </a>\n                <a href=\"https://forms.gle/Gn6FMpEdPAArGHaQA\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">🏆</span> Pautan Sijil Pensyarah</div>\n                    <div class=\"card-desc\">Borang untuk menghantar sijil-sijil pensyarah.</div>\n                    <div class=\"card-link\">📋 Buka Borang →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- ========================================== -->\n        <!-- MAKLUMAT PELAJAR                           -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>MAKLUMAT PELAJAR</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://docs.google.com/spreadsheets/d/1lvsW1iXFyxnX_RviYCLsXEybOSPuOj2yN0mUn5LN0PU/edit?usp=sharing\" target=\"_blank\" class=\"info-card\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">🎓</span> Data Pelajar</div>\n                    <div class=\"card-desc\">Maklumat data pelajar IPGKPP.</div>\n                    <div class=\"card-link\">📊 Buka Spreadsheet →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- ========================================== -->\n        <!-- BAHAN TAKLIMAT                            -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>BAHAN TAKLIMAT</h2>\n            <div class=\"info-card-grid\">\n                <a href=\"https://drive.google.com/file/d/143i08GV6fbzsMDY6eZJXGT7Gd9Y9SHVm/view?usp=drive_link\" target=\"_blank\" class=\"info-card\" style=\"border-left: 4px solid #cc0000;\">\n                    <div class=\"card-title\"><span class=\"emoji-badge\">📌</span> <span style=\"color: #cc0000;\">Taklimat Profesionalisme Akademik Bil.1/2024 - Ketua Jabatan Kecemerlangan Akademik</span></div>\n                    <div class=\"card-desc\">Bahan taklimat profesionalisme akademik untuk ketua jabatan.</div>\n                    <div class=\"card-link\">📥 Muat Turun →</div>\n                </a>\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- footer note -->\n        <div style=\"margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;\">\n            dalam proses pembinaan ....\n        </div>"
+  "page_title": "INFO PENSYARAH",
+  "page_subtitle": "Rujukan dan maklumat untuk pensyarah JKA",
+  "info_sections": [
+    {
+      "heading": "PENGESAHAN PENERIMAAN",
+      "items": [
+        {
+          "title": "Pengesahan Penerimaan Maklumat Kursus & Dokumen Kurikulum",
+          "description": "Sahkan penerimaan maklumat kursus dan dokumen kurikulum melalui borang ini.",
+          "icon": "📑",
+          "image": "",
+          "url": "https://forms.gle/yvNnvN6a3wUGMRWNA",
+          "button_text": "📋 Buka Borang →",
+          "accent_color": ""
+        },
+        {
+          "title": "Pengesahan Penerimaan Jadual Waktu Induk IPGM KPP",
+          "description": "Sahkan penerimaan jadual waktu induk IPGM KPP melalui borang ini.",
+          "icon": "📑",
+          "image": "",
+          "url": "https://forms.gle/upMrnwAkkcR8ErXG9",
+          "button_text": "📋 Buka Borang →",
+          "accent_color": ""
+        }
+      ]
+    },
+    {
+      "heading": "BAHAN RUJUKAN IPGM",
+      "items": [
+        {
+          "title": "Modul Pelaksanaan Program Pembinaan Karakter Generasi Madani",
+          "description": "Modul rujukan untuk program pembinaan karakter generasi madani.",
+          "icon": "📘",
+          "image": "",
+          "url": "https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/view?usp=drive_link",
+          "button_text": "📥 Muat Turun →",
+          "accent_color": ""
+        }
+      ]
+    },
+    {
+      "heading": "SURAT RUJUKAN",
+      "items": [
+        {
+          "title": "Daftar Surat JKA",
+          "description": "Senarai surat-menyurat Jabatan Kecemerlangan Akademik.",
+          "icon": "📋",
+          "image": "",
+          "url": "https://docs.google.com/spreadsheets/d/1AxaSlxq1103MVEK0XzD_Jo7eI9AFPgzYqUDVE19gWLM/edit?usp=sharing",
+          "button_text": "📊 Buka Spreadsheet →",
+          "accent_color": ""
+        }
+      ]
+    },
+    {
+      "heading": "MAKLUMAT PENSYARAH",
+      "items": [
+        {
+          "title": "Maklumat Akademik Pensyarah Mengikut Jabatan",
+          "description": "Data akademik pensyarah mengikut jabatan masing-masing.",
+          "icon": "👨‍🏫",
+          "image": "",
+          "url": "https://docs.google.com/spreadsheets/d/1fABN0TbppbNniH0FjPDVGRxAPKBvGmNd/edit?usp=sharing&ouid=101617717143713065344&rtpof=true&sd=true",
+          "button_text": "📊 Buka Spreadsheet →",
+          "accent_color": ""
+        },
+        {
+          "title": "Data Pensyarah",
+          "description": "Borang untuk mengisi maklumat data pensyarah.",
+          "icon": "📑",
+          "image": "",
+          "url": "https://forms.gle/upMrnwAkkcR8ErXG9",
+          "button_text": "📋 Buka Borang →",
+          "accent_color": ""
+        },
+        {
+          "title": "Pautan Sijil Pensyarah",
+          "description": "Borang untuk menghantar sijil-sijil pensyarah.",
+          "icon": "🏆",
+          "image": "",
+          "url": "https://forms.gle/Gn6FMpEdPAArGHaQA",
+          "button_text": "📋 Buka Borang →",
+          "accent_color": ""
+        }
+      ]
+    },
+    {
+      "heading": "MAKLUMAT PELAJAR",
+      "items": [
+        {
+          "title": "Data Pelajar",
+          "description": "Maklumat data pelajar IPGKPP.",
+          "icon": "🎓",
+          "image": "",
+          "url": "https://docs.google.com/spreadsheets/d/1lvsW1iXFyxnX_RviYCLsXEybOSPuOj2yN0mUn5LN0PU/edit?usp=sharing",
+          "button_text": "📊 Buka Spreadsheet →",
+          "accent_color": ""
+        }
+      ]
+    },
+    {
+      "heading": "BAHAN TAKLIMAT",
+      "items": [
+        {
+          "title": "Taklimat Profesionalisme Akademik Bil.1/2024 - Ketua Jabatan Kecemerlangan Akademik",
+          "description": "Bahan taklimat profesionalisme akademik untuk ketua jabatan.",
+          "icon": "📌",
+          "image": "",
+          "url": "https://drive.google.com/file/d/143i08GV6fbzsMDY6eZJXGT7Gd9Y9SHVm/view?usp=drive_link",
+          "button_text": "📥 Muat Turun →",
+          "accent_color": "#cc0000"
+        }
+      ]
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
 }

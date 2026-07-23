@@ -5,5 +5,66 @@
   "hero_title_html": "Buku Panduan<br><em>IPGM</em>",
   "hero_description_html": "Koleksi buku panduan dan garis panduan rasmi Institut Pendidikan Guru Malaysia (IPGM) untuk rujukan pensyarah dan pelajar guru.",
   "hero_tagline": "📘 Panduan · 📋 Garis Panduan · 📖 Rujukan",
-  "content_html": "<!-- header -->\n        <div style=\"text-align: center; margin-bottom: 48px;\">\n            <h1 class=\"page-title\" style=\"font-size: clamp(36px, 5vw, 64px);\">BUKU PANDUAN IPGM</h1>\n            <p style=\"font-size: 18px; color: var(--text-mid);\">Koleksi buku panduan dan garis panduan rasmi IPGM</p>\n            <div style=\"width: 80px; height: 4px; background: var(--purple); margin: 16px auto 0; border-radius: 4px;\"></div>\n        </div>\n\n        <!-- ========================================== -->\n        <!-- SENARAI BUKU PANDUAN                      -->\n        <!-- ========================================== -->\n        <div class=\"section-block\">\n            <h2>SENARAI BUKU PANDUAN</h2>\n            <div class=\"buku-grid\">\n\n                <!-- 1. GARIS PANDUAN PROFESIONALISME PDPP.pdf -->\n                <a href=\"https://drive.google.com/file/d/11y9VuhKCXBmt2Ncw5d5jUVrOAMgowSXJ/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">GARIS PANDUAN PROFESIONALISME PDPP.pdf</div>\n                    <div class=\"buku-desc\">Garis panduan profesionalisme untuk program PDPP.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 2. GARIS PANDUAN PROFESIONALISME PDP.pdf -->\n                <a href=\"https://drive.google.com/file/d/1UEnqaPC8CoWO871I_Jr80F-BcTe_nfH4/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">GARIS PANDUAN PROFESIONALISME PDP.pdf</div>\n                    <div class=\"buku-desc\">Garis panduan profesionalisme untuk program PDP.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 3. Dasar-Akademik-IPGM-2023.pdf -->\n                <a href=\"https://drive.google.com/file/d/1Iwz441G3oofnugxXna8TXdhYuPJ9t8Bq/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">Dasar-Akademik-IPGM-2023.pdf</div>\n                    <div class=\"buku-desc\">Dasar akademik IPGM 2023.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 4. bp_pdppV3 (1).pdf -->\n                <a href=\"https://drive.google.com/file/d/1BLs8TVE2eGOJA8919_rnl80AKxE2ZKn9/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">bp_pdppV3 (1).pdf</div>\n                    <div class=\"buku-desc\">Buku panduan program PDPP versi 3.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 5. V9_MODUL GenMADANI-1_240305_172059.pdf -->\n                <a href=\"https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">V9_MODUL GenMADANI-1_240305_172059.pdf</div>\n                    <div class=\"buku-desc\">Modul program pembinaan karakter Generasi Madani.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 6. BUKU_PANDUAN_DAN_SYARAT_PENGANUGERAHAN_SEMAKAN_2024.pdf -->\n                <a href=\"https://drive.google.com/file/d/1kN5tHmsNAzP-qEw_0jwFtS7Ih9BIRKuS/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">BUKU_PANDUAN_DAN_SYARAT_<br>PENGANUGERAHAN<br>SEMAKAN_2024.pdf</div>\n                    <div class=\"buku-desc\">Buku panduan dan syarat penganugerahan semakan 2024.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n                <!-- 7. BUKU PANDUAN PENTAKSIRAN IPG.pdf -->\n                <a href=\"https://drive.google.com/file/d/1Y0NNPWwsNGQp-I60pSmhtUQnD8V_BrkK/view?usp=drive_link\" target=\"_blank\" class=\"buku-card\">\n                    <div class=\"buku-thumb-fallback\">📄 PDF</div>\n                    <div class=\"buku-title\">BUKU PANDUAN PENTAKSIRAN IPG.pdf</div>\n                    <div class=\"buku-desc\">Buku panduan pentaksiran IPG.</div>\n                    <div class=\"buku-link\">📥 Lihat →</div>\n                </a>\n\n            </div>\n        </div>\n\n        <div class=\"divider\"></div>\n\n        <!-- footer note -->\n        <div style=\"margin-top: 60px; padding: 20px; text-align: center; background: var(--light-gray); border-radius: 12px; font-size: 14px; color: var(--text-light); font-style: italic;\">\n            dalam proses pembinaan ....\n        </div>"
+  "page_title": "BUKU PANDUAN IPGM",
+  "page_subtitle": "Koleksi buku panduan dan garis panduan rasmi IPGM",
+  "section_heading": "SENARAI BUKU PANDUAN",
+  "books": [
+    {
+      "title": "GARIS PANDUAN PROFESIONALISME PDPP.pdf",
+      "description": "Garis panduan profesionalisme untuk program PDPP.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/11y9VuhKCXBmt2Ncw5d5jUVrOAMgowSXJ/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "GARIS PANDUAN PROFESIONALISME PDP.pdf",
+      "description": "Garis panduan profesionalisme untuk program PDP.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1UEnqaPC8CoWO871I_Jr80F-BcTe_nfH4/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "Dasar-Akademik-IPGM-2023.pdf",
+      "description": "Dasar akademik IPGM 2023.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1Iwz441G3oofnugxXna8TXdhYuPJ9t8Bq/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "bp_pdppV3 (1).pdf",
+      "description": "Buku panduan program PDPP versi 3.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1BLs8TVE2eGOJA8919_rnl80AKxE2ZKn9/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "V9_MODUL GenMADANI-1_240305_172059.pdf",
+      "description": "Modul program pembinaan karakter Generasi Madani.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1cifovaztUCJsOmU_on-lUYKQvo9XBPzC/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "BUKU PANDUAN DAN SYARAT PENGANUGERAHAN SEMAKAN 2024.pdf",
+      "description": "Buku panduan dan syarat penganugerahan semakan 2024.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1kN5tHmsNAzP-qEw_0jwFtS7Ih9BIRKuS/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    },
+    {
+      "title": "BUKU PANDUAN PENTAKSIRAN IPG.pdf",
+      "description": "Buku panduan pentaksiran IPG.",
+      "image": "",
+      "badge": "📄 PDF",
+      "url": "https://drive.google.com/file/d/1Y0NNPWwsNGQp-I60pSmhtUQnD8V_BrkK/view?usp=drive_link",
+      "button_text": "📥 Lihat →"
+    }
+  ],
+  "footer_note": "dalam proses pembinaan ...."
 }
