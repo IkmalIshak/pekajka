@@ -242,7 +242,8 @@ collections:
               - { label: "Picture", name: "image", widget: "image" }
               - { label: "Page or Website Link", name: "link", widget: "string" }
               - { label: "Button Text", name: "button_text", widget: "string", default: "Teroka →" }
-          - label: "Additional Sections"
+          - &academic_additional_sections
+            label: "Additional Sections"
             name: "additional_sections"
             widget: "list"
             required: false
@@ -310,6 +311,7 @@ collections:
           - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
           - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+          - *academic_additional_sections
 
       - name: "maklumatkursus"
         label: "Maklumat Kursus"
@@ -350,6 +352,7 @@ collections:
               - { label: "Button Text", name: "button_text", widget: "string", default: "Buka" }
               - { label: "Button Link", name: "link", widget: "string", required: false }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+          - *academic_additional_sections
 
       - name: "headcount"
         label: "Headcount"
@@ -383,6 +386,7 @@ collections:
                   - { label: "Link Text", name: "label", widget: "string" }
                   - { label: "URL", name: "url", widget: "string" }
               - { label: "Section Note", name: "note", widget: "text", required: false }
+          - *academic_additional_sections
   - name: "program_pengajian"
     label: "Program Pengajian Akademik"
     files:
