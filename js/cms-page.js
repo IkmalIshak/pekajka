@@ -69,6 +69,18 @@
             renderContactPage(main, data);
             return;
         }
+        if (main && Array.isArray(data.info_sections)) {
+            renderLecturerInformation(main, data);
+            return;
+        }
+        if (main && Array.isArray(data.modules)) {
+            renderLecturerModules(main, data);
+            return;
+        }
+        if (main && Array.isArray(data.books)) {
+            renderLecturerBooks(main, data);
+            return;
+        }
         if (Array.isArray(data.cards) && data.section_title_html) {
             renderAcademicManagement(data);
             return;
@@ -1091,6 +1103,105 @@
             main.appendChild(block);
             if (index < data.professional_sections.length - 1) main.appendChild(element('div', 'divider'));
         });
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerInformation(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        data.info_sections.forEach((section, index) => {
+            const block = element('div', 'section-block');
+            block.appendChild(element('h2', '', section.heading));
+            const grid = element('div', 'info-card-grid');
+            (section.items || []).forEach((item) => {
+                const card = element('a', 'info-card');
+                card.href = item.url || '#';
+                if (/^https?:\/\//i.test(item.url || '')) {
+                    card.target = '_blank';
+                    card.rel = 'noopener';
+                }
+                if (item.accent_color) card.style.borderLeft = `4px solid ${item.accent_color}`;
+                if (item.image) {
+                    const image = element('img');
+                    image.src = item.image;
+                    image.alt = item.title || '';
+                    image.style.cssText = 'display:block;width:100%;height:150px;object-fit:contain;border-radius:10px;margin-bottom:14px;background:#fff;';
+                    card.appendChild(image);
+                }
+                const title = element('div', 'card-title');
+                if (item.icon) title.appendChild(element('span', 'emoji-badge', item.icon));
+                const titleText = element('span', '', item.title || '');
+                if (item.accent_color) titleText.style.color = item.accent_color;
+                title.appendChild(titleText);
+                card.appendChild(title);
+                if (item.description) card.appendChild(element('div', 'card-desc', item.description));
+                card.appendChild(element('div', 'card-link', item.button_text || 'Buka →'));
+                grid.appendChild(card);
+            });
+            block.appendChild(grid);
+            main.appendChild(block);
+            if (index < data.info_sections.length - 1) main.appendChild(element('div', 'divider'));
+        });
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerModules(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        const block = element('div', 'section-block');
+        block.appendChild(element('h2', '', data.section_heading || 'SENARAI MODUL'));
+        const grid = element('div', 'modul-grid');
+        data.modules.forEach((item) => {
+            const card = element('a', 'modul-card');
+            card.href = item.url || '#';
+            if (/^https?:\/\//i.test(item.url || '')) {
+                card.target = '_blank';
+                card.rel = 'noopener';
+            }
+            if (item.image) {
+                const image = element('img');
+                image.src = item.image;
+                image.alt = item.title || '';
+                card.appendChild(image);
+            }
+            card.appendChild(element('div', 'modul-title', item.title || ''));
+            if (item.description) card.appendChild(element('div', 'modul-desc', item.description));
+            card.appendChild(element('div', 'modul-link', item.button_text || '📥 Muat Turun →'));
+            grid.appendChild(card);
+        });
+        block.appendChild(grid);
+        main.append(block, element('div', 'divider'));
+        appendFooterNote(main, data.footer_note);
+    }
+
+    function renderLecturerBooks(main, data) {
+        main.replaceChildren();
+        renderPageHeader(main, data);
+        const block = element('div', 'section-block');
+        block.appendChild(element('h2', '', data.section_heading || 'SENARAI BUKU PANDUAN'));
+        const grid = element('div', 'buku-grid');
+        data.books.forEach((item) => {
+            const card = element('a', 'buku-card');
+            card.href = item.url || '#';
+            if (/^https?:\/\//i.test(item.url || '')) {
+                card.target = '_blank';
+                card.rel = 'noopener';
+            }
+            if (item.image) {
+                const image = element('img', 'buku-thumb');
+                image.src = item.image;
+                image.alt = item.title || '';
+                card.appendChild(image);
+            } else {
+                card.appendChild(element('div', 'buku-thumb-fallback', item.badge || '📄 PDF'));
+            }
+            card.appendChild(element('div', 'buku-title', item.title || ''));
+            if (item.description) card.appendChild(element('div', 'buku-desc', item.description));
+            card.appendChild(element('div', 'buku-link', item.button_text || '📥 Lihat →'));
+            grid.appendChild(card);
+        });
+        block.appendChild(grid);
+        main.append(block, element('div', 'divider'));
         appendFooterNote(main, data.footer_note);
     }
 

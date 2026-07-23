@@ -620,7 +620,98 @@ collections:
         file: "content/pages/pembelajaran_digital/akses.json"
         format: "json"
         fields: *professional_page_fields
-  - { name: "info_pensyarah", label: "Info Pensyarah", folder: "content/pages/info_pensyarah", create: false, extension: "json", format: "json", identifier_field: "page", summary: "{{page}}", fields: *page_fields }
+  - name: "info_pensyarah"
+    label: "Info Pensyarah"
+    files:
+      - name: "infopensyarah"
+        label: "Info Pensyarah"
+        file: "content/pages/info_pensyarah/infopensyarah.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Info Pensyarah" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description_html", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - label: "Information Sections"
+            name: "info_sections"
+            widget: "list"
+            label_singular: "Section"
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: "Section Heading", name: "heading", widget: "string" }
+              - label: "Cards and Links"
+                name: "items"
+                widget: "list"
+                label_singular: "Card"
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text", required: false }
+                  - { label: "Icon or Emoji", name: "icon", widget: "string", required: false }
+                  - { label: "Picture", name: "image", widget: "image", required: false }
+                  - { label: "Link", name: "url", widget: "string" }
+                  - { label: "Button Text", name: "button_text", widget: "string", default: "Buka →" }
+                  - { label: "Highlight Colour", name: "accent_color", widget: "color", required: false }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "modul"
+        label: "Modul"
+        file: "content/pages/info_pensyarah/modul.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Modul" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description_html", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Section Heading", name: "section_heading", widget: "string" }
+          - label: "Modules"
+            name: "modules"
+            widget: "list"
+            label_singular: "Module"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Picture", name: "image", widget: "image", required: false }
+              - { label: "Link", name: "url", widget: "string" }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "📥 Muat Turun →" }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
+
+      - name: "buku"
+        label: "Buku Panduan"
+        file: "content/pages/info_pensyarah/buku.json"
+        format: "json"
+        fields:
+          - { label: "Page Name", name: "page", widget: "hidden", default: "Buku Panduan" }
+          - { label: "Browser Tab Title", name: "browser_title", widget: "string" }
+          - { label: "Hero Eyebrow", name: "hero_eyebrow", widget: "string", required: false }
+          - { label: "Hero Title", name: "hero_title_html", widget: "code", default_language: "html", output_code_only: true }
+          - { label: "Hero Description", name: "hero_description_html", widget: "text", required: false }
+          - { label: "Hero Tagline", name: "hero_tagline", widget: "string", required: false }
+          - { label: "Page Title", name: "page_title", widget: "string" }
+          - { label: "Page Subtitle", name: "page_subtitle", widget: "string", required: false }
+          - { label: "Section Heading", name: "section_heading", widget: "string" }
+          - label: "Books and Documents"
+            name: "books"
+            widget: "list"
+            label_singular: "Book"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Cover Picture", name: "image", widget: "image", required: false }
+              - { label: "Fallback Badge", name: "badge", widget: "string", default: "📄 PDF" }
+              - { label: "Document Link", name: "url", widget: "string" }
+              - { label: "Button Text", name: "button_text", widget: "string", default: "📥 Lihat →" }
+          - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
   - name: "lain_lain"
     label: "Lain-lain"
     files:
