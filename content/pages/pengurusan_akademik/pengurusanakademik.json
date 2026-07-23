@@ -1,12 +1,5 @@
 {
-  "page": "Pengurusan Akademik",
   "browser_title": "Pengurusan Akademik — PEKA JKA IPGKPP",
-  "hero_eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
-  "hero_title_html": "Pengurusan<br>Akademik",
-  "hero_description": "Mengurus dan menyelaras pelaksanaan kurikulum akademik secara sistematik bagi memastikan kelancaran proses pengajaran dan pembelajaran di IPGKPP.",
-  "hero_tagline": "Jadual Waktu · Maklumat Kursus · Headcount",
-  "section_eyebrow": "Terokai",
-  "section_title_html": "Urusan Akademik<br>Utama",
   "cards": [
     {
       "link": "jadualwaktuinduk.html",
@@ -30,5 +23,12 @@
       "button_text": "Teroka →"
     }
   ],
-  "additional_sections": []
+  "hero_eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
+  "additional_sections": [],
+  "hero_tagline": "Jadual Waktu · Maklumat Kursus · Headcount",
+  "section_title_html": "Urusan Akademik<br>Utama",
+  "section_eyebrow": "Terokai",
+  "page": "Pengurusan Akademik",
+  "hero_title_html": "Pengurusan<br>Akademik",
+  "hero_description": "Mengurus dan menyelaras pelaksanaan kurikulum akademik secara sistematik bagi memastikan kelancaran proses pengajaran dan pembelajaran di IPGKPP."
 }

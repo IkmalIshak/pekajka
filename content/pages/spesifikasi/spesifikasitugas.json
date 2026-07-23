@@ -1,15 +1,4 @@
 {
-  "page": "Spesifikasi Tugas Unit",
-  "browser_title": "SPESIFIKASI TUGAS UNIT · PEKA JKA IPGKPP",
-  "page_title": "Spesifikasi Tugas Unit",
-  "subtitle": "Jabatan Kecemerlangan Akademik Institut Pendidikan Guru Malaysia Kampus Pulau Pinang",
-  "organisation_heading": "Carta Organisasi",
-  "organisation_intro": "Struktur organisasi Jabatan Kecemerlangan Akademik IPGKPP.",
-  "organisation_image": "SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png",
-  "lecturer_heading": "Pensyarah",
-  "lecturer_intro": "Senarai pegawai dan pensyarah yang terlibat dalam pelaksanaan fungsi unit. Klik kad untuk lihat gambar penuh.",
-  "administration_heading": "Pembantu Tadbir",
-  "administration_intro": "Sokongan pentadbiran jabatan.",
   "staff": [
     {
       "group": "lecturers",
@@ -132,5 +121,16 @@
       ]
     }
   ],
-  "updated_text": "Kemaskini Jun 2026"
+  "lecturer_intro": "Senarai pegawai dan pensyarah yang terlibat dalam pelaksanaan fungsi unit. Klik kad untuk lihat gambar penuh.",
+  "browser_title": "SPESIFIKASI TUGAS UNIT · PEKA JKA IPGKPP",
+  "administration_heading": "Pembantu Tadbir",
+  "organisation_intro": "Struktur organisasi Jabatan Kecemerlangan Akademik IPGKPP.",
+  "page_title": "Spesifikasi Tugas Unit",
+  "administration_intro": "Sokongan pentadbiran jabatan.",
+  "page": "Spesifikasi Tugas Unit",
+  "updated_text": "Kemaskini July 2026",
+  "organisation_image": "SPESIFIKASI TUGAS UNIT_files/cartaorganisasi.png",
+  "lecturer_heading": "Pensyarah",
+  "subtitle": "Jabatan Kecemerlangan Akademik Institut Pendidikan Guru Malaysia Kampus Pulau Pinang",
+  "organisation_heading": "Carta Organisasi"
 }
