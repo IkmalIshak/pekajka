@@ -633,6 +633,64 @@
             grid.appendChild(card);
         });
         content.append(header, grid);
+
+        (data.additional_sections || []).forEach((section) => {
+            const sectionWrap = element('div', 'fade-up visible');
+            sectionWrap.style.cssText = 'margin-top:70px;';
+            sectionWrap.appendChild(cmsPageHeading(section.title));
+            if (section.description) {
+                const description = element('p', '', section.description);
+                description.style.cssText = 'max-width:760px;margin:-6px 0 24px;color:var(--text-light);line-height:1.7;';
+                sectionWrap.appendChild(description);
+            }
+
+            const items = element('div');
+            const style = section.display_style || 'links';
+            if (style === 'cards') {
+                items.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;';
+            } else if (style === 'buttons') {
+                items.style.cssText = 'display:flex;flex-wrap:wrap;gap:12px;';
+            } else {
+                items.style.cssText = 'display:grid;gap:10px;';
+            }
+
+            (section.items || []).forEach((item) => {
+                const link = element('a');
+                link.href = item.link || '#';
+                if (/^https?:\/\//i.test(item.link || '')) {
+                    link.target = '_blank';
+                    link.rel = 'noopener';
+                }
+
+                if (style === 'cards') {
+                    link.style.cssText = 'display:block;padding:24px;background:var(--white);border:1px solid var(--mid-gray);border-radius:16px;text-decoration:none;color:var(--text-dark);box-shadow:0 4px 18px rgba(0,0,0,.04);';
+                    link.appendChild(element('h3', '', item.text || ''));
+                    if (item.description) {
+                        const text = element('p', '', item.description);
+                        text.style.cssText = 'margin:10px 0 18px;color:var(--text-light);line-height:1.6;';
+                        link.appendChild(text);
+                    }
+                    link.appendChild(element('strong', '', item.button_text || 'Buka →'));
+                } else if (style === 'buttons') {
+                    link.textContent = item.text || item.button_text || 'Buka';
+                    link.style.cssText = 'display:inline-flex;align-items:center;padding:12px 20px;background:var(--purple);color:#fff;border-radius:10px;text-decoration:none;font-weight:600;';
+                } else {
+                    link.style.cssText = 'display:flex;justify-content:space-between;align-items:center;gap:16px;padding:15px 18px;background:var(--white);border:1px solid var(--mid-gray);border-radius:10px;text-decoration:none;color:var(--text-dark);';
+                    const label = element('span');
+                    label.appendChild(element('strong', '', item.text || ''));
+                    if (item.description) {
+                        const text = element('small', '', item.description);
+                        text.style.cssText = 'display:block;margin-top:4px;color:var(--text-light);';
+                        label.appendChild(text);
+                    }
+                    link.append(label, element('span', '', item.button_text || 'Buka →'));
+                }
+                items.appendChild(link);
+            });
+
+            sectionWrap.appendChild(items);
+            content.appendChild(sectionWrap);
+        });
     }
 
     function cmsPageHeading(text) {

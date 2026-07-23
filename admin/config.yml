@@ -242,6 +242,33 @@ collections:
               - { label: "Picture", name: "image", widget: "image" }
               - { label: "Page or Website Link", name: "link", widget: "string" }
               - { label: "Button Text", name: "button_text", widget: "string", default: "Teroka →" }
+          - label: "Additional Sections"
+            name: "additional_sections"
+            widget: "list"
+            required: false
+            label_singular: "Section"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Description", name: "description", widget: "text", required: false }
+              - label: "Display Style"
+                name: "display_style"
+                widget: "select"
+                default: "links"
+                options:
+                  - { label: "Simple Text Links", value: "links" }
+                  - { label: "Buttons", value: "buttons" }
+                  - { label: "Cards", value: "cards" }
+              - label: "Linked Items"
+                name: "items"
+                widget: "list"
+                label_singular: "Item"
+                summary: "{{fields.text}}"
+                fields:
+                  - { label: "Text", name: "text", widget: "string" }
+                  - { label: "Link", name: "link", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text", required: false }
+                  - { label: "Button Text", name: "button_text", widget: "string", required: false, default: "Buka →" }
 
       - name: "jadualwaktuinduk"
         label: "Jadual Waktu Induk"
