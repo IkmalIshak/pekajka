@@ -1,12 +1,6 @@
 {
-  "page": "Panduan Asas: Pensyarah Baharu",
   "browser_title": "Panduan Asas: Pensyarah Baharu — PEKA JKA IPGKPP",
   "hero_eyebrow": "JKA · IPGKPP",
-  "hero_title_html": "Panduan Asas<br><em>Pensyarah Baharu</em>",
-  "hero_description": "Garis panduan ringkas skop tugas dan tanggungjawab pensyarah baharu di Jabatan Kecemerlangan Akademik, IPG Kampus Pulau Pinang.",
-  "hero_tagline": "📘 Panduan · 📋 Skop Tugas · 🎓 Pensyarah Baharu",
-  "page_title": "PANDUAN ASAS: PENSYARAH BAHARU",
-  "page_subtitle": "Garis panduan ringkas skop tugas",
   "professional_sections": [
     {
       "type": "cards",
@@ -19,7 +13,7 @@
           "description": "",
           "image": "",
           "preview_url": "",
-          "url": "https://drive.google.com/file/d/1OC6btib84cHyBKMHwUfYgppiha3CMjk7/view?usp=sharing",
+          "url": "https://drive.google.com/file/d/1zeJiLMlEWh2ZxWGhwxij4vt7jKjIEbMB/view?usp=sharing",
           "button_text": "Buka →"
         }
       ],
@@ -31,5 +25,11 @@
       ]
     }
   ],
-  "footer_note": "dalam proses pembinaan ...."
+  "page_title": "PANDUAN ASAS: PENSYARAH BAHARU",
+  "page_subtitle": "Garis panduan ringkas skop tugas",
+  "hero_tagline": "📘 Panduan · 📋 Skop Tugas · 🎓 Pensyarah Baharu",
+  "page": "Panduan Asas: Pensyarah Baharu",
+  "footer_note": "dalam proses pembinaan ....",
+  "hero_title_html": "Panduan Asas<br><em>Pensyarah Baharu</em>",
+  "hero_description": "Garis panduan ringkas skop tugas dan tanggungjawab pensyarah baharu di Jabatan Kecemerlangan Akademik, IPG Kampus Pulau Pinang."
 }
