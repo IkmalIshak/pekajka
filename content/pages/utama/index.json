@@ -11,6 +11,7 @@
       "description_html": "Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.",
       "tagline": "",
       "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
+      "title_font_size": 80,
       "type": "intro",
       "link": ""
     },
@@ -23,6 +24,7 @@
       "description_html": "Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.",
       "tagline": "📅 Buka Kalendar Penuh →",
       "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
+      "title_font_size": 80,
       "type": "calendar",
       "link": "https://calendar.google.com/calendar/u/0?cid=amthLmlwZ2twcEBpcGdtLmVkdS5teQ"
     },
@@ -31,12 +33,14 @@
       "background_image": "/assets/uploads/whatsapp-image-2026-07-23-at-11.32.47-am.jpeg",
       "picture_placement": "panel",
       "title_html": "LAWATAN PENANDA ARAS DARIPADA IPGK TUANKU BAINUN",
+      "title_font_size": 80,
       "description_html": "TARIKH : 29 JULAI 2026\nMASA : 9.00 PAGI\nTEMPAT : BILIK MESYUARAT IXORA"
     },
     {
       "picture_placement": "background",
       "type": "intro",
       "title_html": "BENGKEL PERANCANGAN KURIKULUM PISMP, <br> PPISMP DAN PDPP SEMESTER OGOS-DIS 2026 ",
+      "title_font_size": 80,
       "description_html": "TARIKH : 3 OGOS 2026 - 14 OGOS 2026\nMASA : 8.00 HINGGA 4.30 PETANG \nTEMPAT : BILIK MESYUARAT IXORA, DEWAN PERSIDANGAN"
     }
   ],

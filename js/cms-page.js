@@ -165,6 +165,11 @@
                 content.appendChild(element('p', 'hero-eyebrow', slide.eyebrow || ''));
                 const title = element('h1');
                 title.innerHTML = slide.title_html || '';
+                const titleFontSize = Number(slide.title_font_size);
+                if (Number.isFinite(titleFontSize)) {
+                    const safeSize = Math.min(120, Math.max(28, titleFontSize));
+                    title.style.fontSize = `clamp(28px, 6vw, ${safeSize}px)`;
+                }
                 content.appendChild(title);
                 const description = element('p', 'hero-desc');
                 description.innerHTML = slide.description_html || '';
