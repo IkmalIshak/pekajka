@@ -1,17 +1,37 @@
 {
-  "page": "Maklumat Kursus",
+  "access_image": "PEKA JKA IPGM KPP - MAKLUMAT KURSUS_files/unnamed(1).png",
   "browser_title": "MAKLUMAT KURSUS — PEKA JKA IPGKPP",
   "hero_eyebrow": "Pengurusan Akademik · IPGKPP",
+  "resources": [
+    {
+      "title": "Template Kemas kini MK",
+      "description": "Sila isi maklumat berkaitan dengan perubahan MK",
+      "embed_url": "https://drive.google.com/file/d/1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE/preview",
+      "file_name": "Kemas kini MK",
+      "source": "Google Sheets",
+      "button_text": "📊 Buka di Google Sheets →",
+      "link": "https://drive.google.com/open?authuser=0&id=1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE"
+    },
+    {
+      "title": "PEMETAAN PEMBELAJARAN - KLUSTER - HASIL PEMBELAJARAN - KEMAHIRAN INSANIAH",
+      "description": "",
+      "embed_url": "https://drive.google.com/file/d/18MwwG-hNoJWnoFovVavhtQOUNwy9PGXV/view?usp=sharing",
+      "file_name": "PEMETAAN DOMAIN-KLUSTER-HP-KI.pdf",
+      "source": "Google Drive",
+      "button_text": "📄 Buka di Drive →",
+      "link": "https://drive.google.com/file/d/1bj2_Za34kvOEKqBm4eKSGvhvAMKAqCj-/view?authuser=0&usp=sharing"
+    }
+  ],
+  "additional_sections": [],
+  "access_heading": "PAUTAN MENGAKSES MK (MyPDPP)",
+  "hero_tagline": "",
+  "access_example": "https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=BMMB1094",
+  "page": "Maklumat Kursus",
+  "access_instruction": "Klik pada pautan dibawah dan masukkan kod kursus di hujung seperti contoh berikut:",
+  "access_url": "https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=",
+  "footer_note": "dalam proses pembinaan ....",
   "hero_title_html": "Maklumat <br>Kursus",
   "hero_description": "Akses kepada maklumat lengkap kursus, pautan e-MK, dan dokumen kemas kini terkini untuk perancangan akademik.",
-  "hero_tagline": "",
-  "access_heading": "PAUTAN MENGAKSES MK (MyPDPP)",
-  "access_image": "PEKA JKA IPGM KPP - MAKLUMAT KURSUS_files/unnamed(1).png",
-  "access_instruction": "Klik pada pautan dibawah dan masukkan kod kursus di hujung seperti contoh berikut:",
-  "access_example": "https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=BMMB1094",
-  "access_button_text": "🔗 Pautan akses e-MK",
-  "access_url": "https://mypdpp.moe.gov.my/myIPG/MK/PAPAR_KURSUS.CFM?KODMP=",
-  "memo_heading": "KEMAS KINI MAKLUMAT KURSUS",
   "memos": [
     {
       "title": "MEMO - KEMASKINI MK PPISMP - 29 MEI 2026",
@@ -46,26 +66,6 @@
       "url": "https://drive.google.com/drive/folders/16bv1oN6Fp_i4Mq5fjpa8UrfclPPr71sH?usp=drive_link"
     }
   ],
-  "resources": [
-    {
-      "title": "Template Kemas kini MK",
-      "description": "Sila isi maklumat berkaitan dengan perubahan MK",
-      "embed_url": "https://drive.google.com/file/d/1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE/preview",
-      "file_name": "Kemas kini MK",
-      "source": "Google Sheets",
-      "button_text": "📊 Buka di Google Sheets →",
-      "link": "https://drive.google.com/open?authuser=0&id=1lsgq8_KqjVNIGfDZFeKQDxNLSdzixTKAoT1yNpjdvcE"
-    },
-    {
-      "title": "PEMETAAN PEMBELAJARAN - KLUSTER - HASIL PEMBELAJARAN - KEMAHIRAN INSANIAH",
-      "description": "",
-      "embed_url": "https://drive.google.com/file/d/1bj2_Za34kvOEKqBm4eKSGvhvAMKAqCj-/preview",
-      "file_name": "PEMETAAN DOMAIN-KLUSTER-HP-KI.pdf",
-      "source": "Google Drive",
-      "button_text": "📄 Buka di Drive →",
-      "link": "https://drive.google.com/file/d/1bj2_Za34kvOEKqBm4eKSGvhvAMKAqCj-/view?authuser=0&usp=sharing"
-    }
-  ],
-  "footer_note": "dalam proses pembinaan ....",
-  "additional_sections": []
+  "memo_heading": "KEMAS KINI MAKLUMAT KURSUS",
+  "access_button_text": "🔗 Pautan akses e-MK"
 }
