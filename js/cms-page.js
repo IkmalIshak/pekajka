@@ -123,7 +123,17 @@
                     node.target = '_blank';
                     node.rel = 'noopener';
                 }
-                node.appendChild(element('div', `hero-bg${slide.type === 'calendar' ? ' hero-bg-calendar' : ''}`));
+                const background = element('div', `hero-bg${slide.type === 'calendar' ? ' hero-bg-calendar' : ''}`);
+                if (slide.background_image) {
+                    const overlay = slide.type === 'calendar'
+                        ? 'linear-gradient(to bottom, rgba(30,5,90,.38) 0%, rgba(30,5,90,.76) 65%, rgba(20,3,70,.94) 100%)'
+                        : 'linear-gradient(to bottom, rgba(30,5,90,.3) 0%, rgba(30,5,90,.75) 60%, rgba(20,3,70,.95) 100%)';
+                    background.style.backgroundImage = `${overlay}, url("${slide.background_image.replace(/"/g, '%22')}")`;
+                    background.style.backgroundPosition = 'center';
+                    background.style.backgroundSize = 'cover';
+                    background.style.backgroundRepeat = 'no-repeat';
+                }
+                node.appendChild(background);
                 if (slide.calendar_embed_url) {
                     const calendarCard = element('div', 'hero-calendar-card');
                     const badge = element('div', 'hero-calendar-badge');
