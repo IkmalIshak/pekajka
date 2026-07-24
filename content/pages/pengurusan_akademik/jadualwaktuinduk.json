@@ -1,12 +1,11 @@
 {
-  "page": "Jadual Waktu Induk",
   "browser_title": "Jadual Waktu Induk — PEKA JKA IPGKPP",
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat atau memuat turun dokumen. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
   "hero_eyebrow": "Pengurusan Akademik · IPGKPP",
-  "hero_title_html": "Jadual Waktu<br><em>Induk</em>",
-  "hero_description": "Jadual waktu induk mengikut program dan semester. Klik pada mana-mana pautan untuk melihat atau memuat turun dokumen.",
-  "hero_tagline": "📅 PISMP · PDPP",
+  "additional_sections": [],
   "page_title": "JADUAL WAKTU INDUK",
   "page_subtitle": "Jadual waktu mengikut program dan semester",
+  "hero_tagline": "📅 PPISMP · PISMP · PDPP",
   "programs": [
     {
       "name": "PISMP",
@@ -165,8 +164,9 @@
       ]
     }
   ],
-  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat atau memuat turun dokumen. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
+  "page": "Jadual Waktu Induk",
   "updated_text": "Kemaskini terakhir: Jun 2026",
   "footer_note": "dalam proses pembinaan ....",
-  "additional_sections": []
+  "hero_title_html": "Jadual Waktu<br><em>Induk</em>",
+  "hero_description": "Jadual waktu induk mengikut program dan semester. Klik pada mana-mana pautan untuk melihat atau memuat turun dokumen."
 }
