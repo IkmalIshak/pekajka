@@ -70,7 +70,14 @@ collections:
                 options:
                   - { label: "Introduction", value: "intro" }
                   - { label: "Calendar", value: "calendar" }
-              - { label: "Background Picture", name: "background_image", widget: "image", required: false }
+              - { label: "Slide Picture", name: "background_image", widget: "image", required: false }
+              - label: "Picture Placement"
+                name: "picture_placement"
+                widget: "select"
+                default: "background"
+                options:
+                  - { label: "Full Slide Background", value: "background" }
+                  - { label: "Right-side Panel", value: "panel" }
               - { label: "Small Heading", name: "eyebrow", widget: "string", required: false }
               - { label: "Large Title", name: "title_html", widget: "code", default_language: "html", output_code_only: true }
               - { label: "Description", name: "description_html", widget: "text", required: false }

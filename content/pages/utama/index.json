@@ -5,6 +5,7 @@
     {
       "type": "intro",
       "background_image": "PEKA JKA IPGM KPP_files/unnamed.jpg",
+      "picture_placement": "background",
       "eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
       "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
       "description_html": "Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.",
@@ -16,6 +17,7 @@
     {
       "type": "calendar",
       "background_image": "",
+      "picture_placement": "background",
       "eyebrow": "Kalendar JKA · IPGKPP",
       "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
       "description_html": "Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.",
@@ -27,6 +29,7 @@
     {
       "type": "calendar",
       "background_image": "",
+      "picture_placement": "background",
       "title_html": "LAWATAN PENANDA ARAS DARIPADA IPGK TUANKU BAINUN",
       "description_html": "TARIKH : 29 JULAI 2026\nMASA : 9.00 PAGI\nTEMPAT : BILIK MESYUARAT IXORA"
     }

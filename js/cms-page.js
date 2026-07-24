@@ -124,7 +124,7 @@
                     node.rel = 'noopener';
                 }
                 const background = element('div', `hero-bg${slide.type === 'calendar' ? ' hero-bg-calendar' : ''}`);
-                if (slide.background_image) {
+                if (slide.background_image && slide.picture_placement !== 'panel') {
                     const overlay = slide.type === 'calendar'
                         ? 'linear-gradient(to bottom, rgba(30,5,90,.38) 0%, rgba(30,5,90,.76) 65%, rgba(20,3,70,.94) 100%)'
                         : 'linear-gradient(to bottom, rgba(30,5,90,.3) 0%, rgba(30,5,90,.75) 60%, rgba(20,3,70,.95) 100%)';
@@ -134,7 +134,20 @@
                     background.style.backgroundRepeat = 'no-repeat';
                 }
                 node.appendChild(background);
-                if (slide.calendar_embed_url) {
+                if (slide.background_image && slide.picture_placement === 'panel') {
+                    const pictureCard = element('div', 'hero-calendar-card');
+                    if (slide.calendar_badge) {
+                        const badge = element('div', 'hero-calendar-badge');
+                        badge.textContent = slide.calendar_badge;
+                        pictureCard.appendChild(badge);
+                    }
+                    const picture = element('img');
+                    picture.src = slide.background_image;
+                    picture.alt = slide.eyebrow || 'Gambar slaid';
+                    picture.style.cssText = 'display:block;width:100%;height:400px;object-fit:contain;background:#fff;';
+                    pictureCard.appendChild(picture);
+                    node.appendChild(pictureCard);
+                } else if (slide.calendar_embed_url) {
                     const calendarCard = element('div', 'hero-calendar-card');
                     const badge = element('div', 'hero-calendar-badge');
                     badge.innerHTML = `<span class="live-dot"></span> ${slide.calendar_badge || 'Kalendar Langsung'}`;
