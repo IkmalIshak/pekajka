@@ -655,7 +655,14 @@ collections:
                   - { label: "Picture", name: "image", widget: "image", required: false }
                   - { label: "Link", name: "url", widget: "string" }
                   - { label: "Button Text", name: "button_text", widget: "string", default: "Buka →" }
-                  - { label: "Highlight Colour", name: "accent_color", widget: "color", required: false }
+                  - label: "Highlight Colour"
+                    name: "accent_color"
+                    widget: "string"
+                    required: false
+                    hint: "Optional hex colour, for example #cc0000"
+                    pattern:
+                      - "^#[0-9A-Fa-f]{6}$"
+                      - "Use a six-digit hex colour such as #cc0000"
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
 
       - name: "modul"
