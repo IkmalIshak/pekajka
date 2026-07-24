@@ -24,7 +24,24 @@
     }
   ],
   "hero_eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
-  "additional_sections": [],
+  "additional_sections": [
+    {
+      "display_style": "cards",
+      "title": "MK",
+      "items": [
+        {
+          "button_text": "Buka →",
+          "text": ".",
+          "link": "."
+        },
+        {
+          "button_text": "Buka →",
+          "text": ".",
+          "link": "."
+        }
+      ]
+    }
+  ],
   "hero_tagline": "Jadual Waktu · Maklumat Kursus · Headcount",
   "section_title_html": "Urusan Akademik<br>Utama",
   "section_eyebrow": "Terokai",
