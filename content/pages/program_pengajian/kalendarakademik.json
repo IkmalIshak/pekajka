@@ -1,15 +1,15 @@
 {
-  "page": "Kalendar Akademik",
+  "content_type": "grouped_links",
   "browser_title": "Kalendar Akademik — PEKA JKA IPGKPP",
+  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
   "hero_eyebrow": "Program Pengajian · IPGKPP",
-  "hero_title_html": "Kalendar<br>Akademik",
-  "hero_description": "Semakan tarikh penting bagi setiap semester mengikut program pengajian. Pautan ke kalendar rasmi PPISMP, PISMP dan PDPP.",
-  "hero_tagline": "PPISMP · PISMP · PDPP",
+  "additional_sections": [],
   "page_title": "KALENDER AKADEMIK",
   "page_subtitle": "Tarikh penting sesi akademik mengikut semester dan program",
-  "content_type": "grouped_links",
+  "hero_tagline": "PPISMP · PISMP · PDPP",
   "card_class": "calendar-card",
-  "section_class": "calendar-section",
+  "page": "Kalendar Akademik",
+  "updated_text": "Kemaskini terakhir: Jun 2026",
   "groups": [
     {
       "name": "PPISMP / PISMP",
@@ -49,6 +49,10 @@
         {
           "title": "JUN – JULAI 2026",
           "url": "https://drive.google.com/file/d/1GdrOLYK80jZD7GoLNGbzQfLybi4zYo0X/view?usp=sharing"
+        },
+        {
+          "title": "OGOS-DISEMBER 2026",
+          "url": "."
         }
       ]
     },
@@ -74,8 +78,8 @@
       ]
     }
   ],
-  "instruction_note": "📌 Sila klik pada mana-mana pautan untuk melihat dokumen penuh. Semua fail disimpan di Google Drive dan boleh diakses oleh warga IPGKPP.",
-  "updated_text": "Kemaskini terakhir: Jun 2026",
   "footer_note": "dalam proses pembinaan ....",
-  "additional_sections": []
+  "hero_title_html": "Kalendar<br>Akademik",
+  "hero_description": "Semakan tarikh penting bagi setiap semester mengikut program pengajian. Pautan ke kalendar rasmi PPISMP, PISMP dan PDPP.",
+  "section_class": "calendar-section"
 }
