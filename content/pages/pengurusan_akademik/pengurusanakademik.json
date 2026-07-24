@@ -18,30 +18,13 @@
     {
       "link": "headcount.html",
       "image": "PEKA JKA IPGM KPP - Pengurusan Akademik_files/unnamed(3).png",
-      "title": "Headcount",
+      "title": "Headcount.",
       "description": "Data bilangan pelajar mengikut program, tahun, dan sesi bagi tujuan perancangan akademik dan pentadbiran.",
       "button_text": "Teroka →"
     }
   ],
   "hero_eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
-  "additional_sections": [
-    {
-      "display_style": "cards",
-      "title": "MK",
-      "items": [
-        {
-          "button_text": "Buka →",
-          "text": ".",
-          "link": "."
-        },
-        {
-          "button_text": "Buka →",
-          "text": ".",
-          "link": "."
-        }
-      ]
-    }
-  ],
+  "additional_sections": [],
   "hero_tagline": "Jadual Waktu · Maklumat Kursus · Headcount",
   "section_title_html": "Urusan Akademik<br>Utama",
   "section_eyebrow": "Terokai",
