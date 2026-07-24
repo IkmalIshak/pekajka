@@ -3,33 +3,33 @@
   "browser_title": "PEKA JKA IPGKPP",
   "home_slides": [
     {
-      "type": "intro",
-      "background_image": "PEKA JKA IPGM KPP_files/unnamed.jpg",
+      "calendar_badge": "",
       "picture_placement": "background",
+      "calendar_embed_url": "",
       "eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
-      "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
+      "background_image": "PEKA JKA IPGM KPP_files/unnamed.jpg",
       "description_html": "Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.",
       "tagline": "",
-      "link": "",
-      "calendar_embed_url": "",
-      "calendar_badge": ""
+      "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
+      "type": "intro",
+      "link": ""
     },
     {
-      "type": "calendar",
-      "background_image": "",
+      "calendar_badge": "Kalendar Langsung",
       "picture_placement": "background",
+      "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=jka.ipgkpp%40ipgm.edu.my&ctz=Asia%2FKuala_Lumpur",
       "eyebrow": "Kalendar JKA · IPGKPP",
-      "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
+      "background_image": "",
       "description_html": "Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.",
       "tagline": "📅 Buka Kalendar Penuh →",
-      "link": "https://calendar.google.com/calendar/u/0?cid=amthLmlwZ2twcEBpcGdtLmVkdS5teQ",
-      "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=jka.ipgkpp%40ipgm.edu.my&ctz=Asia%2FKuala_Lumpur",
-      "calendar_badge": "Kalendar Langsung"
+      "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
+      "type": "calendar",
+      "link": "https://calendar.google.com/calendar/u/0?cid=amthLmlwZ2twcEBpcGdtLmVkdS5teQ"
     },
     {
       "type": "calendar",
-      "background_image": "",
-      "picture_placement": "background",
+      "background_image": "/assets/uploads/whatsapp-image-2026-07-23-at-11.32.47-am.jpeg",
+      "picture_placement": "panel",
       "title_html": "LAWATAN PENANDA ARAS DARIPADA IPGK TUANKU BAINUN",
       "description_html": "TARIKH : 29 JULAI 2026\nMASA : 9.00 PAGI\nTEMPAT : BILIK MESYUARAT IXORA"
     }
