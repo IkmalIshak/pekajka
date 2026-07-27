@@ -136,6 +136,8 @@
                 node.appendChild(background);
                 if (slide.background_image && slide.picture_placement === 'panel') {
                     const pictureCard = element('div', 'hero-calendar-card');
+                    pictureCard.style.width = 'clamp(420px, 32vw, 560px)';
+                    pictureCard.style.maxWidth = '48vw';
                     if (slide.calendar_badge) {
                         const badge = element('div', 'hero-calendar-badge');
                         badge.textContent = slide.calendar_badge;
@@ -144,7 +146,7 @@
                     const picture = element('img');
                     picture.src = slide.background_image;
                     picture.alt = slide.eyebrow || 'Gambar slaid';
-                    picture.style.cssText = 'display:block;width:100%;height:400px;object-fit:contain;background:#fff;';
+                    picture.style.cssText = 'display:block;width:100%;height:480px;object-fit:contain;background:#fff;';
                     pictureCard.appendChild(picture);
                     node.appendChild(pictureCard);
                 } else if (slide.calendar_embed_url) {
