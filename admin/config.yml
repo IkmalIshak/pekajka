@@ -78,6 +78,14 @@ collections:
                 options:
                   - { label: "Full Slide Background", value: "background" }
                   - { label: "Right-side Panel", value: "panel" }
+              - label: "Picture Panel Style"
+                name: "picture_panel_style"
+                widget: "select"
+                default: "transparent"
+                hint: "Used only when Picture Placement is Right-side Panel."
+                options:
+                  - { label: "Transparent — no background or shadow", value: "transparent" }
+                  - { label: "White Card — rounded background and shadow", value: "card" }
               - { label: "Small Heading", name: "eyebrow", widget: "string", required: false }
               - { label: "Large Title", name: "title_html", widget: "code", default_language: "html", output_code_only: true }
               - label: "Title Font Size"
