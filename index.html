@@ -380,6 +380,16 @@
             background: linear-gradient(90deg, var(--purple-light), var(--purple));
         }
 
+        .hero-picture-card {
+            background: transparent;
+            box-shadow: none;
+            border-radius: 0;
+        }
+
+        .hero-picture-card::before {
+            display: none;
+        }
+
         .hero-calendar-badge {
             display: flex;
             align-items: center;
