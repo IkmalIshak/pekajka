@@ -3,10 +3,10 @@
   "staff": [
     {
       "name": "DR. NORABIATUL ADAWIAH BT ABD WAHID",
-      "role": "Pensyarah",
+      "role": "Ketua Jabatan",
       "section": "pensyarah",
       "featured": false,
-      "image": "PEKA JKA IPGM KPP - MATEMATIK_files/NORABIATUL.png",
+      "image": "/assets/uploads/norabiatul_kj.png",
       "link": "https://drive.google.com/drive/folders/13DOttKtg64xSmJJzvOg4f9s0QjJaP5oZ?usp=drive_link",
       "image_position": "center"
     },
