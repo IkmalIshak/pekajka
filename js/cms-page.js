@@ -1021,6 +1021,10 @@
 
     function renderProfessionalDevelopment(main, data) {
         main.replaceChildren();
+        if (data.page_layout === 'new_lecturer_guide') {
+            renderNewLecturerGuide(main, data);
+            return;
+        }
         renderPageHeader(main, data);
         data.professional_sections.forEach((section, index) => {
             const block = element('section', 'cms-professional-section');
@@ -1135,6 +1139,78 @@
             if (index < data.professional_sections.length - 1) main.appendChild(element('div', 'divider'));
         });
         appendFooterNote(main, data.footer_note);
+    }
+
+    function renderNewLecturerGuide(main, data) {
+        main.classList.add('guide-page-content');
+        const section = data.professional_sections[0] || {};
+        const item = (section.items || [])[0] || {};
+        const imageData = (section.images || [])[0] || {};
+
+        const intro = element('header', 'guide-intro');
+        intro.appendChild(element('p', 'guide-intro-kicker', data.page_subtitle || 'Panduan ringkas'));
+        intro.appendChild(element('h2', '', section.heading || 'Garis Panduan Skop Tugas'));
+        intro.appendChild(element('p', 'guide-intro-copy', section.introduction || section.description || ''));
+        main.appendChild(intro);
+
+        const layout = element('section', 'guide-layout');
+        const details = element('div', 'guide-details');
+        const label = element('div', 'guide-section-label');
+        label.append(element('span', '', '01'), element('strong', '', section.list_heading || 'Skop utama pensyarah'));
+        details.appendChild(label);
+
+        const checklist = element('div', 'guide-checklist');
+        (section.highlights || []).forEach((highlight, index) => {
+            const card = element('article', 'guide-check-item');
+            const number = element('span', 'guide-check-number', String(index + 1).padStart(2, '0'));
+            const copy = element('div');
+            copy.appendChild(element('h3', '', highlight.title || ''));
+            if (highlight.description) copy.appendChild(element('p', '', highlight.description));
+            card.append(number, copy);
+            checklist.appendChild(card);
+        });
+        details.appendChild(checklist);
+
+        const resource = element('div', 'guide-resource');
+        const resourceCopy = element('div');
+        resourceCopy.appendChild(element('span', 'guide-resource-eyebrow', 'Dokumen rujukan'));
+        resourceCopy.appendChild(element('h3', '', item.title || 'Garis panduan ringkas skop tugas'));
+        if (item.description) resourceCopy.appendChild(element('p', '', item.description));
+        const link = element('a', 'guide-open-button');
+        link.href = item.url || '#';
+        link.target = '_blank';
+        link.rel = 'noopener';
+        link.append(
+            element('span', '', item.button_text || 'Buka panduan'),
+            element('span', 'guide-button-arrow', '↗')
+        );
+        resource.append(resourceCopy, link);
+        details.appendChild(resource);
+
+        const visual = element('figure', 'guide-visual');
+        if (imageData.image) {
+            const image = element('img');
+            image.src = imageData.image;
+            image.alt = imageData.alt || item.title || 'Panduan Asas Pensyarah Baharu';
+            visual.appendChild(image);
+        }
+        const caption = element('figcaption');
+        caption.append(
+            element('span', '', 'Pratonton dokumen'),
+            element('strong', '', 'Panduan Asas Pensyarah Baharu')
+        );
+        visual.appendChild(caption);
+        layout.append(details, visual);
+        main.appendChild(layout);
+
+        if (data.footer_note) {
+            const note = element('aside', 'guide-note');
+            note.append(
+                element('span', 'guide-note-icon', 'i'),
+                element('p', '', data.footer_note)
+            );
+            main.appendChild(note);
+        }
     }
 
     function renderLecturerInformation(main, data) {

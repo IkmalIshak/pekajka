@@ -1,11 +1,31 @@
 {
   "browser_title": "Panduan Asas: Pensyarah Baharu — PEKA JKA IPGKPP",
+  "page_layout": "new_lecturer_guide",
   "hero_eyebrow": "JKA · IPGKPP",
   "professional_sections": [
     {
       "type": "cards",
-      "heading": "📋 Garis Panduan Skop Tugas",
-      "description": "Garis panduan ini disediakan untuk membantu pensyarah baharu memahami skop tugas dan tanggungjawab di Jabatan Kecemerlangan Akademik, IPG Kampus Pulau Pinang.\nIa merangkumi aspek-aspek penting seperti:\nTanggungjawab akademik pensyarah\nProsedur dan proses pengajaran\nDokumentasi dan pelaporan\nPengurusan kursus dan program",
+      "heading": "Garis Panduan Skop Tugas",
+      "introduction": "Panduan ini membantu pensyarah baharu memahami skop tugas dan tanggungjawab utama di Jabatan Kecemerlangan Akademik, IPG Kampus Pulau Pinang.",
+      "list_heading": "Empat skop utama",
+      "highlights": [
+        {
+          "title": "Tanggungjawab akademik",
+          "description": "Memahami peranan, amanah dan standard profesional seorang pensyarah."
+        },
+        {
+          "title": "Proses pengajaran",
+          "description": "Melaksanakan perancangan dan pengajaran mengikut prosedur yang ditetapkan."
+        },
+        {
+          "title": "Dokumentasi dan pelaporan",
+          "description": "Mengurus rekod akademik dan pelaporan dengan teratur serta tepat."
+        },
+        {
+          "title": "Pengurusan kursus dan program",
+          "description": "Menyelaras keperluan kursus dan program secara sistematik."
+        }
+      ],
       "embed_url": "",
       "items": [
         {
@@ -14,7 +34,8 @@
           "image": "",
           "preview_url": "",
           "url": "https://drive.google.com/file/d/1zeJiLMlEWh2ZxWGhwxij4vt7jKjIEbMB/view?usp=sharing",
-          "button_text": "Buka"
+          "description": "Dokumen lengkap untuk rujukan dan tindakan.",
+          "button_text": "Buka panduan"
         }
       ],
       "images": [
@@ -29,7 +50,7 @@
   "page_subtitle": "Garis panduan ringkas skop tugas",
   "hero_tagline": "📘 Panduan · 📋 Skop Tugas · 🎓 Pensyarah Baharu",
   "page": "Panduan Asas: Pensyarah Baharu",
-  "footer_note": "dalam proses pembinaan ....",
+  "footer_note": "Maklumat dalam panduan ini akan dikemas kini dari semasa ke semasa.",
   "hero_title_html": "Panduan Asas<br><em>Pensyarah Baharu</em>",
   "hero_description": "Garis panduan ringkas skop tugas dan tanggungjawab pensyarah baharu di Jabatan Kecemerlangan Akademik, IPG Kampus Pulau Pinang."
 }
