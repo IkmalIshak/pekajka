@@ -5,7 +5,6 @@
     {
       "calendar_badge": "",
       "picture_placement": "background",
-      "picture_panel_style": "transparent",
       "calendar_embed_url": "",
       "eyebrow": "Jabatan Kecemerlangan Akademik · IPGKPP",
       "title_font_size": 80,
@@ -13,13 +12,13 @@
       "description_html": "Peneraju Kecemerlangan Pendidikan Guru <br> Institut Pendidikan Guru Kampus Pulau Pinang <br> Membina Tenaga Pengajar Bertaraf Dunia.",
       "tagline": "",
       "title_html": "Pengurusan<br>Kurikulum<br><em>Akademik</em>",
+      "picture_panel_style": "transparent",
       "type": "intro",
       "link": ""
     },
     {
       "calendar_badge": "Kalendar Langsung",
       "picture_placement": "background",
-      "picture_panel_style": "transparent",
       "calendar_embed_url": "https://calendar.google.com/calendar/embed?src=jka.ipgkpp%40ipgm.edu.my&ctz=Asia%2FKuala_Lumpur",
       "eyebrow": "Kalendar JKA · IPGKPP",
       "title_font_size": 80,
@@ -27,6 +26,7 @@
       "description_html": "Semak tarikh penting, cuti rasmi, dan aktiviti akademik terkini pada bila-bila masa.",
       "tagline": "📅 Buka Kalendar Penuh →",
       "title_html": "Lihat<br>Kalendar<br><em>JKA</em>",
+      "picture_panel_style": "transparent",
       "type": "calendar",
       "link": "https://calendar.google.com/calendar/u/0?cid=amthLmlwZ2twcEBpcGdtLmVkdS5teQ"
     },
@@ -140,6 +140,11 @@
       "title": "GALERI",
       "image": "/assets/uploads/gallery.png",
       "link": "https://drive.google.com/drive/u/0/folders/1liMa5YyE1betF0vhpNNyD9WXuwlOi48p"
+    },
+    {
+      "title": "KPPB",
+      "image": "/assets/uploads/deep.png",
+      "link": "kppb.html"
     }
   ],
   "about": {
