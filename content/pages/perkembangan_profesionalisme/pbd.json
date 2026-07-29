@@ -1,12 +1,6 @@
 {
-  "page": "PBD",
   "browser_title": "PBD — PEKA JKA IPGKPP",
   "hero_eyebrow": "UPPA · IPGKPP",
-  "hero_title_html": "Pentaksiran Bilik Darjah<br /><em>(PBD)</em>",
-  "hero_description": "PBD merupakan pendekatan pentaksiran berterusan yang dilaksanakan dalam bilik darjah untuk menilai perkembangan, kemajuan dan penguasaan murid secara holistik.",
-  "hero_tagline": "📘 Buku Panduan · 📹 Video Animasi · 📄 Modul",
-  "page_title": "PENTAKSIRAN BILIK DARJAH (PBD)",
-  "page_subtitle": "Buku panduan, modul dan rujukan pelaksanaan PBD",
   "professional_sections": [
     {
       "type": "video",
@@ -113,7 +107,7 @@
       "embed_url": "",
       "items": [
         {
-          "title": "PDF BROCHURE SLU PBD SESI 1 Brosur maklumat ringkas pelaksanaan PBD untuk sesi 1 — merangkumi objektif, komponen utama dan jadual pelaksanaan. 📄 2 muka surat 📅 2025 📖 Buka Brosu",
+          "title": "PDF BROCHURE SLU PBD SESI 1 ",
           "description": "",
           "image": "",
           "preview_url": "https://drive.google.com/file/d/1m1MgFOUg7hX0NkVO7FmXM-DO26r4Iq77/preview",
@@ -121,7 +115,7 @@
           "button_text": "Buka →"
         },
         {
-          "title": "PDF BROCHURE SLU PBD SESI 2 Brosur maklumat ringkas pelaksanaan PBD untuk sesi 2 — fokus kepada penambahbaikan dan amalan terbaik dalam bilik darjah. 📄 2 muka surat 📅 2025 📖 Buk",
+          "title": "PDF BROCHURE SLU PBD SESI 2",
           "description": "",
           "image": "",
           "preview_url": "https://drive.google.com/file/d/12Qdma7dOrI3ptZLjBuDbOuHHBCzpb-LY/preview",
@@ -181,5 +175,11 @@
       "images": []
     }
   ],
-  "footer_note": "dalam proses pembinaan ...."
+  "page_title": "PENTAKSIRAN BILIK DARJAH (PBD)",
+  "page_subtitle": "Buku panduan, modul dan rujukan pelaksanaan PBD",
+  "hero_tagline": "📘 Buku Panduan · 📹 Video Animasi · 📄 Modul",
+  "page": "PBD",
+  "footer_note": "dalam proses pembinaan ....",
+  "hero_title_html": "Pentaksiran Bilik Darjah<br /><em>(PBD)</em>",
+  "hero_description": "PBD merupakan pendekatan pentaksiran berterusan yang dilaksanakan dalam bilik darjah untuk menilai perkembangan, kemajuan dan penguasaan murid secara holistik."
 }
