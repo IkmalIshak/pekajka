@@ -126,6 +126,15 @@
       "image": "PEKA JKA IPGM KPP - SAINS_files/placeholder-avatar.svg",
       "link": "https://drive.google.com/drive/folders/1yAwVFbDlP7Ytqb97IOCjSC8tNRMGVVSb?usp=drive_link",
       "image_position": "center"
+    },
+    {
+      "featured": false,
+      "image_position": "center",
+      "name": "NURUL BAHIYAH BINTI ISMAIL",
+      "role": "Pensyarah ",
+      "section": "pensyarah",
+      "link": "https://drive.google.com/drive/u/0/folders/1FAEDbUn4smwB5_Tb7B30LlVCaeFhrKj8",
+      "image": "/assets/uploads/nurul-bahiyah-1-.png"
     }
   ]
 }
