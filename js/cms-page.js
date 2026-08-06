@@ -7,7 +7,8 @@
         // This intentionally loads before each page's existing scripts run, so
         // their event listeners attach to the CMS-rendered content.
         const request = new XMLHttpRequest();
-        request.open('GET', source, false);
+        const separator = source.includes('?') ? '&' : '?';
+        request.open('GET', `${source}${separator}cms_refresh=${Date.now()}`, false);
         request.send(null);
         if (request.status && (request.status < 200 || request.status >= 300)) return;
 
@@ -1287,26 +1288,28 @@
         const block = element('div', 'section-block');
         block.appendChild(element('h2', '', data.section_heading || 'SENARAI BUKU PANDUAN'));
         const grid = element('div', 'buku-grid');
-        data.books.forEach((item) => {
-            const card = element('a', 'buku-card');
-            card.href = item.url || '#';
-            if (/^https?:\/\//i.test(item.url || '')) {
-                card.target = '_blank';
-                card.rel = 'noopener';
-            }
-            if (item.image) {
-                const image = element('img', 'buku-thumb');
-                image.src = item.image;
-                image.alt = item.title || '';
-                card.appendChild(image);
-            } else {
-                card.appendChild(element('div', 'buku-thumb-fallback', item.badge || '📄 PDF'));
-            }
-            card.appendChild(element('div', 'buku-title', item.title || ''));
-            if (item.description) card.appendChild(element('div', 'buku-desc', item.description));
-            card.appendChild(element('div', 'buku-link', item.button_text || '📥 Lihat →'));
-            grid.appendChild(card);
-        });
+        data.books
+            .filter((item) => item && (item.title || item.url || item.image))
+            .forEach((item) => {
+                const card = element('a', 'buku-card');
+                card.href = item.url || '#';
+                if (/^https?:\/\//i.test(item.url || '')) {
+                    card.target = '_blank';
+                    card.rel = 'noopener';
+                }
+                if (item.image) {
+                    const image = element('img', 'buku-thumb');
+                    image.src = item.image;
+                    image.alt = item.title || '';
+                    card.appendChild(image);
+                } else {
+                    card.appendChild(element('div', 'buku-thumb-fallback', item.badge || '📄 PDF'));
+                }
+                card.appendChild(element('div', 'buku-title', item.title || ''));
+                if (item.description) card.appendChild(element('div', 'buku-desc', item.description));
+                card.appendChild(element('div', 'buku-link', item.button_text || '📥 Lihat →'));
+                grid.appendChild(card);
+            });
         block.appendChild(grid);
         main.append(block, element('div', 'divider'));
         appendFooterNote(main, data.footer_note);
