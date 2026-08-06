@@ -1,12 +1,6 @@
 {
-  "page": "Pentaksiran Berterusan",
   "browser_title": "Pentaksiran Berterusan — PEKA JKA IPGKPP",
   "hero_eyebrow": "UPPA · IPGKPP",
-  "hero_title_html": "Pentaksiran<br><em>Berterusan</em>",
-  "hero_description": "Pentaksiran berterusan dilaksanakan sepanjang perjalanan kursus pengajian bagi tujuan pengumpulan bukti berlakunya pembelajaran yang mana akan digunakan untuk tujuan penambahbaikan pembelajaran, pengubahsuaian pengajaran dan pengubahsuaian reka bentuk kurikulum.",
-  "hero_tagline": "📋 PB · 📊 Rubrik · 📑 Dokumentasi",
-  "page_title": "PENTAKSIRAN BERTERUSAN",
-  "page_subtitle": "Dokumen dan rujukan pentaksiran berterusan IPGM",
   "professional_sections": [
     {
       "type": "images",
@@ -58,6 +52,12 @@
           "preview_url": "https://drive.google.com/file/d/108KzjbTzorBODg0U0q_fe7xnfdBAT9XI/preview",
           "url": "https://drive.google.com/file/d/108KzjbTzorBODg0U0q_fe7xnfdBAT9XI/view?usp=sharing",
           "button_text": "Buka →"
+        },
+        {
+          "button_text": "Buka →",
+          "title": "BUKU PANDUAN PENTAKSIRAN BERTERUSAN IPGM (KEMASKINI OGOS 2026)",
+          "url": "https://drive.google.com/drive/u/0/folders/1K1Xirpd2nOOqGyZ2q2cuR_8SbSmvxzYo",
+          "preview_url": "https://drive.google.com/drive/u/0/folders/1K1Xirpd2nOOqGyZ2q2cuR_8SbSmvxzYo/preview"
         }
       ],
       "images": []
@@ -267,5 +267,11 @@
       "images": []
     }
   ],
-  "footer_note": "dalam proses pembinaan ...."
+  "page_title": "PENTAKSIRAN BERTERUSAN",
+  "page_subtitle": "Dokumen dan rujukan pentaksiran berterusan IPGM",
+  "hero_tagline": "📋 PB · 📊 Rubrik · 📑 Dokumentasi",
+  "page": "Pentaksiran Berterusan",
+  "footer_note": "dalam proses pembinaan ....",
+  "hero_title_html": "Pentaksiran<br><em>Berterusan</em>",
+  "hero_description": "Pentaksiran berterusan dilaksanakan sepanjang perjalanan kursus pengajian bagi tujuan pengumpulan bukti berlakunya pembelajaran yang mana akan digunakan untuk tujuan penambahbaikan pembelajaran, pengubahsuaian pengajaran dan pengubahsuaian reka bentuk kurikulum."
 }
