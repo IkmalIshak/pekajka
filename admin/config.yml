@@ -25,6 +25,7 @@ collections:
       - label: "Staff"
         name: "staff"
         widget: "list"
+        add_to_top: true
         summary: "{{fields.name}} — {{fields.section}}"
         fields:
           - { label: "Name", name: "name", widget: "string" }
@@ -61,6 +62,7 @@ collections:
           - label: "Hero Slides"
             name: "home_slides"
             widget: "list"
+            add_to_top: true
             label_singular: "Slide"
             summary: "{{fields.eyebrow}}"
             fields:
@@ -106,6 +108,7 @@ collections:
           - label: "Shortcut Cards"
             name: "shortcuts"
             widget: "list"
+            add_to_top: true
             label_singular: "Shortcut"
             summary: "{{fields.title}}"
             fields:
@@ -132,6 +135,7 @@ collections:
               - label: "Contact Details"
                 name: "details"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Contact Detail"
                 summary: "{{fields.text}}"
                 fields:
@@ -161,6 +165,7 @@ collections:
           - label: "People"
             name: "staff"
             widget: "list"
+            add_to_top: true
             label_singular: "Person"
             summary: "{{fields.name}} — {{fields.role}}"
             fields:
@@ -178,6 +183,7 @@ collections:
               - label: "Tasks"
                 name: "tasks"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Task"
                 field: { label: "Task Description", name: "task", widget: "text" }
           - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
@@ -198,6 +204,7 @@ collections:
           - label: "Departments"
             name: "departments"
             widget: "list"
+            add_to_top: true
             label_singular: "Department"
             summary: "{{fields.name}}"
             fields: &portfolio_link_fields
@@ -208,12 +215,14 @@ collections:
           - label: "Units"
             name: "units"
             widget: "list"
+            add_to_top: true
             label_singular: "Unit"
             summary: "{{fields.name}}"
             fields: *portfolio_link_fields
           - label: "Guides and Resources"
             name: "resources"
             widget: "list"
+            add_to_top: true
             label_singular: "Resource"
             required: false
             summary: "{{fields.title}}"
@@ -261,6 +270,7 @@ collections:
           - label: "Navigation Cards"
             name: "cards"
             widget: "list"
+            add_to_top: true
             label_singular: "Card"
             summary: "{{fields.title}}"
             fields:
@@ -273,6 +283,7 @@ collections:
             label: "Additional Sections"
             name: "additional_sections"
             widget: "list"
+            add_to_top: true
             required: false
             label_singular: "Section"
             summary: "{{fields.title}}"
@@ -290,6 +301,7 @@ collections:
               - label: "Linked Items"
                 name: "items"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Item"
                 summary: "{{fields.text}}"
                 fields:
@@ -315,6 +327,7 @@ collections:
           - label: "Programs"
             name: "programs"
             widget: "list"
+            add_to_top: true
             label_singular: "Program"
             summary: "{{fields.name}}"
             fields:
@@ -322,6 +335,7 @@ collections:
               - label: "Semesters"
                 name: "semesters"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Semester"
                 summary: "{{fields.name}}"
                 fields:
@@ -330,6 +344,7 @@ collections:
                   - label: "Documents"
                     name: "documents"
                     widget: "list"
+                    add_to_top: true
                     label_singular: "Document"
                     summary: "{{fields.title}}"
                     fields:
@@ -360,6 +375,7 @@ collections:
           - label: "Memos"
             name: "memos"
             widget: "list"
+            add_to_top: true
             label_singular: "Memo"
             summary: "{{fields.title}}"
             fields:
@@ -368,6 +384,7 @@ collections:
           - label: "Embedded Resources"
             name: "resources"
             widget: "list"
+            add_to_top: true
             label_singular: "Resource"
             summary: "{{fields.title}}"
             fields:
@@ -395,6 +412,7 @@ collections:
           - label: "Headcount Sections"
             name: "headcount_sections"
             widget: "list"
+            add_to_top: true
             label_singular: "Headcount Section"
             summary: "{{fields.title}}"
             fields:
@@ -406,6 +424,7 @@ collections:
               - label: "Links"
                 name: "links"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Link"
                 required: false
                 summary: "{{fields.label}}"
@@ -434,6 +453,7 @@ collections:
           - label: "Program Profiles"
             name: "profiles"
             widget: "list"
+            add_to_top: true
             label_singular: "Program Profile"
             summary: "{{fields.name}}"
             fields:
@@ -442,6 +462,7 @@ collections:
               - label: "Cohorts / Intakes"
                 name: "cohorts"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Cohort"
                 summary: "{{fields.label}}"
                 fields:
@@ -449,6 +470,7 @@ collections:
                   - label: "Fields and Links"
                     name: "links"
                     widget: "list"
+                    add_to_top: true
                     label_singular: "Field Link"
                     summary: "{{fields.title}}"
                     fields: &simple_link_fields
@@ -457,11 +479,12 @@ collections:
           - label: "Elective Sections"
             name: "elective_sections"
             widget: "list"
+            add_to_top: true
             label_singular: "Elective Section"
             summary: "{{fields.heading}}"
             fields:
               - { label: "Section Heading", name: "heading", widget: "string" }
-              - { label: "Links", name: "links", widget: "list", label_singular: "Link", summary: "{{fields.title}}", fields: *simple_link_fields }
+              - { label: "Links", name: "links", widget: "list", add_to_top: true, label_singular: "Link", summary: "{{fields.title}}", fields: *simple_link_fields }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
           - *academic_additional_sections
 
@@ -484,11 +507,12 @@ collections:
           - label: "Groups"
             name: "groups"
             widget: "list"
+            add_to_top: true
             label_singular: "Group"
             summary: "{{fields.name}}"
             fields:
               - { label: "Group Name", name: "name", widget: "string" }
-              - { label: "Items", name: "items", widget: "list", label_singular: "Item", summary: "{{fields.title}}", fields: *simple_link_fields }
+              - { label: "Items", name: "items", widget: "list", add_to_top: true, label_singular: "Item", summary: "{{fields.title}}", fields: *simple_link_fields }
           - { label: "Instruction Note", name: "instruction_note", widget: "text", required: false }
           - { label: "Updated Text", name: "updated_text", widget: "string", required: false }
           - { label: "Footer Note", name: "footer_note", widget: "text", required: false }
@@ -523,6 +547,7 @@ collections:
           - label: "Book Sections"
             name: "groups"
             widget: "list"
+            add_to_top: true
             label_singular: "Book Section"
             summary: "{{fields.name}}"
             fields:
@@ -530,6 +555,7 @@ collections:
               - label: "Books and Documents"
                 name: "documents"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Book"
                 summary: "{{fields.title}}"
                 fields:
@@ -560,6 +586,7 @@ collections:
           - label: "Page Sections"
             name: "professional_sections"
             widget: "list"
+            add_to_top: true
             label_singular: "Section"
             summary: "{{fields.heading}}"
             fields:
@@ -580,6 +607,7 @@ collections:
               - label: "Cards, Documents or Links"
                 name: "items"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Resource"
                 required: false
                 summary: "{{fields.title}}"
@@ -593,6 +621,7 @@ collections:
               - label: "Pictures"
                 name: "images"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Picture"
                 required: false
                 summary: "{{fields.alt}}"
@@ -666,6 +695,7 @@ collections:
           - label: "Information Sections"
             name: "info_sections"
             widget: "list"
+            add_to_top: true
             label_singular: "Section"
             summary: "{{fields.heading}}"
             fields:
@@ -673,6 +703,7 @@ collections:
               - label: "Cards and Links"
                 name: "items"
                 widget: "list"
+                add_to_top: true
                 label_singular: "Card"
                 summary: "{{fields.title}}"
                 fields:
@@ -709,6 +740,7 @@ collections:
           - label: "Modules"
             name: "modules"
             widget: "list"
+            add_to_top: true
             label_singular: "Module"
             summary: "{{fields.title}}"
             fields:
@@ -736,6 +768,7 @@ collections:
           - label: "Books and Documents"
             name: "books"
             widget: "list"
+            add_to_top: true
             label_singular: "Book"
             summary: "{{fields.title}}"
             fields:
@@ -770,6 +803,7 @@ collections:
           - label: "Allowed Emails"
             name: "allowed_emails"
             widget: "list"
+            add_to_top: true
             label_singular: "Email"
             summary: "{{fields.email}}"
             field:
@@ -798,6 +832,7 @@ collections:
           - label: "Contacts"
             name: "contacts"
             widget: "list"
+            add_to_top: true
             label_singular: "Contact"
             summary: "{{fields.name}} — {{fields.position}}"
             fields:
