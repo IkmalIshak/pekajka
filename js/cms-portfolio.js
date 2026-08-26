@@ -46,7 +46,17 @@
         role.style.cssText = 'font-size:13px;color:var(--text-light);margin:0;';
         role.textContent = person.section === 'arkib' ? 'Arkib' : person.role;
 
-        card.append(photo, name, role);
+        const qualification = document.createElement(person.link ? 'a' : 'p');
+        qualification.className = 'qualification-link';
+        qualification.style.cssText = 'display:inline-block;margin-top:8px;color:var(--purple);font-family:Georgia,\'Times New Roman\',serif;font-size:13px;font-style:italic;text-decoration:none;';
+        qualification.textContent = 'Kelayakan Akademik';
+        if (person.link) {
+            qualification.href = person.link;
+            qualification.target = '_blank';
+            qualification.rel = 'noopener';
+        }
+
+        card.append(photo, name, role, qualification);
         return card;
     }
 
