@@ -98,13 +98,14 @@
 
         if (slug === 'jka') {
             containers.pensyarah = document.getElementById('cms-jka-pensyarah');
+            containers.staff = document.getElementById('cms-jka-staff');
         }
         return containers;
     }
 
     function renderStandard(data) {
         const containers = findContainers();
-        ['pensyarah', 'bantuan', 'arkib'].forEach((section) => {
+        ['pensyarah', 'bantuan', 'arkib', 'staff'].forEach((section) => {
             const container = containers[section];
             const people = (data.staff || []).filter((person) => person.section === section);
             if (!container) return;
@@ -118,6 +119,11 @@
             // JKA already provides the grid container and its page heading lives
             // outside it, so render its cards directly into that existing grid.
             if (slug === 'jka' && section === 'pensyarah') {
+                people.forEach((person) => container.appendChild(createCard(person)));
+                return;
+            }
+
+            if (slug === 'jka' && section === 'staff') {
                 people.forEach((person) => container.appendChild(createCard(person)));
                 return;
             }

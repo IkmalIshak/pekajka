@@ -37,6 +37,7 @@ collections:
               - { label: "Pensyarah", value: "pensyarah" }
               - { label: "Pensyarah Bantuan", value: "bantuan" }
               - { label: "Arkib", value: "arkib" }
+              - { label: "Staff", value: "staff" }
           - { label: "Featured / Head", name: "featured", widget: "boolean", default: false }
           - { label: "Photo", name: "image", widget: "image" }
           - { label: "E-Portfolio Link", name: "link", widget: "string", required: false }
