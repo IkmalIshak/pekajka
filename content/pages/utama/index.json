@@ -54,6 +54,11 @@
   "shortcuts_title_html": "Akses Kandungan<br>Utama",
   "shortcuts": [
     {
+      "title": "BIRO AKADEMIK JPP SESI 26/27",
+      "image": "/assets/uploads/biro-jpp.jpg",
+      "link": "https://linktr.ee/AKADServes4Students"
+    },
+    {
       "title": "Spesifikasi Tugas Unit",
       "image": "PEKA JKA IPGM KPP_files/unnamed(1).png",
       "link": "spesifikasitugas.html"
