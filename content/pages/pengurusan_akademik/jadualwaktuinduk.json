@@ -8,6 +8,21 @@
   "hero_tagline": "📅 PPISMP · PISMP · PDPP",
   "programs": [
     {
+      "name": "PDPP (COS)",
+      "semesters": [
+        {
+          "open": true,
+          "name": "SEMESTER DIS 2026 - APRIL 2027",
+          "documents": [
+            {
+              "title": "JADUAL WAKTU PDPP (COS) DIS 2026 - APRIL 2027🆕",
+              "url": "https://drive.google.com/file/d/1bAwzuFGQiXWfV1IjlWcjw9ToOmIiR5i5/view?usp=sharing"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "PPISMP/PISMP",
       "semesters": [
         {
